@@ -1,0 +1,3673 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 0.0,
+            "end": 5.0,
+            "text": " Hello, how are you all? This is Lakshay."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 5.0,
+            "end": 9.0,
+            "text": " So today we are going to start our OS series lecture number 1."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 9.0,
+            "end": 11.0,
+            "text": " Things are going to be very simple."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 11.0,
+            "end": 13.0,
+            "text": " We will start from the basics. What is OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 13.0,
+            "end": 17.0,
+            "text": " Why is it important? Why does OS exist in this world?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 17.0,
+            "end": 22.0,
+            "text": " So first of all, let's start with the part of what."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 22.0,
+            "end": 24.0,
+            "text": " What is OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 24.0,
+            "end": 26.0,
+            "text": " But I say let's stop a little."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 26.0,
+            "end": 28.0,
+            "text": " We will come to what in a while."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 28.0,
+            "end": 30.0,
+            "text": " First, let's know the part of why."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 30.0,
+            "end": 32.0,
+            "text": " What will happen if there is no OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 32.0,
+            "end": 36.0,
+            "text": " Why is OS important? Let's discuss this part first."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 36.0,
+            "end": 40.0,
+            "text": " So everyone must have used the TikTok app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 40.0,
+            "end": 42.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 42.0,
+            "end": 44.0,
+            "text": " TikTok app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 44.0,
+            "end": 46.0,
+            "text": " If you haven't used it, don't use it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 46.0,
+            "end": 48.0,
+            "text": " It's a bad app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 48.0,
+            "end": 51.0,
+            "text": " So to run the TikTok app,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 51.0,
+            "end": 55.0,
+            "text": " what do we need in any mobile phone or tablet?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 55.0,
+            "end": 57.0,
+            "text": " We need some basic things."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 57.0,
+            "end": 65.0,
+            "text": " We need a CPU, memory, GPU and a disk."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 65.0,
+            "end": 71.0,
+            "text": " So I can call this a small computer."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 71.0,
+            "end": 73.0,
+            "text": " A minimalistic computer."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 73.0,
+            "end": 75.0,
+            "text": " In which these 4 components will be there."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 75.0,
+            "end": 77.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 77.0,
+            "end": 80.0,
+            "text": " So now you said you had to use TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 80.0,
+            "end": 82.0,
+            "text": " You turned on the TikTok app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 82.0,
+            "end": 84.0,
+            "text": " What will happen now?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 84.0,
+            "end": 86.0,
+            "text": " There is nothing like OS in this world."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 86.0,
+            "end": 88.0,
+            "text": " Keep this in mind."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 88.0,
+            "end": 90.0,
+            "text": " Now what will happen if there is no OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 90.0,
+            "end": 92.0,
+            "text": " As soon as TikTok launches,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 92.0,
+            "end": 94.0,
+            "text": " it will say I need a little CPU,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 94.0,
+            "end": 98.0,
+            "text": " I need memory, I need GPU and I need a little disk."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 98.0,
+            "end": 101.0,
+            "text": " But what will it do if there is no OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 101.0,
+            "end": 103.0,
+            "text": " It will go straight to the CPU,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 103.0,
+            "end": 105.0,
+            "text": " it will go to the memory, it will go to the GPU,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 105.0,
+            "end": 107.0,
+            "text": " it will go to the disk and it will hack it all."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 107.0,
+            "end": 109.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 109.0,
+            "end": 112.0,
+            "text": " So this time all our resources have been hacked."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 112.0,
+            "end": 114.0,
+            "text": " It will hack."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 114.0,
+            "end": 116.0,
+            "text": " So now you have been hacked."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 116.0,
+            "end": 119.0,
+            "text": " So the biggest thing in this is that you are able to use TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 119.0,
+            "end": 121.0,
+            "text": " But you felt like playing a little game."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 121.0,
+            "end": 123.0,
+            "text": " Let's play PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 123.0,
+            "end": 125.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 125.0,
+            "end": 127.0,
+            "text": " Now you felt like playing PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 127.0,
+            "end": 129.0,
+            "text": " You told TikTok,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 129.0,
+            "end": 131.0,
+            "text": " TikTok, sit quietly for a while, I want to play PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 131.0,
+            "end": 134.0,
+            "text": " But because all your resources have been hacked by TikTok,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 134.0,
+            "end": 136.0,
+            "text": " PUBG will not be able to be owned."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 136.0,
+            "end": 139.0,
+            "text": " Before PUBG is on, it will go to the hang state."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 139.0,
+            "end": 141.0,
+            "text": " It cannot be owned."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 141.0,
+            "end": 143.0,
+            "text": " So now think carefully."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 143.0,
+            "end": 145.0,
+            "text": " You have the resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 145.0,
+            "end": 147.0,
+            "text": " And there are adequate resources to be able to play both apps."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 147.0,
+            "end": 149.0,
+            "text": " But you will not be able to play PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 149.0,
+            "end": 152.0,
+            "text": " So how do I do this thing now?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 152.0,
+            "end": 157.0,
+            "text": " So we need to give some resources to TikTok without giving all the resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 157.0,
+            "end": 159.0,
+            "text": " We provide some percentage of those resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 159.0,
+            "end": 161.0,
+            "text": " So what do we do now?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 161.0,
+            "end": 163.0,
+            "text": " Let's put a layer of OS in the middle of this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 163.0,
+            "end": 165.0,
+            "text": " OS is here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 165.0,
+            "end": 167.0,
+            "text": " Now what will the OS do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 167.0,
+            "end": 169.0,
+            "text": " What will the OS do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 169.0,
+            "end": 171.0,
+            "text": " TikTok,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 171.0,
+            "end": 173.0,
+            "text": " leave this hooliganism."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 173.0,
+            "end": 175.0,
+            "text": " And take 5% CPU."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 175.0,
+            "end": 177.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 177.0,
+            "end": 179.0,
+            "text": " Take 10% memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 181.0,
+            "end": 183.0,
+            "text": " And the rest, let's give 12% GPU."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 183.0,
+            "end": 185.0,
+            "text": " And so on."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 185.0,
+            "end": 187.0,
+            "text": " Now because all the resources have not been given to it,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 187.0,
+            "end": 191.0,
+            "text": " PUBG can now come into memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 191.0,
+            "end": 193.0,
+            "text": " Now PUBG will come."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 193.0,
+            "end": 195.0,
+            "text": " PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 195.0,
+            "end": 197.0,
+            "text": " PUBG will come."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 197.0,
+            "end": 199.0,
+            "text": " PUBG is a little heavy app, so let's give it more."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 199.0,
+            "end": 201.0,
+            "text": " So we gave 50% CPU."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 201.0,
+            "end": 203.0,
+            "text": " We gave 50% memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 205.0,
+            "end": 207.0,
+            "text": " And we gave 60% GPU."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 207.0,
+            "end": 209.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 209.0,
+            "end": 211.0,
+            "text": " So now you can see that"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 211.0,
+            "end": 213.0,
+            "text": " now something like resource management is happening here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 213.0,
+            "end": 215.0,
+            "text": " Right?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 215.0,
+            "end": 217.0,
+            "text": " That all the resources are not being given to the same."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 217.0,
+            "end": 219.0,
+            "text": " We have given some resources to PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 219.0,
+            "end": 221.0,
+            "text": " We have given some resources to TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 221.0,
+            "end": 223.0,
+            "text": " So what do we call this?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 223.0,
+            "end": 225.0,
+            "text": " Resource Management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 225.0,
+            "end": 227.0,
+            "text": " A good term has come to our mind."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 227.0,
+            "end": 229.0,
+            "text": " Resource Management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 229.0,
+            "end": 231.0,
+            "text": " So,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 231.0,
+            "end": 233.0,
+            "text": " we have just seen the first work of OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 235.0,
+            "end": 237.0,
+            "text": " We are calling it resource management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 237.0,
+            "end": 239.0,
+            "text": " This video is sponsored by Coding Ninjas."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 239.0,
+            "end": 241.0,
+            "text": " Coding Ninja is one of the largest online coding education platform."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 241.0,
+            "end": 243.0,
+            "text": " You will get a lot of courses here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 243.0,
+            "end": 245.0,
+            "text": " You want to do inter-preparation."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 245.0,
+            "end": 247.0,
+            "text": " System Design, DBMS, OS,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 247.0,
+            "end": 249.0,
+            "text": " you have to do the preparation of aptitude."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 249.0,
+            "end": 251.0,
+            "text": " Apart from that, if you want to do a course of DSA in different languages,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 251.0,
+            "end": 253.0,
+            "text": " are interested in competitive programming,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 253.0,
+            "end": 255.0,
+            "text": " want to do web development,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 255.0,
+            "end": 257.0,
+            "text": " are interested in data science,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 257.0,
+            "end": 259.0,
+            "text": " want to do android development,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 259.0,
+            "end": 261.0,
+            "text": " you will get well curated courses of all these."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 261.0,
+            "end": 263.0,
+            "text": " Apart from that, the best thing I think"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 263.0,
+            "end": 265.0,
+            "text": " in this, because people also"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 265.0,
+            "end": 267.0,
+            "text": " praise a lot, that is one on one mentor support."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 267.0,
+            "end": 269.0,
+            "text": " In which any doubt you have,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 269.0,
+            "end": 271.0,
+            "text": " it is solved in 20 minutes."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 271.0,
+            "end": 273.0,
+            "text": " You are interested in mock interviews."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 273.0,
+            "end": 275.0,
+            "text": " You also get this in free content."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 275.0,
+            "end": 277.0,
+            "text": " Whoever has made these courses,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 277.0,
+            "end": 279.0,
+            "text": " they have already broken big companies."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 279.0,
+            "end": 281.0,
+            "text": " So you don't have to take any tension about it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 281.0,
+            "end": 283.0,
+            "text": " If you are interested in paid courses,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 283.0,
+            "end": 285.0,
+            "text": " I will put the link in the description."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 285.0,
+            "end": 287.0,
+            "text": " Whatever is the maximum discount,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 287.0,
+            "end": 289.0,
+            "text": " you will get it from this link."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 289.0,
+            "end": 291.0,
+            "text": " So back to the video."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 291.0,
+            "end": 293.0,
+            "text": " Resource Management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 293.0,
+            "end": 295.0,
+            "text": " So now you saw that there was no OS,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 295.0,
+            "end": 297.0,
+            "text": " so how was the hacking going on,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 297.0,
+            "end": 299.0,
+            "text": " things were being hijacked."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 299.0,
+            "end": 301.0,
+            "text": " And now resources are being managed and used."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 301.0,
+            "end": 303.0,
+            "text": " So this is the first job of the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 303.0,
+            "end": 305.0,
+            "text": " You saw how resource management is done."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 305.0,
+            "end": 307.0,
+            "text": " Now you will see a little bit,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 307.0,
+            "end": 309.0,
+            "text": " what we just added to the OS here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 309.0,
+            "end": 311.0,
+            "text": " Now let's say it in a little technical"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 311.0,
+            "end": 313.0,
+            "text": " and good words."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 313.0,
+            "end": 315.0,
+            "text": " So the OS is working like an interface here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 315.0,
+            "end": 317.0,
+            "text": " It is working like this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 317.0,
+            "end": 319.0,
+            "text": " Interface."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 319.0,
+            "end": 321.0,
+            "text": " Interface."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 321.0,
+            "end": 323.0,
+            "text": " Now it said something new."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 323.0,
+            "end": 325.0,
+            "text": " Now what is the interface?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 325.0,
+            "end": 327.0,
+            "text": " Now let's understand it in a desi example."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 327.0,
+            "end": 329.0,
+            "text": " You all go to the bank."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 329.0,
+            "end": 331.0,
+            "text": " You all go to the bank."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 331.0,
+            "end": 333.0,
+            "text": " This is you."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 333.0,
+            "end": 335.0,
+            "text": " You go to the bank."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 335.0,
+            "end": 337.0,
+            "text": " You need your 10,000 rupees,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 337.0,
+            "end": 339.0,
+            "text": " which are lying in your bank."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 339.0,
+            "end": 341.0,
+            "text": " You go to your uncle."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 341.0,
+            "end": 343.0,
+            "text": " This is your bank."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 343.0,
+            "end": 345.0,
+            "text": " This is your uncle."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 345.0,
+            "end": 347.0,
+            "text": " We are talking about SBI here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 347.0,
+            "end": 349.0,
+            "text": " Now you went to the bank."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 349.0,
+            "end": 351.0,
+            "text": " You went to the bank and said,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 351.0,
+            "end": 353.0,
+            "text": " Uncle, I need my 10,000 rupees."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 353.0,
+            "end": 355.0,
+            "text": " Uncle says, take this slip and fill it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 355.0,
+            "end": 357.0,
+            "text": " Put details in it, your account number and all."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 357.0,
+            "end": 359.0,
+            "text": " And I will give it to you."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 359.0,
+            "end": 361.0,
+            "text": " Now you are not going to the bank yourself."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 361.0,
+            "end": 363.0,
+            "text": " You are not going to the bank's treasury"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 363.0,
+            "end": 365.0,
+            "text": " where the cash is kept."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 365.0,
+            "end": 367.0,
+            "text": " You are going through your uncle."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 367.0,
+            "end": 369.0,
+            "text": " This was your treasury."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 369.0,
+            "end": 371.0,
+            "text": " Your money was lying here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 371.0,
+            "end": 373.0,
+            "text": " Uncle goes and brings the money."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 373.0,
+            "end": 375.0,
+            "text": " Then he gives it to you."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 375.0,
+            "end": 377.0,
+            "text": " So what is uncle doing here?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 377.0,
+            "end": 379.0,
+            "text": " He is working like an interface."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 379.0,
+            "end": 381.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 381.0,
+            "end": 383.0,
+            "text": " You are not going yourself."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 383.0,
+            "end": 385.0,
+            "text": " Uncle is going."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 385.0,
+            "end": 387.0,
+            "text": " Now if I understand it a little like this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 387.0,
+            "end": 389.0,
+            "text": " Let's put an analogy."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 389.0,
+            "end": 391.0,
+            "text": " In the case of OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 391.0,
+            "end": 393.0,
+            "text": " So you are"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 393.0,
+            "end": 395.0,
+            "text": " a user app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 395.0,
+            "end": 397.0,
+            "text": " TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 397.0,
+            "end": 399.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 399.0,
+            "end": 401.0,
+            "text": " And the bank, the uncle sitting in the bank."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 401.0,
+            "end": 403.0,
+            "text": " The uncle who is sitting is"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 403.0,
+            "end": 405.0,
+            "text": " the interface."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 405.0,
+            "end": 407.0,
+            "text": " Which is here OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 407.0,
+            "end": 409.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 409.0,
+            "end": 411.0,
+            "text": " And inside the treasury of money"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 411.0,
+            "end": 413.0,
+            "text": " is your resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 415.0,
+            "end": 417.0,
+            "text": " CPU, GPU, etc."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 417.0,
+            "end": 419.0,
+            "text": " Right?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 419.0,
+            "end": 421.0,
+            "text": " So we understood what the interface is."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 421.0,
+            "end": 423.0,
+            "text": " So OS is acting"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 423.0,
+            "end": 425.0,
+            "text": " as an interface."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 425.0,
+            "end": 427.0,
+            "text": " Your resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 427.0,
+            "end": 429.0,
+            "text": " OS is an interface between your user app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 431.0,
+            "end": 433.0,
+            "text": " So we understood that OS acts like an interface."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 433.0,
+            "end": 435.0,
+            "text": " Now we understand one more thing."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 435.0,
+            "end": 437.0,
+            "text": " What will happen if there is no OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 437.0,
+            "end": 439.0,
+            "text": " Let's understand one more problem of this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 439.0,
+            "end": 441.0,
+            "text": " Now you think that"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 441.0,
+            "end": 443.0,
+            "text": " you do subcoding, you write your apps."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 443.0,
+            "end": 445.0,
+            "text": " So what do you do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 445.0,
+            "end": 447.0,
+            "text": " If I talk about C++."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 447.0,
+            "end": 449.0,
+            "text": " If I talk about C++."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 449.0,
+            "end": 451.0,
+            "text": " What do you use for memory allocation?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 451.0,
+            "end": 453.0,
+            "text": " I use malloc."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 453.0,
+            "end": 455.0,
+            "text": " Or new."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 455.0,
+            "end": 457.0,
+            "text": " Malloc is supported in both C and C++."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 457.0,
+            "end": 459.0,
+            "text": " So you use malloc."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 459.0,
+            "end": 461.0,
+            "text": " So what you need is that you give me 10 bytes."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 461.0,
+            "end": 463.0,
+            "text": " So you call simple malloc."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 463.0,
+            "end": 465.0,
+            "text": " Give me 10 bytes."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 465.0,
+            "end": 467.0,
+            "text": " You don't know how the OS"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 467.0,
+            "end": 469.0,
+            "text": " is going into the memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 469.0,
+            "end": 471.0,
+            "text": " From which sector"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 471.0,
+            "end": 473.0,
+            "text": " it is giving free memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 473.0,
+            "end": 475.0,
+            "text": " You have no idea about this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 475.0,
+            "end": 477.0,
+            "text": " You don't even know about this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 477.0,
+            "end": 479.0,
+            "text": " You don't care about this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 479.0,
+            "end": 481.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 481.0,
+            "end": 483.0,
+            "text": " So if there is no OS here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 483.0,
+            "end": 485.0,
+            "text": " If there is no OS,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 485.0,
+            "end": 487.0,
+            "text": " let's come back to the example of TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 487.0,
+            "end": 489.0,
+            "text": " This is your TikTok app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 489.0,
+            "end": 491.0,
+            "text": " And this is PUBG app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 491.0,
+            "end": 493.0,
+            "text": " Now what will happen?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 493.0,
+            "end": 495.0,
+            "text": " What will the developer have to do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 495.0,
+            "end": 497.0,
+            "text": " He will write the logic of his TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 497.0,
+            "end": 499.0,
+            "text": " At the same time, he will have to write the logic of memory management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 499.0,
+            "end": 501.0,
+            "text": " There is no OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 501.0,
+            "end": 503.0,
+            "text": " Do it yourself."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 503.0,
+            "end": 505.0,
+            "text": " See for yourself how you have to use CPU."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 505.0,
+            "end": 507.0,
+            "text": " How to use memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 507.0,
+            "end": 509.0,
+            "text": " He will have to write the code of resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 509.0,
+            "end": 511.0,
+            "text": " He will have to write the code of other resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " He will have to write the code of other resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 513.0,
+            "end": 515.0,
+            "text": " We are taking the example of memory management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 515.0,
+            "end": 517.0,
+            "text": " It will be very easy."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 517.0,
+            "end": 519.0,
+            "text": " So now the developer has written the logic of TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 519.0,
+            "end": 521.0,
+            "text": " We have to run PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 521.0,
+            "end": 523.0,
+            "text": " So what will the developer of PUBG do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 523.0,
+            "end": 525.0,
+            "text": " He will write the code of memory management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 527.0,
+            "end": 529.0,
+            "text": " Now look carefully."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 529.0,
+            "end": 531.0,
+            "text": " What is happening here?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 531.0,
+            "end": 533.0,
+            "text": " That same code."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 533.0,
+            "end": 535.0,
+            "text": " Now in a computer,"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 535.0,
+            "end": 537.0,
+            "text": " The same code of memory management will be used."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 537.0,
+            "end": 539.0,
+            "text": " Where are the resources?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 539.0,
+            "end": 541.0,
+            "text": " The same code will be used."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 541.0,
+            "end": 543.0,
+            "text": " The same code is also in TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 543.0,
+            "end": 545.0,
+            "text": " It is also in PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 545.0,
+            "end": 547.0,
+            "text": " There is also their own logic."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 547.0,
+            "end": 549.0,
+            "text": " And extra code is also written."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 549.0,
+            "end": 551.0,
+            "text": " Now what happened to this?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 551.0,
+            "end": 553.0,
+            "text": " Our app has become bulky."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 553.0,
+            "end": 555.0,
+            "text": " Now suppose normally TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 555.0,
+            "end": 557.0,
+            "text": " Suppose there is an app of 50 MB."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 557.0,
+            "end": 559.0,
+            "text": " So if you put so much code of resource management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 559.0,
+            "end": 561.0,
+            "text": " Then you are adding additional 700-800 MB."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 561.0,
+            "end": 563.0,
+            "text": " And this addition is not only in TikTok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 563.0,
+            "end": 565.0,
+            "text": " It will also be in PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 565.0,
+            "end": 567.0,
+            "text": " So now you can see that the app has become bulky."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 567.0,
+            "end": 569.0,
+            "text": " Now everything is messed up."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 569.0,
+            "end": 571.0,
+            "text": " And if we talk a little more technically."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 571.0,
+            "end": 573.0,
+            "text": " Then here the dry principle is being violated."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 573.0,
+            "end": 575.0,
+            "text": " Now let's see."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 575.0,
+            "end": 577.0,
+            "text": " What did you say dry?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 577.0,
+            "end": 579.0,
+            "text": " No one will tell you this dry."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 579.0,
+            "end": 581.0,
+            "text": " In lectures."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 581.0,
+            "end": 583.0,
+            "text": " Dry is do not repeat yourself."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 583.0,
+            "end": 585.0,
+            "text": " It is very simple."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 585.0,
+            "end": 587.0,
+            "text": " If we take this example."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 587.0,
+            "end": 589.0,
+            "text": " When we are writing code of memory management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 589.0,
+            "end": 591.0,
+            "text": " Suppose you have a function."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 591.0,
+            "end": 593.0,
+            "text": " To get a prime number."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 593.0,
+            "end": 595.0,
+            "text": " You have to place the function of getting the prime number."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 595.0,
+            "end": 597.0,
+            "text": " In a lot of places in the code."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 597.0,
+            "end": 599.0,
+            "text": " So what do you do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 599.0,
+            "end": 601.0,
+            "text": " You simply pick up."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 601.0,
+            "end": 603.0,
+            "text": " You write a function."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 603.0,
+            "end": 605.0,
+            "text": " And you keep calling that function."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 605.0,
+            "end": 607.0,
+            "text": " As you need it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 607.0,
+            "end": 609.0,
+            "text": " So this is your do not repeat yourself principle."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 609.0,
+            "end": 611.0,
+            "text": " Now what was happening here?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 611.0,
+            "end": 613.0,
+            "text": " Here it was happening."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 613.0,
+            "end": 615.0,
+            "text": " That memory management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 615.0,
+            "end": 617.0,
+            "text": " And the code of the management of other resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 617.0,
+            "end": 619.0,
+            "text": " The code of the management of other resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 619.0,
+            "end": 621.0,
+            "text": " The application developer had to write it himself."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 621.0,
+            "end": 623.0,
+            "text": " So here we are repeating the same code."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 623.0,
+            "end": 625.0,
+            "text": " Which is not needed."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 625.0,
+            "end": 627.0,
+            "text": " If we think carefully."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 627.0,
+            "end": 629.0,
+            "text": " So the dry principle is being violated."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 629.0,
+            "end": 631.0,
+            "text": " To stop this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 631.0,
+            "end": 633.0,
+            "text": " Now see when the OS comes back in the picture."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 633.0,
+            "end": 635.0,
+            "text": " So how well it will avoid it from here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 635.0,
+            "end": 637.0,
+            "text": " Now what we will do."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 637.0,
+            "end": 639.0,
+            "text": " The code of resource management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 641.0,
+            "end": 643.0,
+            "text": " The spelling is wrong."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 643.0,
+            "end": 645.0,
+            "text": " No problem."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 645.0,
+            "end": 647.0,
+            "text": " The code of resource management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 647.0,
+            "end": 649.0,
+            "text": " What you have to do."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 649.0,
+            "end": 651.0,
+            "text": " The OS will say that I will write it inside."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 651.0,
+            "end": 653.0,
+            "text": " All the code of the resource management will be inside the code base of the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 653.0,
+            "end": 655.0,
+            "text": " Memory management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 655.0,
+            "end": 657.0,
+            "text": " Scheduling. Process management."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 657.0,
+            "end": 659.0,
+            "text": " Everything will be in it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 659.0,
+            "end": 661.0,
+            "text": " Now see how easy it is."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 661.0,
+            "end": 663.0,
+            "text": " You are an application developer."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 663.0,
+            "end": 665.0,
+            "text": " If you want to write your application."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 665.0,
+            "end": 667.0,
+            "text": " How will the weather app work?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 667.0,
+            "end": 669.0,
+            "text": " You will think about it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 669.0,
+            "end": 671.0,
+            "text": " You will not get into all these circles."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 671.0,
+            "end": 673.0,
+            "text": " How to manage the resource."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 673.0,
+            "end": 675.0,
+            "text": " Now see how the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 675.0,
+            "end": 677.0,
+            "text": " Saved any app from being bulky."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 677.0,
+            "end": 679.0,
+            "text": " Now see this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 679.0,
+            "end": 681.0,
+            "text": " This is the second work of the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 681.0,
+            "end": 683.0,
+            "text": " That it saves from being bulky."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 683.0,
+            "end": 685.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 685.0,
+            "end": 687.0,
+            "text": " If the OS is not there."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 687.0,
+            "end": 689.0,
+            "text": " Then the issue of memory management comes."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 689.0,
+            "end": 691.0,
+            "text": " The issue of resource management comes."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 691.0,
+            "end": 693.0,
+            "text": " It becomes bulky."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 693.0,
+            "end": 695.0,
+            "text": " So something like this happens."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 695.0,
+            "end": 697.0,
+            "text": " So we have understood these two things."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 697.0,
+            "end": 699.0,
+            "text": " Now there is one more very important thing."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 699.0,
+            "end": 701.0,
+            "text": " If the OS is not there."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 701.0,
+            "end": 703.0,
+            "text": " Then the most important thing."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 703.0,
+            "end": 705.0,
+            "text": " Which is coming to my mind."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 705.0,
+            "end": 707.0,
+            "text": " Which we should discuss."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 707.0,
+            "end": 709.0,
+            "text": " That is your isolation."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 709.0,
+            "end": 711.0,
+            "text": " And."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 711.0,
+            "end": 713.0,
+            "text": " Provide protection."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 715.0,
+            "end": 717.0,
+            "text": " How?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 717.0,
+            "end": 719.0,
+            "text": " Now let's take another example."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 719.0,
+            "end": 721.0,
+            "text": " That this was your."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 721.0,
+            "end": 723.0,
+            "text": " Memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 723.0,
+            "end": 725.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 725.0,
+            "end": 727.0,
+            "text": " Now in this memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 727.0,
+            "end": 729.0,
+            "text": " You have such blocks."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 729.0,
+            "end": 731.0,
+            "text": " Now in these blocks."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 731.0,
+            "end": 733.0,
+            "text": " I see."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 733.0,
+            "end": 735.0,
+            "text": " As we were taking examples."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 735.0,
+            "end": 737.0,
+            "text": " For example, our Tik Tok is in memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 739.0,
+            "end": 741.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 741.0,
+            "end": 743.0,
+            "text": " And your PUBG is in memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 743.0,
+            "end": 745.0,
+            "text": " When you turned it on."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 745.0,
+            "end": 747.0,
+            "text": " What happened?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 747.0,
+            "end": 749.0,
+            "text": " Tik Tok took some memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 749.0,
+            "end": 751.0,
+            "text": " PUBG took some memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 753.0,
+            "end": 755.0,
+            "text": " Now look carefully."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 755.0,
+            "end": 757.0,
+            "text": " Now you can see their memory separately."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 757.0,
+            "end": 759.0,
+            "text": " But this is not the case."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 759.0,
+            "end": 761.0,
+            "text": " When the OS is not there."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 761.0,
+            "end": 763.0,
+            "text": " Then there is no isolation."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 763.0,
+            "end": 765.0,
+            "text": " What does isolation mean here?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 765.0,
+            "end": 767.0,
+            "text": " That both the memory should be far away."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 767.0,
+            "end": 769.0,
+            "text": " Tik Tok should not know."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 769.0,
+            "end": 771.0,
+            "text": " That there is an app like PUBG in the memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 771.0,
+            "end": 773.0,
+            "text": " If the OS is not here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 773.0,
+            "end": 775.0,
+            "text": " What will happen?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 775.0,
+            "end": 777.0,
+            "text": " What will Tik Tok do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 777.0,
+            "end": 779.0,
+            "text": " It may go and write something."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 779.0,
+            "end": 781.0,
+            "text": " In the memory of PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 781.0,
+            "end": 783.0,
+            "text": " Now PUBG was running independently."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 783.0,
+            "end": 785.0,
+            "text": " He was thinking that okay."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 785.0,
+            "end": 787.0,
+            "text": " There is no other app other than PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 787.0,
+            "end": 789.0,
+            "text": " He was thinking so."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 789.0,
+            "end": 791.0,
+            "text": " But an app came from behind."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 791.0,
+            "end": 793.0,
+            "text": " And he picked it up and wrote something."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 793.0,
+            "end": 795.0,
+            "text": " This is a very dangerous thing."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 795.0,
+            "end": 797.0,
+            "text": " Security violation is happening."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 797.0,
+            "end": 799.0,
+            "text": " We call this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 799.0,
+            "end": 801.0,
+            "text": " There will be no memory protection."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 801.0,
+            "end": 803.0,
+            "text": " Now take a small example."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 803.0,
+            "end": 805.0,
+            "text": " Suppose you are playing PUBG."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 805.0,
+            "end": 807.0,
+            "text": " And your health is 100%."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 807.0,
+            "end": 809.0,
+            "text": " And what will he do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 809.0,
+            "end": 811.0,
+            "text": " Tik Tok."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 811.0,
+            "end": 813.0,
+            "text": " Where 100% is written."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 813.0,
+            "end": 815.0,
+            "text": " He overwrote it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 815.0,
+            "end": 817.0,
+            "text": " Now you were 100% earlier."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 817.0,
+            "end": 819.0,
+            "text": " Now what will your code model do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 819.0,
+            "end": 821.0,
+            "text": " It has 0% health."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 821.0,
+            "end": 823.0,
+            "text": " So kill it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 823.0,
+            "end": 825.0,
+            "text": " You will be dead."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 825.0,
+            "end": 827.0,
+            "text": " Now what happened with this?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 827.0,
+            "end": 829.0,
+            "text": " How dangerous is it?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 829.0,
+            "end": 831.0,
+            "text": " Now if the OS comes in the picture again."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 831.0,
+            "end": 833.0,
+            "text": " What will the OS do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 833.0,
+            "end": 835.0,
+            "text": " It will logically store."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 835.0,
+            "end": 837.0,
+            "text": " Where did I give Tik Tok?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 837.0,
+            "end": 839.0,
+            "text": " How far is the memory?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 839.0,
+            "end": 841.0,
+            "text": " Suppose this is your memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 841.0,
+            "end": 843.0,
+            "text": " So it will say."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 843.0,
+            "end": 845.0,
+            "text": " I have given Tik Tok from 0 to this location."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 847.0,
+            "end": 849.0,
+            "text": " So I give PUBG from this location to this location."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 853.0,
+            "end": 855.0,
+            "text": " Now the OS here."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 855.0,
+            "end": 857.0,
+            "text": " Will take care of this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 857.0,
+            "end": 859.0,
+            "text": " Tik Tok should not even know."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 859.0,
+            "end": 861.0,
+            "text": " That an app like PUBG is running there."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 861.0,
+            "end": 863.0,
+            "text": " Both the memory will be separate."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 863.0,
+            "end": 865.0,
+            "text": " Both the existence will be separate."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 867.0,
+            "end": 869.0,
+            "text": " So in this way."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 869.0,
+            "end": 871.0,
+            "text": " OS will provide memory protection and isolation."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 871.0,
+            "end": 873.0,
+            "text": " To any two apps."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 873.0,
+            "end": 875.0,
+            "text": " Or multiple apps."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 875.0,
+            "end": 877.0,
+            "text": " So if we look at the notes."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 877.0,
+            "end": 879.0,
+            "text": " Notes we have made for you."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 879.0,
+            "end": 881.0,
+            "text": " With a lot of hard work."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 881.0,
+            "end": 883.0,
+            "text": " So if we look at the notes."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 883.0,
+            "end": 885.0,
+            "text": " So first of all we learned."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 885.0,
+            "end": 887.0,
+            "text": " What if there is no OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 887.0,
+            "end": 889.0,
+            "text": " So we saw in this."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 889.0,
+            "end": 891.0,
+            "text": " Resource exploitation will do."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 891.0,
+            "end": 893.0,
+            "text": " The second."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 893.0,
+            "end": 895.0,
+            "text": " The code of the hardware interaction."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 895.0,
+            "end": 897.0,
+            "text": " Memory management etc."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 897.0,
+            "end": 899.0,
+            "text": " So what will happen with this?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 899.0,
+            "end": 901.0,
+            "text": " Complex app will be."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 901.0,
+            "end": 903.0,
+            "text": " And the third."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 903.0,
+            "end": 905.0,
+            "text": " Security issue."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 905.0,
+            "end": 907.0,
+            "text": " That there will be no memory protection."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 909.0,
+            "end": 911.0,
+            "text": " So now think of it a little differently."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 911.0,
+            "end": 913.0,
+            "text": " Now we can say."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 913.0,
+            "end": 915.0,
+            "text": " What are the functions of the OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 915.0,
+            "end": 917.0,
+            "text": " So functions of the OSR."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 917.0,
+            "end": 919.0,
+            "text": " The first function you saw."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 919.0,
+            "end": 921.0,
+            "text": " Resource management function."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 921.0,
+            "end": 923.0,
+            "text": " Very important function."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 923.0,
+            "end": 925.0,
+            "text": " Arbitration can also be said."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 925.0,
+            "end": 927.0,
+            "text": " Second."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 927.0,
+            "end": 929.0,
+            "text": " These two."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 929.0,
+            "end": 931.0,
+            "text": " Entities that we have."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 931.0,
+            "end": 933.0,
+            "text": " Computer hardware and user app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 933.0,
+            "end": 935.0,
+            "text": " In between."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 935.0,
+            "end": 937.0,
+            "text": " It acts like an interface."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 937.0,
+            "end": 939.0,
+            "text": " This is our second point."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 939.0,
+            "end": 941.0,
+            "text": " Third."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 941.0,
+            "end": 943.0,
+            "text": " In the example of the bulky app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 943.0,
+            "end": 945.0,
+            "text": " In that OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 945.0,
+            "end": 947.0,
+            "text": " All the hardware interaction code."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 947.0,
+            "end": 949.0,
+            "text": " Was written in its own code base."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 949.0,
+            "end": 951.0,
+            "text": " Now what happened with this?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 951.0,
+            "end": 953.0,
+            "text": " It is making you tension free."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 953.0,
+            "end": 955.0,
+            "text": " You just have to do a direct mail lock call."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 955.0,
+            "end": 957.0,
+            "text": " You will get the memory."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 957.0,
+            "end": 959.0,
+            "text": " How is it happening? Why is it happening?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 959.0,
+            "end": 961.0,
+            "text": " You don't have to worry about it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 961.0,
+            "end": 963.0,
+            "text": " What is happening with this?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 963.0,
+            "end": 965.0,
+            "text": " Underlying complexity."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 965.0,
+            "end": 967.0,
+            "text": " On the right side of the interface."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 967.0,
+            "end": 969.0,
+            "text": " The complexity of the computer hardware."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 969.0,
+            "end": 971.0,
+            "text": " You are avoiding it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 971.0,
+            "end": 973.0,
+            "text": " You are not worried about it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 973.0,
+            "end": 975.0,
+            "text": " This is a function of the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 975.0,
+            "end": 977.0,
+            "text": " It hides the underlying complexity of the hardware."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 977.0,
+            "end": 979.0,
+            "text": " Which we can also call abstraction."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 979.0,
+            "end": 981.0,
+            "text": " Fourth."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 981.0,
+            "end": 983.0,
+            "text": " The security execution of application programs."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 983.0,
+            "end": 985.0,
+            "text": " For providing isolation and protection."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 985.0,
+            "end": 987.0,
+            "text": " We just discussed."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 987.0,
+            "end": 989.0,
+            "text": " One more thing."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 989.0,
+            "end": 991.0,
+            "text": " We have written it in the notes."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 991.0,
+            "end": 993.0,
+            "text": " Access to the computer hardware."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 993.0,
+            "end": 995.0,
+            "text": " We can say."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 995.0,
+            "end": 997.0,
+            "text": " The access to the computer hardware."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 997.0,
+            "end": 999.0,
+            "text": " It is not with the user app."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 999.0,
+            "end": 1001.0,
+            "text": " It is only."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1001.0,
+            "end": 1003.0,
+            "text": " With the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1003.0,
+            "end": 1005.0,
+            "text": " If someone wants to interact with the computer hardware."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1005.0,
+            "end": 1007.0,
+            "text": " You will go to the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1007.0,
+            "end": 1009.0,
+            "text": " He will guide you."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1009.0,
+            "end": 1011.0,
+            "text": " How to do it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1011.0,
+            "end": 1013.0,
+            "text": " This is."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1013.0,
+            "end": 1015.0,
+            "text": " Access to the computer hardware."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1015.0,
+            "end": 1017.0,
+            "text": " We have understood the relevance of the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1017.0,
+            "end": 1019.0,
+            "text": " You have seen."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1019.0,
+            "end": 1021.0,
+            "text": " How important the OS is."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1021.0,
+            "end": 1023.0,
+            "text": " Now let's focus on one more thing."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1023.0,
+            "end": 1025.0,
+            "text": " What is an OS?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1025.0,
+            "end": 1027.0,
+            "text": " What is an operating system?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1027.0,
+            "end": 1029.0,
+            "text": " A formal definition."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1029.0,
+            "end": 1031.0,
+            "text": " An operating system is a piece of software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1031.0,
+            "end": 1033.0,
+            "text": " It is a software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1033.0,
+            "end": 1035.0,
+            "text": " It is a software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1035.0,
+            "end": 1037.0,
+            "text": " You make it."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1037.0,
+            "end": 1039.0,
+            "text": " It is a software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1039.0,
+            "end": 1041.0,
+            "text": " A piece of software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1041.0,
+            "end": 1043.0,
+            "text": " That manages all the resources of the computer system."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1043.0,
+            "end": 1045.0,
+            "text": " Resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1045.0,
+            "end": 1047.0,
+            "text": " It can be of any type."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1047.0,
+            "end": 1049.0,
+            "text": " Hardware and software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1049.0,
+            "end": 1051.0,
+            "text": " It manages both the resources."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1051.0,
+            "end": 1053.0,
+            "text": " And provides an environment."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1053.0,
+            "end": 1055.0,
+            "text": " In which the user can execute."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1055.0,
+            "end": 1057.0,
+            "text": " His or her program."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1057.0,
+            "end": 1059.0,
+            "text": " In a convenient and efficient manner."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1059.0,
+            "end": 1061.0,
+            "text": " It is providing such an environment."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1061.0,
+            "end": 1063.0,
+            "text": " To the developer."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1063.0,
+            "end": 1065.0,
+            "text": " To the user."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1065.0,
+            "end": 1067.0,
+            "text": " It can run the software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1067.0,
+            "end": 1069.0,
+            "text": " It can run the software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1069.0,
+            "end": 1071.0,
+            "text": " It can run the software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1071.0,
+            "end": 1073.0,
+            "text": " It can run the software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1073.0,
+            "end": 1075.0,
+            "text": " It can run the software."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1075.0,
+            "end": 1077.0,
+            "text": " There is no hijacking."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1077.0,
+            "end": 1079.0,
+            "text": " How does it do it?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1079.0,
+            "end": 1081.0,
+            "text": " Let's take the name of two important things."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1081.0,
+            "end": 1083.0,
+            "text": " By hiding underlying complexity."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1083.0,
+            "end": 1085.0,
+            "text": " Of hardware."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1085.0,
+            "end": 1087.0,
+            "text": " And acting as a resource manager."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1087.0,
+            "end": 1089.0,
+            "text": " It acts like a resource manager."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1089.0,
+            "end": 1091.0,
+            "text": " And hides the underlying complexity."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1091.0,
+            "end": 1093.0,
+            "text": " This is the formal definition of the OS."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1093.0,
+            "end": 1095.0,
+            "text": " You can ask questions in the intro."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1097.0,
+            "end": 1099.0,
+            "text": " This was our first lecture."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1099.0,
+            "end": 1101.0,
+            "text": " In which we learned."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1101.0,
+            "end": 1103.0,
+            "text": " We learned a lot of things."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1103.0,
+            "end": 1105.0,
+            "text": " I hope you understood everything."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1105.0,
+            "end": 1107.0,
+            "text": " Tell us in the comment section."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1107.0,
+            "end": 1109.0,
+            "text": " How was the video before?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1109.0,
+            "end": 1111.0,
+            "text": " What improvements can we do?"
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1111.0,
+            "end": 1113.0,
+            "text": " Tell us everything."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1113.0,
+            "end": 1115.0,
+            "text": " We will read all the comments."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1115.0,
+            "end": 1117.0,
+            "text": " See you in the next lecture."
+        },
+        {
+            "number": "Lecture 1",
+            "title": " What is an Operating System  ",
+            "start": 1117.0,
+            "end": 1119.0,
+            "text": " Bye."
+        }
+    ],
+    "text": " Hello, how are you all? This is Lakshay. So today we are going to start our OS series lecture number 1. Things are going to be very simple. We will start from the basics. What is OS? Why is it important? Why does OS exist in this world? So first of all, let's start with the part of what. What is OS? But I say let's stop a little. We will come to what in a while. First, let's know the part of why. What will happen if there is no OS? Why is OS important? Let's discuss this part first. So everyone must have used the TikTok app. Okay? TikTok app. If you haven't used it, don't use it. It's a bad app. So to run the TikTok app, what do we need in any mobile phone or tablet? We need some basic things. We need a CPU, memory, GPU and a disk. So I can call this a small computer. A minimalistic computer. In which these 4 components will be there. Okay? So now you said you had to use TikTok. You turned on the TikTok app. What will happen now? There is nothing like OS in this world. Keep this in mind. Now what will happen if there is no OS? As soon as TikTok launches, it will say I need a little CPU, I need memory, I need GPU and I need a little disk. But what will it do if there is no OS? It will go straight to the CPU, it will go to the memory, it will go to the GPU, it will go to the disk and it will hack it all. Okay? So this time all our resources have been hacked. It will hack. So now you have been hacked. So the biggest thing in this is that you are able to use TikTok. But you felt like playing a little game. Let's play PUBG. Okay? Now you felt like playing PUBG. You told TikTok, TikTok, sit quietly for a while, I want to play PUBG. But because all your resources have been hacked by TikTok, PUBG will not be able to be owned. Before PUBG is on, it will go to the hang state. It cannot be owned. So now think carefully. You have the resources. And there are adequate resources to be able to play both apps. But you will not be able to play PUBG. So how do I do this thing now? So we need to give some resources to TikTok without giving all the resources. We provide some percentage of those resources. So what do we do now? Let's put a layer of OS in the middle of this. OS is here. Now what will the OS do? What will the OS do? TikTok, leave this hooliganism. And take 5% CPU. Okay? Take 10% memory. And the rest, let's give 12% GPU. And so on. Now because all the resources have not been given to it, PUBG can now come into memory. Now PUBG will come. PUBG. PUBG will come. PUBG is a little heavy app, so let's give it more. So we gave 50% CPU. We gave 50% memory. And we gave 60% GPU. Okay? So now you can see that now something like resource management is happening here. Right? That all the resources are not being given to the same. We have given some resources to PUBG. We have given some resources to TikTok. So what do we call this? Resource Management. A good term has come to our mind. Resource Management. So, we have just seen the first work of OS. We are calling it resource management. This video is sponsored by Coding Ninjas. Coding Ninja is one of the largest online coding education platform. You will get a lot of courses here. You want to do inter-preparation. System Design, DBMS, OS, you have to do the preparation of aptitude. Apart from that, if you want to do a course of DSA in different languages, are interested in competitive programming, want to do web development, are interested in data science, want to do android development, you will get well curated courses of all these. Apart from that, the best thing I think in this, because people also praise a lot, that is one on one mentor support. In which any doubt you have, it is solved in 20 minutes. You are interested in mock interviews. You also get this in free content. Whoever has made these courses, they have already broken big companies. So you don't have to take any tension about it. If you are interested in paid courses, I will put the link in the description. Whatever is the maximum discount, you will get it from this link. So back to the video. Resource Management. So now you saw that there was no OS, so how was the hacking going on, things were being hijacked. And now resources are being managed and used. So this is the first job of the OS. You saw how resource management is done. Now you will see a little bit, what we just added to the OS here. Now let's say it in a little technical and good words. So the OS is working like an interface here. It is working like this. Interface. Interface. Now it said something new. Now what is the interface? Now let's understand it in a desi example. You all go to the bank. You all go to the bank. This is you. You go to the bank. You need your 10,000 rupees, which are lying in your bank. You go to your uncle. This is your bank. This is your uncle. We are talking about SBI here. Now you went to the bank. You went to the bank and said, Uncle, I need my 10,000 rupees. Uncle says, take this slip and fill it. Put details in it, your account number and all. And I will give it to you. Now you are not going to the bank yourself. You are not going to the bank's treasury where the cash is kept. You are going through your uncle. This was your treasury. Your money was lying here. Uncle goes and brings the money. Then he gives it to you. So what is uncle doing here? He is working like an interface. Okay? You are not going yourself. Uncle is going. Now if I understand it a little like this. Let's put an analogy. In the case of OS. So you are a user app. TikTok. Okay? And the bank, the uncle sitting in the bank. The uncle who is sitting is the interface. Which is here OS. Okay? And inside the treasury of money is your resources. CPU, GPU, etc. Right? So we understood what the interface is. So OS is acting as an interface. Your resources. OS is an interface between your user app. Okay? So we understood that OS acts like an interface. Now we understand one more thing. What will happen if there is no OS? Let's understand one more problem of this. Now you think that you do subcoding, you write your apps. So what do you do? If I talk about C++. If I talk about C++. What do you use for memory allocation? I use malloc. Or new. Malloc is supported in both C and C++. So you use malloc. So what you need is that you give me 10 bytes. So you call simple malloc. Give me 10 bytes. You don't know how the OS is going into the memory. From which sector it is giving free memory. You have no idea about this. You don't even know about this. You don't care about this. Okay? So if there is no OS here. If there is no OS, let's come back to the example of TikTok. This is your TikTok app. And this is PUBG app. Now what will happen? What will the developer have to do? He will write the logic of his TikTok. At the same time, he will have to write the logic of memory management. There is no OS. Do it yourself. See for yourself how you have to use CPU. How to use memory. He will have to write the code of resources. He will have to write the code of other resources. He will have to write the code of other resources. We are taking the example of memory management. It will be very easy. So now the developer has written the logic of TikTok. We have to run PUBG. So what will the developer of PUBG do? He will write the code of memory management. Now look carefully. What is happening here? That same code. Now in a computer, The same code of memory management will be used. Where are the resources? The same code will be used. The same code is also in TikTok. It is also in PUBG. There is also their own logic. And extra code is also written. Now what happened to this? Our app has become bulky. Now suppose normally TikTok. Suppose there is an app of 50 MB. So if you put so much code of resource management. Then you are adding additional 700-800 MB. And this addition is not only in TikTok. It will also be in PUBG. So now you can see that the app has become bulky. Now everything is messed up. And if we talk a little more technically. Then here the dry principle is being violated. Now let's see. What did you say dry? No one will tell you this dry. In lectures. Dry is do not repeat yourself. It is very simple. If we take this example. When we are writing code of memory management. Suppose you have a function. To get a prime number. You have to place the function of getting the prime number. In a lot of places in the code. So what do you do? You simply pick up. You write a function. And you keep calling that function. As you need it. So this is your do not repeat yourself principle. Now what was happening here? Here it was happening. That memory management. And the code of the management of other resources. The code of the management of other resources. The application developer had to write it himself. So here we are repeating the same code. Which is not needed. If we think carefully. So the dry principle is being violated. To stop this. Now see when the OS comes back in the picture. So how well it will avoid it from here. Now what we will do. The code of resource management. The spelling is wrong. No problem. The code of resource management. What you have to do. The OS will say that I will write it inside. All the code of the resource management will be inside the code base of the OS. Memory management. Scheduling. Process management. Everything will be in it. Now see how easy it is. You are an application developer. If you want to write your application. How will the weather app work? You will think about it. You will not get into all these circles. How to manage the resource. Now see how the OS. Saved any app from being bulky. Now see this. This is the second work of the OS. That it saves from being bulky. Okay. If the OS is not there. Then the issue of memory management comes. The issue of resource management comes. It becomes bulky. So something like this happens. So we have understood these two things. Now there is one more very important thing. If the OS is not there. Then the most important thing. Which is coming to my mind. Which we should discuss. That is your isolation. And. Provide protection. How? Now let's take another example. That this was your. Memory. Okay. Now in this memory. You have such blocks. Now in these blocks. I see. As we were taking examples. For example, our Tik Tok is in memory. Okay. And your PUBG is in memory. When you turned it on. What happened? Tik Tok took some memory. PUBG took some memory. Now look carefully. Now you can see their memory separately. But this is not the case. When the OS is not there. Then there is no isolation. What does isolation mean here? That both the memory should be far away. Tik Tok should not know. That there is an app like PUBG in the memory. If the OS is not here. What will happen? What will Tik Tok do? It may go and write something. In the memory of PUBG. Now PUBG was running independently. He was thinking that okay. There is no other app other than PUBG. He was thinking so. But an app came from behind. And he picked it up and wrote something. This is a very dangerous thing. Security violation is happening. We call this. There will be no memory protection. Now take a small example. Suppose you are playing PUBG. And your health is 100%. And what will he do? Tik Tok. Where 100% is written. He overwrote it. Now you were 100% earlier. Now what will your code model do? It has 0% health. So kill it. You will be dead. Now what happened with this? How dangerous is it? Now if the OS comes in the picture again. What will the OS do? It will logically store. Where did I give Tik Tok? How far is the memory? Suppose this is your memory. So it will say. I have given Tik Tok from 0 to this location. So I give PUBG from this location to this location. Now the OS here. Will take care of this. Tik Tok should not even know. That an app like PUBG is running there. Both the memory will be separate. Both the existence will be separate. So in this way. OS will provide memory protection and isolation. To any two apps. Or multiple apps. So if we look at the notes. Notes we have made for you. With a lot of hard work. So if we look at the notes. So first of all we learned. What if there is no OS? So we saw in this. Resource exploitation will do. The second. The code of the hardware interaction. Memory management etc. So what will happen with this? Complex app will be. And the third. Security issue. That there will be no memory protection. So now think of it a little differently. Now we can say. What are the functions of the OS? So functions of the OSR. The first function you saw. Resource management function. Very important function. Arbitration can also be said. Second. These two. Entities that we have. Computer hardware and user app. In between. It acts like an interface. This is our second point. Third. In the example of the bulky app. In that OS. All the hardware interaction code. Was written in its own code base. Now what happened with this? It is making you tension free. You just have to do a direct mail lock call. You will get the memory. How is it happening? Why is it happening? You don't have to worry about it. What is happening with this? Underlying complexity. On the right side of the interface. The complexity of the computer hardware. You are avoiding it. You are not worried about it. This is a function of the OS. It hides the underlying complexity of the hardware. Which we can also call abstraction. Fourth. The security execution of application programs. For providing isolation and protection. We just discussed. One more thing. We have written it in the notes. Access to the computer hardware. We can say. The access to the computer hardware. It is not with the user app. It is only. With the OS. If someone wants to interact with the computer hardware. You will go to the OS. He will guide you. How to do it. This is. Access to the computer hardware. We have understood the relevance of the OS. You have seen. How important the OS is. Now let's focus on one more thing. What is an OS? What is an operating system? A formal definition. An operating system is a piece of software. It is a software. It is a software. You make it. It is a software. A piece of software. That manages all the resources of the computer system. Resources. It can be of any type. Hardware and software. It manages both the resources. And provides an environment. In which the user can execute. His or her program. In a convenient and efficient manner. It is providing such an environment. To the developer. To the user. It can run the software. It can run the software. It can run the software. It can run the software. It can run the software. There is no hijacking. How does it do it? Let's take the name of two important things. By hiding underlying complexity. Of hardware. And acting as a resource manager. It acts like a resource manager. And hides the underlying complexity. This is the formal definition of the OS. You can ask questions in the intro. This was our first lecture. In which we learned. We learned a lot of things. I hope you understood everything. Tell us in the comment section. How was the video before? What improvements can we do? Tell us everything. We will read all the comments. See you in the next lecture. Bye."
+}

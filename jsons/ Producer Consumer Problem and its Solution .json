@@ -1,0 +1,1741 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 0.0,
+            "end": 5.0,
+            "text": " Hello, how are you all? This is Lakshya."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 5.0,
+            "end": 7.0,
+            "text": " So we have come to our OS lecture number 18."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 7.0,
+            "end": 11.0,
+            "text": " And today we are going to discuss some classic problems of synchronization."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 11.0,
+            "end": 14.0,
+            "text": " See, till now we have discussed about threads."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 14.0,
+            "end": 19.0,
+            "text": " When threads are being executed in parallel and when they work in a critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 19.0,
+            "end": 21.0,
+            "text": " So what problems arise from this, we have read that."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 21.0,
+            "end": 23.0,
+            "text": " We have read race condition."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 23.0,
+            "end": 24.0,
+            "text": " Critical section problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 24.0,
+            "end": 27.0,
+            "text": " After that we have discussed some methods like locks."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 27.0,
+            "end": 31.0,
+            "text": " We have discussed about pittanson solution, conditional variable, sigma 4."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 31.0,
+            "end": 35.0,
+            "text": " With which I was able to synchronize the threads."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 35.0,
+            "end": 39.0,
+            "text": " Now we will discuss some classic problems of synchronization."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 39.0,
+            "end": 46.0,
+            "text": " And how to solve those problems using those methods which we have discussed."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 46.0,
+            "end": 48.0,
+            "text": " Now why is it important to read this?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 48.0,
+            "end": 50.0,
+            "text": " Because it is directly asked in the interview."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 50.0,
+            "end": 52.0,
+            "text": " What are the problem of a re-derivator?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 52.0,
+            "end": 54.0,
+            "text": " What is the producer-consumer problem?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 55.0,
+            "end": 58.0,
+            "text": " So in this lecture we will discuss producer-consumer problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 67.0,
+            "end": 71.0,
+            "text": " So this video is sponsored by Coding Ninjas, India's leading coding education platform."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 71.0,
+            "end": 79.0,
+            "text": " Many product based companies like Amazon, Adobe, Commvault focus on OS part in their technical interviews."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 79.0,
+            "end": 83.0,
+            "text": " So to clear these interviews, your OS part should be very strong."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 83.0,
+            "end": 90.0,
+            "text": " So Coding Ninjas provides comprehensive and in-depth course which covers all these concepts."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 90.0,
+            "end": 96.0,
+            "text": " Apart from that, all the theoretical concepts are taught by mapping the Linux operating system."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 96.0,
+            "end": 99.0,
+            "text": " Along with the course, one on one doubt session is also provided."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 99.0,
+            "end": 104.0,
+            "text": " Apart from that, the faculty will teach you from big companies like Nvidia, Microsoft."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 104.0,
+            "end": 109.0,
+            "text": " Apart from that, I will say that in this course you will get more than 12 hours of content."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 109.0,
+            "end": 111.0,
+            "text": " You will solve more than 150 problems."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 111.0,
+            "end": 114.0,
+            "text": " You will do hands-on in more than 12 projects."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 114.0,
+            "end": 119.0,
+            "text": " Apart from that, you will get many different computer science related courses on Coding Ninjas."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 119.0,
+            "end": 122.0,
+            "text": " If you are interested in paid courses, then I will put the link in the description."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 122.0,
+            "end": 125.0,
+            "text": " With this, you will get maximum available discount."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 125.0,
+            "end": 126.0,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 126.0,
+            "end": 129.0,
+            "text": " I also call this a bounded buffer problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 134.0,
+            "end": 136.0,
+            "text": " First let's understand what is the problem statement?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 136.0,
+            "end": 138.0,
+            "text": " What is this problem and why is this problem?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 139.0,
+            "end": 147.0,
+            "text": " We have a thread of producer and a thread of consumer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 151.0,
+            "end": 154.0,
+            "text": " So, we have a task of producer and a task of consumer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 154.0,
+            "end": 155.0,
+            "text": " What does the producer do?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 155.0,
+            "end": 158.0,
+            "text": " The producer produces any data."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 158.0,
+            "end": 162.0,
+            "text": " For example, he produces bottles."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 162.0,
+            "end": 164.0,
+            "text": " Consumer consumes it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 164.0,
+            "end": 166.0,
+            "text": " Here I have a critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 174.0,
+            "end": 175.0,
+            "text": " Here I have a critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 175.0,
+            "end": 176.0,
+            "text": " Here I have a critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 176.0,
+            "end": 181.0,
+            "text": " In this, the producer produces and puts the data in the buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 181.0,
+            "end": 182.0,
+            "text": " What does the consumer do?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 182.0,
+            "end": 190.0,
+            "text": " When the producer produces, that is, when the data is available in the slots, then he starts consuming it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 191.0,
+            "end": 208.0,
+            "text": " In this, either the producer produces and puts the data in the slots or the consumer picks it from the slots."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 208.0,
+            "end": 211.0,
+            "text": " The consumer is consuming and the producer is producing."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 212.0,
+            "end": 217.0,
+            "text": " So, basically, I have n slots here."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 219.0,
+            "end": 221.0,
+            "text": " In the starting, it will be empty."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 221.0,
+            "end": 223.0,
+            "text": " The producer will produce and put it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 223.0,
+            "end": 224.0,
+            "text": " The consumer will consume and put it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 224.0,
+            "end": 230.0,
+            "text": " Now, this particular buffer is called a critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 231.0,
+            "end": 233.0,
+            "text": " I need a method of synchronization."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 233.0,
+            "end": 238.0,
+            "text": " When the producer is producing, he produces and puts it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 238.0,
+            "end": 241.0,
+            "text": " The consumer should not interfere."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 241.0,
+            "end": 247.0,
+            "text": " Or vice versa, if the consumer has come to pick it, then the producer should not put it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 247.0,
+            "end": 251.0,
+            "text": " Let's discuss this further."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 251.0,
+            "end": 252.0,
+            "text": " This is your producer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 252.0,
+            "end": 254.0,
+            "text": " He will put it in empty slots."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 254.0,
+            "end": 259.0,
+            "text": " The consumer will pick it from the filled slots."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 259.0,
+            "end": 262.0,
+            "text": " We have understood what it is."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 262.0,
+            "end": 266.0,
+            "text": " Now we have understood what the problem is."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 268.0,
+            "end": 279.0,
+            "text": " The problem is that our critical section, which I am calling a buffer, is a shared resource."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 279.0,
+            "end": 282.0,
+            "text": " I don't want inconsistencies to be produced."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 282.0,
+            "end": 288.0,
+            "text": " I want the access of threads in a synchronized way."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 288.0,
+            "end": 290.0,
+            "text": " I want synchronization."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 290.0,
+            "end": 296.0,
+            "text": " Sync between producer thread and consumer thread."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 298.0,
+            "end": 301.0,
+            "text": " This is your problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 301.0,
+            "end": 305.0,
+            "text": " The producer cannot insert data when the buffer is full."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 305.0,
+            "end": 312.0,
+            "text": " If the buffer is full, then should I put the producer?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 312.0,
+            "end": 316.0,
+            "text": " Should I waste the CPU cycle?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 316.0,
+            "end": 318.0,
+            "text": " I don't want to waste the CPU cycle."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 318.0,
+            "end": 320.0,
+            "text": " The whole game is about CPU cycles."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 320.0,
+            "end": 321.0,
+            "text": " I want to save CPU cycles."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 321.0,
+            "end": 327.0,
+            "text": " If the buffer is full, then why should I check it?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 327.0,
+            "end": 330.0,
+            "text": " I want this thing to be synchronized."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 330.0,
+            "end": 332.0,
+            "text": " I want to cater this thing in my solution."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 332.0,
+            "end": 333.0,
+            "text": " This is a problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 333.0,
+            "end": 335.0,
+            "text": " Let's write it quickly."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 335.0,
+            "end": 343.0,
+            "text": " Producer must not insert."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 343.0,
+            "end": 349.0,
+            "text": " If the producer is full, then should I put it?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 349.0,
+            "end": 369.0,
+            "text": " Similarly, the consumer must not pick or remove data when the buffer is empty."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 369.0,
+            "end": 373.0,
+            "text": " These are the three problems."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 373.0,
+            "end": 375.0,
+            "text": " I want to cater these three problems."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 375.0,
+            "end": 380.0,
+            "text": " I want to avoid the critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 380.0,
+            "end": 382.0,
+            "text": " I want to have synchronized access."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 382.0,
+            "end": 384.0,
+            "text": " I want to avoid the producer problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 384.0,
+            "end": 387.0,
+            "text": " Producer should not produce or insert data."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 387.0,
+            "end": 390.0,
+            "text": " Consumer should not pick or consume data."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 390.0,
+            "end": 396.0,
+            "text": " The second problem is called bounded buffer problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 396.0,
+            "end": 398.0,
+            "text": " Why am I saying bounded buffer problem?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 398.0,
+            "end": 400.0,
+            "text": " Because I have a finite buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 400.0,
+            "end": 404.0,
+            "text": " This is a finite buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 404.0,
+            "end": 406.0,
+            "text": " This is not an infinite buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 406.0,
+            "end": 408.0,
+            "text": " If it was an infinite buffer, then it would not be a problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 408.0,
+            "end": 410.0,
+            "text": " It is a finite buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 410.0,
+            "end": 413.0,
+            "text": " I want to synchronize these things in a finite buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 413.0,
+            "end": 415.0,
+            "text": " That's why I call it a bounded buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 415.0,
+            "end": 416.0,
+            "text": " This buffer is bounded."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 416.0,
+            "end": 417.0,
+            "text": " This is a finite buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 417.0,
+            "end": 420.0,
+            "text": " Now let's see the solution."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 420.0,
+            "end": 422.0,
+            "text": " We give the solution with the help of semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 422.0,
+            "end": 424.0,
+            "text": " Let's try and solve it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 424.0,
+            "end": 426.0,
+            "text": " Let's give the solution."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 426.0,
+            "end": 428.0,
+            "text": " The solution with semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " There are two types of semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 431.0,
+            "end": 433.0,
+            "text": " Binary semaphore and counting semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 433.0,
+            "end": 435.0,
+            "text": " We will use both."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 435.0,
+            "end": 437.0,
+            "text": " We will use both binary and counting semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 437.0,
+            "end": 440.0,
+            "text": " First, I take semaphore M."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 440.0,
+            "end": 441.0,
+            "text": " I am giving M."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 441.0,
+            "end": 443.0,
+            "text": " This is mutex."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 443.0,
+            "end": 446.0,
+            "text": " We discussed mutex."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 446.0,
+            "end": 452.0,
+            "text": " Internally, mutex is a binary semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 452.0,
+            "end": 454.0,
+            "text": " I call it mutex."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 454.0,
+            "end": 457.0,
+            "text": " This is a binary semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 458.0,
+            "end": 459.0,
+            "text": " Why will it be used?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 459.0,
+            "end": 465.0,
+            "text": " It is used to acquire lock on buffer."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 465.0,
+            "end": 471.0,
+            "text": " When I go to access the buffer, I will lock it before accessing it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 471.0,
+            "end": 473.0,
+            "text": " I am using it for that."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 473.0,
+            "end": 475.0,
+            "text": " The second is empty semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 475.0,
+            "end": 477.0,
+            "text": " Empty semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 477.0,
+            "end": 478.0,
+            "text": " What is empty semaphore?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 478.0,
+            "end": 480.0,
+            "text": " This is a counting semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 480.0,
+            "end": 483.0,
+            "text": " This is a counting semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 484.0,
+            "end": 490.0,
+            "text": " The initial value of this is N."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 490.0,
+            "end": 495.0,
+            "text": " The value of empty is N."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 495.0,
+            "end": 499.0,
+            "text": " Because the buffer is empty."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 499.0,
+            "end": 501.0,
+            "text": " The empty slot is N."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 501.0,
+            "end": 502.0,
+            "text": " N is an empty slot."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 502.0,
+            "end": 504.0,
+            "text": " This is empty."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 504.0,
+            "end": 506.0,
+            "text": " This is used to track."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 506.0,
+            "end": 508.0,
+            "text": " Tracks empty slots."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 508.0,
+            "end": 511.0,
+            "text": " I am using it to track empty slots."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " The third value is full."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 513.0,
+            "end": 515.0,
+            "text": " You must have understood full."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 515.0,
+            "end": 518.0,
+            "text": " This will track the number of filled slots."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 518.0,
+            "end": 522.0,
+            "text": " Tracks filled slots."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 522.0,
+            "end": 525.0,
+            "text": " What is the initial value of this?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 525.0,
+            "end": 527.0,
+            "text": " Zero."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 527.0,
+            "end": 529.0,
+            "text": " The initial value of this is zero."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 529.0,
+            "end": 530.0,
+            "text": " It will track filled slots."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 530.0,
+            "end": 534.0,
+            "text": " Because when t is equal to zero, the buffer will be empty."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 534.0,
+            "end": 537.0,
+            "text": " The filled slots will be zero."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 537.0,
+            "end": 540.0,
+            "text": " Let's move ahead."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 540.0,
+            "end": 543.0,
+            "text": " I have three semaphores."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 543.0,
+            "end": 546.0,
+            "text": " We have initialized three semaphores."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 546.0,
+            "end": 550.0,
+            "text": " Now, I will put the final solution."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 550.0,
+            "end": 552.0,
+            "text": " Let's write the final solution."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 552.0,
+            "end": 554.0,
+            "text": " This is our solution."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 554.0,
+            "end": 556.0,
+            "text": " We are proposing this solution."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 556.0,
+            "end": 558.0,
+            "text": " For producer-consumer problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 558.0,
+            "end": 563.0,
+            "text": " Let's understand how it is solving the problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 563.0,
+            "end": 571.0,
+            "text": " My first problem was to access the critical section in a mutually exclusive way."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 571.0,
+            "end": 574.0,
+            "text": " This is our critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 574.0,
+            "end": 577.0,
+            "text": " Similarly, this is our central section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 577.0,
+            "end": 580.0,
+            "text": " Is there a mutual exclusion?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 580.0,
+            "end": 584.0,
+            "text": " The mutex variable that we used was a binary semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 584.0,
+            "end": 588.0,
+            "text": " It will wait call."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 588.0,
+            "end": 594.0,
+            "text": " In the last video, we discussed how to implement semaphore."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 594.0,
+            "end": 597.0,
+            "text": " We saw that there is an integer value."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 597.0,
+            "end": 599.0,
+            "text": " In this case, it is 1."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 599.0,
+            "end": 601.0,
+            "text": " It is minus."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 601.0,
+            "end": 603.0,
+            "text": " After minus, it becomes zero."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 603.0,
+            "end": 609.0,
+            "text": " Once the value is zero, if any other thread decrements it, it is blocked."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 609.0,
+            "end": 611.0,
+            "text": " It goes to wait."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 611.0,
+            "end": 613.0,
+            "text": " It is properly blocked."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 613.0,
+            "end": 618.0,
+            "text": " I am able to bring mutual exclusion with the help of mutex."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 618.0,
+            "end": 625.0,
+            "text": " Let's see how to use the new counting variables."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 625.0,
+            "end": 634.0,
+            "text": " First, let's see what will happen if the buffer is empty."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 634.0,
+            "end": 641.0,
+            "text": " If the consumer wants to consume, but the consumer does not know that the buffer is empty."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 641.0,
+            "end": 644.0,
+            "text": " It will wait call."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 644.0,
+            "end": 647.0,
+            "text": " It will try to minus the fill."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 647.0,
+            "end": 652.0,
+            "text": " How did we initialize the fill value?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 652.0,
+            "end": 655.0,
+            "text": " The value of the fill is already zero."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 655.0,
+            "end": 657.0,
+            "text": " Will it be able to minus?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 657.0,
+            "end": 658.0,
+            "text": " It will not be able to minus."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 658.0,
+            "end": 660.0,
+            "text": " As soon as it will do minus, it will go to wait."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 660.0,
+            "end": 663.0,
+            "text": " As soon as it will be minus, it will go to wait."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 663.0,
+            "end": 665.0,
+            "text": " Why will it go to wait?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 665.0,
+            "end": 669.0,
+            "text": " Because our buffer is not filled in any slot."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 669.0,
+            "end": 672.0,
+            "text": " The value of the fill was zero in the beginning."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 672.0,
+            "end": 674.0,
+            "text": " It will be negative."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 674.0,
+            "end": 676.0,
+            "text": " It will go to wait."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 676.0,
+            "end": 679.0,
+            "text": " Consumer thread will wait."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 679.0,
+            "end": 684.0,
+            "text": " After that, the producer thread will see if it is empty."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 684.0,
+            "end": 687.0,
+            "text": " It will wait call."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 687.0,
+            "end": 688.0,
+            "text": " Empty will also wait call."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 688.0,
+            "end": 691.0,
+            "text": " Empty initialized from n."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 691.0,
+            "end": 695.0,
+            "text": " The counting variable will be decremented."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 695.0,
+            "end": 700.0,
+            "text": " Wait until the value is equal to n."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 700.0,
+            "end": 703.0,
+            "text": " I will move forward."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 703.0,
+            "end": 707.0,
+            "text": " Mutex will lock."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 707.0,
+            "end": 709.0,
+            "text": " Critical section will be accessed."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 709.0,
+            "end": 712.0,
+            "text": " In the beginning, only the producer thread will be able to go inside."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 712.0,
+            "end": 713.0,
+            "text": " Consumer thread will not go inside."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 713.0,
+            "end": 715.0,
+            "text": " The producer thread went inside."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 715.0,
+            "end": 719.0,
+            "text": " After that, it filled a slot in the critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 719.0,
+            "end": 722.0,
+            "text": " After adding a slot, it signaled."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 722.0,
+            "end": 724.0,
+            "text": " It again signaled the full."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 724.0,
+            "end": 729.0,
+            "text": " After signalling the full, it filled the increment."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 729.0,
+            "end": 734.0,
+            "text": " The value of the signal was plus."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 734.0,
+            "end": 738.0,
+            "text": " As soon as the value is plus, the consumer thread will wait."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 738.0,
+            "end": 746.0,
+            "text": " As soon as the signal is increment, it will call the wakeup."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 746.0,
+            "end": 750.0,
+            "text": " As soon as the increment is 0, it will call the wakeup."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 750.0,
+            "end": 752.0,
+            "text": " A signal will go here."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 752.0,
+            "end": 755.0,
+            "text": " The block thread will be unlocked."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 755.0,
+            "end": 758.0,
+            "text": " It will enter the critical section."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 758.0,
+            "end": 762.0,
+            "text": " In the beginning, only the producer thread was able to enter."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 762.0,
+            "end": 766.0,
+            "text": " As soon as the producer filled a slot, the consumer thread entered."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 766.0,
+            "end": 770.0,
+            "text": " I can say how I managed it."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 770.0,
+            "end": 778.0,
+            "text": " Only when the producer thread is empty, the consumer thread will fill the slot."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 778.0,
+            "end": 781.0,
+            "text": " At least one slot is filled."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 781.0,
+            "end": 783.0,
+            "text": " Let's discuss the second scenario."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 783.0,
+            "end": 788.0,
+            "text": " Assume that the buffer is filled."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 788.0,
+            "end": 793.0,
+            "text": " If the buffer is filled, will the consumer thread be able to consume?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 793.0,
+            "end": 794.0,
+            "text": " The consumer thread will be able to consume."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 794.0,
+            "end": 796.0,
+            "text": " It will call the wakeup."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 796.0,
+            "end": 798.0,
+            "text": " Will the producer thread be able to produce?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 798.0,
+            "end": 799.0,
+            "text": " No, it will not."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 799.0,
+            "end": 805.0,
+            "text": " Because when the buffer is filled, the empty slot will be 0."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 806.0,
+            "end": 810.0,
+            "text": " Wait until the empty slot is greater than 1."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 810.0,
+            "end": 813.0,
+            "text": " Similarly, the producer thread will wait."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 813.0,
+            "end": 818.0,
+            "text": " When the buffer is filled, the producer thread will wait."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 818.0,
+            "end": 820.0,
+            "text": " Because no slot is empty, it will not be able to produce."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 820.0,
+            "end": 821.0,
+            "text": " No one will be able to enter."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 821.0,
+            "end": 825.0,
+            "text": " Why should I give the access of the critical section to the producer?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 825.0,
+            "end": 826.0,
+            "text": " I will not give any access."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 826.0,
+            "end": 834.0,
+            "text": " See how beautifully Sima 4 solved this synchronization problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 834.0,
+            "end": 836.0,
+            "text": " This is a very famous problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 836.0,
+            "end": 840.0,
+            "text": " It is used in many OSs."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 840.0,
+            "end": 843.0,
+            "text": " It is used in thread design."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 843.0,
+            "end": 846.0,
+            "text": " It can be used in multiple thread."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 846.0,
+            "end": 853.0,
+            "text": " It can be used in multiple thread."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 853.0,
+            "end": 856.0,
+            "text": " This was a classic problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 856.0,
+            "end": 860.0,
+            "text": " We solved this problem with Sima 4."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 860.0,
+            "end": 863.0,
+            "text": " I hope you understood this problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 863.0,
+            "end": 865.0,
+            "text": " You must have understood the solution to this problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 865.0,
+            "end": 869.0,
+            "text": " This is directly asked in the interview."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 869.0,
+            "end": 872.0,
+            "text": " How will you solve the problem of producer-consumer?"
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 872.0,
+            "end": 876.0,
+            "text": " You have to read this."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 876.0,
+            "end": 878.0,
+            "text": " See you in the next lecture."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 878.0,
+            "end": 880.0,
+            "text": " In the next lecture, we will discuss the reader-writer problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 880.0,
+            "end": 882.0,
+            "text": " That is also a classic problem."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 882.0,
+            "end": 884.0,
+            "text": " See you in the next lecture."
+        },
+        {
+            "number": "Lecture 18",
+            "title": " Producer Consumer Problem and its Solution ",
+            "start": 884.0,
+            "end": 886.0,
+            "text": " Bye."
+        }
+    ],
+    "text": " Hello, how are you all? This is Lakshya. So we have come to our OS lecture number 18. And today we are going to discuss some classic problems of synchronization. See, till now we have discussed about threads. When threads are being executed in parallel and when they work in a critical section. So what problems arise from this, we have read that. We have read race condition. Critical section problem. After that we have discussed some methods like locks. We have discussed about pittanson solution, conditional variable, sigma 4. With which I was able to synchronize the threads. Now we will discuss some classic problems of synchronization. And how to solve those problems using those methods which we have discussed. Now why is it important to read this? Because it is directly asked in the interview. What are the problem of a re-derivator? What is the producer-consumer problem? So in this lecture we will discuss producer-consumer problem. So this video is sponsored by Coding Ninjas, India's leading coding education platform. Many product based companies like Amazon, Adobe, Commvault focus on OS part in their technical interviews. So to clear these interviews, your OS part should be very strong. So Coding Ninjas provides comprehensive and in-depth course which covers all these concepts. Apart from that, all the theoretical concepts are taught by mapping the Linux operating system. Along with the course, one on one doubt session is also provided. Apart from that, the faculty will teach you from big companies like Nvidia, Microsoft. Apart from that, I will say that in this course you will get more than 12 hours of content. You will solve more than 150 problems. You will do hands-on in more than 12 projects. Apart from that, you will get many different computer science related courses on Coding Ninjas. If you are interested in paid courses, then I will put the link in the description. With this, you will get maximum available discount. Thank you. I also call this a bounded buffer problem. First let's understand what is the problem statement? What is this problem and why is this problem? We have a thread of producer and a thread of consumer. So, we have a task of producer and a task of consumer. What does the producer do? The producer produces any data. For example, he produces bottles. Consumer consumes it. Here I have a critical section. Here I have a critical section. Here I have a critical section. In this, the producer produces and puts the data in the buffer. What does the consumer do? When the producer produces, that is, when the data is available in the slots, then he starts consuming it. In this, either the producer produces and puts the data in the slots or the consumer picks it from the slots. The consumer is consuming and the producer is producing. So, basically, I have n slots here. In the starting, it will be empty. The producer will produce and put it. The consumer will consume and put it. Now, this particular buffer is called a critical section. I need a method of synchronization. When the producer is producing, he produces and puts it. The consumer should not interfere. Or vice versa, if the consumer has come to pick it, then the producer should not put it. Let's discuss this further. This is your producer. He will put it in empty slots. The consumer will pick it from the filled slots. We have understood what it is. Now we have understood what the problem is. The problem is that our critical section, which I am calling a buffer, is a shared resource. I don't want inconsistencies to be produced. I want the access of threads in a synchronized way. I want synchronization. Sync between producer thread and consumer thread. This is your problem. The producer cannot insert data when the buffer is full. If the buffer is full, then should I put the producer? Should I waste the CPU cycle? I don't want to waste the CPU cycle. The whole game is about CPU cycles. I want to save CPU cycles. If the buffer is full, then why should I check it? I want this thing to be synchronized. I want to cater this thing in my solution. This is a problem. Let's write it quickly. Producer must not insert. If the producer is full, then should I put it? Similarly, the consumer must not pick or remove data when the buffer is empty. These are the three problems. I want to cater these three problems. I want to avoid the critical section. I want to have synchronized access. I want to avoid the producer problem. Producer should not produce or insert data. Consumer should not pick or consume data. The second problem is called bounded buffer problem. Why am I saying bounded buffer problem? Because I have a finite buffer. This is a finite buffer. This is not an infinite buffer. If it was an infinite buffer, then it would not be a problem. It is a finite buffer. I want to synchronize these things in a finite buffer. That's why I call it a bounded buffer. This buffer is bounded. This is a finite buffer. Now let's see the solution. We give the solution with the help of semaphore. Let's try and solve it. Let's give the solution. The solution with semaphore. There are two types of semaphore. Binary semaphore and counting semaphore. We will use both. We will use both binary and counting semaphore. First, I take semaphore M. I am giving M. This is mutex. We discussed mutex. Internally, mutex is a binary semaphore. I call it mutex. This is a binary semaphore. Why will it be used? It is used to acquire lock on buffer. When I go to access the buffer, I will lock it before accessing it. I am using it for that. The second is empty semaphore. Empty semaphore. What is empty semaphore? This is a counting semaphore. This is a counting semaphore. The initial value of this is N. The value of empty is N. Because the buffer is empty. The empty slot is N. N is an empty slot. This is empty. This is used to track. Tracks empty slots. I am using it to track empty slots. The third value is full. You must have understood full. This will track the number of filled slots. Tracks filled slots. What is the initial value of this? Zero. The initial value of this is zero. It will track filled slots. Because when t is equal to zero, the buffer will be empty. The filled slots will be zero. Let's move ahead. I have three semaphores. We have initialized three semaphores. Now, I will put the final solution. Let's write the final solution. This is our solution. We are proposing this solution. For producer-consumer problem. Let's understand how it is solving the problem. My first problem was to access the critical section in a mutually exclusive way. This is our critical section. Similarly, this is our central section. Is there a mutual exclusion? The mutex variable that we used was a binary semaphore. It will wait call. In the last video, we discussed how to implement semaphore. We saw that there is an integer value. In this case, it is 1. It is minus. After minus, it becomes zero. Once the value is zero, if any other thread decrements it, it is blocked. It goes to wait. It is properly blocked. I am able to bring mutual exclusion with the help of mutex. Let's see how to use the new counting variables. First, let's see what will happen if the buffer is empty. If the consumer wants to consume, but the consumer does not know that the buffer is empty. It will wait call. It will try to minus the fill. How did we initialize the fill value? The value of the fill is already zero. Will it be able to minus? It will not be able to minus. As soon as it will do minus, it will go to wait. As soon as it will be minus, it will go to wait. Why will it go to wait? Because our buffer is not filled in any slot. The value of the fill was zero in the beginning. It will be negative. It will go to wait. Consumer thread will wait. After that, the producer thread will see if it is empty. It will wait call. Empty will also wait call. Empty initialized from n. The counting variable will be decremented. Wait until the value is equal to n. I will move forward. Mutex will lock. Critical section will be accessed. In the beginning, only the producer thread will be able to go inside. Consumer thread will not go inside. The producer thread went inside. After that, it filled a slot in the critical section. After adding a slot, it signaled. It again signaled the full. After signalling the full, it filled the increment. The value of the signal was plus. As soon as the value is plus, the consumer thread will wait. As soon as the signal is increment, it will call the wakeup. As soon as the increment is 0, it will call the wakeup. A signal will go here. The block thread will be unlocked. It will enter the critical section. In the beginning, only the producer thread was able to enter. As soon as the producer filled a slot, the consumer thread entered. I can say how I managed it. Only when the producer thread is empty, the consumer thread will fill the slot. At least one slot is filled. Let's discuss the second scenario. Assume that the buffer is filled. If the buffer is filled, will the consumer thread be able to consume? The consumer thread will be able to consume. It will call the wakeup. Will the producer thread be able to produce? No, it will not. Because when the buffer is filled, the empty slot will be 0. Wait until the empty slot is greater than 1. Similarly, the producer thread will wait. When the buffer is filled, the producer thread will wait. Because no slot is empty, it will not be able to produce. No one will be able to enter. Why should I give the access of the critical section to the producer? I will not give any access. See how beautifully Sima 4 solved this synchronization problem. This is a very famous problem. It is used in many OSs. It is used in thread design. It can be used in multiple thread. It can be used in multiple thread. This was a classic problem. We solved this problem with Sima 4. I hope you understood this problem. You must have understood the solution to this problem. This is directly asked in the interview. How will you solve the problem of producer-consumer? You have to read this. See you in the next lecture. In the next lecture, we will discuss the reader-writer problem. That is also a classic problem. See you in the next lecture. Bye."
+}

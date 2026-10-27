@@ -1,0 +1,2000 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 0.0,
+            "end": 7.0,
+            "text": " Hello, how are you all? We have come to the lecture number 19 of this lecture."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 7.0,
+            "end": 12.0,
+            "text": " And now we are going to our concurrency module in which we were discussing in the last lecture"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 12.0,
+            "end": 16.0,
+            "text": " that what are the problems of classic synchronization and how are we solving them."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 16.0,
+            "end": 19.0,
+            "text": " So the next problem that we are going to discuss is a very famous problem,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 19.0,
+            "end": 21.0,
+            "text": " which is called reader-writer problem."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 21.0,
+            "end": 24.0,
+            "text": " This video is sponsored by Cryo, the world's only work experience visual learning platform"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 24.0,
+            "end": 26.0,
+            "text": " to learn the latest technical skills."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 26.0,
+            "end": 29.0,
+            "text": " Cryo has launched a new thing, which we call as externship opportunity."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 29.0,
+            "end": 34.0,
+            "text": " Here they are helping developers to showcase their skills and get placed in top product-based companies."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 34.0,
+            "end": 36.0,
+            "text": " But what is externship?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 36.0,
+            "end": 42.0,
+            "text": " Externships are just professional project building opportunities where you are working on real tech problems."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 42.0,
+            "end": 47.0,
+            "text": " So to become a Cryo launch developer, you just have to clear a coding test."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 47.0,
+            "end": 51.0,
+            "text": " When you clear it, you will work on externship projects, enhance your skills"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 51.0,
+            "end": 56.0,
+            "text": " and you will grab a job in a big company, in a high-stakes company."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 56.0,
+            "end": 58.0,
+            "text": " And the interesting thing is that everything is free."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 58.0,
+            "end": 61.0,
+            "text": " You don't have to pay anything to become a Cryo launch developer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 61.0,
+            "end": 63.0,
+            "text": " Your hard work is your only investment."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 63.0,
+            "end": 67.0,
+            "text": " What you have to do is, I will add a link in the description, you will go to that link"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 67.0,
+            "end": 72.0,
+            "text": " and you will book your coding assessment slot, clear it, do externship project"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 72.0,
+            "end": 74.0,
+            "text": " and then you will get placed and give me a party."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 74.0,
+            "end": 75.0,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 75.0,
+            "end": 77.0,
+            "text": " It is a very famous problem, okay."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 77.0,
+            "end": 79.0,
+            "text": " It can be asked in the interview."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 79.0,
+            "end": 81.0,
+            "text": " It is a very obvious problem, okay."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 81.0,
+            "end": 83.0,
+            "text": " So let's discuss."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 83.0,
+            "end": 85.0,
+            "text": " First of all, we have some entities here."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 85.0,
+            "end": 88.0,
+            "text": " Let's say we have a database."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 88.0,
+            "end": 92.0,
+            "text": " Okay, we have a database."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 92.0,
+            "end": 94.0,
+            "text": " Now what is a database?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 94.0,
+            "end": 96.0,
+            "text": " Database is a shared resource."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 96.0,
+            "end": 100.0,
+            "text": " Here are things that your writer will come and write,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 100.0,
+            "end": 102.0,
+            "text": " some reader will read, there can be many threads."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 102.0,
+            "end": 104.0,
+            "text": " Reading threads, they will read."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 104.0,
+            "end": 106.0,
+            "text": " Many writing threads, they will write."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 106.0,
+            "end": 109.0,
+            "text": " So in this case, we have to set up synchronization."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 109.0,
+            "end": 116.0,
+            "text": " That only one writer can write at a time, but multiple readers can read."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 116.0,
+            "end": 119.0,
+            "text": " Okay, so let's understand it this way."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 119.0,
+            "end": 122.0,
+            "text": " Which entities do we have?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 122.0,
+            "end": 123.0,
+            "text": " Which entity do we have?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 123.0,
+            "end": 125.0,
+            "text": " First of all, we have a reader."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 125.0,
+            "end": 128.0,
+            "text": " I can call them reader threads."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 128.0,
+            "end": 129.0,
+            "text": " What is their job?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 129.0,
+            "end": 130.0,
+            "text": " Just read."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 130.0,
+            "end": 133.0,
+            "text": " Secondly, we have writer threads."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 136.0,
+            "end": 138.0,
+            "text": " Their job is to write."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 138.0,
+            "end": 140.0,
+            "text": " Basically, they update the data."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 140.0,
+            "end": 147.0,
+            "text": " You can understand it this way that if you have a paper or a file,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 147.0,
+            "end": 152.0,
+            "text": " you want to write a lot of writers and many readers want to read."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 152.0,
+            "end": 154.0,
+            "text": " Now let's take this as an example."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 154.0,
+            "end": 156.0,
+            "text": " You have a doc file."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 156.0,
+            "end": 159.0,
+            "text": " If many writers are writing, the data will be inconsistent."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 159.0,
+            "end": 163.0,
+            "text": " So I want my writer to write only one person at a time."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 163.0,
+            "end": 165.0,
+            "text": " But readers can be multiple."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 165.0,
+            "end": 168.0,
+            "text": " So if I use more than one reader,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 168.0,
+            "end": 174.0,
+            "text": " first of all, if there are greater than one readers,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 174.0,
+            "end": 181.0,
+            "text": " if readers are reading, then no issue."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 181.0,
+            "end": 182.0,
+            "text": " Any issue will come."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 182.0,
+            "end": 185.0,
+            "text": " No issue will come."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 185.0,
+            "end": 193.0,
+            "text": " And the second is if I have greater than one writers."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 194.0,
+            "end": 204.0,
+            "text": " Or I can say that one writer is done and some other thread is done."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 208.0,
+            "end": 211.0,
+            "text": " I can use reader thread or writer thread."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 211.0,
+            "end": 220.0,
+            "text": " If this happens, then in this case, if this work is happening in parallel,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 221.0,
+            "end": 224.0,
+            "text": " then race condition occurs."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 226.0,
+            "end": 229.0,
+            "text": " And data will be inconsistent."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 234.0,
+            "end": 236.0,
+            "text": " How will it happen?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 236.0,
+            "end": 238.0,
+            "text": " Let's take an example."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 238.0,
+            "end": 241.0,
+            "text": " I have a paper and I am writing here."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 241.0,
+            "end": 244.0,
+            "text": " Suppose a writer is already writing here."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 244.0,
+            "end": 246.0,
+            "text": " Suppose a writer is writing here."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 247.0,
+            "end": 250.0,
+            "text": " Suppose a writer is writing here."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 250.0,
+            "end": 252.0,
+            "text": " What will happen?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 252.0,
+            "end": 255.0,
+            "text": " Suppose he is writing ABCD and she is writing EFG."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 255.0,
+            "end": 257.0,
+            "text": " So characters will be corrupted."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 257.0,
+            "end": 259.0,
+            "text": " So my data will be inconsistent."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 259.0,
+            "end": 263.0,
+            "text": " Now let's assume that the second thread is not a writer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 263.0,
+            "end": 266.0,
+            "text": " Suppose there was a reader thread R1."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 266.0,
+            "end": 268.0,
+            "text": " Then also there will be a problem."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 268.0,
+            "end": 270.0,
+            "text": " Because when one thread is writing,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 270.0,
+            "end": 272.0,
+            "text": " at the same time, one thread is reading."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 272.0,
+            "end": 274.0,
+            "text": " So it is possible that when the reader reads,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 274.0,
+            "end": 277.0,
+            "text": " the writer updates the data after a while."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 277.0,
+            "end": 280.0,
+            "text": " So I will say that the reader has not read the correct data."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 280.0,
+            "end": 282.0,
+            "text": " He must have done inconsistent reading."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 282.0,
+            "end": 287.0,
+            "text": " The writer was writing ABCD earlier."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 287.0,
+            "end": 289.0,
+            "text": " And the reader came and at the same time,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 289.0,
+            "end": 291.0,
+            "text": " he read ABCD and left."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 291.0,
+            "end": 293.0,
+            "text": " Sorry, he read ABCD and left."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 293.0,
+            "end": 296.0,
+            "text": " So he read ABCD in the buffer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 296.0,
+            "end": 301.0,
+            "text": " But the writer did not do ABCD and did ABZF."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 301.0,
+            "end": 306.0,
+            "text": " So I will say that the writer has changed ABZF."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 306.0,
+            "end": 308.0,
+            "text": " But the reader read ABCD."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 308.0,
+            "end": 312.0,
+            "text": " So the reader read the wrong data."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 312.0,
+            "end": 315.0,
+            "text": " But the writer corrected the data after a while."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 315.0,
+            "end": 322.0,
+            "text": " So I don't want that if a writer is updating the data,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 322.0,
+            "end": 323.0,
+            "text": " then another thread,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 323.0,
+            "end": 325.0,
+            "text": " maybe it can be a reader or a writer,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 325.0,
+            "end": 327.0,
+            "text": " can interfere with it."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 327.0,
+            "end": 331.0,
+            "text": " So it means that only one writer will be in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 331.0,
+            "end": 333.0,
+            "text": " Here, our database,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 333.0,
+            "end": 336.0,
+            "text": " in this case, my page is a critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 336.0,
+            "end": 340.0,
+            "text": " So we understood that we have a critical section database."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 340.0,
+            "end": 342.0,
+            "text": " We have reader threads and writer threads."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 342.0,
+            "end": 344.0,
+            "text": " I want that the writer threads"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 344.0,
+            "end": 349.0,
+            "text": " start writing only one thread in a mutually exclusive way."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 349.0,
+            "end": 352.0,
+            "text": " But the reader threads can read more than one."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 352.0,
+            "end": 354.0,
+            "text": " But if the writer thread is already writing,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 354.0,
+            "end": 356.0,
+            "text": " then no reader can come."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 356.0,
+            "end": 358.0,
+            "text": " Because the reader will read inconsistently."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 358.0,
+            "end": 361.0,
+            "text": " So let's see how to solve this."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 361.0,
+            "end": 364.0,
+            "text": " Let's give the solution of the reader-writer problem."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 364.0,
+            "end": 367.0,
+            "text": " And we give the solution again from semaphore."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 367.0,
+            "end": 374.0,
+            "text": " semaphore solution to reader-writer problem"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 377.0,
+            "end": 379.0,
+            "text": " First of all, I will use a mutex."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 381.0,
+            "end": 383.0,
+            "text": " We said mutex in the last video."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 383.0,
+            "end": 385.0,
+            "text": " I am talking about a binary semaphore."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 385.0,
+            "end": 387.0,
+            "text": " We used mutex in the last video."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 387.0,
+            "end": 391.0,
+            "text": " You can see what is a semaphore in the video of semophore."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 391.0,
+            "end": 394.0,
+            "text": " I think it will be a previous video."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 394.0,
+            "end": 396.0,
+            "text": " You can see what binary semaphore is."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 396.0,
+            "end": 398.0,
+            "text": " So why will this happen?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 398.0,
+            "end": 404.0,
+            "text": " This is used to ensure mutual exclusion"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 409.0,
+            "end": 411.0,
+            "text": " when read count"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 411.0,
+            "end": 413.0,
+            "text": " I call read count as RC"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 413.0,
+            "end": 415.0,
+            "text": " is updated"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 417.0,
+            "end": 421.0,
+            "text": " I am going to use a variable called read count in the solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 421.0,
+            "end": 423.0,
+            "text": " It will be a simple variable."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 423.0,
+            "end": 427.0,
+            "text": " I said that the reader can be more than one."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 427.0,
+            "end": 429.0,
+            "text": " So we have to maintain the reader count."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " To update a read count,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 431.0,
+            "end": 434.0,
+            "text": " I will say read count in one type."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 434.0,
+            "end": 438.0,
+            "text": " Because this read count will also become a critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 439.0,
+            "end": 442.0,
+            "text": " We discussed that when we were doing count++"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 442.0,
+            "end": 446.0,
+            "text": " In that case, I want mutual exclusion while doing count++."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 446.0,
+            "end": 450.0,
+            "text": " Because of the temp variable, it is not an atomic operation."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 450.0,
+            "end": 454.0,
+            "text": " Whenever I am updating the read count,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 454.0,
+            "end": 458.0,
+            "text": " I want a mutex on it."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 458.0,
+            "end": 460.0,
+            "text": " That is, it should be updated in a mutually exclusive way."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 460.0,
+            "end": 463.0,
+            "text": " So what will happen if I use mutex?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 463.0,
+            "end": 467.0,
+            "text": " So I can say that no two threads will modify the read count at the same time."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 469.0,
+            "end": 472.0,
+            "text": " Second, I use a WRT variable."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 472.0,
+            "end": 475.0,
+            "text": " This is also a binary semaphore."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 480.0,
+            "end": 485.0,
+            "text": " And this will be common for both reader and writer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 489.0,
+            "end": 492.0,
+            "text": " Let's see what it means."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 492.0,
+            "end": 494.0,
+            "text": " Why will the WRT semaphore be used?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 494.0,
+            "end": 496.0,
+            "text": " Because it is a critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 496.0,
+            "end": 500.0,
+            "text": " I want the database access to be synchronized."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 500.0,
+            "end": 504.0,
+            "text": " I want access in a mutually exclusive way."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 504.0,
+            "end": 506.0,
+            "text": " So WRT will be used for that."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 506.0,
+            "end": 510.0,
+            "text": " The third variable is my read count."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 514.0,
+            "end": 517.0,
+            "text": " This is a simple integer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 517.0,
+            "end": 519.0,
+            "text": " This is not a semaphore."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 520.0,
+            "end": 523.0,
+            "text": " This is an integer whose value is initialized from 0."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 523.0,
+            "end": 530.0,
+            "text": " The reader count keeps track of how many readers are reading in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 530.0,
+            "end": 534.0,
+            "text": " Let's move ahead and discuss the solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 534.0,
+            "end": 536.0,
+            "text": " Now let's discuss the solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 536.0,
+            "end": 538.0,
+            "text": " Let's see how the solution works."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 538.0,
+            "end": 540.0,
+            "text": " First, there is a small solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 540.0,
+            "end": 543.0,
+            "text": " Let's discuss the solution of the writer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 543.0,
+            "end": 546.0,
+            "text": " How will the writer's code look?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 546.0,
+            "end": 548.0,
+            "text": " I will write it quickly."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 548.0,
+            "end": 550.0,
+            "text": " I have made the solution of the writer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 550.0,
+            "end": 552.0,
+            "text": " How will the writer's solution work?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 552.0,
+            "end": 556.0,
+            "text": " The writing operation is a critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 556.0,
+            "end": 558.0,
+            "text": " Only one writer will get access to it."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 558.0,
+            "end": 561.0,
+            "text": " I am using the WRT variable for this."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 561.0,
+            "end": 563.0,
+            "text": " This is a simple semaphore."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 563.0,
+            "end": 567.0,
+            "text": " I have told you how the semaphore works."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 567.0,
+            "end": 571.0,
+            "text": " You can revise it if you have any problem."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 571.0,
+            "end": 573.0,
+            "text": " What will the writer do?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 573.0,
+            "end": 576.0,
+            "text": " This is a binary semaphore."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 576.0,
+            "end": 579.0,
+            "text": " I will wait for the writer to enter."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 579.0,
+            "end": 581.0,
+            "text": " The writer will lock the binary semaphore."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 581.0,
+            "end": 583.0,
+            "text": " No other thread will be able to enter."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 583.0,
+            "end": 585.0,
+            "text": " The writer will signal to the writer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 585.0,
+            "end": 587.0,
+            "text": " No other thread can enter."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 587.0,
+            "end": 589.0,
+            "text": " This is a simple solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 589.0,
+            "end": 591.0,
+            "text": " This is how the writer's solution works."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 591.0,
+            "end": 593.0,
+            "text": " Let's discuss the reader's solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 593.0,
+            "end": 595.0,
+            "text": " This is a tricky solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 595.0,
+            "end": 597.0,
+            "text": " I will draw it quickly."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 597.0,
+            "end": 600.0,
+            "text": " I have written the reader's solution with great difficulty."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 600.0,
+            "end": 602.0,
+            "text": " This is a tricky solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 602.0,
+            "end": 604.0,
+            "text": " But it is very easy to understand."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 604.0,
+            "end": 606.0,
+            "text": " We understood the writer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 606.0,
+            "end": 608.0,
+            "text": " Now let's discuss the reader's solution."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 608.0,
+            "end": 610.0,
+            "text": " What was the condition of the reader?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 610.0,
+            "end": 612.0,
+            "text": " Multiple readers can read."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 612.0,
+            "end": 614.0,
+            "text": " Multiple readers can read."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 614.0,
+            "end": 616.0,
+            "text": " When we are going to read,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 616.0,
+            "end": 622.0,
+            "text": " we have to ensure that there is no writer in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 622.0,
+            "end": 624.0,
+            "text": " Or if I say this in reverse,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 624.0,
+            "end": 626.0,
+            "text": " If I am reading,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 626.0,
+            "end": 628.0,
+            "text": " I don't want the writer to enter."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 628.0,
+            "end": 630.0,
+            "text": " How will we do this?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 630.0,
+            "end": 632.0,
+            "text": " Because we are talking about multiple readers,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 632.0,
+            "end": 634.0,
+            "text": " we have a read count variable."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 634.0,
+            "end": 636.0,
+            "text": " In the beginning,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 636.0,
+            "end": 640.0,
+            "text": " we used the mutex to add the read count variable."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 640.0,
+            "end": 642.0,
+            "text": " Why did we use mutex?"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 642.0,
+            "end": 644.0,
+            "text": " We discussed that if we add count++,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 644.0,
+            "end": 646.0,
+            "text": " it can also cause race condition."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 646.0,
+            "end": 648.0,
+            "text": " To save this,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 648.0,
+            "end": 650.0,
+            "text": " we also used mutex."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 650.0,
+            "end": 652.0,
+            "text": " The read count variable"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 652.0,
+            "end": 654.0,
+            "text": " is the mutual variable of the reader."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 654.0,
+            "end": 660.0,
+            "text": " So, we want to add the read count variable."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 660.0,
+            "end": 664.0,
+            "text": " We want this to be in the mutual exclusive way."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 664.0,
+            "end": 666.0,
+            "text": " Multiple readers can add count++."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 666.0,
+            "end": 670.0,
+            "text": " So, we understood why we are using mutex."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 670.0,
+            "end": 672.0,
+            "text": " Now we have used mutex."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 672.0,
+            "end": 674.0,
+            "text": " When the first reader comes,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 674.0,
+            "end": 676.0,
+            "text": " the read count will be 1."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 676.0,
+            "end": 678.0,
+            "text": " So, we will see if this is the first reader."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 678.0,
+            "end": 680.0,
+            "text": " If it is the first reader,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 680.0,
+            "end": 682.0,
+            "text": " then we will call wait on wrt."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 682.0,
+            "end": 684.0,
+            "text": " So, at this point,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 684.0,
+            "end": 686.0,
+            "text": " the writer can be in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 686.0,
+            "end": 688.0,
+            "text": " If the writer is already in the critical section,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 688.0,
+            "end": 692.0,
+            "text": " then the reader thread will be blocked."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 692.0,
+            "end": 694.0,
+            "text": " Because the writer is already in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 694.0,
+            "end": 696.0,
+            "text": " If the writer is not in the critical section,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 696.0,
+            "end": 698.0,
+            "text": " then I will block the writer."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 698.0,
+            "end": 700.0,
+            "text": " If I call wait on wrt,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 700.0,
+            "end": 704.0,
+            "text": " then the writer will not be able to enter the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 704.0,
+            "end": 706.0,
+            "text": " That's why we are using this condition."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 706.0,
+            "end": 708.0,
+            "text": " We have also written here that"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 708.0,
+            "end": 710.0,
+            "text": " ensures no writer can enter if there is even one reader."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 710.0,
+            "end": 712.0,
+            "text": " So, no writer should be in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 712.0,
+            "end": 714.0,
+            "text": " After that, we have called signal mutex."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 714.0,
+            "end": 716.0,
+            "text": " Basically, this is used for RC."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 716.0,
+            "end": 718.0,
+            "text": " After that, a reader will read in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 718.0,
+            "end": 720.0,
+            "text": " If there are multiple readers,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 720.0,
+            "end": 722.0,
+            "text": " then they will also read."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 722.0,
+            "end": 724.0,
+            "text": " After that, we have called wait mutex again."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 724.0,
+            "end": 726.0,
+            "text": " Suppose there are multiple readers."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 726.0,
+            "end": 728.0,
+            "text": " Suppose there were 4 readers here."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 728.0,
+            "end": 730.0,
+            "text": " So, if 4 readers are there,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 730.0,
+            "end": 734.0,
+            "text": " then if 4 readers simultaneously leave the critical section,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 734.0,
+            "end": 736.0,
+            "text": " then they will minus RC at that point."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 736.0,
+            "end": 738.0,
+            "text": " I want this to be accessed in the mutual exclusive way."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 738.0,
+            "end": 740.0,
+            "text": " So, I have called mutex again."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 740.0,
+            "end": 742.0,
+            "text": " Reader leaves."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 742.0,
+            "end": 744.0,
+            "text": " Finally, if the read count is 0,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 744.0,
+            "end": 746.0,
+            "text": " then I will signal wrt."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 746.0,
+            "end": 748.0,
+            "text": " That means there is no reader in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 748.0,
+            "end": 750.0,
+            "text": " There are 0 readers in the critical section."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 750.0,
+            "end": 752.0,
+            "text": " In this case, I will signal wrt."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 752.0,
+            "end": 754.0,
+            "text": " That means the writer can enter."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 754.0,
+            "end": 756.0,
+            "text": " It is possible that"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 756.0,
+            "end": 758.0,
+            "text": " when many readers were reading for so long,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 758.0,
+            "end": 760.0,
+            "text": " then a writer is waiting here."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 760.0,
+            "end": 762.0,
+            "text": " So, to signal that,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 762.0,
+            "end": 764.0,
+            "text": " we have called signal wrt."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 764.0,
+            "end": 766.0,
+            "text": " So, to signal wrt,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 766.0,
+            "end": 768.0,
+            "text": " we have called signal mutex."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 768.0,
+            "end": 770.0,
+            "text": " So, that the reader can leave."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 770.0,
+            "end": 772.0,
+            "text": " And it will continue in the loop."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 772.0,
+            "end": 774.0,
+            "text": " So, this is how reader-writer problem is solved."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 774.0,
+            "end": 776.0,
+            "text": " It is very easy."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 776.0,
+            "end": 778.0,
+            "text": " The solution of the writer is very easy."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 778.0,
+            "end": 780.0,
+            "text": " The solution of the reader is also easy."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 780.0,
+            "end": 782.0,
+            "text": " But it is a little difficult to understand."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 782.0,
+            "end": 784.0,
+            "text": " I hope you have understood this."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 784.0,
+            "end": 786.0,
+            "text": " So, first of all,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 786.0,
+            "end": 788.0,
+            "text": " I will give you a homework"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 788.0,
+            "end": 790.0,
+            "text": " in the classic problems we are discussing."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 790.0,
+            "end": 792.0,
+            "text": " So, first of all,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 792.0,
+            "end": 794.0,
+            "text": " I will give you a homework"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 794.0,
+            "end": 796.0,
+            "text": " that after reading all the problems,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 796.0,
+            "end": 798.0,
+            "text": " that after reading all the problems,"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 798.0,
+            "end": 800.0,
+            "text": " implement all the solutions"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 800.0,
+            "end": 802.0,
+            "text": " that we are giving."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 804.0,
+            "end": 806.0,
+            "text": " Implement."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 806.0,
+            "end": 808.0,
+            "text": " By implementing, you will get a lot of confidence"
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 808.0,
+            "end": 810.0,
+            "text": " that I have understood the reader-writer problem."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 810.0,
+            "end": 812.0,
+            "text": " Apart from this, I have understood the bounded perfect problem."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 812.0,
+            "end": 814.0,
+            "text": " Apart from this, I have understood the reader-writer problem."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 814.0,
+            "end": 816.0,
+            "text": " So, you will feel very confident about the classic problem."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 816.0,
+            "end": 818.0,
+            "text": " And this is a mark my words."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 818.0,
+            "end": 820.0,
+            "text": " This is a mark my words."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 820.0,
+            "end": 822.0,
+            "text": " I hope you understood this."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 822.0,
+            "end": 824.0,
+            "text": " I hope you understood this."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 824.0,
+            "end": 826.0,
+            "text": " I will meet you in the next video."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 826.0,
+            "end": 828.0,
+            "text": " I will meet you in the next video."
+        },
+        {
+            "number": "Lecture 19",
+            "title": " Reader-Writer Problem and its Solution ",
+            "start": 828.0,
+            "end": 830.0,
+            "text": " Goodbye."
+        }
+    ],
+    "text": " Hello, how are you all? We have come to the lecture number 19 of this lecture. And now we are going to our concurrency module in which we were discussing in the last lecture that what are the problems of classic synchronization and how are we solving them. So the next problem that we are going to discuss is a very famous problem, which is called reader-writer problem. This video is sponsored by Cryo, the world's only work experience visual learning platform to learn the latest technical skills. Cryo has launched a new thing, which we call as externship opportunity. Here they are helping developers to showcase their skills and get placed in top product-based companies. But what is externship? Externships are just professional project building opportunities where you are working on real tech problems. So to become a Cryo launch developer, you just have to clear a coding test. When you clear it, you will work on externship projects, enhance your skills and you will grab a job in a big company, in a high-stakes company. And the interesting thing is that everything is free. You don't have to pay anything to become a Cryo launch developer. Your hard work is your only investment. What you have to do is, I will add a link in the description, you will go to that link and you will book your coding assessment slot, clear it, do externship project and then you will get placed and give me a party. Thank you. It is a very famous problem, okay. It can be asked in the interview. It is a very obvious problem, okay. So let's discuss. First of all, we have some entities here. Let's say we have a database. Okay, we have a database. Now what is a database? Database is a shared resource. Here are things that your writer will come and write, some reader will read, there can be many threads. Reading threads, they will read. Many writing threads, they will write. So in this case, we have to set up synchronization. That only one writer can write at a time, but multiple readers can read. Okay, so let's understand it this way. Which entities do we have? Which entity do we have? First of all, we have a reader. I can call them reader threads. What is their job? Just read. Secondly, we have writer threads. Their job is to write. Basically, they update the data. You can understand it this way that if you have a paper or a file, you want to write a lot of writers and many readers want to read. Now let's take this as an example. You have a doc file. If many writers are writing, the data will be inconsistent. So I want my writer to write only one person at a time. But readers can be multiple. So if I use more than one reader, first of all, if there are greater than one readers, if readers are reading, then no issue. Any issue will come. No issue will come. And the second is if I have greater than one writers. Or I can say that one writer is done and some other thread is done. I can use reader thread or writer thread. If this happens, then in this case, if this work is happening in parallel, then race condition occurs. And data will be inconsistent. How will it happen? Let's take an example. I have a paper and I am writing here. Suppose a writer is already writing here. Suppose a writer is writing here. Suppose a writer is writing here. What will happen? Suppose he is writing ABCD and she is writing EFG. So characters will be corrupted. So my data will be inconsistent. Now let's assume that the second thread is not a writer. Suppose there was a reader thread R1. Then also there will be a problem. Because when one thread is writing, at the same time, one thread is reading. So it is possible that when the reader reads, the writer updates the data after a while. So I will say that the reader has not read the correct data. He must have done inconsistent reading. The writer was writing ABCD earlier. And the reader came and at the same time, he read ABCD and left. Sorry, he read ABCD and left. So he read ABCD in the buffer. But the writer did not do ABCD and did ABZF. So I will say that the writer has changed ABZF. But the reader read ABCD. So the reader read the wrong data. But the writer corrected the data after a while. So I don't want that if a writer is updating the data, then another thread, maybe it can be a reader or a writer, can interfere with it. So it means that only one writer will be in the critical section. Here, our database, in this case, my page is a critical section. So we understood that we have a critical section database. We have reader threads and writer threads. I want that the writer threads start writing only one thread in a mutually exclusive way. But the reader threads can read more than one. But if the writer thread is already writing, then no reader can come. Because the reader will read inconsistently. So let's see how to solve this. Let's give the solution of the reader-writer problem. And we give the solution again from semaphore. semaphore solution to reader-writer problem First of all, I will use a mutex. We said mutex in the last video. I am talking about a binary semaphore. We used mutex in the last video. You can see what is a semaphore in the video of semophore. I think it will be a previous video. You can see what binary semaphore is. So why will this happen? This is used to ensure mutual exclusion when read count I call read count as RC is updated I am going to use a variable called read count in the solution. It will be a simple variable. I said that the reader can be more than one. So we have to maintain the reader count. To update a read count, I will say read count in one type. Because this read count will also become a critical section. We discussed that when we were doing count++ In that case, I want mutual exclusion while doing count++. Because of the temp variable, it is not an atomic operation. Whenever I am updating the read count, I want a mutex on it. That is, it should be updated in a mutually exclusive way. So what will happen if I use mutex? So I can say that no two threads will modify the read count at the same time. Second, I use a WRT variable. This is also a binary semaphore. And this will be common for both reader and writer. Let's see what it means. Why will the WRT semaphore be used? Because it is a critical section. I want the database access to be synchronized. I want access in a mutually exclusive way. So WRT will be used for that. The third variable is my read count. This is a simple integer. This is not a semaphore. This is an integer whose value is initialized from 0. The reader count keeps track of how many readers are reading in the critical section. Let's move ahead and discuss the solution. Now let's discuss the solution. Let's see how the solution works. First, there is a small solution. Let's discuss the solution of the writer. How will the writer's code look? I will write it quickly. I have made the solution of the writer. How will the writer's solution work? The writing operation is a critical section. Only one writer will get access to it. I am using the WRT variable for this. This is a simple semaphore. I have told you how the semaphore works. You can revise it if you have any problem. What will the writer do? This is a binary semaphore. I will wait for the writer to enter. The writer will lock the binary semaphore. No other thread will be able to enter. The writer will signal to the writer. No other thread can enter. This is a simple solution. This is how the writer's solution works. Let's discuss the reader's solution. This is a tricky solution. I will draw it quickly. I have written the reader's solution with great difficulty. This is a tricky solution. But it is very easy to understand. We understood the writer. Now let's discuss the reader's solution. What was the condition of the reader? Multiple readers can read. Multiple readers can read. When we are going to read, we have to ensure that there is no writer in the critical section. Or if I say this in reverse, If I am reading, I don't want the writer to enter. How will we do this? Because we are talking about multiple readers, we have a read count variable. In the beginning, we used the mutex to add the read count variable. Why did we use mutex? We discussed that if we add count++, it can also cause race condition. To save this, we also used mutex. The read count variable is the mutual variable of the reader. So, we want to add the read count variable. We want this to be in the mutual exclusive way. Multiple readers can add count++. So, we understood why we are using mutex. Now we have used mutex. When the first reader comes, the read count will be 1. So, we will see if this is the first reader. If it is the first reader, then we will call wait on wrt. So, at this point, the writer can be in the critical section. If the writer is already in the critical section, then the reader thread will be blocked. Because the writer is already in the critical section. If the writer is not in the critical section, then I will block the writer. If I call wait on wrt, then the writer will not be able to enter the critical section. That's why we are using this condition. We have also written here that ensures no writer can enter if there is even one reader. So, no writer should be in the critical section. After that, we have called signal mutex. Basically, this is used for RC. After that, a reader will read in the critical section. If there are multiple readers, then they will also read. After that, we have called wait mutex again. Suppose there are multiple readers. Suppose there were 4 readers here. So, if 4 readers are there, then if 4 readers simultaneously leave the critical section, then they will minus RC at that point. I want this to be accessed in the mutual exclusive way. So, I have called mutex again. Reader leaves. Finally, if the read count is 0, then I will signal wrt. That means there is no reader in the critical section. There are 0 readers in the critical section. In this case, I will signal wrt. That means the writer can enter. It is possible that when many readers were reading for so long, then a writer is waiting here. So, to signal that, we have called signal wrt. So, to signal wrt, we have called signal mutex. So, that the reader can leave. And it will continue in the loop. So, this is how reader-writer problem is solved. It is very easy. The solution of the writer is very easy. The solution of the reader is also easy. But it is a little difficult to understand. I hope you have understood this. So, first of all, I will give you a homework in the classic problems we are discussing. So, first of all, I will give you a homework that after reading all the problems, that after reading all the problems, implement all the solutions that we are giving. Implement. By implementing, you will get a lot of confidence that I have understood the reader-writer problem. Apart from this, I have understood the bounded perfect problem. Apart from this, I have understood the reader-writer problem. So, you will feel very confident about the classic problem. And this is a mark my words. This is a mark my words. I hope you understood this. I hope you understood this. I will meet you in the next video. I will meet you in the next video. Goodbye."
+}

@@ -1,0 +1,4345 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 0.0,
+            "end": 5.0,
+            "text": " Hello, how are you all? This is Lakshya."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 5.0,
+            "end": 7.0,
+            "text": " We are here at OS lecture 12."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 7.0,
+            "end": 11.0,
+            "text": " And today we are going to discuss about Process Scheduling Algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 11.0,
+            "end": 14.0,
+            "text": " Which is a very important part of process management."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 14.0,
+            "end": 18.0,
+            "text": " But before jumping directly to the process scheduling algorithm,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 18.0,
+            "end": 21.0,
+            "text": " there are some terms and jargons that you should know."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 21.0,
+            "end": 24.0,
+            "text": " Because we are going to use them a lot in the upcoming lectures."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 24.0,
+            "end": 29.0,
+            "text": " So, first of all, let's know what is process scheduling?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 29.0,
+            "end": 33.0,
+            "text": " What is process scheduling?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 33.0,
+            "end": 37.0,
+            "text": " You might have an intuition about it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 37.0,
+            "end": 40.0,
+            "text": " Because we have discussed about it in previous lectures."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 40.0,
+            "end": 43.0,
+            "text": " But still, let me discuss it quickly."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 43.0,
+            "end": 46.0,
+            "text": " We have a ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 46.0,
+            "end": 48.0,
+            "text": " We have a CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 48.0,
+            "end": 51.0,
+            "text": " All the processes come in the run state of the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 51.0,
+            "end": 53.0,
+            "text": " Exit from here."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 53.0,
+            "end": 57.0,
+            "text": " What is the short term scheduler here?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 57.0,
+            "end": 61.0,
+            "text": " It dispatches the process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 61.0,
+            "end": 64.0,
+            "text": " Here we have P1, P2, P3."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 64.0,
+            "end": 67.0,
+            "text": " There are many processes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 67.0,
+            "end": 69.0,
+            "text": " Now, what happens here?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 69.0,
+            "end": 73.0,
+            "text": " The process that comes in the ready queue brings the long term scheduler."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 73.0,
+            "end": 76.0,
+            "text": " You put all the processes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 76.0,
+            "end": 81.0,
+            "text": " OS picks any process from the ready queue and gives it to the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 81.0,
+            "end": 83.0,
+            "text": " And depending on the algorithm you are using,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 83.0,
+            "end": 85.0,
+            "text": " the process is executed."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 85.0,
+            "end": 90.0,
+            "text": " After some time, the process comes back to the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 90.0,
+            "end": 94.0,
+            "text": " And goes to the waiting state."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 94.0,
+            "end": 96.0,
+            "text": " If it is IO."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 96.0,
+            "end": 100.0,
+            "text": " And this is how things work."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 100.0,
+            "end": 106.0,
+            "text": " So, your job is to pick the process from the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 106.0,
+            "end": 108.0,
+            "text": " Which process will be picked?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 108.0,
+            "end": 111.0,
+            "text": " Choose that process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 111.0,
+            "end": 114.0,
+            "text": " Then schedule that process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 114.0,
+            "end": 117.0,
+            "text": " This is done by the CPU scheduler."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 117.0,
+            "end": 121.0,
+            "text": " So, which process will be picked?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 121.0,
+            "end": 124.0,
+            "text": " This is done by the process scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 124.0,
+            "end": 129.0,
+            "text": " This is done by the process scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 129.0,
+            "end": 133.0,
+            "text": " And this is called CPU scheduling."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 133.0,
+            "end": 137.0,
+            "text": " And actually, the process that controls the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 137.0,
+            "end": 140.0,
+            "text": " This is called dispatcher."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 140.0,
+            "end": 142.0,
+            "text": " We have discussed this."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 142.0,
+            "end": 144.0,
+            "text": " So, what does the CPU scheduler do?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 144.0,
+            "end": 146.0,
+            "text": " Whenever your CPU is idle,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 146.0,
+            "end": 148.0,
+            "text": " I have to pick a process from the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 148.0,
+            "end": 150.0,
+            "text": " I will pick that and give it to the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 150.0,
+            "end": 152.0,
+            "text": " And so on."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 152.0,
+            "end": 155.0,
+            "text": " This is called CPU scheduling."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 155.0,
+            "end": 159.0,
+            "text": " Before moving forward, let's give a shoutout to our sponsors."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 159.0,
+            "end": 161.0,
+            "text": " This video is sponsored by Coding Ninjas."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 161.0,
+            "end": 163.0,
+            "text": " India's leading coding education platform."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 163.0,
+            "end": 167.0,
+            "text": " Many product based companies like Amazon, Adobe, Commvault."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 167.0,
+            "end": 170.0,
+            "text": " Focus on OS in their technical interviews."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 170.0,
+            "end": 172.0,
+            "text": " So, to clear these interviews,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 172.0,
+            "end": 175.0,
+            "text": " your OS part should be very strong."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 175.0,
+            "end": 178.0,
+            "text": " So, Coding Ninjas provides a comprehensive and in-depth course."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 178.0,
+            "end": 182.0,
+            "text": " Which covers all these concepts well."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 182.0,
+            "end": 184.0,
+            "text": " Apart from that, all the theoretical concepts."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 184.0,
+            "end": 187.0,
+            "text": " All of them are taught by mapping the Linux operating system."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 187.0,
+            "end": 191.0,
+            "text": " Along with the course, you are also provided with a one-on-one doubt session."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 191.0,
+            "end": 195.0,
+            "text": " The faculty will teach you from big companies like Nvidia and Microsoft."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 195.0,
+            "end": 200.0,
+            "text": " Apart from that, you will get more than 12 hours of content in this course."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 200.0,
+            "end": 202.0,
+            "text": " You will solve more than 150 problems."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 202.0,
+            "end": 205.0,
+            "text": " You will do hands-on in more than 12 projects."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 205.0,
+            "end": 210.0,
+            "text": " Apart from that, you will get many different computer science related courses on Coding Ninjas."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 210.0,
+            "end": 212.0,
+            "text": " If you are interested in paid courses,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 212.0,
+            "end": 214.0,
+            "text": " I will put the link in the description."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 214.0,
+            "end": 216.0,
+            "text": " With this, you will get the maximum available discount."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 216.0,
+            "end": 217.0,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 217.0,
+            "end": 219.0,
+            "text": " Let's continue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 219.0,
+            "end": 222.0,
+            "text": " We have two types of scheduling algorithms."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 222.0,
+            "end": 224.0,
+            "text": " First is Non-Preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 225.0,
+            "end": 229.0,
+            "text": " Non-Preemptive Scheduling."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 231.0,
+            "end": 233.0,
+            "text": " I can call these two types as a paradigm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 233.0,
+            "end": 235.0,
+            "text": " There are two types of ways to do it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 235.0,
+            "end": 237.0,
+            "text": " What happens in Non-Preemptive?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 237.0,
+            "end": 239.0,
+            "text": " You give the CPU to the process once."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 240.0,
+            "end": 241.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 241.0,
+            "end": 243.0,
+            "text": " This was your P1 process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 243.0,
+            "end": 245.0,
+            "text": " Here was your CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 245.0,
+            "end": 247.0,
+            "text": " You gave it to the CPU once."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 247.0,
+            "end": 249.0,
+            "text": " Once it was dispatched from here."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 250.0,
+            "end": 252.0,
+            "text": " Dispatcher dispatched it once."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 252.0,
+            "end": 253.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 253.0,
+            "end": 255.0,
+            "text": " After dispatching,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 255.0,
+            "end": 259.0,
+            "text": " This process will keep the CPU until"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 259.0,
+            "end": 262.0,
+            "text": " Either your process terminates."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 263.0,
+            "end": 265.0,
+            "text": " Either your process terminates."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 266.0,
+            "end": 269.0,
+            "text": " Or it goes to the wait state."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 269.0,
+            "end": 271.0,
+            "text": " That is, it goes to the IO."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 271.0,
+            "end": 272.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 272.0,
+            "end": 273.0,
+            "text": " So these are the two ways."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 273.0,
+            "end": 275.0,
+            "text": " In a Non-Preemptive Scheduling Algorithm,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 275.0,
+            "end": 277.0,
+            "text": " In which either the process will leave the CPU"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 277.0,
+            "end": 279.0,
+            "text": " when it terminates."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 279.0,
+            "end": 281.0,
+            "text": " Or it will go to the IO."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 281.0,
+            "end": 283.0,
+            "text": " Then the process will leave."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 283.0,
+            "end": 286.0,
+            "text": " So I call this a method of Non-Preemptive Scheduling."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 286.0,
+            "end": 288.0,
+            "text": " Once the CPU is found, it is found."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 288.0,
+            "end": 289.0,
+            "text": " After that, it will not leave."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 289.0,
+            "end": 291.0,
+            "text": " Which thing are we missing in this?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 291.0,
+            "end": 293.0,
+            "text": " One thing we are missing is"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 293.0,
+            "end": 295.0,
+            "text": " Time quantum."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 295.0,
+            "end": 297.0,
+            "text": " The time sharing we read."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 297.0,
+            "end": 301.0,
+            "text": " Whenever the CPU executes a process,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 301.0,
+            "end": 303.0,
+            "text": " If there is an X amount of time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 303.0,
+            "end": 306.0,
+            "text": " If there is an X amount of time quantum."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 306.0,
+            "end": 309.0,
+            "text": " After that, the CPU leaves that process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 309.0,
+            "end": 311.0,
+            "text": " And goes back to the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 311.0,
+            "end": 313.0,
+            "text": " This thing, the time sharing thing."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 313.0,
+            "end": 315.0,
+            "text": " This is not in Non-Preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 315.0,
+            "end": 316.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 316.0,
+            "end": 318.0,
+            "text": " Now what is its second type?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 318.0,
+            "end": 319.0,
+            "text": " Preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 321.0,
+            "end": 323.0,
+            "text": " Preemptive Scheduling."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 323.0,
+            "end": 325.0,
+            "text": " What will happen in Preemptive Scheduling?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 325.0,
+            "end": 327.0,
+            "text": " What happens in this is that"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 327.0,
+            "end": 329.0,
+            "text": " It happens that when it terminates,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 329.0,
+            "end": 331.0,
+            "text": " The process will leave the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 331.0,
+            "end": 333.0,
+            "text": " Apart from that, when it goes to the wait state,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 333.0,
+            "end": 335.0,
+            "text": " Even then, it will happen."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 335.0,
+            "end": 337.0,
+            "text": " That it will leave the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 337.0,
+            "end": 339.0,
+            "text": " But,"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 339.0,
+            "end": 341.0,
+            "text": " Another extra thing that happens in this is that"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 341.0,
+            "end": 343.0,
+            "text": " When the time quantum expires."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 345.0,
+            "end": 347.0,
+            "text": " When the time quantum expires."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 347.0,
+            "end": 349.0,
+            "text": " Even then, the process"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 349.0,
+            "end": 351.0,
+            "text": " It frees the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 351.0,
+            "end": 353.0,
+            "text": " And goes back to the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 353.0,
+            "end": 355.0,
+            "text": " So these are two types of"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 355.0,
+            "end": 357.0,
+            "text": " Your CPU scheduling."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 357.0,
+            "end": 359.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 359.0,
+            "end": 361.0,
+            "text": " If I want to compare them."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 361.0,
+            "end": 363.0,
+            "text": " So starvation."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 363.0,
+            "end": 365.0,
+            "text": " Starvation."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 367.0,
+            "end": 369.0,
+            "text": " What is starvation?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 369.0,
+            "end": 371.0,
+            "text": " Starvation is that a process is not getting the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 371.0,
+            "end": 373.0,
+            "text": " Meaning that"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 373.0,
+            "end": 375.0,
+            "text": " If there is a high priority job or"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 375.0,
+            "end": 377.0,
+            "text": " A job is taking a lot of CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 377.0,
+            "end": 379.0,
+            "text": " It is doing the same work."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 379.0,
+            "end": 381.0,
+            "text": " If there is a low priority job or"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 381.0,
+            "end": 383.0,
+            "text": " The other jobs in the ready queue are not getting the time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 383.0,
+            "end": 385.0,
+            "text": " So, the other jobs that are not getting the time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 385.0,
+            "end": 387.0,
+            "text": " I call them their start."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 387.0,
+            "end": 389.0,
+            "text": " Meaning that the process is starvation."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 389.0,
+            "end": 391.0,
+            "text": " So if I compare."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 391.0,
+            "end": 393.0,
+            "text": " Then in which process will starvation be more?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 393.0,
+            "end": 395.0,
+            "text": " In which process will starvation be more?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 395.0,
+            "end": 397.0,
+            "text": " In non-preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 397.0,
+            "end": 399.0,
+            "text": " Process starvation will be more."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 399.0,
+            "end": 401.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 401.0,
+            "end": 403.0,
+            "text": " Why?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 403.0,
+            "end": 405.0,
+            "text": " Because in non-preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 405.0,
+            "end": 407.0,
+            "text": " The time sharing part is missing."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 407.0,
+            "end": 409.0,
+            "text": " If I get a job."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 409.0,
+            "end": 411.0,
+            "text": " Which is very CPU intensive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 411.0,
+            "end": 413.0,
+            "text": " It will take a lot of time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 413.0,
+            "end": 415.0,
+            "text": " 20-30 minutes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 415.0,
+            "end": 417.0,
+            "text": " And there is no instruction in it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 417.0,
+            "end": 419.0,
+            "text": " It will terminate after 20-30 minutes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 419.0,
+            "end": 421.0,
+            "text": " So for 20-30 minutes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 421.0,
+            "end": 423.0,
+            "text": " The other processes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 423.0,
+            "end": 425.0,
+            "text": " Will go into starvation."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 425.0,
+            "end": 427.0,
+            "text": " Because of this."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 427.0,
+            "end": 429.0,
+            "text": " This non-preemptive method."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " Starvation is more."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 431.0,
+            "end": 433.0,
+            "text": " In preemptive method starvation is not there."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 433.0,
+            "end": 435.0,
+            "text": " Because it has a time quantum."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 435.0,
+            "end": 437.0,
+            "text": " I will say that it is less."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 437.0,
+            "end": 439.0,
+            "text": " Because in it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 439.0,
+            "end": 441.0,
+            "text": " Every process will get a chance."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 441.0,
+            "end": 443.0,
+            "text": " Because time quantum will expire."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 443.0,
+            "end": 445.0,
+            "text": " So the other process will get a chance."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 445.0,
+            "end": 447.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 447.0,
+            "end": 449.0,
+            "text": " So I can say that in preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 449.0,
+            "end": 451.0,
+            "text": " Spelling is wrong."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 451.0,
+            "end": 453.0,
+            "text": " Starvation in preemptive is less."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 453.0,
+            "end": 455.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 455.0,
+            "end": 457.0,
+            "text": " After that we come to."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 457.0,
+            "end": 459.0,
+            "text": " Which has more CPU utilization?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 459.0,
+            "end": 461.0,
+            "text": " CPU utilization."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 461.0,
+            "end": 463.0,
+            "text": " Which has more?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 463.0,
+            "end": 465.0,
+            "text": " You will say."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 465.0,
+            "end": 467.0,
+            "text": " According to starvation."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 467.0,
+            "end": 469.0,
+            "text": " You must have got the idea."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 469.0,
+            "end": 471.0,
+            "text": " Which has more CPU utilization?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 471.0,
+            "end": 473.0,
+            "text": " Because more processes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 473.0,
+            "end": 475.0,
+            "text": " Get a chance to work."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 475.0,
+            "end": 477.0,
+            "text": " So at a particular time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 477.0,
+            "end": 479.0,
+            "text": " More processes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 479.0,
+            "end": 481.0,
+            "text": " Your CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 481.0,
+            "end": 483.0,
+            "text": " Will be working on it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 483.0,
+            "end": 485.0,
+            "text": " So I can say that in preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 485.0,
+            "end": 487.0,
+            "text": " It has high CPU utilization."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 487.0,
+            "end": 489.0,
+            "text": " Third point."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 489.0,
+            "end": 491.0,
+            "text": " I can discuss."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 491.0,
+            "end": 493.0,
+            "text": " Overhead."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 493.0,
+            "end": 495.0,
+            "text": " Which has more?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 495.0,
+            "end": 497.0,
+            "text": " If I talk about overhead."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 497.0,
+            "end": 499.0,
+            "text": " Then in preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 499.0,
+            "end": 501.0,
+            "text": " Overhead is more."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 503.0,
+            "end": 505.0,
+            "text": " Why overhead is more in preemptive?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 505.0,
+            "end": 507.0,
+            "text": " Because inside it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 507.0,
+            "end": 509.0,
+            "text": " Apart from that going for IO."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 509.0,
+            "end": 511.0,
+            "text": " And termination."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " There is an extra overhead."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 513.0,
+            "end": 515.0,
+            "text": " If there is a 1 second time quantum."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 515.0,
+            "end": 517.0,
+            "text": " Then after every second."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 517.0,
+            "end": 519.0,
+            "text": " Process will change."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 519.0,
+            "end": 521.0,
+            "text": " CPU will have to execute a new process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 521.0,
+            "end": 523.0,
+            "text": " Which is short term schedule."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 523.0,
+            "end": 525.0,
+            "text": " Someone will pick a new process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 525.0,
+            "end": 527.0,
+            "text": " So because of this."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 527.0,
+            "end": 529.0,
+            "text": " If we change in 1 second."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 529.0,
+            "end": 531.0,
+            "text": " Then in 10 seconds."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 531.0,
+            "end": 533.0,
+            "text": " 10 processes will change."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 533.0,
+            "end": 535.0,
+            "text": " So I will say overhead is more."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 535.0,
+            "end": 537.0,
+            "text": " So this is your comparison."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 537.0,
+            "end": 539.0,
+            "text": " In preemptive and non-preemptive."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 539.0,
+            "end": 541.0,
+            "text": " Now we will discuss goals."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 541.0,
+            "end": 543.0,
+            "text": " Goals of CPU scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 545.0,
+            "end": 547.0,
+            "text": " What are my goals?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 547.0,
+            "end": 549.0,
+            "text": " If I am using my own OS."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 549.0,
+            "end": 551.0,
+            "text": " Or I am designing my own OS."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 551.0,
+            "end": 553.0,
+            "text": " Whenever I design my own OS."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 553.0,
+            "end": 555.0,
+            "text": " Then when I am in process management."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 555.0,
+            "end": 557.0,
+            "text": " I am coding in process management."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 557.0,
+            "end": 559.0,
+            "text": " Then I will think."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 559.0,
+            "end": 561.0,
+            "text": " The CPU scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 561.0,
+            "end": 563.0,
+            "text": " I will use."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 563.0,
+            "end": 565.0,
+            "text": " I will use."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 565.0,
+            "end": 567.0,
+            "text": " On which parameters."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 567.0,
+            "end": 569.0,
+            "text": " I will make."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 569.0,
+            "end": 571.0,
+            "text": " What will be my goals?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 571.0,
+            "end": 573.0,
+            "text": " What will the algorithm fulfill?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 573.0,
+            "end": 575.0,
+            "text": " Let's discuss about those goals."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 575.0,
+            "end": 577.0,
+            "text": " My first goal."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 577.0,
+            "end": 579.0,
+            "text": " I want maximum CPU utilization."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 579.0,
+            "end": 581.0,
+            "text": " Maximum CPU utilization."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 585.0,
+            "end": 587.0,
+            "text": " Maximum CPU utilization."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 587.0,
+            "end": 589.0,
+            "text": " We are studying from day 1."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 589.0,
+            "end": 591.0,
+            "text": " I want CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 591.0,
+            "end": 593.0,
+            "text": " It is a very important resource."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 593.0,
+            "end": 595.0,
+            "text": " I don't want CPU to wait."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 595.0,
+            "end": 597.0,
+            "text": " Wait for a few seconds."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 597.0,
+            "end": 599.0,
+            "text": " What is the second part?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 599.0,
+            "end": 601.0,
+            "text": " I want minimum."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 601.0,
+            "end": 603.0,
+            "text": " Turn around time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 605.0,
+            "end": 607.0,
+            "text": " What is turn around time?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 609.0,
+            "end": 611.0,
+            "text": " Turn around time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 611.0,
+            "end": 613.0,
+            "text": " When your first job."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 613.0,
+            "end": 615.0,
+            "text": " Comes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 615.0,
+            "end": 617.0,
+            "text": " And termination time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 617.0,
+            "end": 619.0,
+            "text": " Means."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 619.0,
+            "end": 621.0,
+            "text": " Whenever your job."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 621.0,
+            "end": 623.0,
+            "text": " Comes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 623.0,
+            "end": 625.0,
+            "text": " P1 comes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 625.0,
+            "end": 627.0,
+            "text": " And after that."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 627.0,
+            "end": 629.0,
+            "text": " Whatever you have done."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 629.0,
+            "end": 631.0,
+            "text": " It may have gone to wait state."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 631.0,
+            "end": 633.0,
+            "text": " Or may have been preempted."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 633.0,
+            "end": 635.0,
+            "text": " It may have come back to the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 635.0,
+            "end": 637.0,
+            "text": " Whenever it exits."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 637.0,
+            "end": 639.0,
+            "text": " It will terminate."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 639.0,
+            "end": 641.0,
+            "text": " The time between."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 641.0,
+            "end": 643.0,
+            "text": " When it comes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 643.0,
+            "end": 645.0,
+            "text": " And when it exits."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 645.0,
+            "end": 647.0,
+            "text": " The difference between."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 647.0,
+            "end": 649.0,
+            "text": " I want turn around time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 649.0,
+            "end": 651.0,
+            "text": " If the process comes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 651.0,
+            "end": 653.0,
+            "text": " I want to execute it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 653.0,
+            "end": 655.0,
+            "text": " And exit."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 657.0,
+            "end": 659.0,
+            "text": " Third."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 659.0,
+            "end": 661.0,
+            "text": " Minimum wait time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 661.0,
+            "end": 663.0,
+            "text": " What does it mean?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 663.0,
+            "end": 665.0,
+            "text": " I want."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 665.0,
+            "end": 667.0,
+            "text": " The process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 667.0,
+            "end": 669.0,
+            "text": " Wait for the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 669.0,
+            "end": 671.0,
+            "text": " Whenever a process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 671.0,
+            "end": 673.0,
+            "text": " Goes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 673.0,
+            "end": 675.0,
+            "text": " CPU preempts it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 675.0,
+            "end": 677.0,
+            "text": " Our algorithm says."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 677.0,
+            "end": 679.0,
+            "text": " We have to execute the second process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 679.0,
+            "end": 681.0,
+            "text": " In that case."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 681.0,
+            "end": 683.0,
+            "text": " I want minimum waiting time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 683.0,
+            "end": 685.0,
+            "text": " Every process should have minimum waiting time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 685.0,
+            "end": 687.0,
+            "text": " Minimum waiting time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 687.0,
+            "end": 689.0,
+            "text": " I don't want to wait."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 689.0,
+            "end": 691.0,
+            "text": " If there is more waiting."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 691.0,
+            "end": 693.0,
+            "text": " Then starvation will happen."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 693.0,
+            "end": 695.0,
+            "text": " Fourth."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 695.0,
+            "end": 697.0,
+            "text": " Minimum response time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 697.0,
+            "end": 699.0,
+            "text": " What is response time?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 699.0,
+            "end": 701.0,
+            "text": " It is the time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 701.0,
+            "end": 703.0,
+            "text": " Whenever a process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 703.0,
+            "end": 705.0,
+            "text": " Comes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 705.0,
+            "end": 707.0,
+            "text": " And it gets the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 707.0,
+            "end": 709.0,
+            "text": " The difference between."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 709.0,
+            "end": 711.0,
+            "text": " When the process comes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 711.0,
+            "end": 713.0,
+            "text": " After it comes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 713.0,
+            "end": 715.0,
+            "text": " When it gets the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 715.0,
+            "end": 717.0,
+            "text": " The first time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 717.0,
+            "end": 719.0,
+            "text": " I call it response time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 719.0,
+            "end": 721.0,
+            "text": " I want."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 721.0,
+            "end": 723.0,
+            "text": " Whenever a process comes in the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 723.0,
+            "end": 725.0,
+            "text": " It should get the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 725.0,
+            "end": 727.0,
+            "text": " At least the first time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 727.0,
+            "end": 729.0,
+            "text": " It should get the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 729.0,
+            "end": 731.0,
+            "text": " At least the first time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 731.0,
+            "end": 733.0,
+            "text": " It should execute the program."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 733.0,
+            "end": 735.0,
+            "text": " It should not start."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 735.0,
+            "end": 737.0,
+            "text": " It should not start."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 737.0,
+            "end": 739.0,
+            "text": " It should not start."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 739.0,
+            "end": 741.0,
+            "text": " It should not start."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 741.0,
+            "end": 743.0,
+            "text": " I don't want this."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 743.0,
+            "end": 745.0,
+            "text": " Fifth point."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 745.0,
+            "end": 747.0,
+            "text": " Maximum."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 747.0,
+            "end": 749.0,
+            "text": " Throughput."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 751.0,
+            "end": 753.0,
+            "text": " Maximum throughput."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 753.0,
+            "end": 755.0,
+            "text": " What is throughput?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 755.0,
+            "end": 757.0,
+            "text": " It is the number of processes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 757.0,
+            "end": 759.0,
+            "text": " Completed per unit time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 759.0,
+            "end": 761.0,
+            "text": " It is the measure."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 761.0,
+            "end": 763.0,
+            "text": " To measure any CPU scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 763.0,
+            "end": 765.0,
+            "text": " I want."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 765.0,
+            "end": 767.0,
+            "text": " The throughput of my system."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 767.0,
+            "end": 769.0,
+            "text": " My whole process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 769.0,
+            "end": 771.0,
+            "text": " The whole system of process management."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 771.0,
+            "end": 773.0,
+            "text": " With CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 773.0,
+            "end": 775.0,
+            "text": " I want the whole system."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 775.0,
+            "end": 777.0,
+            "text": " To execute the most number of processes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 777.0,
+            "end": 779.0,
+            "text": " Per unit time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 779.0,
+            "end": 781.0,
+            "text": " Why are we doing this?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 781.0,
+            "end": 783.0,
+            "text": " The main goal is."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 783.0,
+            "end": 785.0,
+            "text": " I want maximum CPU utilization."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 785.0,
+            "end": 787.0,
+            "text": " That's why I want my system to be fast."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 787.0,
+            "end": 789.0,
+            "text": " The system should work efficiently."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 789.0,
+            "end": 791.0,
+            "text": " That's why I am deciding all my goals."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 791.0,
+            "end": 793.0,
+            "text": " That's why I am deciding all my goals."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 793.0,
+            "end": 795.0,
+            "text": " I am keeping it in my mind."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 795.0,
+            "end": 797.0,
+            "text": " Before designing my CPU scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 797.0,
+            "end": 799.0,
+            "text": " Before designing my CPU scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 799.0,
+            "end": 801.0,
+            "text": " The terms we have discussed."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 801.0,
+            "end": 803.0,
+            "text": " I will elaborate them."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 803.0,
+            "end": 805.0,
+            "text": " I will elaborate them."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 805.0,
+            "end": 807.0,
+            "text": " Through nodes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 807.0,
+            "end": 809.0,
+            "text": " Through nodes."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 809.0,
+            "end": 811.0,
+            "text": " I have written all the definitions."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 811.0,
+            "end": 813.0,
+            "text": " First of all."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 813.0,
+            "end": 815.0,
+            "text": " Number of processes completed per unit time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 815.0,
+            "end": 817.0,
+            "text": " Next."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 817.0,
+            "end": 819.0,
+            "text": " Arrival time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 819.0,
+            "end": 821.0,
+            "text": " Time when process is arrived."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 821.0,
+            "end": 823.0,
+            "text": " At the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 823.0,
+            "end": 825.0,
+            "text": " In the system."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 825.0,
+            "end": 827.0,
+            "text": " There is a time line."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 827.0,
+            "end": 829.0,
+            "text": " After the system is on."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 829.0,
+            "end": 831.0,
+            "text": " The clock will continue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 831.0,
+            "end": 833.0,
+            "text": " At what point."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 833.0,
+            "end": 835.0,
+            "text": " At what time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 835.0,
+            "end": 837.0,
+            "text": " The process is arrived at the ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 837.0,
+            "end": 839.0,
+            "text": " I am calling it arrival time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 839.0,
+            "end": 841.0,
+            "text": " Second."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 841.0,
+            "end": 843.0,
+            "text": " Burst time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 843.0,
+            "end": 845.0,
+            "text": " Burst time means."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 845.0,
+            "end": 847.0,
+            "text": " The time required."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 847.0,
+            "end": 849.0,
+            "text": " By process for its execution."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 849.0,
+            "end": 851.0,
+            "text": " It is written here."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 851.0,
+            "end": 853.0,
+            "text": " I will remove it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 853.0,
+            "end": 855.0,
+            "text": " How much time does the process need."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 855.0,
+            "end": 857.0,
+            "text": " How much time does the process need."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 857.0,
+            "end": 859.0,
+            "text": " It means."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 859.0,
+            "end": 861.0,
+            "text": " If there is no other process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 861.0,
+            "end": 863.0,
+            "text": " If there is no other process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 863.0,
+            "end": 865.0,
+            "text": " If there is only one process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 865.0,
+            "end": 867.0,
+            "text": " If there is only one process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 867.0,
+            "end": 869.0,
+            "text": " How much time will it take."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 869.0,
+            "end": 871.0,
+            "text": " If it is a single owner."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 871.0,
+            "end": 873.0,
+            "text": " How much time will it take."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 873.0,
+            "end": 875.0,
+            "text": " I am calling it burst time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 875.0,
+            "end": 877.0,
+            "text": " What is the turnaround time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 877.0,
+            "end": 879.0,
+            "text": " What is the turnaround time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 879.0,
+            "end": 881.0,
+            "text": " I have discussed the turnaround time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 881.0,
+            "end": 883.0,
+            "text": " Time taken from the first time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 883.0,
+            "end": 885.0,
+            "text": " Process enter."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 885.0,
+            "end": 887.0,
+            "text": " Ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 887.0,
+            "end": 889.0,
+            "text": " This is the turnaround time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 889.0,
+            "end": 891.0,
+            "text": " I will discuss the completion time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 891.0,
+            "end": 893.0,
+            "text": " What is the completion time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 893.0,
+            "end": 895.0,
+            "text": " Time taken till process gets terminated."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 895.0,
+            "end": 897.0,
+            "text": " It means."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 897.0,
+            "end": 899.0,
+            "text": " When it arrived."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 899.0,
+            "end": 901.0,
+            "text": " It will get the response time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 901.0,
+            "end": 903.0,
+            "text": " It will get the schedule."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 903.0,
+            "end": 905.0,
+            "text": " Then it will go to wait."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 905.0,
+            "end": 907.0,
+            "text": " Then it will come back to ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 907.0,
+            "end": 909.0,
+            "text": " Then it will get the schedule again."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 909.0,
+            "end": 911.0,
+            "text": " Time quantum will expire."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 911.0,
+            "end": 913.0,
+            "text": " Then it will come back to ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 913.0,
+            "end": 915.0,
+            "text": " Your process travels in different states."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 915.0,
+            "end": 917.0,
+            "text": " What is the completion time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 917.0,
+            "end": 919.0,
+            "text": " Long term scheduler."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 919.0,
+            "end": 921.0,
+            "text": " Scheduler put it in ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 921.0,
+            "end": 923.0,
+            "text": " Till it exits."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 923.0,
+            "end": 925.0,
+            "text": " The difference between that."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 925.0,
+            "end": 927.0,
+            "text": " Is the completion time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 927.0,
+            "end": 929.0,
+            "text": " You can be confused."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 929.0,
+            "end": 931.0,
+            "text": " What is the turnaround time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 931.0,
+            "end": 933.0,
+            "text": " It is CT-AT."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 933.0,
+            "end": 935.0,
+            "text": " It means completion time minus arrival time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 935.0,
+            "end": 937.0,
+            "text": " I am calling it turnaround time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 937.0,
+            "end": 939.0,
+            "text": " After that."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 939.0,
+            "end": 941.0,
+            "text": " We have discussed the wait time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 941.0,
+            "end": 943.0,
+            "text": " Time process spans waiting for the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 943.0,
+            "end": 945.0,
+            "text": " If I tell you the formula."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 945.0,
+            "end": 947.0,
+            "text": " It will be wait time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 947.0,
+            "end": 949.0,
+            "text": " CT-AT-BT"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 949.0,
+            "end": 951.0,
+            "text": " Turnaround time minus burst time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 951.0,
+            "end": 953.0,
+            "text": " WT-TAT-BT"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 953.0,
+            "end": 955.0,
+            "text": " What is the turnaround time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 955.0,
+            "end": 957.0,
+            "text": " When the process arrives in ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 957.0,
+            "end": 959.0,
+            "text": " Till it terminates."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 959.0,
+            "end": 961.0,
+            "text": " BT is the actual time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 961.0,
+            "end": 963.0,
+            "text": " If it is a single process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 965.0,
+            "end": 967.0,
+            "text": " I want the waiting time to be minimum."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 967.0,
+            "end": 969.0,
+            "text": " That's why."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 969.0,
+            "end": 971.0,
+            "text": " How will the waiting time be."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 971.0,
+            "end": 973.0,
+            "text": " Turnaround time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 973.0,
+            "end": 975.0,
+            "text": " Minus the actual time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 975.0,
+            "end": 977.0,
+            "text": " I am calling it waiting time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 977.0,
+            "end": 979.0,
+            "text": " So."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 979.0,
+            "end": 981.0,
+            "text": " We have discussed the different jargons."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 981.0,
+            "end": 983.0,
+            "text": " Now."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 983.0,
+            "end": 985.0,
+            "text": " We will go to the first."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 985.0,
+            "end": 987.0,
+            "text": " The first scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 987.0,
+            "end": 989.0,
+            "text": " Which is called."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 989.0,
+            "end": 991.0,
+            "text": " FCFS"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 991.0,
+            "end": 993.0,
+            "text": " First come first serve."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 993.0,
+            "end": 995.0,
+            "text": " The easiest."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 995.0,
+            "end": 997.0,
+            "text": " Scheduling algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 997.0,
+            "end": 999.0,
+            "text": " What are we doing in this."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 999.0,
+            "end": 1001.0,
+            "text": " Whatever process arrives in ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1001.0,
+            "end": 1003.0,
+            "text": " Whatever process arrives in ready queue."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1003.0,
+            "end": 1005.0,
+            "text": " I will pick it up and assign it to the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1005.0,
+            "end": 1007.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1007.0,
+            "end": 1009.0,
+            "text": " Suppose."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1009.0,
+            "end": 1011.0,
+            "text": " P1, P2, P3."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1011.0,
+            "end": 1013.0,
+            "text": " Suppose."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1013.0,
+            "end": 1015.0,
+            "text": " First it came."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1015.0,
+            "end": 1017.0,
+            "text": " Then it came."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1017.0,
+            "end": 1019.0,
+            "text": " Then it came."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1019.0,
+            "end": 1021.0,
+            "text": " These are three jobs."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1021.0,
+            "end": 1023.0,
+            "text": " What will the FCFS scheduler do."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1023.0,
+            "end": 1025.0,
+            "text": " The first one."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1025.0,
+            "end": 1027.0,
+            "text": " It will pick it up and dispatch it to the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1027.0,
+            "end": 1029.0,
+            "text": " It will select it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1029.0,
+            "end": 1031.0,
+            "text": " It will pick it up and say."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1031.0,
+            "end": 1033.0,
+            "text": " First."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1033.0,
+            "end": 1035.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1035.0,
+            "end": 1037.0,
+            "text": " And it will tell the dispatcher."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1037.0,
+            "end": 1039.0,
+            "text": " That."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1039.0,
+            "end": 1041.0,
+            "text": " Provide it to the CPU."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1041.0,
+            "end": 1043.0,
+            "text": " So."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1043.0,
+            "end": 1045.0,
+            "text": " When P1 is executed."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1045.0,
+            "end": 1047.0,
+            "text": " P2 is executed."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1047.0,
+            "end": 1049.0,
+            "text": " P3 is executed."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1049.0,
+            "end": 1051.0,
+            "text": " But."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1051.0,
+            "end": 1053.0,
+            "text": " There is a big problem in this algorithm."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1053.0,
+            "end": 1055.0,
+            "text": " Which I call Convoy effect."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1057.0,
+            "end": 1059.0,
+            "text": " Before understanding Convoy effect."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1059.0,
+            "end": 1061.0,
+            "text": " Let's understand it through an example."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1061.0,
+            "end": 1063.0,
+            "text": " We have an example."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1063.0,
+            "end": 1065.0,
+            "text": " A scenario."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1065.0,
+            "end": 1067.0,
+            "text": " Some processes have come to us."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1067.0,
+            "end": 1069.0,
+            "text": " Suppose."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1069.0,
+            "end": 1071.0,
+            "text": " I have processes 1, 2."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1071.0,
+            "end": 1073.0,
+            "text": " I make it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1077.0,
+            "end": 1079.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1079.0,
+            "end": 1081.0,
+            "text": " I made a scenario."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1081.0,
+            "end": 1083.0,
+            "text": " We have a scenario."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1083.0,
+            "end": 1085.0,
+            "text": " Inside which."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1085.0,
+            "end": 1087.0,
+            "text": " We have a table."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1087.0,
+            "end": 1089.0,
+            "text": " The process name."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1089.0,
+            "end": 1091.0,
+            "text": " Process."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1091.0,
+            "end": 1093.0,
+            "text": " We have the arrival time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1093.0,
+            "end": 1095.0,
+            "text": " We have the burst time."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1097.0,
+            "end": 1099.0,
+            "text": " We want to get all these values."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1099.0,
+            "end": 1101.0,
+            "text": " To get it."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1101.0,
+            "end": 1103.0,
+            "text": " We use a method."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1103.0,
+            "end": 1105.0,
+            "text": " I call it Gantt chart."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1107.0,
+            "end": 1109.0,
+            "text": " G.A.N.T"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1109.0,
+            "end": 1111.0,
+            "text": " T chart."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1111.0,
+            "end": 1113.0,
+            "text": " I call it Gantt chart."
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1113.0,
+            "end": 1115.0,
+            "text": " How will I make it?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1115.0,
+            "end": 1116.0,
+            "text": " Let's see"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1118.36,
+            "end": 1121.36,
+            "text": " So, I am saying that t is equal to 0"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1121.36,
+            "end": 1124.36,
+            "text": " Which process is coming on t equal to 0?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1124.36,
+            "end": 1127.36,
+            "text": " Fcfs is your scheduler"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1127.36,
+            "end": 1130.36,
+            "text": " So, what you will do is"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1130.36,
+            "end": 1133.36,
+            "text": " The first arrival time of Fcfs"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1133.36,
+            "end": 1136.36,
+            "text": " Which is 0, in this case"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1136.36,
+            "end": 1139.36,
+            "text": " I will schedule it first"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1139.36,
+            "end": 1142.36,
+            "text": " So, P1 will be scheduled first. How long will P1 run?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1142.7199999999998,
+            "end": 1145.7199999999998,
+            "text": " It will run till 20 units"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1145.7199999999998,
+            "end": 1148.7199999999998,
+            "text": " After 20 units, what will happen?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1148.7199999999998,
+            "end": 1151.7199999999998,
+            "text": " When P1 is executed, P2 will come in memory"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1151.7199999999998,
+            "end": 1154.7199999999998,
+            "text": " What is the burst time of P2?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1154.7199999999998,
+            "end": 1157.7199999999998,
+            "text": " It is 2"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1157.7199999999998,
+            "end": 1160.7199999999998,
+            "text": " Gantt chart shows the entire timeline"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1160.7199999999998,
+            "end": 1163.7199999999998,
+            "text": " If 20 seconds have passed in the entire timeline"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1163.7199999999998,
+            "end": 1166.7199999999998,
+            "text": " Then it will be 20 plus 2"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1166.7199999999998,
+            "end": 1169.7199999999998,
+            "text": " Then P3 will come"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1170.08,
+            "end": 1173.08,
+            "text": " So, 22 plus 20 will be 24"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1173.08,
+            "end": 1176.08,
+            "text": " So, what is the completion time?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1176.08,
+            "end": 1179.08,
+            "text": " The actual completion time is"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1179.08,
+            "end": 1182.08,
+            "text": " 20 seconds of P1"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1182.08,
+            "end": 1185.08,
+            "text": " 22 seconds of P2"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1185.08,
+            "end": 1188.08,
+            "text": " 24 seconds of P3"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1188.08,
+            "end": 1191.08,
+            "text": " If I try to find the turnaround time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1191.08,
+            "end": 1194.08,
+            "text": " The turnaround time is CT minus AT"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1194.08,
+            "end": 1197.08,
+            "text": " Completion time minus arrival time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1197.4399999999998,
+            "end": 1200.4399999999998,
+            "text": " So, what is the turnaround time?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1200.4399999999998,
+            "end": 1203.4399999999998,
+            "text": " It will be 20, 21, 23"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1203.4399999999998,
+            "end": 1206.4399999999998,
+            "text": " Now, let's find the waiting time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1206.4399999999998,
+            "end": 1209.4399999999998,
+            "text": " Waiting time is"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1209.4399999999998,
+            "end": 1212.4399999999998,
+            "text": " TAT minus BT"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1212.4399999999998,
+            "end": 1215.4399999999998,
+            "text": " If I do TAT minus BT, it will be 0"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1215.4399999999998,
+            "end": 1218.4399999999998,
+            "text": " It executed directly"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1218.4399999999998,
+            "end": 1221.4399999999998,
+            "text": " It waited for 19 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1221.4399999999998,
+            "end": 1224.4399999999998,
+            "text": " It waited for 20 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1224.8,
+            "end": 1227.8,
+            "text": " It will be 19 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1227.8,
+            "end": 1230.8,
+            "text": " If I do CT minus AT, it will be 22"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1230.8,
+            "end": 1233.8,
+            "text": " If I do 22 minus BT, it will be 20"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1233.8,
+            "end": 1236.8,
+            "text": " So, this is the total waiting time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1236.8,
+            "end": 1239.8,
+            "text": " If I sum the waiting time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1239.8,
+            "end": 1242.8,
+            "text": " What is the total waiting time?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1242.8,
+            "end": 1245.8,
+            "text": " This is the waiting time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1245.8,
+            "end": 1248.8,
+            "text": " This is the waiting time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1248.8,
+            "end": 1251.8,
+            "text": " If I find the average"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1252.1599999999999,
+            "end": 1255.1599999999999,
+            "text": " It will be 13"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1255.1599999999999,
+            "end": 1258.1599999999999,
+            "text": " So, my average waiting time is"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1258.1599999999999,
+            "end": 1261.1599999999999,
+            "text": " 13"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1261.1599999999999,
+            "end": 1264.1599999999999,
+            "text": " Now, if I change the process"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1264.1599999999999,
+            "end": 1267.1599999999999,
+            "text": " in the ready queue"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1267.1599999999999,
+            "end": 1270.1599999999999,
+            "text": " I will change it"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1270.1599999999999,
+            "end": 1273.1599999999999,
+            "text": " Now, let's see another scenario"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1273.1599999999999,
+            "end": 1276.1599999999999,
+            "text": " The P1 process, which had the most burst time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1276.1599999999999,
+            "end": 1279.1599999999999,
+            "text": " I am taking it to the end"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1279.52,
+            "end": 1282.52,
+            "text": " In FCFS algorithm, which will be the first?"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1282.52,
+            "end": 1285.52,
+            "text": " P2, P3, P1"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1285.52,
+            "end": 1288.52,
+            "text": " So, P2 and P3, which were the first two jobs"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1288.52,
+            "end": 1291.52,
+            "text": " Their burst time is less"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1291.52,
+            "end": 1294.52,
+            "text": " And the last process has more burst time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1294.52,
+            "end": 1297.52,
+            "text": " Now, let's find the average waiting time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1297.52,
+            "end": 1300.52,
+            "text": " If I make a Gantt chart"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1300.52,
+            "end": 1303.52,
+            "text": " P2 will be first"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1303.52,
+            "end": 1306.52,
+            "text": " P2 will be executed for 2 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1306.8799999999999,
+            "end": 1309.8799999999999,
+            "text": " 2 plus 2 is 4 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1309.8799999999999,
+            "end": 1312.8799999999999,
+            "text": " I will use the word units"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1312.8799999999999,
+            "end": 1315.8799999999999,
+            "text": " P1 will be 24"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1315.8799999999999,
+            "end": 1318.8799999999999,
+            "text": " If I write the completion time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1318.8799999999999,
+            "end": 1321.8799999999999,
+            "text": " It will be 2 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1321.8799999999999,
+            "end": 1324.8799999999999,
+            "text": " P2 will be 4 seconds and P3 will be 24 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1324.8799999999999,
+            "end": 1327.8799999999999,
+            "text": " If I find the turnaround time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1327.8799999999999,
+            "end": 1330.8799999999999,
+            "text": " CT minus 80"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1330.8799999999999,
+            "end": 1333.8799999999999,
+            "text": " CT minus 80 will be 2 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1334.24,
+            "end": 1337.24,
+            "text": " If I try to find WT"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1337.24,
+            "end": 1340.24,
+            "text": " It will be TAT minus BT"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1340.24,
+            "end": 1343.24,
+            "text": " So, I will get 0, 1, 2"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1343.24,
+            "end": 1346.24,
+            "text": " If I find the average waiting time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1346.24,
+            "end": 1349.24,
+            "text": " It will be 1 unit"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1349.24,
+            "end": 1352.24,
+            "text": " This is called Convoy Effect"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1352.24,
+            "end": 1355.24,
+            "text": " This means, when a heavy job"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1355.24,
+            "end": 1358.24,
+            "text": " Which had the most burst time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1358.24,
+            "end": 1361.24,
+            "text": " If it comes first"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1361.6,
+            "end": 1364.6,
+            "text": " Then the other jobs have to wait"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1364.6,
+            "end": 1367.6,
+            "text": " Because the first job will run for 20 units"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1367.6,
+            "end": 1370.6,
+            "text": " If I use seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1370.6,
+            "end": 1373.6,
+            "text": " If it runs for 20 seconds"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1373.6,
+            "end": 1376.6,
+            "text": " Then the other jobs will wait for a long time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1376.6,
+            "end": 1379.6,
+            "text": " So, the average waiting time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1379.6,
+            "end": 1382.6,
+            "text": " Of my whole system"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1382.6,
+            "end": 1385.6,
+            "text": " The average waiting time is 13"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1385.6,
+            "end": 1388.6,
+            "text": " Which increased because of the first job"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1388.9599999999998,
+            "end": 1391.9599999999998,
+            "text": " So, my average waiting time is 1 unit"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1391.9599999999998,
+            "end": 1394.9599999999998,
+            "text": " This is called Convoy Effect"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1394.9599999999998,
+            "end": 1397.9599999999998,
+            "text": " If I want to read the definition of Convoy Effect"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1397.9599999999998,
+            "end": 1400.9599999999998,
+            "text": " If there is a process"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1400.9599999999998,
+            "end": 1403.9599999999998,
+            "text": " Which has a higher BT"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1403.9599999999998,
+            "end": 1406.9599999999998,
+            "text": " It will have a major impact"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1406.9599999999998,
+            "end": 1409.9599999999998,
+            "text": " On the average BT of different processes"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1409.9599999999998,
+            "end": 1412.9599999999998,
+            "text": " We saw this from the live example"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1412.9599999999998,
+            "end": 1415.9599999999998,
+            "text": " If the first job has more burst time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1416.32,
+            "end": 1419.32,
+            "text": " Then the other jobs will wait for a longer time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1419.32,
+            "end": 1422.32,
+            "text": " Convoy Effect is not necessary"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1422.32,
+            "end": 1425.32,
+            "text": " Only in processes, scheduling algorithm"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1425.32,
+            "end": 1428.32,
+            "text": " In general, it can be used in"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1428.32,
+            "end": 1431.32,
+            "text": " Not only CPU"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1431.32,
+            "end": 1434.32,
+            "text": " If you are talking about any other resource"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1434.32,
+            "end": 1437.32,
+            "text": " If you have a process which is taking the longest time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1437.32,
+            "end": 1440.32,
+            "text": " And any other process wants to use that resource"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1440.32,
+            "end": 1443.32,
+            "text": " Then the other processes will wait for a longer time"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1443.6799999999998,
+            "end": 1446.6799999999998,
+            "text": " So, this is called Convoy Effect"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1446.6799999999998,
+            "end": 1449.6799999999998,
+            "text": " I can also call it a resource management"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1449.6799999999998,
+            "end": 1452.6799999999998,
+            "text": " Because, resource is for everyone"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1452.6799999999998,
+            "end": 1455.6799999999998,
+            "text": " There should be no partiality"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1455.6799999999998,
+            "end": 1458.6799999999998,
+            "text": " If P1 gets resource, P2 should get resource too"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1458.6799999999998,
+            "end": 1461.6799999999998,
+            "text": " This is my goal of CPU scheduling algorithms"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1461.6799999999998,
+            "end": 1464.6799999999998,
+            "text": " So, this was in this video"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1464.6799999999998,
+            "end": 1467.6799999999998,
+            "text": " We read about some jargons"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1467.6799999999998,
+            "end": 1470.6799999999998,
+            "text": " What is throughput, AT, BT, TET, WT, CT"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1471.04,
+            "end": 1474.04,
+            "text": " We understood the goals of CPU scheduling algorithms"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1474.04,
+            "end": 1477.04,
+            "text": " What is preemptive scheduling and non-preemptive scheduling"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1477.04,
+            "end": 1480.04,
+            "text": " What is Convoy Effect"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1480.04,
+            "end": 1483.04,
+            "text": " Convoy Effect is directly asked in the interview"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1483.04,
+            "end": 1486.04,
+            "text": " So, this interview question is yours"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1486.04,
+            "end": 1489.04,
+            "text": " So, let's end this video with this"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1489.04,
+            "end": 1492.04,
+            "text": " See you in the next lecture"
+        },
+        {
+            "number": "Lecture 12",
+            "title": " What is Convoy Effect ",
+            "start": 1492.04,
+            "end": 1495.04,
+            "text": " Goodbye"
+        }
+    ],
+    "text": " Hello, how are you all? This is Lakshya. We are here at OS lecture 12. And today we are going to discuss about Process Scheduling Algorithm. Which is a very important part of process management. But before jumping directly to the process scheduling algorithm, there are some terms and jargons that you should know. Because we are going to use them a lot in the upcoming lectures. So, first of all, let's know what is process scheduling? What is process scheduling? You might have an intuition about it. Because we have discussed about it in previous lectures. But still, let me discuss it quickly. We have a ready queue. We have a CPU. All the processes come in the run state of the CPU. Exit from here. What is the short term scheduler here? It dispatches the process. Here we have P1, P2, P3. There are many processes. Now, what happens here? The process that comes in the ready queue brings the long term scheduler. You put all the processes in the ready queue. OS picks any process from the ready queue and gives it to the CPU. And depending on the algorithm you are using, the process is executed. After some time, the process comes back to the ready queue. And goes to the waiting state. If it is IO. And this is how things work. So, your job is to pick the process from the ready queue. Which process will be picked? Choose that process. Then schedule that process. This is done by the CPU scheduler. So, which process will be picked? This is done by the process scheduling algorithm. This is done by the process scheduling algorithm. And this is called CPU scheduling. And actually, the process that controls the CPU. This is called dispatcher. We have discussed this. So, what does the CPU scheduler do? Whenever your CPU is idle, I have to pick a process from the ready queue. I will pick that and give it to the CPU. And so on. This is called CPU scheduling. Before moving forward, let's give a shoutout to our sponsors. This video is sponsored by Coding Ninjas. India's leading coding education platform. Many product based companies like Amazon, Adobe, Commvault. Focus on OS in their technical interviews. So, to clear these interviews, your OS part should be very strong. So, Coding Ninjas provides a comprehensive and in-depth course. Which covers all these concepts well. Apart from that, all the theoretical concepts. All of them are taught by mapping the Linux operating system. Along with the course, you are also provided with a one-on-one doubt session. The faculty will teach you from big companies like Nvidia and Microsoft. Apart from that, you will get more than 12 hours of content in this course. You will solve more than 150 problems. You will do hands-on in more than 12 projects. Apart from that, you will get many different computer science related courses on Coding Ninjas. If you are interested in paid courses, I will put the link in the description. With this, you will get the maximum available discount. Thank you. Let's continue. We have two types of scheduling algorithms. First is Non-Preemptive. Non-Preemptive Scheduling. I can call these two types as a paradigm. There are two types of ways to do it. What happens in Non-Preemptive? You give the CPU to the process once. Okay. This was your P1 process. Here was your CPU. You gave it to the CPU once. Once it was dispatched from here. Dispatcher dispatched it once. Okay. After dispatching, This process will keep the CPU until Either your process terminates. Either your process terminates. Or it goes to the wait state. That is, it goes to the IO. Okay. So these are the two ways. In a Non-Preemptive Scheduling Algorithm, In which either the process will leave the CPU when it terminates. Or it will go to the IO. Then the process will leave. So I call this a method of Non-Preemptive Scheduling. Once the CPU is found, it is found. After that, it will not leave. Which thing are we missing in this? One thing we are missing is Time quantum. The time sharing we read. Whenever the CPU executes a process, If there is an X amount of time. If there is an X amount of time quantum. After that, the CPU leaves that process. And goes back to the ready queue. This thing, the time sharing thing. This is not in Non-Preemptive. Okay. Now what is its second type? Preemptive. Preemptive Scheduling. What will happen in Preemptive Scheduling? What happens in this is that It happens that when it terminates, The process will leave the CPU. Apart from that, when it goes to the wait state, Even then, it will happen. That it will leave the CPU. But, Another extra thing that happens in this is that When the time quantum expires. When the time quantum expires. Even then, the process It frees the CPU. And goes back to the ready queue. So these are two types of Your CPU scheduling. Okay. If I want to compare them. So starvation. Starvation. What is starvation? Starvation is that a process is not getting the CPU. Meaning that If there is a high priority job or A job is taking a lot of CPU. It is doing the same work. If there is a low priority job or The other jobs in the ready queue are not getting the time. So, the other jobs that are not getting the time. I call them their start. Meaning that the process is starvation. So if I compare. Then in which process will starvation be more? In which process will starvation be more? In non-preemptive. Process starvation will be more. Okay. Why? Because in non-preemptive. The time sharing part is missing. If I get a job. Which is very CPU intensive. It will take a lot of time. 20-30 minutes. And there is no instruction in it. It will terminate after 20-30 minutes. So for 20-30 minutes. The other processes in the ready queue. Will go into starvation. Because of this. This non-preemptive method. Starvation is more. In preemptive method starvation is not there. Because it has a time quantum. I will say that it is less. Because in it. Every process will get a chance. Because time quantum will expire. So the other process will get a chance. Okay. So I can say that in preemptive. Spelling is wrong. Starvation in preemptive is less. Okay. After that we come to. Which has more CPU utilization? CPU utilization. Which has more? You will say. According to starvation. You must have got the idea. Which has more CPU utilization? Because more processes. Get a chance to work. So at a particular time. More processes. Your CPU. Will be working on it. So I can say that in preemptive. It has high CPU utilization. Third point. I can discuss. Overhead. Which has more? If I talk about overhead. Then in preemptive. Overhead is more. Why overhead is more in preemptive? Because inside it. Apart from that going for IO. And termination. There is an extra overhead. If there is a 1 second time quantum. Then after every second. Process will change. CPU will have to execute a new process. Which is short term schedule. Someone will pick a new process. So because of this. If we change in 1 second. Then in 10 seconds. 10 processes will change. So I will say overhead is more. So this is your comparison. In preemptive and non-preemptive. Now we will discuss goals. Goals of CPU scheduling algorithm. What are my goals? If I am using my own OS. Or I am designing my own OS. Whenever I design my own OS. Then when I am in process management. I am coding in process management. Then I will think. The CPU scheduling algorithm. I will use. I will use. On which parameters. I will make. What will be my goals? What will the algorithm fulfill? Let's discuss about those goals. My first goal. I want maximum CPU utilization. Maximum CPU utilization. Maximum CPU utilization. We are studying from day 1. I want CPU. It is a very important resource. I don't want CPU to wait. Wait for a few seconds. What is the second part? I want minimum. Turn around time. What is turn around time? Turn around time. When your first job. Comes in the ready queue. And termination time. Means. Whenever your job. Comes in the ready queue. P1 comes in the ready queue. And after that. Whatever you have done. It may have gone to wait state. Or may have been preempted. It may have come back to the ready queue. Whenever it exits. It will terminate. The time between. When it comes in the ready queue. And when it exits. The difference between. I want turn around time. If the process comes in the ready queue. I want to execute it. And exit. Third. Minimum wait time. What does it mean? I want. The process. Wait for the CPU. Whenever a process. Goes in the ready queue. CPU preempts it. Our algorithm says. We have to execute the second process. In that case. I want minimum waiting time. Every process should have minimum waiting time. Minimum waiting time. I don't want to wait. If there is more waiting. Then starvation will happen. Fourth. Minimum response time. What is response time? It is the time. Whenever a process. Comes in the ready queue. And it gets the CPU. The difference between. When the process comes in the ready queue. After it comes. When it gets the CPU. The first time. I call it response time. I want. Whenever a process comes in the ready queue. It should get the CPU. At least the first time. It should get the CPU. At least the first time. It should execute the program. It should not start. It should not start. It should not start. It should not start. I don't want this. Fifth point. Maximum. Throughput. Maximum throughput. What is throughput? It is the number of processes. Completed per unit time. It is the measure. To measure any CPU scheduling algorithm. I want. The throughput of my system. My whole process. The whole system of process management. With CPU. I want the whole system. To execute the most number of processes. Per unit time. Why are we doing this? The main goal is. I want maximum CPU utilization. That's why I want my system to be fast. The system should work efficiently. That's why I am deciding all my goals. That's why I am deciding all my goals. I am keeping it in my mind. Before designing my CPU scheduling algorithm. Before designing my CPU scheduling algorithm. The terms we have discussed. I will elaborate them. I will elaborate them. Through nodes. Through nodes. I have written all the definitions. First of all. Number of processes completed per unit time. Next. Arrival time. Time when process is arrived. At the ready queue. In the system. There is a time line. After the system is on. The clock will continue. At what point. At what time. The process is arrived at the ready queue. I am calling it arrival time. Second. Burst time. Burst time means. The time required. By process for its execution. It is written here. I will remove it. How much time does the process need. How much time does the process need. It means. If there is no other process. If there is no other process. If there is only one process. If there is only one process. How much time will it take. If it is a single owner. How much time will it take. I am calling it burst time. What is the turnaround time. What is the turnaround time. I have discussed the turnaround time. Time taken from the first time. Process enter. Ready queue. This is the turnaround time. I will discuss the completion time. What is the completion time. Time taken till process gets terminated. It means. When it arrived. It will get the response time. It will get the schedule. Then it will go to wait. Then it will come back to ready queue. Then it will get the schedule again. Time quantum will expire. Then it will come back to ready queue. Your process travels in different states. What is the completion time. Long term scheduler. Scheduler put it in ready queue. Till it exits. The difference between that. Is the completion time. You can be confused. What is the turnaround time. It is CT-AT. It means completion time minus arrival time. I am calling it turnaround time. After that. We have discussed the wait time. Time process spans waiting for the CPU. If I tell you the formula. It will be wait time. CT-AT-BT Turnaround time minus burst time. WT-TAT-BT What is the turnaround time. When the process arrives in ready queue. Till it terminates. BT is the actual time. If it is a single process. I want the waiting time to be minimum. That's why. How will the waiting time be. Turnaround time. Minus the actual time. I am calling it waiting time. So. We have discussed the different jargons. Now. We will go to the first. The first scheduling algorithm. Which is called. FCFS First come first serve. The easiest. Scheduling algorithm. What are we doing in this. Whatever process arrives in ready queue. Whatever process arrives in ready queue. I will pick it up and assign it to the CPU. Okay. Suppose. P1, P2, P3. Suppose. First it came. Then it came. Then it came. These are three jobs. What will the FCFS scheduler do. The first one. It will pick it up and dispatch it to the CPU. It will select it. It will pick it up and say. First. Okay. And it will tell the dispatcher. That. Provide it to the CPU. So. When P1 is executed. P2 is executed. P3 is executed. But. There is a big problem in this algorithm. Which I call Convoy effect. Before understanding Convoy effect. Let's understand it through an example. We have an example. A scenario. Some processes have come to us. Suppose. I have processes 1, 2. I make it. Okay. I made a scenario. We have a scenario. Inside which. We have a table. The process name. Process. We have the arrival time. We have the burst time. We want to get all these values. To get it. We use a method. I call it Gantt chart. G.A.N.T T chart. I call it Gantt chart. How will I make it? Let's see So, I am saying that t is equal to 0 Which process is coming on t equal to 0? Fcfs is your scheduler So, what you will do is The first arrival time of Fcfs Which is 0, in this case I will schedule it first So, P1 will be scheduled first. How long will P1 run? It will run till 20 units After 20 units, what will happen? When P1 is executed, P2 will come in memory What is the burst time of P2? It is 2 Gantt chart shows the entire timeline If 20 seconds have passed in the entire timeline Then it will be 20 plus 2 Then P3 will come So, 22 plus 20 will be 24 So, what is the completion time? The actual completion time is 20 seconds of P1 22 seconds of P2 24 seconds of P3 If I try to find the turnaround time The turnaround time is CT minus AT Completion time minus arrival time So, what is the turnaround time? It will be 20, 21, 23 Now, let's find the waiting time Waiting time is TAT minus BT If I do TAT minus BT, it will be 0 It executed directly It waited for 19 seconds It waited for 20 seconds It will be 19 seconds If I do CT minus AT, it will be 22 If I do 22 minus BT, it will be 20 So, this is the total waiting time If I sum the waiting time What is the total waiting time? This is the waiting time This is the waiting time If I find the average It will be 13 So, my average waiting time is 13 Now, if I change the process in the ready queue I will change it Now, let's see another scenario The P1 process, which had the most burst time I am taking it to the end In FCFS algorithm, which will be the first? P2, P3, P1 So, P2 and P3, which were the first two jobs Their burst time is less And the last process has more burst time Now, let's find the average waiting time If I make a Gantt chart P2 will be first P2 will be executed for 2 seconds 2 plus 2 is 4 seconds I will use the word units P1 will be 24 If I write the completion time It will be 2 seconds P2 will be 4 seconds and P3 will be 24 seconds If I find the turnaround time CT minus 80 CT minus 80 will be 2 seconds If I try to find WT It will be TAT minus BT So, I will get 0, 1, 2 If I find the average waiting time It will be 1 unit This is called Convoy Effect This means, when a heavy job Which had the most burst time If it comes first Then the other jobs have to wait Because the first job will run for 20 units If I use seconds If it runs for 20 seconds Then the other jobs will wait for a long time So, the average waiting time Of my whole system The average waiting time is 13 Which increased because of the first job So, my average waiting time is 1 unit This is called Convoy Effect If I want to read the definition of Convoy Effect If there is a process Which has a higher BT It will have a major impact On the average BT of different processes We saw this from the live example If the first job has more burst time Then the other jobs will wait for a longer time Convoy Effect is not necessary Only in processes, scheduling algorithm In general, it can be used in Not only CPU If you are talking about any other resource If you have a process which is taking the longest time And any other process wants to use that resource Then the other processes will wait for a longer time So, this is called Convoy Effect I can also call it a resource management Because, resource is for everyone There should be no partiality If P1 gets resource, P2 should get resource too This is my goal of CPU scheduling algorithms So, this was in this video We read about some jargons What is throughput, AT, BT, TET, WT, CT We understood the goals of CPU scheduling algorithms What is preemptive scheduling and non-preemptive scheduling What is Convoy Effect Convoy Effect is directly asked in the interview So, this interview question is yours So, let's end this video with this See you in the next lecture Goodbye"
+}

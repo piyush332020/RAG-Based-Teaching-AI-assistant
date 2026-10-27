@@ -1,0 +1,5178 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 0.0,
+            "end": 5.0,
+            "text": " Hello, how are you all? This is Lakshay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 5.0,
+            "end": 7.0,
+            "text": " We have come to the lecture number 14 of our OS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 7.0,
+            "end": 12.0,
+            "text": " Today we are going to discuss some real-life implementation scheduling algorithms."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 12.0,
+            "end": 18.0,
+            "text": " Till now, we have discussed SJF, FCFS, RR algorithms."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 18.0,
+            "end": 21.0,
+            "text": " All these algorithms were simple."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 21.0,
+            "end": 25.0,
+            "text": " But the algorithms that are being used in the OS now,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 25.0,
+            "end": 27.0,
+            "text": " they do not directly implement them."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 27.0,
+            "end": 30.0,
+            "text": " They directly implement them using RR algorithm."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 30.0,
+            "end": 33.0,
+            "text": " They are implemented in a different way, in an optimized way."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 33.0,
+            "end": 35.0,
+            "text": " Let's study that."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 35.0,
+            "end": 43.0,
+            "text": " So, first of all, we have our multi-level queue scheduling."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 43.0,
+            "end": 48.0,
+            "text": " I will call it MLQ."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 48.0,
+            "end": 49.0,
+            "text": " Now, see what we do."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 49.0,
+            "end": 54.0,
+            "text": " We know that our system has three types of processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 54.0,
+            "end": 56.0,
+            "text": " There are three types of processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 56.0,
+            "end": 58.0,
+            "text": " First, system processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 58.0,
+            "end": 65.0,
+            "text": " Which are created by OS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 65.0,
+            "end": 70.0,
+            "text": " The system processes, as we have discussed, are init processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 70.0,
+            "end": 72.0,
+            "text": " Which starts in the kernel."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 72.0,
+            "end": 74.0,
+            "text": " The first process is init."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 74.0,
+            "end": 78.0,
+            "text": " Apart from that, there are many processes related to the network."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 78.0,
+            "end": 80.0,
+            "text": " These are system processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 80.0,
+            "end": 86.0,
+            "text": " Basically, the important processes for OS or kernel to run are called system processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 86.0,
+            "end": 88.0,
+            "text": " The second is interactive processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 94.0,
+            "end": 100.0,
+            "text": " Interactive processes are those processes that require user input."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 100.0,
+            "end": 103.0,
+            "text": " They require user input."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 104.0,
+            "end": 107.0,
+            "text": " For example, if you are using Microsoft Word,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 107.0,
+            "end": 110.0,
+            "text": " you have to wait for the IO."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 110.0,
+            "end": 112.0,
+            "text": " So, IO is required in this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 112.0,
+            "end": 115.0,
+            "text": " User input is waiting for this type of process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 115.0,
+            "end": 118.0,
+            "text": " This is called foreground process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 118.0,
+            "end": 120.0,
+            "text": " Why am I saying foreground?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 120.0,
+            "end": 125.0,
+            "text": " Because you can see it in the front, in the user space."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 125.0,
+            "end": 127.0,
+            "text": " You can see it in GUI."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 127.0,
+            "end": 130.0,
+            "text": " That's why I call it interactive process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 131.0,
+            "end": 133.0,
+            "text": " User input is required in this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 133.0,
+            "end": 136.0,
+            "text": " The third process is batch process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 139.0,
+            "end": 141.0,
+            "text": " I call it background process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 141.0,
+            "end": 142.0,
+            "text": " Background."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 142.0,
+            "end": 145.0,
+            "text": " It basically runs in the background."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 145.0,
+            "end": 147.0,
+            "text": " I don't need any user input in this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 147.0,
+            "end": 150.0,
+            "text": " No user input."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 150.0,
+            "end": 153.0,
+            "text": " Since there is no user input, it runs in the background."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 153.0,
+            "end": 158.0,
+            "text": " Like in the last lecture, when we were making the orphan process and zombie process,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 158.0,
+            "end": 163.0,
+            "text": " we used to write sleep 1 or sleep 100 and put ampersand at the end."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 163.0,
+            "end": 166.0,
+            "text": " In the terminal, in Linux system, after putting ampersand,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 166.0,
+            "end": 168.0,
+            "text": " the process runs in the background."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 168.0,
+            "end": 169.0,
+            "text": " There is no input."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 169.0,
+            "end": 172.0,
+            "text": " It runs in the background and you can't see it."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 172.0,
+            "end": 174.0,
+            "text": " This is the type of process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 174.0,
+            "end": 175.0,
+            "text": " What we did now is,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 175.0,
+            "end": 179.0,
+            "text": " we were reading the process in the previous algorithms."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 179.0,
+            "end": 180.0,
+            "text": " P1, P2, P3."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 180.0,
+            "end": 181.0,
+            "text": " This type of process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 181.0,
+            "end": 184.0,
+            "text": " Now, we divided the process according to nature."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 184.0,
+            "end": 186.0,
+            "text": " We have three types of nature processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 186.0,
+            "end": 190.0,
+            "text": " System process, OSK, Interactive process, Foreground process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 190.0,
+            "end": 192.0,
+            "text": " Second is batch process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 192.0,
+            "end": 195.0,
+            "text": " These are the three types of processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 216.0,
+            "end": 221.0,
+            "text": " Not only this, their program comes with a placement guarantee."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 221.0,
+            "end": 225.0,
+            "text": " So that you can double ensure that you are getting a placement in a good company."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 225.0,
+            "end": 229.0,
+            "text": " At the end of their programs, you must have made a lot of projects."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 229.0,
+            "end": 233.0,
+            "text": " By which your resume will be more effective and your portfolio will be more strong."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 233.0,
+            "end": 237.0,
+            "text": " If you are interested, then their program comes with a free trial of one week."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 237.0,
+            "end": 238.0,
+            "text": " You can take the trial."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 238.0,
+            "end": 240.0,
+            "text": " And you also get an assured scholarship."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 240.0,
+            "end": 242.0,
+            "text": " So what you have to do is,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 242.0,
+            "end": 243.0,
+            "text": " I will add it in the description in the link."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 243.0,
+            "end": 247.0,
+            "text": " And by clicking on that link, you can avail the maximum possible discount on their program."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 247.0,
+            "end": 249.0,
+            "text": " You can take the placement."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 249.0,
+            "end": 251.0,
+            "text": " And you can give me a party to get the placement."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 251.0,
+            "end": 252.0,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 252.0,
+            "end": 253.0,
+            "text": " Now what I did,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 253.0,
+            "end": 257.0,
+            "text": " For these three types of processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 257.0,
+            "end": 260.0,
+            "text": " I made three different ready-queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 260.0,
+            "end": 263.0,
+            "text": " That is, the ready-queue that I was talking about,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 263.0,
+            "end": 265.0,
+            "text": " the ready-queue that we were discussing,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 265.0,
+            "end": 269.0,
+            "text": " I made three logical divisions of that ready-queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 269.0,
+            "end": 271.0,
+            "text": " Based on the nature of process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 271.0,
+            "end": 274.0,
+            "text": " If I see its example, it is made directly in notes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 276.0,
+            "end": 277.0,
+            "text": " It is something like this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 277.0,
+            "end": 279.0,
+            "text": " One of my ready-queues will be SP-Q."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 279.0,
+            "end": 281.0,
+            "text": " Which I am calling system process-Q."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 281.0,
+            "end": 284.0,
+            "text": " Your IP-Q, interactive process-Q, batch-Q."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 285.0,
+            "end": 290.0,
+            "text": " And its priority is set in this way that the system-Q will be the most prioritized."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 290.0,
+            "end": 295.0,
+            "text": " That is, the system-Q will have the most priority in the processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 297.0,
+            "end": 298.0,
+            "text": " After that, your interactive comes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 298.0,
+            "end": 300.0,
+            "text": " Then your batch process comes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 300.0,
+            "end": 303.0,
+            "text": " The system-Q will have the most priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 303.0,
+            "end": 304.0,
+            "text": " Because it is a system process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 304.0,
+            "end": 307.0,
+            "text": " If you don't give priority to the OS process,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 307.0,
+            "end": 309.0,
+            "text": " How will the OS work properly?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 309.0,
+            "end": 310.0,
+            "text": " This is the simple logic in this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 311.0,
+            "end": 313.0,
+            "text": " After that, we put user processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 313.0,
+            "end": 314.0,
+            "text": " After that, the batch process comes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 314.0,
+            "end": 316.0,
+            "text": " This is running in the background."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 316.0,
+            "end": 319.0,
+            "text": " It may be an important process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 319.0,
+            "end": 321.0,
+            "text": " But we have kept it at the bottom."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 321.0,
+            "end": 323.0,
+            "text": " Its priority is lowest."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 323.0,
+            "end": 325.0,
+            "text": " And now what I will do in this,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 325.0,
+            "end": 328.0,
+            "text": " The three queues I have made,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 328.0,
+            "end": 335.0,
+            "text": " SP-Q, IP-Q, and the third batch process-Q."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 336.0,
+            "end": 338.0,
+            "text": " The three processes that we have made,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 338.0,
+            "end": 342.0,
+            "text": " They will have their own separate scheduling algorithms."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 345.0,
+            "end": 347.0,
+            "text": " The algorithms that we have read so far,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 347.0,
+            "end": 348.0,
+            "text": " One of them will be."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 348.0,
+            "end": 350.0,
+            "text": " For example,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 350.0,
+            "end": 355.0,
+            "text": " Suppose I am doing this with round robin."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 355.0,
+            "end": 357.0,
+            "text": " I am doing this with round robin."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 357.0,
+            "end": 359.0,
+            "text": " But I have put FCFS in BP."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 360.0,
+            "end": 363.0,
+            "text": " This can be an example of mine."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 364.0,
+            "end": 367.0,
+            "text": " Now how does this work?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 367.0,
+            "end": 369.0,
+            "text": " Suppose we have any process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 369.0,
+            "end": 371.0,
+            "text": " Let's take an example here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 371.0,
+            "end": 374.0,
+            "text": " I have a lot of processes like P1, P2."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 374.0,
+            "end": 375.0,
+            "text": " So what I will do,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 375.0,
+            "end": 378.0,
+            "text": " Based on the nature of that process,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 378.0,
+            "end": 379.0,
+            "text": " On the basis of nature,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 379.0,
+            "end": 382.0,
+            "text": " What will be the memory size of that?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 382.0,
+            "end": 383.0,
+            "text": " What is its priority?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 383.0,
+            "end": 386.0,
+            "text": " According to that, I will put that process in any queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 388.0,
+            "end": 391.0,
+            "text": " Suppose I have a P1 process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 393.0,
+            "end": 395.0,
+            "text": " It will go to any one of these queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 398.0,
+            "end": 401.0,
+            "text": " And it will remain in that queue permanently."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 401.0,
+            "end": 403.0,
+            "text": " Once it goes to that queue, it will remain in that queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 403.0,
+            "end": 404.0,
+            "text": " Because the system process,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 404.0,
+            "end": 406.0,
+            "text": " I will put it in the system SP queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 407.0,
+            "end": 409.0,
+            "text": " So once I decide,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 409.0,
+            "end": 413.0,
+            "text": " OS will decide and push it in that queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 413.0,
+            "end": 414.0,
+            "text": " Now what will happen after that?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 414.0,
+            "end": 416.0,
+            "text": " It will continue to schedule in that queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 416.0,
+            "end": 419.0,
+            "text": " Depending on the algorithm you have applied to that queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 420.0,
+            "end": 422.0,
+            "text": " Now we have seen that there are three different queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 422.0,
+            "end": 424.0,
+            "text": " They have different scheduling algorithms."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 424.0,
+            "end": 426.0,
+            "text": " But how will the scheduling be in between these queues?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 427.0,
+            "end": 428.0,
+            "text": " Between this queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 428.0,
+            "end": 430.0,
+            "text": " That is, the three queues we have,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 430.0,
+            "end": 433.0,
+            "text": " If I draw it here,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 433.0,
+            "end": 436.0,
+            "text": " In between these three different queues,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 436.0,
+            "end": 440.0,
+            "text": " What will be the scheduling algorithm?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 440.0,
+            "end": 446.0,
+            "text": " There is a fixed priority pre-emptive scheduling in between these queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 446.0,
+            "end": 449.0,
+            "text": " The priority scheduling we have studied,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 449.0,
+            "end": 451.0,
+            "text": " It has a pre-emptive version."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 451.0,
+            "end": 453.0,
+            "text": " In which there is a fixed priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 453.0,
+            "end": 454.0,
+            "text": " And what is that fixed priority?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 454.0,
+            "end": 456.0,
+            "text": " That fixed priority is,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 456.0,
+            "end": 458.0,
+            "text": " SP's highest priority,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 458.0,
+            "end": 460.0,
+            "text": " Then IPQ's priority,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 460.0,
+            "end": 461.0,
+            "text": " Then BPQ's priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 461.0,
+            "end": 463.0,
+            "text": " We have made a diagram of it here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 463.0,
+            "end": 465.0,
+            "text": " In this way, your priority will be going."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 465.0,
+            "end": 466.0,
+            "text": " The highest priority is this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 466.0,
+            "end": 468.0,
+            "text": " Then the lowest priority is this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 469.0,
+            "end": 471.0,
+            "text": " Now in this case,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 471.0,
+            "end": 473.0,
+            "text": " Suppose a P1 process comes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 473.0,
+            "end": 475.0,
+            "text": " This is a new process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 475.0,
+            "end": 478.0,
+            "text": " P2 process is already scheduled to the CPU."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 479.0,
+            "end": 482.0,
+            "text": " But this P2 process is a batch process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 482.0,
+            "end": 484.0,
+            "text": " This is a batch process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 484.0,
+            "end": 485.0,
+            "text": " So what will happen in this case?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 485.0,
+            "end": 487.0,
+            "text": " Because the batch process,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 487.0,
+            "end": 490.0,
+            "text": " That is, the batch queue itself is the lowest priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 490.0,
+            "end": 491.0,
+            "text": " And the new process that came,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 491.0,
+            "end": 494.0,
+            "text": " Suppose it is an IP process, an interactive process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 494.0,
+            "end": 495.0,
+            "text": " So what I will do?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 495.0,
+            "end": 499.0,
+            "text": " Currently, I will pre-empt the P2 which is BP."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 499.0,
+            "end": 502.0,
+            "text": " And I will schedule the new process, IP."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 502.0,
+            "end": 503.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 503.0,
+            "end": 504.0,
+            "text": " So it happened that,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 504.0,
+            "end": 508.0,
+            "text": " The priority of BPQ is the lowest in this case."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 508.0,
+            "end": 509.0,
+            "text": " Because there is more IP."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 509.0,
+            "end": 511.0,
+            "text": " Similarly, if a system process comes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " So if any IP process is scheduled,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 513.0,
+            "end": 515.0,
+            "text": " Then I will pre-empt it."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 515.0,
+            "end": 517.0,
+            "text": " So things are done in this way here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 517.0,
+            "end": 519.0,
+            "text": " So there is a fixed priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 519.0,
+            "end": 520.0,
+            "text": " Now tell me one thing,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 520.0,
+            "end": 521.0,
+            "text": " What will happen in this case?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 521.0,
+            "end": 523.0,
+            "text": " That the top level queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 523.0,
+            "end": 525.0,
+            "text": " Which is called SPQ."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 525.0,
+            "end": 528.0,
+            "text": " All the processes in the top level queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 528.0,
+            "end": 529.0,
+            "text": " Until it is properly,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 529.0,
+            "end": 531.0,
+            "text": " That is, until it is not terminated,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 531.0,
+            "end": 532.0,
+            "text": " Or does not go into wait,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 532.0,
+            "end": 533.0,
+            "text": " Until then, the second process,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 533.0,
+            "end": 535.0,
+            "text": " Which is the interactive process below,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 535.0,
+            "end": 537.0,
+            "text": " They will not get a chance."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 537.0,
+            "end": 539.0,
+            "text": " Think about it, I have given the highest priority to it."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 539.0,
+            "end": 540.0,
+            "text": " Priority schedule, we read,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 540.0,
+            "end": 541.0,
+            "text": " What was happening in it?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 541.0,
+            "end": 542.0,
+            "text": " The highest priority was,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 542.0,
+            "end": 545.0,
+            "text": " Basically, the CPU got the most time."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 545.0,
+            "end": 547.0,
+            "text": " The lowest priority was not even getting a chance."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 547.0,
+            "end": 548.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 548.0,
+            "end": 549.0,
+            "text": " What a strong convoy effect it was."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 549.0,
+            "end": 551.0,
+            "text": " So in this case, the batch process,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 551.0,
+            "end": 554.0,
+            "text": " We will wait for the most."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 554.0,
+            "end": 555.0,
+            "text": " So the average waiting time,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 555.0,
+            "end": 557.0,
+            "text": " Which will be more overall."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 557.0,
+            "end": 558.0,
+            "text": " So I can say,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 558.0,
+            "end": 561.0,
+            "text": " There will be a problem like starvation here too."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 561.0,
+            "end": 564.0,
+            "text": " Look, we have tried to optimize it completely."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 564.0,
+            "end": 566.0,
+            "text": " This is the real-world scenario,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 566.0,
+            "end": 568.0,
+            "text": " There are many processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 568.0,
+            "end": 570.0,
+            "text": " I tried to divide it."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 570.0,
+            "end": 571.0,
+            "text": " I tried to put some optimization,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 571.0,
+            "end": 574.0,
+            "text": " But there is some incompleteness in this optimization."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 574.0,
+            "end": 576.0,
+            "text": " The way we have put the priority,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 576.0,
+            "end": 578.0,
+            "text": " This is a problematic thing."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 578.0,
+            "end": 579.0,
+            "text": " Because in this,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 579.0,
+            "end": 583.0,
+            "text": " The CPU time will get the most CPU time."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 583.0,
+            "end": 584.0,
+            "text": " The rest are below."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 584.0,
+            "end": 586.0,
+            "text": " Forget BP."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 586.0,
+            "end": 587.0,
+            "text": " This is the situation."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 587.0,
+            "end": 589.0,
+            "text": " So the problem of indefinite waiting,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 589.0,
+            "end": 591.0,
+            "text": " The strongest convoy effect,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 591.0,
+            "end": 592.0,
+            "text": " Which I was saying,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 592.0,
+            "end": 594.0,
+            "text": " That will also be here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 594.0,
+            "end": 596.0,
+            "text": " So starvation will be here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 596.0,
+            "end": 598.0,
+            "text": " So even though I tried my best,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 598.0,
+            "end": 602.0,
+            "text": " I tried my best to optimize things a little."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 602.0,
+            "end": 603.0,
+            "text": " But here,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 603.0,
+            "end": 605.0,
+            "text": " There is still some work left."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 605.0,
+            "end": 607.0,
+            "text": " Let's put it in the notes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 607.0,
+            "end": 609.0,
+            "text": " We have written everything on the notes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 609.0,
+            "end": 611.0,
+            "text": " Convoy effect is present."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 611.0,
+            "end": 614.0,
+            "text": " Only after completion of all processes from the top level,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 614.0,
+            "end": 615.0,
+            "text": " The further level,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 615.0,
+            "end": 617.0,
+            "text": " Ready queues will be scheduled."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 617.0,
+            "end": 620.0,
+            "text": " Fixed priority preemptive scheduling is applied."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 620.0,
+            "end": 622.0,
+            "text": " In all three queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 622.0,
+            "end": 624.0,
+            "text": " So there are two types of scheduling."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 624.0,
+            "end": 625.0,
+            "text": " Within queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 625.0,
+            "end": 627.0,
+            "text": " A particular queue is also scheduled."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 627.0,
+            "end": 629.0,
+            "text": " And if I say inter queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 629.0,
+            "end": 631.0,
+            "text": " Inter queue is also scheduled."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 631.0,
+            "end": 633.0,
+            "text": " So this was our MLQ,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 633.0,
+            "end": 635.0,
+            "text": " Multi-level queue scheduling."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 635.0,
+            "end": 637.0,
+            "text": " This is a concept."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 637.0,
+            "end": 639.0,
+            "text": " I don't think it has ever been used."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 639.0,
+            "end": 641.0,
+            "text": " It is not used in today's date."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 641.0,
+            "end": 643.0,
+            "text": " A better version of this,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 643.0,
+            "end": 645.0,
+            "text": " I can say 2.0 version of this,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 645.0,
+            "end": 647.0,
+            "text": " Multi-level feedback queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 647.0,
+            "end": 649.0,
+            "text": " Now let's discuss the multi-level feedback queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 649.0,
+            "end": 651.0,
+            "text": " Which is a little,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 651.0,
+            "end": 653.0,
+            "text": " The strongest convoy effect,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 653.0,
+            "end": 655.0,
+            "text": " Which is the biggest problem of starvation,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 655.0,
+            "end": 657.0,
+            "text": " Try to overcome it a little."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 657.0,
+            "end": 660.0,
+            "text": " Now let's discuss the multi-level feedback queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 660.0,
+            "end": 662.0,
+            "text": " Now let's discuss the multi-level."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 662.0,
+            "end": 664.0,
+            "text": " Multi-level."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 664.0,
+            "end": 666.0,
+            "text": " Multi-level."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 670.0,
+            "end": 672.0,
+            "text": " Queue scheduling."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 672.0,
+            "end": 674.0,
+            "text": " Now you will see this,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 674.0,
+            "end": 676.0,
+            "text": " These are used these days."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 676.0,
+            "end": 678.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 678.0,
+            "end": 680.0,
+            "text": " And I say in this,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 680.0,
+            "end": 682.0,
+            "text": " It is a little user defined."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 682.0,
+            "end": 684.0,
+            "text": " Now let's discuss how user defined."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 684.0,
+            "end": 686.0,
+            "text": " This is a very flexible type of algorithm."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 686.0,
+            "end": 688.0,
+            "text": " There are different queues in this too."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 688.0,
+            "end": 690.0,
+            "text": " Okay. Multiple."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 690.0,
+            "end": 692.0,
+            "text": " All queues are here too."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 694.0,
+            "end": 696.0,
+            "text": " We have divided in queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 696.0,
+            "end": 698.0,
+            "text": " But there is a big thing in this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 698.0,
+            "end": 700.0,
+            "text": " The different queues we made,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 700.0,
+            "end": 702.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 702.0,
+            "end": 704.0,
+            "text": " In this queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 704.0,
+            "end": 706.0,
+            "text": " What were we discussing in the previous MLQ?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 706.0,
+            "end": 708.0,
+            "text": " In MLQ, we were discussing that,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 708.0,
+            "end": 710.0,
+            "text": " If I put a process in SP,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 710.0,
+            "end": 712.0,
+            "text": " Or IP,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 712.0,
+            "end": 714.0,
+            "text": " Or basically BP queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 714.0,
+            "end": 716.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 716.0,
+            "end": 718.0,
+            "text": " After that,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 718.0,
+            "end": 720.0,
+            "text": " It is scheduled in its own queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 720.0,
+            "end": 722.0,
+            "text": " It does not move in the other queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 722.0,
+            "end": 724.0,
+            "text": " That is, the process of SP queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 724.0,
+            "end": 726.0,
+            "text": " Will not go to any interactive queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 726.0,
+            "end": 728.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 728.0,
+            "end": 730.0,
+            "text": " There is no such attachment in this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 730.0,
+            "end": 732.0,
+            "text": " It cannot move within the queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 732.0,
+            "end": 734.0,
+            "text": " So, in this case,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 734.0,
+            "end": 736.0,
+            "text": " We tried to optimize it a little."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 736.0,
+            "end": 738.0,
+            "text": " We did, there are still many queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 738.0,
+            "end": 740.0,
+            "text": " But it is allowed to go to other queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 740.0,
+            "end": 742.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 742.0,
+            "end": 744.0,
+            "text": " So, inter-queue movement is allowed in this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 744.0,
+            "end": 746.0,
+            "text": " I will write."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 748.0,
+            "end": 750.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 752.0,
+            "end": 754.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 754.0,
+            "end": 756.0,
+            "text": " My idea is,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 756.0,
+            "end": 758.0,
+            "text": " I will separate the processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 758.0,
+            "end": 760.0,
+            "text": " Based on their burst time."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 760.0,
+            "end": 762.0,
+            "text": " That is, the processes which are taking more time,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 762.0,
+            "end": 764.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 764.0,
+            "end": 766.0,
+            "text": " The processes in the ready queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 766.0,
+            "end": 768.0,
+            "text": " I will move them in the lower queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 768.0,
+            "end": 770.0,
+            "text": " I will keep doing it."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 770.0,
+            "end": 772.0,
+            "text": " And the more interactive processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 772.0,
+            "end": 774.0,
+            "text": " Which are doing more IO,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 774.0,
+            "end": 776.0,
+            "text": " Or the user intervention which is required,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 776.0,
+            "end": 778.0,
+            "text": " I will keep moving in the lower queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 778.0,
+            "end": 780.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 780.0,
+            "end": 782.0,
+            "text": " So, let's write in this,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 782.0,
+            "end": 784.0,
+            "text": " That we are separating,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 784.0,
+            "end": 786.0,
+            "text": " Processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 788.0,
+            "end": 790.0,
+            "text": " Based on,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 790.0,
+            "end": 792.0,
+            "text": " BT."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 792.0,
+            "end": 794.0,
+            "text": " How?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 794.0,
+            "end": 796.0,
+            "text": " The one which is taking more time,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 796.0,
+            "end": 798.0,
+            "text": " I will move it in the lower queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 800.0,
+            "end": 802.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 802.0,
+            "end": 804.0,
+            "text": " And which will be IO bound processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 804.0,
+            "end": 806.0,
+            "text": " Or the interactive processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 808.0,
+            "end": 810.0,
+            "text": " Interactive processes means,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 810.0,
+            "end": 812.0,
+            "text": " That it will be moving on the wait,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 812.0,
+            "end": 814.0,
+            "text": " After some time."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 814.0,
+            "end": 816.0,
+            "text": " It needs this user input,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 816.0,
+            "end": 818.0,
+            "text": " This user input,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 818.0,
+            "end": 820.0,
+            "text": " This user input,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 820.0,
+            "end": 822.0,
+            "text": " I will keep them in the higher priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 822.0,
+            "end": 824.0,
+            "text": " Why are we keeping them in the higher priority?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 824.0,
+            "end": 826.0,
+            "text": " Because you have turned on the system."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 826.0,
+            "end": 828.0,
+            "text": " You have turned on the system."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 828.0,
+            "end": 830.0,
+            "text": " And you have run a program."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 830.0,
+            "end": 832.0,
+            "text": " Now, the rest of the system processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 832.0,
+            "end": 834.0,
+            "text": " The background processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 834.0,
+            "end": 836.0,
+            "text": " Are getting more CPU time."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 836.0,
+            "end": 838.0,
+            "text": " The application which you have launched,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 838.0,
+            "end": 840.0,
+            "text": " Is not getting the CPU time."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 840.0,
+            "end": 842.0,
+            "text": " So, it will be a weird situation."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 842.0,
+            "end": 844.0,
+            "text": " The user,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 844.0,
+            "end": 846.0,
+            "text": " Is working on an OS,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 846.0,
+            "end": 848.0,
+            "text": " Which is not getting the CPU time."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 848.0,
+            "end": 850.0,
+            "text": " No one wants to work on such OS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 850.0,
+            "end": 852.0,
+            "text": " So, we increase the priority of the interactive processes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 852.0,
+            "end": 854.0,
+            "text": " And move them in the upper queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 854.0,
+            "end": 856.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 856.0,
+            "end": 858.0,
+            "text": " And,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 858.0,
+            "end": 860.0,
+            "text": " There is one more thing."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 860.0,
+            "end": 862.0,
+            "text": " Now,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 862.0,
+            "end": 864.0,
+            "text": " I will keep the higher priority in the lower queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 864.0,
+            "end": 866.0,
+            "text": " This will create a problem."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 866.0,
+            "end": 868.0,
+            "text": " The lower queue will keep moving."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 868.0,
+            "end": 870.0,
+            "text": " Now, you will say,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 870.0,
+            "end": 872.0,
+            "text": " Convoy fit can still come in this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 872.0,
+            "end": 874.0,
+            "text": " The process is moving in the lower queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 874.0,
+            "end": 876.0,
+            "text": " The upper process is getting more CPU time."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 876.0,
+            "end": 878.0,
+            "text": " The process in the lower queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 878.0,
+            "end": 880.0,
+            "text": " Can go into starvation."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 880.0,
+            "end": 882.0,
+            "text": " For that, I will use a method,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 882.0,
+            "end": 884.0,
+            "text": " Which we discussed in the priority scheduling."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 884.0,
+            "end": 886.0,
+            "text": " Which is called,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 886.0,
+            "end": 888.0,
+            "text": " Aging."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 888.0,
+            "end": 890.0,
+            "text": " The lower processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 890.0,
+            "end": 892.0,
+            "text": " Will go into the lower queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 892.0,
+            "end": 894.0,
+            "text": " I will use the aging method after a point."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 894.0,
+            "end": 896.0,
+            "text": " And,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 896.0,
+            "end": 898.0,
+            "text": " The lower priority processes,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 898.0,
+            "end": 900.0,
+            "text": " Will be,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 900.0,
+            "end": 902.0,
+            "text": " Increased in their priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 902.0,
+            "end": 904.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 904.0,
+            "end": 906.0,
+            "text": " So, in this way,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 906.0,
+            "end": 908.0,
+            "text": " I will prevent starvation with the help of aging."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 908.0,
+            "end": 910.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 910.0,
+            "end": 912.0,
+            "text": " No aging method was being used here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 912.0,
+            "end": 914.0,
+            "text": " Because, we could not use the aging technique in the MLQ."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 914.0,
+            "end": 916.0,
+            "text": " Because,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 916.0,
+            "end": 918.0,
+            "text": " There was no inter-queue movement."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 918.0,
+            "end": 920.0,
+            "text": " Now, there is an inter-queue movement."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 920.0,
+            "end": 922.0,
+            "text": " So, we are able to use this method."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 922.0,
+            "end": 924.0,
+            "text": " So, in this case, it is more flexible."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 924.0,
+            "end": 926.0,
+            "text": " Now,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 926.0,
+            "end": 928.0,
+            "text": " Listen to all its characteristics."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 928.0,
+            "end": 930.0,
+            "text": " We will make an example of how it will look."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 930.0,
+            "end": 932.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 932.0,
+            "end": 934.0,
+            "text": " And, if it is flexible,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 934.0,
+            "end": 936.0,
+            "text": " Then it is configurable."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 936.0,
+            "end": 938.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 938.0,
+            "end": 940.0,
+            "text": " It is configurable."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 940.0,
+            "end": 942.0,
+            "text": " The type of OS you are designing,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 942.0,
+            "end": 944.0,
+            "text": " You can configure it according to that."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 944.0,
+            "end": 946.0,
+            "text": " You can choose,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 946.0,
+            "end": 948.0,
+            "text": " Which process you want to send to the lower priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 948.0,
+            "end": 950.0,
+            "text": " How long do you want to age?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 950.0,
+            "end": 952.0,
+            "text": " In which interval do you want to increase their priority?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 952.0,
+            "end": 954.0,
+            "text": " Do you want to keep the interactive process at the top?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 954.0,
+            "end": 956.0,
+            "text": " Do you want to keep the system process at the top?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 956.0,
+            "end": 958.0,
+            "text": " Or, what do you want to do?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 958.0,
+            "end": 960.0,
+            "text": " What theme do you want to keep?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 960.0,
+            "end": 962.0,
+            "text": " How much priority do you want to give it?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 962.0,
+            "end": 964.0,
+            "text": " You can configure all this here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 964.0,
+            "end": 966.0,
+            "text": " Now, if I,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 966.0,
+            "end": 968.0,
+            "text": " Make a sample MLFQ design,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 968.0,
+            "end": 970.0,
+            "text": " I will show you."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 970.0,
+            "end": 972.0,
+            "text": " I will show you in the notes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 972.0,
+            "end": 974.0,
+            "text": " It will look like this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 974.0,
+            "end": 976.0,
+            "text": " Look carefully."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 976.0,
+            "end": 978.0,
+            "text": " The first queue was,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 978.0,
+            "end": 980.0,
+            "text": " Now, I put RR in this one."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 980.0,
+            "end": 982.0,
+            "text": " I put RR in the second one."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 982.0,
+            "end": 984.0,
+            "text": " I put RR in the third queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 984.0,
+            "end": 986.0,
+            "text": " I put FCFS in the fourth one."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 986.0,
+            "end": 988.0,
+            "text": " Let's not do too much."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 988.0,
+            "end": 990.0,
+            "text": " Let's put FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 990.0,
+            "end": 992.0,
+            "text": " Now, I kept the time quantum of the first one for 2 seconds."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 992.0,
+            "end": 994.0,
+            "text": " The second one is 4."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 994.0,
+            "end": 996.0,
+            "text": " And, the third one is 8."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 996.0,
+            "end": 998.0,
+            "text": " After that, I will tell FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 998.0,
+            "end": 1000.0,
+            "text": " Now, let's say a process comes."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1000.0,
+            "end": 1002.0,
+            "text": " Now, imagine,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1002.0,
+            "end": 1004.0,
+            "text": " Its burst time was more than 2."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1004.0,
+            "end": 1006.0,
+            "text": " If it is more than 2,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1006.0,
+            "end": 1008.0,
+            "text": " It will move to the next queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1008.0,
+            "end": 1010.0,
+            "text": " It will move to the next queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1010.0,
+            "end": 1012.0,
+            "text": " If it is less than 2,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1012.0,
+            "end": 1014.0,
+            "text": " Then, we will simply exit from here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1014.0,
+            "end": 1016.0,
+            "text": " Then, we will simply exit from here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1016.0,
+            "end": 1018.0,
+            "text": " That process will exit."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1018.0,
+            "end": 1020.0,
+            "text": " Now, what is the benefit of this?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1020.0,
+            "end": 1022.0,
+            "text": " The processes with lower burst time,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1022.0,
+            "end": 1024.0,
+            "text": " The processes with lower burst time,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1026.0,
+            "end": 1028.0,
+            "text": " They are not getting started."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1030.0,
+            "end": 1032.0,
+            "text": " They are not getting started."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1032.0,
+            "end": 1034.0,
+            "text": " The reason being,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1034.0,
+            "end": 1036.0,
+            "text": " The process with lower burst time,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1036.0,
+            "end": 1038.0,
+            "text": " The process with lower burst time,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1038.0,
+            "end": 1040.0,
+            "text": " It will exit in the starting itself."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1040.0,
+            "end": 1042.0,
+            "text": " Now, let's say,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1042.0,
+            "end": 1044.0,
+            "text": " The process with higher burst time,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1044.0,
+            "end": 1046.0,
+            "text": " It will move to the next queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1046.0,
+            "end": 1048.0,
+            "text": " Now, we are saying that this process"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1048.0,
+            "end": 1050.0,
+            "text": " couldn't run in 2 seconds."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1050.0,
+            "end": 1052.0,
+            "text": " Let's give it 4 seconds."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1052.0,
+            "end": 1054.0,
+            "text": " Now, it didn't run in 4 seconds."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1054.0,
+            "end": 1056.0,
+            "text": " Let's give it 8 seconds."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1056.0,
+            "end": 1058.0,
+            "text": " I could have added more queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1058.0,
+            "end": 1060.0,
+            "text": " Now, I have added FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1060.0,
+            "end": 1062.0,
+            "text": " Now, it is like FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1062.0,
+            "end": 1064.0,
+            "text": " Now, it is like FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1064.0,
+            "end": 1066.0,
+            "text": " Now, I am giving multiple chances"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1066.0,
+            "end": 1068.0,
+            "text": " to a process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1068.0,
+            "end": 1070.0,
+            "text": " It can run in different time quantum."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1070.0,
+            "end": 1072.0,
+            "text": " If it doesn't run in different time quantum,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1072.0,
+            "end": 1074.0,
+            "text": " I will schedule FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1074.0,
+            "end": 1076.0,
+            "text": " This is how it is designed."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1076.0,
+            "end": 1078.0,
+            "text": " This is a sample design."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1078.0,
+            "end": 1080.0,
+            "text": " Now, let's talk about"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1080.0,
+            "end": 1082.0,
+            "text": " the aging process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1082.0,
+            "end": 1084.0,
+            "text": " Let's see why we are using aging."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1084.0,
+            "end": 1086.0,
+            "text": " There can be a process like P1,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1086.0,
+            "end": 1088.0,
+            "text": " If the burst time is more,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1088.0,
+            "end": 1090.0,
+            "text": " it will exit from the first queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1090.0,
+            "end": 1092.0,
+            "text": " second queue, and fourth queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1092.0,
+            "end": 1094.0,
+            "text": " When it will reach this queue,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1094.0,
+            "end": 1096.0,
+            "text": " it will feel starvation."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1096.0,
+            "end": 1098.0,
+            "text": " It will feel starvation."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1098.0,
+            "end": 1100.0,
+            "text": " Now, it is being scheduled like FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1100.0,
+            "end": 1102.0,
+            "text": " Now, it is being scheduled like FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1102.0,
+            "end": 1104.0,
+            "text": " Now, it is being scheduled like FCFS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1104.0,
+            "end": 1106.0,
+            "text": " If I want to overcome this,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1106.0,
+            "end": 1108.0,
+            "text": " I am using the aging method."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1108.0,
+            "end": 1110.0,
+            "text": " I will increase the priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1110.0,
+            "end": 1112.0,
+            "text": " After increasing the priority,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1112.0,
+            "end": 1114.0,
+            "text": " I can use a method"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1114.0,
+            "end": 1116.0,
+            "text": " to move the process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1116.0,
+            "end": 1118.0,
+            "text": " It is configurable."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1118.0,
+            "end": 1120.0,
+            "text": " This is a sample design."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1120.0,
+            "end": 1122.0,
+            "text": " This is a sample design."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1122.0,
+            "end": 1124.0,
+            "text": " We can use it in OS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1124.0,
+            "end": 1126.0,
+            "text": " We can use it in OS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1126.0,
+            "end": 1128.0,
+            "text": " In Mac, MLFQ is used."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1128.0,
+            "end": 1130.0,
+            "text": " They use different types of priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1130.0,
+            "end": 1132.0,
+            "text": " They use different types of priority."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1132.0,
+            "end": 1134.0,
+            "text": " They implement it."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1134.0,
+            "end": 1136.0,
+            "text": " If I want to define"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1136.0,
+            "end": 1138.0,
+            "text": " how MLFQ will look like,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1138.0,
+            "end": 1140.0,
+            "text": " how MLFQ will look like,"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1140.0,
+            "end": 1142.0,
+            "text": " how will be the points."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1142.0,
+            "end": 1144.0,
+            "text": " I will discuss two things."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1144.0,
+            "end": 1146.0,
+            "text": " I will discuss two things."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1146.0,
+            "end": 1148.0,
+            "text": " The design of MLFQ."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1148.0,
+            "end": 1150.0,
+            "text": " The design of MLFQ."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1150.0,
+            "end": 1152.0,
+            "text": " The points of it."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1152.0,
+            "end": 1154.0,
+            "text": " The first point is the number of queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1154.0,
+            "end": 1156.0,
+            "text": " The first point is the number of queues."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1156.0,
+            "end": 1158.0,
+            "text": " The designer will decide"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1158.0,
+            "end": 1160.0,
+            "text": " the requirement of the OS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1160.0,
+            "end": 1162.0,
+            "text": " The designer will decide"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1162.0,
+            "end": 1164.0,
+            "text": " the requirement of the OS."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1164.0,
+            "end": 1166.0,
+            "text": " The second point is"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1166.0,
+            "end": 1168.0,
+            "text": " the scheduling algorithm"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1168.0,
+            "end": 1170.0,
+            "text": " in each queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1170.0,
+            "end": 1172.0,
+            "text": " The third point is"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1172.0,
+            "end": 1174.0,
+            "text": " the scheduling algorithm"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1174.0,
+            "end": 1176.0,
+            "text": " in each queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1176.0,
+            "end": 1178.0,
+            "text": " The third point is"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1178.0,
+            "end": 1180.0,
+            "text": " the method to upgrade the process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1180.0,
+            "end": 1182.0,
+            "text": " the method to upgrade the process."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1182.0,
+            "end": 1184.0,
+            "text": " The method to upgrade"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1184.0,
+            "end": 1186.0,
+            "text": " the method to upgrade"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1186.0,
+            "end": 1188.0,
+            "text": " the method to upgrade"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1188.0,
+            "end": 1190.0,
+            "text": " the process"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1190.0,
+            "end": 1192.0,
+            "text": " to a higher"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1192.0,
+            "end": 1194.0,
+            "text": " to a higher"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1194.0,
+            "end": 1196.0,
+            "text": " queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1196.0,
+            "end": 1198.0,
+            "text": " I will discuss the method of aging."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1198.0,
+            "end": 1200.0,
+            "text": " to upgrade the process"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1200.0,
+            "end": 1202.0,
+            "text": " and move it to a higher queue."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1202.0,
+            "end": 1204.0,
+            "text": " I will discuss the method of aging."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1204.0,
+            "end": 1206.0,
+            "text": " I will discuss the method of aging."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1206.0,
+            "end": 1208.0,
+            "text": " question beeps"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1208.0,
+            "end": 1210.0,
+            "text": " question beeps"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1210.0,
+            "end": 1212.0,
+            "text": " question beeps"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1212.0,
+            "end": 1214.0,
+            "text": " question beeps"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1214.0,
+            "end": 1216.0,
+            "text": " question beeps"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1216.0,
+            "end": 1218.0,
+            "text": " question beeps"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1218.0,
+            "end": 1220.0,
+            "text": " question beeps"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1220.0,
+            "end": 1222.0,
+            "text": " I have decided this."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1222.0,
+            "end": 1224.0,
+            "text": " I will delete these."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1224.0,
+            "end": 1226.0,
+            "text": " I will delete some of the seters."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1226.0,
+            "end": 1228.0,
+            "text": " How will I demote this process?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1228.0,
+            "end": 1230.0,
+            "text": " What will be the method of this?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1236.0,
+            "end": 1238.0,
+            "text": " The method used here was"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1238.0,
+            "end": 1240.0,
+            "text": " First, I was checking after 2 seconds"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1240.0,
+            "end": 1242.0,
+            "text": " Is it executing in 2 seconds or not?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1242.0,
+            "end": 1244.0,
+            "text": " Then I demoted it here and then here"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1244.0,
+            "end": 1246.0,
+            "text": " By doing this, we have put a method here"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1246.0,
+            "end": 1248.0,
+            "text": " So this is a sample"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1248.0,
+            "end": 1250.0,
+            "text": " This is a sample"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1250.0,
+            "end": 1252.0,
+            "text": " I can design any type of flexibility"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1252.0,
+            "end": 1254.0,
+            "text": " Okay?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1254.0,
+            "end": 1256.0,
+            "text": " Suppose, any process comes"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1256.0,
+            "end": 1258.0,
+            "text": " Process P1"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1258.0,
+            "end": 1260.0,
+            "text": " In which queue will it go first?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1268.0,
+            "end": 1270.0,
+            "text": " In which queue it will be pushed?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1270.0,
+            "end": 1272.0,
+            "text": " In which queue will it go first?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1272.0,
+            "end": 1274.0,
+            "text": " It can be like this"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1274.0,
+            "end": 1276.0,
+            "text": " I will design something like this"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1276.0,
+            "end": 1278.0,
+            "text": " I will send it in TQ first"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1278.0,
+            "end": 1280.0,
+            "text": " Or I know this is a very easy process"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1280.0,
+            "end": 1282.0,
+            "text": " So I will send it in FCFS first"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1282.0,
+            "end": 1284.0,
+            "text": " So I can do this type of flexible things"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1284.0,
+            "end": 1286.0,
+            "text": " So to design MLFQ"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1286.0,
+            "end": 1288.0,
+            "text": " These are 5 pointers"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1288.0,
+            "end": 1290.0,
+            "text": " Someone will think about these 5 things"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1290.0,
+            "end": 1292.0,
+            "text": " And will design a scheduling algorithm"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1292.0,
+            "end": 1294.0,
+            "text": " For MLFQ"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1294.0,
+            "end": 1296.0,
+            "text": " For his particular OS"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1296.0,
+            "end": 1298.0,
+            "text": " If I am making an OS"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1298.0,
+            "end": 1300.0,
+            "text": " I will keep these points in mind"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1300.0,
+            "end": 1302.0,
+            "text": " To make an MLFQ design"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1302.0,
+            "end": 1304.0,
+            "text": " So"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1304.0,
+            "end": 1306.0,
+            "text": " Now I can see"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1306.0,
+            "end": 1308.0,
+            "text": " I am using aging here"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1308.0,
+            "end": 1310.0,
+            "text": " So I tried to stop starvation"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1310.0,
+            "end": 1312.0,
+            "text": " So these are my two types of"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1312.0,
+            "end": 1314.0,
+            "text": " Multi-level queues"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1314.0,
+            "end": 1316.0,
+            "text": " That we discussed"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1316.0,
+            "end": 1318.0,
+            "text": " Now let's discuss an important thing"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1318.0,
+            "end": 1320.0,
+            "text": " That is"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1320.0,
+            "end": 1322.0,
+            "text": " Let's do a comparison"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1322.0,
+            "end": 1324.0,
+            "text": " Of these 4-5 algorithms"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1324.0,
+            "end": 1326.0,
+            "text": " Let's do a comparison"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1326.0,
+            "end": 1328.0,
+            "text": " The comparison will be like this"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1328.0,
+            "end": 1330.0,
+            "text": " We have seen 4 things"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1330.0,
+            "end": 1332.0,
+            "text": " We will decide on these 4 things"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1332.0,
+            "end": 1334.0,
+            "text": " How is the design? Is preemption happening?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1334.0,
+            "end": 1336.0,
+            "text": " Or how much is the Convoy effect?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1336.0,
+            "end": 1338.0,
+            "text": " How much is the overhead?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1338.0,
+            "end": 1340.0,
+            "text": " Now let's see FCFS"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1340.0,
+            "end": 1342.0,
+            "text": " What is there in FCFS?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1342.0,
+            "end": 1344.0,
+            "text": " Its design is very simple"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1344.0,
+            "end": 1346.0,
+            "text": " First come first serve"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1346.0,
+            "end": 1348.0,
+            "text": " It doesn't have preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1348.0,
+            "end": 1350.0,
+            "text": " Now the question is"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1350.0,
+            "end": 1352.0,
+            "text": " What is the preempt version of FCFS?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1352.0,
+            "end": 1354.0,
+            "text": " What is the preempt version of FCFS?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1354.0,
+            "end": 1356.0,
+            "text": " Write it in the comment section"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1356.0,
+            "end": 1358.0,
+            "text": " What is the preempt version of FCFS?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1358.0,
+            "end": 1360.0,
+            "text": " I have told this in the last lecture"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1360.0,
+            "end": 1362.0,
+            "text": " Does it have Convoy effect?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1362.0,
+            "end": 1364.0,
+            "text": " Yes, it has Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1364.0,
+            "end": 1366.0,
+            "text": " Because the Convoy effect that we defined"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1366.0,
+            "end": 1368.0,
+            "text": " We did it right"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1368.0,
+            "end": 1370.0,
+            "text": " If the first process"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1370.0,
+            "end": 1372.0,
+            "text": " Which has the most burst time"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1372.0,
+            "end": 1374.0,
+            "text": " If it is scheduled first"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1374.0,
+            "end": 1376.0,
+            "text": " Then the other processes will wait"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1376.0,
+            "end": 1378.0,
+            "text": " Is there any overhead in this?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1378.0,
+            "end": 1380.0,
+            "text": " There is no overhead in this"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1380.0,
+            "end": 1382.0,
+            "text": " Because there is no preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1382.0,
+            "end": 1384.0,
+            "text": " So there is no overhead"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1384.0,
+            "end": 1386.0,
+            "text": " Once P1 is found, it is found"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1386.0,
+            "end": 1388.0,
+            "text": " Now let's come to the second scheduling algorithm"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1388.0,
+            "end": 1390.0,
+            "text": " Which is SJF"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1390.0,
+            "end": 1392.0,
+            "text": " Now this is a complex"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1392.0,
+            "end": 1394.0,
+            "text": " How is it complex?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1394.0,
+            "end": 1396.0,
+            "text": " Calculate it for a process"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1396.0,
+            "end": 1398.0,
+            "text": " So it has a complex design"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1398.0,
+            "end": 1400.0,
+            "text": " It doesn't have preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1400.0,
+            "end": 1402.0,
+            "text": " It will have Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1402.0,
+            "end": 1404.0,
+            "text": " Why will it have Convoy effect?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1404.0,
+            "end": 1406.0,
+            "text": " Because when t is equal to 0"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1406.0,
+            "end": 1408.0,
+            "text": " The arrival time is 0"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1408.0,
+            "end": 1410.0,
+            "text": " The process with more bt is the first"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1410.0,
+            "end": 1412.0,
+            "text": " So it is done once the schedule is done"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1412.0,
+            "end": 1414.0,
+            "text": " Because there is no preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1414.0,
+            "end": 1416.0,
+            "text": " So even if there is a bt less than P2"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1416.0,
+            "end": 1418.0,
+            "text": " We will not be able to schedule it"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1418.0,
+            "end": 1420.0,
+            "text": " Because there is no preemption here"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1420.0,
+            "end": 1422.0,
+            "text": " There is no overhead here"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1422.0,
+            "end": 1424.0,
+            "text": " If there is no preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1424.0,
+            "end": 1426.0,
+            "text": " Then how will there be overhead?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1426.0,
+            "end": 1428.0,
+            "text": " Now its preempt version is also complex"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1428.0,
+            "end": 1430.0,
+            "text": " It has to do bt estimation"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1430.0,
+            "end": 1432.0,
+            "text": " But it has preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1432.0,
+            "end": 1434.0,
+            "text": " So because of preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1434.0,
+            "end": 1436.0,
+            "text": " Convoy effect is negligible"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1436.0,
+            "end": 1438.0,
+            "text": " It doesn't happen"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1438.0,
+            "end": 1440.0,
+            "text": " Because this is such an algorithm"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1440.0,
+            "end": 1442.0,
+            "text": " In which the average waiting time is less"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1442.0,
+            "end": 1444.0,
+            "text": " Because the job with the least bt"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1444.0,
+            "end": 1446.0,
+            "text": " As soon as the job with the least bt comes"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1446.0,
+            "end": 1448.0,
+            "text": " I schedule it"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1448.0,
+            "end": 1450.0,
+            "text": " If the job with less bt comes"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1450.0,
+            "end": 1452.0,
+            "text": " Then I preempt that one"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1452.0,
+            "end": 1454.0,
+            "text": " And schedule the next one"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1454.0,
+            "end": 1456.0,
+            "text": " So there is no Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1456.0,
+            "end": 1458.0,
+            "text": " Then is there overhead? Yes"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1458.0,
+            "end": 1460.0,
+            "text": " If there is preemption, then how will there be no overhead?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1460.0,
+            "end": 1462.0,
+            "text": " Context switching is done here"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1462.0,
+            "end": 1464.0,
+            "text": " Now comes priority scheduling"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1464.0,
+            "end": 1466.0,
+            "text": " This is also complex"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1466.0,
+            "end": 1468.0,
+            "text": " How to take priority decision"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1468.0,
+            "end": 1470.0,
+            "text": " How to take priority from any process"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1470.0,
+            "end": 1472.0,
+            "text": " If there is a process, then why should I give it priority?"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1472.0,
+            "end": 1474.0,
+            "text": " This is also a decision-making"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1474.0,
+            "end": 1476.0,
+            "text": " Basically, it is a very important job"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1476.0,
+            "end": 1478.0,
+            "text": " How to give priority"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1478.0,
+            "end": 1480.0,
+            "text": " How to give priority to a right process"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1480.0,
+            "end": 1482.0,
+            "text": " Then there is no preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1482.0,
+            "end": 1484.0,
+            "text": " This is a non-preemptive version"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1484.0,
+            "end": 1486.0,
+            "text": " Because there is no preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1486.0,
+            "end": 1488.0,
+            "text": " Convoy effect will happen"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1488.0,
+            "end": 1490.0,
+            "text": " It was a heavy Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1490.0,
+            "end": 1492.0,
+            "text": " There was an indefinite waiting"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1492.0,
+            "end": 1494.0,
+            "text": " Then there will be no overhead"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1494.0,
+            "end": 1496.0,
+            "text": " Let's see its preemptive version"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1496.0,
+            "end": 1498.0,
+            "text": " This is also complex"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1498.0,
+            "end": 1500.0,
+            "text": " How to tell priority"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1500.0,
+            "end": 1502.0,
+            "text": " There is preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1502.0,
+            "end": 1504.0,
+            "text": " Convoy effect will also happen"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1504.0,
+            "end": 1506.0,
+            "text": " The job with more priority is being delayed"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1506.0,
+            "end": 1508.0,
+            "text": " The job with more priority is being delayed"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1508.0,
+            "end": 1510.0,
+            "text": " There is starvation"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1510.0,
+            "end": 1512.0,
+            "text": " There will be overhead"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1512.0,
+            "end": 1514.0,
+            "text": " There will be overhead"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1514.0,
+            "end": 1516.0,
+            "text": " Now comes round robin"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1516.0,
+            "end": 1518.0,
+            "text": " The best quality in round robin is"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1518.0,
+            "end": 1520.0,
+            "text": " Response time is less"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1520.0,
+            "end": 1522.0,
+            "text": " In round robin"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1522.0,
+            "end": 1524.0,
+            "text": " At least once the CPU is found"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1524.0,
+            "end": 1526.0,
+            "text": " Because round robin is running"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1526.0,
+            "end": 1528.0,
+            "text": " Response time is the least"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1528.0,
+            "end": 1530.0,
+            "text": " The biggest advantage of RRL algorithm is"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1530.0,
+            "end": 1532.0,
+            "text": " Response time is the least"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1532.0,
+            "end": 1534.0,
+            "text": " Response time is the least"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1534.0,
+            "end": 1536.0,
+            "text": " This is a simple design"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1536.0,
+            "end": 1538.0,
+            "text": " This is a simple design"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1538.0,
+            "end": 1540.0,
+            "text": " I hope you have implemented it"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1540.0,
+            "end": 1542.0,
+            "text": " I hope you have implemented it"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1542.0,
+            "end": 1544.0,
+            "text": " Write in the comment section"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1544.0,
+            "end": 1546.0,
+            "text": " Who implemented all the algorithms"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1546.0,
+            "end": 1548.0,
+            "text": " I think Babbar Bhaiya"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1548.0,
+            "end": 1550.0,
+            "text": " I think Babbar Bhaiya"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1550.0,
+            "end": 1552.0,
+            "text": " You can implement all the algorithms"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1552.0,
+            "end": 1554.0,
+            "text": " You have read the data structure"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1554.0,
+            "end": 1556.0,
+            "text": " Now"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1556.0,
+            "end": 1558.0,
+            "text": " Yes, there is preemption"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1558.0,
+            "end": 1560.0,
+            "text": " There is time quantum"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1560.0,
+            "end": 1562.0,
+            "text": " If the process is not executed in time quantum"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1562.0,
+            "end": 1564.0,
+            "text": " Preempt and take another job"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1564.0,
+            "end": 1566.0,
+            "text": " Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1566.0,
+            "end": 1568.0,
+            "text": " There is no convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1568.0,
+            "end": 1570.0,
+            "text": " Because there is no starvation"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1570.0,
+            "end": 1572.0,
+            "text": " CPU is found after some time"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1572.0,
+            "end": 1574.0,
+            "text": " There is overhead"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1574.0,
+            "end": 1576.0,
+            "text": " Contact switching"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1576.0,
+            "end": 1578.0,
+            "text": " MLQ"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1578.0,
+            "end": 1580.0,
+            "text": " Complex"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1580.0,
+            "end": 1582.0,
+            "text": " We are dividing the queues"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1582.0,
+            "end": 1584.0,
+            "text": " We are dividing the queues"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1584.0,
+            "end": 1586.0,
+            "text": " We are dividing the queues"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1586.0,
+            "end": 1588.0,
+            "text": " Complexity is high"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1588.0,
+            "end": 1590.0,
+            "text": " Preemption is there"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1590.0,
+            "end": 1592.0,
+            "text": " We discussed"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1592.0,
+            "end": 1594.0,
+            "text": " We discussed"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1594.0,
+            "end": 1596.0,
+            "text": " We discussed"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1596.0,
+            "end": 1598.0,
+            "text": " Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1598.0,
+            "end": 1600.0,
+            "text": " Low priority"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1600.0,
+            "end": 1602.0,
+            "text": " Low priority"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1602.0,
+            "end": 1604.0,
+            "text": " Starvation"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1604.0,
+            "end": 1606.0,
+            "text": " Overhead"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1606.0,
+            "end": 1608.0,
+            "text": " Similarly"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1608.0,
+            "end": 1610.0,
+            "text": " Complex"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1610.0,
+            "end": 1612.0,
+            "text": " Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1612.0,
+            "end": 1614.0,
+            "text": " Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1614.0,
+            "end": 1616.0,
+            "text": " Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1616.0,
+            "end": 1618.0,
+            "text": " Convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1618.0,
+            "end": 1620.0,
+            "text": " We are trying to control"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1620.0,
+            "end": 1622.0,
+            "text": " If I say anything"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1622.0,
+            "end": 1624.0,
+            "text": " It is not eliminated"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1624.0,
+            "end": 1626.0,
+            "text": " If we read the deadlock"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1626.0,
+            "end": 1628.0,
+            "text": " We will also read the deadlock and avoidance"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1628.0,
+            "end": 1630.0,
+            "text": " We will also read the deadlock and avoidance"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1630.0,
+            "end": 1632.0,
+            "text": " There is no implementation problem"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1632.0,
+            "end": 1634.0,
+            "text": " There is a deadlock"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1634.0,
+            "end": 1636.0,
+            "text": " There is a hang"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1636.0,
+            "end": 1638.0,
+            "text": " There is a hang"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1638.0,
+            "end": 1640.0,
+            "text": " There is a convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1640.0,
+            "end": 1642.0,
+            "text": " There is a convoy effect"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1642.0,
+            "end": 1644.0,
+            "text": " There is an overhead"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1644.0,
+            "end": 1646.0,
+            "text": " There is an overhead"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1646.0,
+            "end": 1648.0,
+            "text": " We discussed"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1650.0,
+            "end": 1652.0,
+            "text": " We discussed"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1652.0,
+            "end": 1654.0,
+            "text": " in the comment section"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1654.0,
+            "end": 1656.0,
+            "text": " There is a"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1656.0,
+            "end": 1658.0,
+            "text": " There is a"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1658.0,
+            "end": 1660.0,
+            "text": " in the comment section"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1660.0,
+            "end": 1662.0,
+            "text": " There is a"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1666.0,
+            "end": 1670.0,
+            "text": " Use the"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1670.0,
+            "end": 1672.0,
+            "text": " Use the"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1672.0,
+            "end": 1674.0,
+            "text": " Use the"
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1674.0,
+            "end": 1677.0,
+            "text": " So, with this, CPU scheduling ends here."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1677.0,
+            "end": 1680.0,
+            "text": " Now, we will continue in the next lecture about concurrency."
+        },
+        {
+            "number": "Lecture 14",
+            "title": " Multi Level Queue Scheduling ",
+            "start": 1680.0,
+            "end": 1681.0,
+            "text": " Thank you."
+        }
+    ],
+    "text": " Hello, how are you all? This is Lakshay. We have come to the lecture number 14 of our OS. Today we are going to discuss some real-life implementation scheduling algorithms. Till now, we have discussed SJF, FCFS, RR algorithms. All these algorithms were simple. But the algorithms that are being used in the OS now, they do not directly implement them. They directly implement them using RR algorithm. They are implemented in a different way, in an optimized way. Let's study that. So, first of all, we have our multi-level queue scheduling. I will call it MLQ. Now, see what we do. We know that our system has three types of processes. There are three types of processes. First, system processes. Which are created by OS. The system processes, as we have discussed, are init processes. Which starts in the kernel. The first process is init. Apart from that, there are many processes related to the network. These are system processes. Basically, the important processes for OS or kernel to run are called system processes. The second is interactive processes. Interactive processes are those processes that require user input. They require user input. For example, if you are using Microsoft Word, you have to wait for the IO. So, IO is required in this. User input is waiting for this type of process. This is called foreground process. Why am I saying foreground? Because you can see it in the front, in the user space. You can see it in GUI. That's why I call it interactive process. User input is required in this. The third process is batch process. I call it background process. Background. It basically runs in the background. I don't need any user input in this. No user input. Since there is no user input, it runs in the background. Like in the last lecture, when we were making the orphan process and zombie process, we used to write sleep 1 or sleep 100 and put ampersand at the end. In the terminal, in Linux system, after putting ampersand, the process runs in the background. There is no input. It runs in the background and you can't see it. This is the type of process. What we did now is, we were reading the process in the previous algorithms. P1, P2, P3. This type of process. Now, we divided the process according to nature. We have three types of nature processes. System process, OSK, Interactive process, Foreground process. Second is batch process. These are the three types of processes. Not only this, their program comes with a placement guarantee. So that you can double ensure that you are getting a placement in a good company. At the end of their programs, you must have made a lot of projects. By which your resume will be more effective and your portfolio will be more strong. If you are interested, then their program comes with a free trial of one week. You can take the trial. And you also get an assured scholarship. So what you have to do is, I will add it in the description in the link. And by clicking on that link, you can avail the maximum possible discount on their program. You can take the placement. And you can give me a party to get the placement. Thank you. Now what I did, For these three types of processes, I made three different ready-queues. That is, the ready-queue that I was talking about, the ready-queue that we were discussing, I made three logical divisions of that ready-queue. Based on the nature of process. If I see its example, it is made directly in notes. It is something like this. One of my ready-queues will be SP-Q. Which I am calling system process-Q. Your IP-Q, interactive process-Q, batch-Q. And its priority is set in this way that the system-Q will be the most prioritized. That is, the system-Q will have the most priority in the processes. After that, your interactive comes. Then your batch process comes. The system-Q will have the most priority. Because it is a system process. If you don't give priority to the OS process, How will the OS work properly? This is the simple logic in this. After that, we put user processes. After that, the batch process comes. This is running in the background. It may be an important process. But we have kept it at the bottom. Its priority is lowest. And now what I will do in this, The three queues I have made, SP-Q, IP-Q, and the third batch process-Q. The three processes that we have made, They will have their own separate scheduling algorithms. The algorithms that we have read so far, One of them will be. For example, Suppose I am doing this with round robin. I am doing this with round robin. But I have put FCFS in BP. This can be an example of mine. Now how does this work? Suppose we have any process. Let's take an example here. I have a lot of processes like P1, P2. So what I will do, Based on the nature of that process, On the basis of nature, What will be the memory size of that? What is its priority? According to that, I will put that process in any queue. Suppose I have a P1 process. It will go to any one of these queues. And it will remain in that queue permanently. Once it goes to that queue, it will remain in that queue. Because the system process, I will put it in the system SP queue. So once I decide, OS will decide and push it in that queue. Now what will happen after that? It will continue to schedule in that queue. Depending on the algorithm you have applied to that queue. Now we have seen that there are three different queues. They have different scheduling algorithms. But how will the scheduling be in between these queues? Between this queue, That is, the three queues we have, If I draw it here, In between these three different queues, What will be the scheduling algorithm? There is a fixed priority pre-emptive scheduling in between these queues. The priority scheduling we have studied, It has a pre-emptive version. In which there is a fixed priority. And what is that fixed priority? That fixed priority is, SP's highest priority, Then IPQ's priority, Then BPQ's priority. We have made a diagram of it here. In this way, your priority will be going. The highest priority is this. Then the lowest priority is this. Now in this case, Suppose a P1 process comes. This is a new process. P2 process is already scheduled to the CPU. But this P2 process is a batch process. This is a batch process. So what will happen in this case? Because the batch process, That is, the batch queue itself is the lowest priority. And the new process that came, Suppose it is an IP process, an interactive process. So what I will do? Currently, I will pre-empt the P2 which is BP. And I will schedule the new process, IP. Okay? So it happened that, The priority of BPQ is the lowest in this case. Because there is more IP. Similarly, if a system process comes, So if any IP process is scheduled, Then I will pre-empt it. So things are done in this way here. So there is a fixed priority. Now tell me one thing, What will happen in this case? That the top level queue, Which is called SPQ. All the processes in the top level queue, Until it is properly, That is, until it is not terminated, Or does not go into wait, Until then, the second process, Which is the interactive process below, They will not get a chance. Think about it, I have given the highest priority to it. Priority schedule, we read, What was happening in it? The highest priority was, Basically, the CPU got the most time. The lowest priority was not even getting a chance. Okay? What a strong convoy effect it was. So in this case, the batch process, We will wait for the most. So the average waiting time, Which will be more overall. So I can say, There will be a problem like starvation here too. Look, we have tried to optimize it completely. This is the real-world scenario, There are many processes, I tried to divide it. I tried to put some optimization, But there is some incompleteness in this optimization. The way we have put the priority, This is a problematic thing. Because in this, The CPU time will get the most CPU time. The rest are below. Forget BP. This is the situation. So the problem of indefinite waiting, The strongest convoy effect, Which I was saying, That will also be here. So starvation will be here. So even though I tried my best, I tried my best to optimize things a little. But here, There is still some work left. Let's put it in the notes. We have written everything on the notes. Convoy effect is present. Only after completion of all processes from the top level, The further level, Ready queues will be scheduled. Fixed priority preemptive scheduling is applied. In all three queues. So there are two types of scheduling. Within queue, A particular queue is also scheduled. And if I say inter queue, Inter queue is also scheduled. So this was our MLQ, Multi-level queue scheduling. This is a concept. I don't think it has ever been used. It is not used in today's date. A better version of this, I can say 2.0 version of this, Multi-level feedback queue. Now let's discuss the multi-level feedback queue. Which is a little, The strongest convoy effect, Which is the biggest problem of starvation, Try to overcome it a little. Now let's discuss the multi-level feedback queue. Now let's discuss the multi-level. Multi-level. Multi-level. Queue scheduling. Now you will see this, These are used these days. Okay. And I say in this, It is a little user defined. Now let's discuss how user defined. This is a very flexible type of algorithm. There are different queues in this too. Okay. Multiple. All queues are here too. We have divided in queues. But there is a big thing in this. The different queues we made, Okay. In this queue, What were we discussing in the previous MLQ? In MLQ, we were discussing that, If I put a process in SP, Or IP, Or basically BP queue. Okay. After that, It is scheduled in its own queue. It does not move in the other queue. That is, the process of SP queue, Will not go to any interactive queue. Okay. There is no such attachment in this. It cannot move within the queue. So, in this case, We tried to optimize it a little. We did, there are still many queues. But it is allowed to go to other queues. Okay. So, inter-queue movement is allowed in this. I will write. Okay. Okay. My idea is, I will separate the processes, Based on their burst time. That is, the processes which are taking more time, Okay. The processes in the ready queue, I will move them in the lower queue. I will keep doing it. And the more interactive processes, Which are doing more IO, Or the user intervention which is required, I will keep moving in the lower queue. Okay. So, let's write in this, That we are separating, Processes, Based on, BT. How? The one which is taking more time, I will move it in the lower queue. Okay. And which will be IO bound processes. Or the interactive processes. Interactive processes means, That it will be moving on the wait, After some time. It needs this user input, This user input, This user input, I will keep them in the higher priority. Why are we keeping them in the higher priority? Because you have turned on the system. You have turned on the system. And you have run a program. Now, the rest of the system processes, The background processes, Are getting more CPU time. The application which you have launched, Is not getting the CPU time. So, it will be a weird situation. The user, Is working on an OS, Which is not getting the CPU time. No one wants to work on such OS. So, we increase the priority of the interactive processes. And move them in the upper queue. Okay. And, There is one more thing. Now, I will keep the higher priority in the lower queue. This will create a problem. The lower queue will keep moving. Now, you will say, Convoy fit can still come in this. The process is moving in the lower queue. The upper process is getting more CPU time. The process in the lower queue, Can go into starvation. For that, I will use a method, Which we discussed in the priority scheduling. Which is called, Aging. The lower processes, Will go into the lower queue. I will use the aging method after a point. And, The lower priority processes, Will be, Increased in their priority. Okay. So, in this way, I will prevent starvation with the help of aging. Okay. No aging method was being used here. Because, we could not use the aging technique in the MLQ. Because, There was no inter-queue movement. Now, there is an inter-queue movement. So, we are able to use this method. So, in this case, it is more flexible. Now, Listen to all its characteristics. We will make an example of how it will look. Okay. And, if it is flexible, Then it is configurable. Okay. It is configurable. The type of OS you are designing, You can configure it according to that. You can choose, Which process you want to send to the lower priority. How long do you want to age? In which interval do you want to increase their priority? Do you want to keep the interactive process at the top? Do you want to keep the system process at the top? Or, what do you want to do? What theme do you want to keep? How much priority do you want to give it? You can configure all this here. Now, if I, Make a sample MLFQ design, I will show you. I will show you in the notes. It will look like this. Look carefully. The first queue was, Now, I put RR in this one. I put RR in the second one. I put RR in the third queue. I put FCFS in the fourth one. Let's not do too much. Let's put FCFS. Now, I kept the time quantum of the first one for 2 seconds. The second one is 4. And, the third one is 8. After that, I will tell FCFS. Now, let's say a process comes. Now, imagine, Its burst time was more than 2. If it is more than 2, It will move to the next queue. It will move to the next queue. If it is less than 2, Then, we will simply exit from here. Then, we will simply exit from here. That process will exit. Now, what is the benefit of this? The processes with lower burst time, The processes with lower burst time, They are not getting started. They are not getting started. The reason being, The process with lower burst time, The process with lower burst time, It will exit in the starting itself. Now, let's say, The process with higher burst time, It will move to the next queue. Now, we are saying that this process couldn't run in 2 seconds. Let's give it 4 seconds. Now, it didn't run in 4 seconds. Let's give it 8 seconds. I could have added more queues. Now, I have added FCFS. Now, it is like FCFS. Now, it is like FCFS. Now, I am giving multiple chances to a process. It can run in different time quantum. If it doesn't run in different time quantum, I will schedule FCFS. This is how it is designed. This is a sample design. Now, let's talk about the aging process. Let's see why we are using aging. There can be a process like P1, If the burst time is more, it will exit from the first queue, second queue, and fourth queue. When it will reach this queue, it will feel starvation. It will feel starvation. Now, it is being scheduled like FCFS. Now, it is being scheduled like FCFS. Now, it is being scheduled like FCFS. If I want to overcome this, I am using the aging method. I will increase the priority. After increasing the priority, I can use a method to move the process. It is configurable. This is a sample design. This is a sample design. We can use it in OS. We can use it in OS. In Mac, MLFQ is used. They use different types of priority. They use different types of priority. They implement it. If I want to define how MLFQ will look like, how MLFQ will look like, how will be the points. I will discuss two things. I will discuss two things. The design of MLFQ. The design of MLFQ. The points of it. The first point is the number of queues. The first point is the number of queues. The designer will decide the requirement of the OS. The designer will decide the requirement of the OS. The second point is the scheduling algorithm in each queue. The third point is the scheduling algorithm in each queue. The third point is the method to upgrade the process. the method to upgrade the process. The method to upgrade the method to upgrade the method to upgrade the process to a higher to a higher queue. I will discuss the method of aging. to upgrade the process and move it to a higher queue. I will discuss the method of aging. I will discuss the method of aging. question beeps question beeps question beeps question beeps question beeps question beeps question beeps I have decided this. I will delete these. I will delete some of the seters. How will I demote this process? What will be the method of this? The method used here was First, I was checking after 2 seconds Is it executing in 2 seconds or not? Then I demoted it here and then here By doing this, we have put a method here So this is a sample This is a sample I can design any type of flexibility Okay? Suppose, any process comes Process P1 In which queue will it go first? In which queue it will be pushed? In which queue will it go first? It can be like this I will design something like this I will send it in TQ first Or I know this is a very easy process So I will send it in FCFS first So I can do this type of flexible things So to design MLFQ These are 5 pointers Someone will think about these 5 things And will design a scheduling algorithm For MLFQ For his particular OS If I am making an OS I will keep these points in mind To make an MLFQ design So Now I can see I am using aging here So I tried to stop starvation So these are my two types of Multi-level queues That we discussed Now let's discuss an important thing That is Let's do a comparison Of these 4-5 algorithms Let's do a comparison The comparison will be like this We have seen 4 things We will decide on these 4 things How is the design? Is preemption happening? Or how much is the Convoy effect? How much is the overhead? Now let's see FCFS What is there in FCFS? Its design is very simple First come first serve It doesn't have preemption Now the question is What is the preempt version of FCFS? What is the preempt version of FCFS? Write it in the comment section What is the preempt version of FCFS? I have told this in the last lecture Does it have Convoy effect? Yes, it has Convoy effect Because the Convoy effect that we defined We did it right If the first process Which has the most burst time If it is scheduled first Then the other processes will wait Is there any overhead in this? There is no overhead in this Because there is no preemption So there is no overhead Once P1 is found, it is found Now let's come to the second scheduling algorithm Which is SJF Now this is a complex How is it complex? Calculate it for a process So it has a complex design It doesn't have preemption It will have Convoy effect Why will it have Convoy effect? Because when t is equal to 0 The arrival time is 0 The process with more bt is the first So it is done once the schedule is done Because there is no preemption So even if there is a bt less than P2 We will not be able to schedule it Because there is no preemption here There is no overhead here If there is no preemption Then how will there be overhead? Now its preempt version is also complex It has to do bt estimation But it has preemption So because of preemption Convoy effect is negligible It doesn't happen Because this is such an algorithm In which the average waiting time is less Because the job with the least bt As soon as the job with the least bt comes I schedule it If the job with less bt comes Then I preempt that one And schedule the next one So there is no Convoy effect Then is there overhead? Yes If there is preemption, then how will there be no overhead? Context switching is done here Now comes priority scheduling This is also complex How to take priority decision How to take priority from any process If there is a process, then why should I give it priority? This is also a decision-making Basically, it is a very important job How to give priority How to give priority to a right process Then there is no preemption This is a non-preemptive version Because there is no preemption Convoy effect will happen It was a heavy Convoy effect There was an indefinite waiting Then there will be no overhead Let's see its preemptive version This is also complex How to tell priority There is preemption Convoy effect will also happen The job with more priority is being delayed The job with more priority is being delayed There is starvation There will be overhead There will be overhead Now comes round robin The best quality in round robin is Response time is less In round robin At least once the CPU is found Because round robin is running Response time is the least The biggest advantage of RRL algorithm is Response time is the least Response time is the least This is a simple design This is a simple design I hope you have implemented it I hope you have implemented it Write in the comment section Who implemented all the algorithms I think Babbar Bhaiya I think Babbar Bhaiya You can implement all the algorithms You have read the data structure Now Yes, there is preemption There is time quantum If the process is not executed in time quantum Preempt and take another job Convoy effect There is no convoy effect Because there is no starvation CPU is found after some time There is overhead Contact switching MLQ Complex We are dividing the queues We are dividing the queues We are dividing the queues Complexity is high Preemption is there We discussed We discussed We discussed Convoy effect Low priority Low priority Starvation Overhead Similarly Complex Convoy effect Convoy effect Convoy effect Convoy effect We are trying to control If I say anything It is not eliminated If we read the deadlock We will also read the deadlock and avoidance We will also read the deadlock and avoidance There is no implementation problem There is a deadlock There is a hang There is a hang There is a convoy effect There is a convoy effect There is an overhead There is an overhead We discussed We discussed in the comment section There is a There is a in the comment section There is a Use the Use the Use the So, with this, CPU scheduling ends here. Now, we will continue in the next lecture about concurrency. Thank you."
+}
