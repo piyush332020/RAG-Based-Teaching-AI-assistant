@@ -3,14 +3,14 @@ import json
 import os
 
 model = whisper.load_model("large-v2") # best model for transcript
-audios=os.listdir("vedios_mp3")
+audios=os.listdir("audios_mp3")
 for audio in audios:
     # print(audio)
     number=audio.split("_")[0]
     title=audio.split("_")[1]
     print(number +" "+ title)
     # result=model.transcribe(audio="vedios_mp3/0_practise.mp3")
-    result=model.transcribe(audio=f"vedios_mp3/{audio}",language="hi",task="translate",word_timestamps=False)
+    result=model.transcribe(audio=f"audios_mp3/{audio}",language="hi",task="translate",word_timestamps=False)
 
     chunks=[]
     for segment in result["segments"]:
