@@ -1,6 +1,6 @@
 # RAG-Based Teaching AI Assistant
 
-This project is a **Retrieval-Augmented Generation (RAG) Based Teaching AI Assistant**, developed using educational video content from the Love Babbar DSA course on YouTube.
+This project is a **Retrieval-Augmented Generation (RAG) Based Teaching AI Assistant**, developed using educational video content from the Love Babbar operating sysytem course on YouTube.
 
 **Course Playlist:**  
 https://youtube.com/playlist?list=PLDzeHZWIZsTr3nwuTegHLa2qlI81QweYG&si=lyiC1NqgoRlDLBFj
@@ -81,6 +81,10 @@ ollama pull bge-m3
 ## 4. Video Processing and Execution Order
 
 If you want to process your own educational videos, place them in the appropriate input directory used by the project.
+ensure your video format follow this order
+Lecture-number_Title.mp3
+for ex-
+Lecture-01_operating system.mp3
 
 Run the following Python files in the exact order:
 
