@@ -1,5 +1,5 @@
 This Rag-Based teaching Ai Assistant based on this Love Babbar course-
-https://youtube.com/playlist?list=PLDzeHZWIZsTr3nwuTegHLa2qlI81QweYG&si=lyiC1NqgoRlDLBFj </b>
+<b> https://youtube.com/playlist?list=PLDzeHZWIZsTr3nwuTegHLa2qlI81QweYG&si=lyiC1NqgoRlDLBFj </b>
 if you want to make it on your vedios
 Then follow this Instruction
 
