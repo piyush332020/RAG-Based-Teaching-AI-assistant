@@ -58,14 +58,14 @@ if user asks unrelated question ,tell him that you can only answer question rela
 '''
 model="deepseek-r1:14b"
 
-with open("prompt.txt","w") as f:
-    f.write(prompt)
+# with open("prompt.txt","w") as f:
+#     f.write(prompt)
 
 
 response=infrence(prompt,model)["response"]
 print(response)
-with open("response.txt","w") as f:
-    f.write(response)
+# with open("response.txt","w") as f:
+#     f.write(response)
 
 for index,item in new_df.iterrows():
     print(index,item["title"],item["number"],item["text"],item["start"],item["end"])

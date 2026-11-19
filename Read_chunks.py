@@ -11,6 +11,8 @@ def create_embeddings(text_list):
         "model":"bge-m3",
         "input":text_list
     })
+    print("Status:", r.status_code)
+    print("Response:", r.text)
     embeddings=r.json()["embeddings"]
     return embeddings
 # print(create_embeddings("my name is piyush"))
@@ -21,14 +23,32 @@ chunk_id=0
 for json_file in jsons:
     with open(f"jsons/{json_file}") as f:
         content =json.load(f)
-    text=[c['text'] for c in content['chunks']]
-    embedding=create_embeddings(text)
-    for i, chunk in enumerate(content['chunks']):
-        chunk['chunk_id']=i
-        chunk['embedding']=embedding[i]
-        my_dict.append(chunk)
+    text = [c['text'] for c in content['chunks']]
+
+    batch_size = 200
+
+    for start in range(0, len(text), batch_size):
+
+        end = min(start + batch_size, len(text))
+
+        batch_text = text[start:end]
+
+        print(f"Processing chunks {start + 1} to {end}")
+
+        embedding = create_embeddings(batch_text)
+
+        for i, emb in enumerate(embedding):
+
+            chunk = content['chunks'][start + i]
+
+            chunk['chunk_id'] = chunk_id
+            chunk['embedding'] = emb
+
+            my_dict.append(chunk)
+
+            chunk_id += 1
 df=pd.DataFrame.from_records(my_dict)
 #save this dataframe df
 joblib.dump(df,'embeddings.joblib')
 
-print("done")
+# print("done")
