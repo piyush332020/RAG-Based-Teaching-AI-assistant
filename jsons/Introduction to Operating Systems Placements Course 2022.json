@@ -1,0 +1,985 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 0.0,
+            "end": 6.8,
+            "text": " Hello, how are you all? This is Love Bhopal and welcome to the channel Code Help."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 6.8,
+            "end": 12.0,
+            "text": " So this is our introduction video of our upcoming OS series, operating system series."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 12.0,
+            "end": 16.6,
+            "text": " What are we going to cover in this? What are your expectations going to be fulfilled?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 16.6,
+            "end": 20.0,
+            "text": " Will only target placement or academics, gates, etc."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 20.0,
+            "end": 22.0,
+            "text": " So our Guruji is sitting with us today."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 22.0,
+            "end": 26.6,
+            "text": " Hello, how are you all? This is Laksh. So today we have come to do the course with you."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 26.6,
+            "end": 35.2,
+            "text": " So we will give you a little introduction before the first video of the course."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 35.2,
+            "end": 39.2,
+            "text": " Who will target the course, what will not do, so Babbar will also ask us some questions."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 39.2,
+            "end": 41.2,
+            "text": " We will also answer them."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 41.2,
+            "end": 47.2,
+            "text": " First let's understand that I am a child and I found out that an OS series is about to start on Code Help."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 47.2,
+            "end": 50.2,
+            "text": " What are the things we are going to cover in this?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 50.800000000000004,
+            "end": 54.800000000000004,
+            "text": " OS which you study in college, it will be a little different from college."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 54.800000000000004,
+            "end": 59.800000000000004,
+            "text": " In college, you are studying academics, you have to give exam, exam point of view."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 59.800000000000004,
+            "end": 61.800000000000004,
+            "text": " But here our point of view is a little different."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 61.800000000000004,
+            "end": 63.800000000000004,
+            "text": " We want you to get placement specific things."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 63.800000000000004,
+            "end": 65.8,
+            "text": " Only placement specific."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 65.8,
+            "end": 68.80000000000001,
+            "text": " Means it will not help you to clear any other exam."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 68.80000000000001,
+            "end": 72.80000000000001,
+            "text": " You can do a little, like you are on the college way, so 100% will not come."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 72.80000000000001,
+            "end": 74.80000000000001,
+            "text": " But we are not targeting the college."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 74.80000000000001,
+            "end": 78.80000000000001,
+            "text": " If you have a gate, then there will be no 100% because we are not targeting it."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 79.39999999999999,
+            "end": 81.39999999999999,
+            "text": " We are only targeting the placement interview."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 81.39999999999999,
+            "end": 85.39999999999999,
+            "text": " If you have asked 10 questions there, then we are making sure that you get 10 answers out of 10."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 85.39999999999999,
+            "end": 87.39999999999999,
+            "text": " Am I right?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 87.39999999999999,
+            "end": 92.39999999999999,
+            "text": " If your OS is going to be a deciding factor in the interview, then what we will do is make your OS deciding factor very strong."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 92.39999999999999,
+            "end": 97.4,
+            "text": " So that if OS is being asked, then you will make the interviewer happy."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 97.4,
+            "end": 99.4,
+            "text": " Good, good, very good."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 99.4,
+            "end": 102.4,
+            "text": " Once told at a high level, who is going to cover which topics."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 102.4,
+            "end": 105.4,
+            "text": " It doesn't matter that much, but still the child should know what to read."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 106.0,
+            "end": 111.0,
+            "text": " First of all, we will discuss what is OS, why is it important, why not, why we have to read it."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 111.0,
+            "end": 113.0,
+            "text": " We will discuss this."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 113.0,
+            "end": 117.0,
+            "text": " Apart from that, we will cover all the topics you have studied in your courses."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 117.0,
+            "end": 124.0,
+            "text": " Like process, memory management, scheduling algorithms, storage management, concurrency control, deadlock, etc."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 124.0,
+            "end": 126.0,
+            "text": " All the big issues that you must be studying in college."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 126.0,
+            "end": 128.0,
+            "text": " But we will study it from a different angle."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 128.0,
+            "end": 132.0,
+            "text": " So far I have seen OS videos, I have studied very good courses."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 132.0,
+            "end": 135.0,
+            "text": " But there is no placement oriented, only academics oriented."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 135.6,
+            "end": 139.6,
+            "text": " I have studied very good courses, but there is no practical thing."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 139.6,
+            "end": 144.6,
+            "text": " So if I have to say, I have not studied any placement oriented course on YouTube."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 144.6,
+            "end": 146.6,
+            "text": " As I have seen, there is nothing in Hindi or Hindi."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 146.6,
+            "end": 150.6,
+            "text": " So, the theory is read, the academics are read."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 150.6,
+            "end": 158.6,
+            "text": " If I have to tell children, how is our course different from those courses, how is it good from those courses, how is it standing separately, then what will be the factor?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 158.6,
+            "end": 163.6,
+            "text": " First of all, we have discussed the factor that it is targeting only placement courses."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 164.2,
+            "end": 171.2,
+            "text": " Secondly, we will discuss the interview specific questions that will be asked to you directly."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 171.2,
+            "end": 176.2,
+            "text": " What answer do you have to give and what knowledge you should have around it to give that answer."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 176.2,
+            "end": 178.2,
+            "text": " Now the interviewer will ask you some questions."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 178.2,
+            "end": 181.2,
+            "text": " What is OS? He will ask a very small question."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 181.2,
+            "end": 185.2,
+            "text": " So you will give a definition, but he will not be happy with that."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 185.2,
+            "end": 187.2,
+            "text": " He wants to get something out of you."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 187.2,
+            "end": 189.2,
+            "text": " That means you do not understand it in its real."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 189.79999999999998,
+            "end": 196.79999999999998,
+            "text": " So in the same way, we will explain you the whole background so that the interviewer who will question you, you can answer it properly."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 196.79999999999998,
+            "end": 204.79999999999998,
+            "text": " Secondly, one more thing that we are not going to introduce in this is that there are some questions in OS that we do coding."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 204.79999999999998,
+            "end": 206.79999999999998,
+            "text": " Implementation questions."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 206.79999999999998,
+            "end": 209.79999999999998,
+            "text": " We will go to the level of implementation."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 209.79999999999998,
+            "end": 214.79999999999998,
+            "text": " The interviewer does not directly code from you, but he wants you to write a little bit."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 215.4,
+            "end": 221.4,
+            "text": " You know a little bit, you can write questions of concurrency control or you can give a solution."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 221.4,
+            "end": 224.4,
+            "text": " So in this way, we will keep it a little practical."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 224.4,
+            "end": 227.4,
+            "text": " The biggest advantage of keeping it practical is that the audience will enjoy it."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 227.4,
+            "end": 232.4,
+            "text": " Exactly the same, all the courses are there, the girl has studied very well there."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 232.4,
+            "end": 234.4,
+            "text": " We studied from there to pass in our college time."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 234.4,
+            "end": 239.4,
+            "text": " But the placement point is that if you show the interviewer that X factor, that coding, that you have done implementation,"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 239.4,
+            "end": 241.4,
+            "text": " that sir, I write a program."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 242.0,
+            "end": 244.0,
+            "text": " So you have done a different standout."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 244.0,
+            "end": 249.0,
+            "text": " You had 10 children, 9 did not know, did not know what would happen, the definition came, that this boy knows everything."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 249.0,
+            "end": 252.0,
+            "text": " His OS is very strong and by mistake that company became Adobe."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 252.0,
+            "end": 256.0,
+            "text": " So this video is sponsored by Cryo, the world's leading project driven platform."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 256.0,
+            "end": 261.0,
+            "text": " If we are targeting that we need a good job, we are doing the work on problem solving skills and DSA in this series."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 261.0,
+            "end": 265.0,
+            "text": " Also, if we want to be strong in development, then Cryo is the place for you."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 265.0,
+            "end": 270.0,
+            "text": " In Cryo, you will get different programs like full stack program, backend development program."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 270.6,
+            "end": 275.6,
+            "text": " The grade of each program is such that the project you are going to develop is an internship level project."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 275.6,
+            "end": 277.6,
+            "text": " Here you are going to do things practically."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 277.6,
+            "end": 281.6,
+            "text": " At the end of each program, you will have so many projects that your resume will be very strong."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 281.6,
+            "end": 286.6,
+            "text": " Not only that, there is also a fellowship program here in which you are guaranteed placement."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 286.6,
+            "end": 288.6,
+            "text": " That you will be placed in a product based company."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 288.6,
+            "end": 293.6,
+            "text": " All the programs come with a one week free trial and you will also get an assured scholarship."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 293.6,
+            "end": 298.6,
+            "text": " So a link will show you here in the description, you can go there and avail the maximum discount available."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 299.20000000000005,
+            "end": 303.20000000000005,
+            "text": " You can use the coupon code here and get the maximum discount."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 303.20000000000005,
+            "end": 305.20000000000005,
+            "text": " And it applies to every program."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 305.20000000000005,
+            "end": 307.20000000000005,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 307.20000000000005,
+            "end": 309.20000000000005,
+            "text": " There are many other questions like this."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 309.20000000000005,
+            "end": 313.20000000000005,
+            "text": " So that's the thing."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 313.20000000000005,
+            "end": 315.20000000000005,
+            "text": " And we are targeting the implementation of concurrency control."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 315.20000000000005,
+            "end": 318.20000000000005,
+            "text": " We are going to do at least 10 questions of concurrency control."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 318.20000000000005,
+            "end": 321.20000000000005,
+            "text": " And there will be a lot of premium questions in it."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 321.20000000000005,
+            "end": 323.20000000000005,
+            "text": " So it's going to be a lot of fun."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 323.20000000000005,
+            "end": 325.20000000000005,
+            "text": " So we have understood this."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 325.8,
+            "end": 327.8,
+            "text": " I want to give a message to your students."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 327.8,
+            "end": 329.8,
+            "text": " I want to explain one thing."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 329.8,
+            "end": 331.8,
+            "text": " Keep in mind this thing."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 331.8,
+            "end": 333.8,
+            "text": " So what will happen?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 333.8,
+            "end": 335.8,
+            "text": " The biggest thing I will say is that OS videos will start uploading from today."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 335.8,
+            "end": 337.8,
+            "text": " What you have to do is to be consistent."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 337.8,
+            "end": 339.8,
+            "text": " Try to watch the video the day it comes out."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 339.8,
+            "end": 343.8,
+            "text": " No one is going to teach in a very big and sophisticated way."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 343.8,
+            "end": 345.8,
+            "text": " They will teach from a very niche level."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 345.8,
+            "end": 347.8,
+            "text": " Try to watch the video the day it comes out."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 347.8,
+            "end": 349.8,
+            "text": " Be consistent."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 349.8,
+            "end": 351.8,
+            "text": " Watch the video the day it comes out."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 351.8,
+            "end": 353.8,
+            "text": " Give us feedback."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 354.40000000000003,
+            "end": 356.40000000000003,
+            "text": " Give us feedback."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 356.40000000000003,
+            "end": 358.40000000000003,
+            "text": " Give us feedback."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 358.40000000000003,
+            "end": 360.40000000000003,
+            "text": " If you leave the video,"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 360.40000000000003,
+            "end": 362.40000000000003,
+            "text": " Then you will think that I will watch it when it is over."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 362.40000000000003,
+            "end": 364.40000000000003,
+            "text": " It won't be fun."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 364.40000000000003,
+            "end": 368.40000000000003,
+            "text": " The engagement between a teacher and a student should be there."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 368.40000000000003,
+            "end": 370.40000000000003,
+            "text": " Watch the video the day it comes out."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 370.40000000000003,
+            "end": 372.40000000000003,
+            "text": " Because it will be like this."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 372.40000000000003,
+            "end": 374.40000000000003,
+            "text": " If you leave it behind,"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 374.40000000000003,
+            "end": 376.40000000000003,
+            "text": " The video will be made stupid."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 376.40000000000003,
+            "end": 378.40000000000003,
+            "text": " Where will it come from now?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 378.40000000000003,
+            "end": 380.40000000000003,
+            "text": " Lazy."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 380.40000000000003,
+            "end": 382.40000000000003,
+            "text": " It's up to you."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 383.0,
+            "end": 385.0,
+            "text": " Watch the video the day it comes out."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 385.0,
+            "end": 387.0,
+            "text": " Comment that it was fun."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 387.0,
+            "end": 389.0,
+            "text": " Or you can do this improvement."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 389.0,
+            "end": 391.0,
+            "text": " Include this improvement in the next video."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 391.0,
+            "end": 393.0,
+            "text": " Let's talk about the frequency."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 393.0,
+            "end": 395.0,
+            "text": " How many videos will come in a week?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 395.0,
+            "end": 397.0,
+            "text": " We will put two videos in a week."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 397.0,
+            "end": 399.0,
+            "text": " There will be big videos."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 399.0,
+            "end": 401.0,
+            "text": " Watch them."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 401.0,
+            "end": 403.0,
+            "text": " We will try to keep the length small."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 403.0,
+            "end": 405.0,
+            "text": " So that you can enjoy."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 405.0,
+            "end": 407.0,
+            "text": " Don't go to sleep after watching for 20 minutes."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 407.0,
+            "end": 409.0,
+            "text": " At least two videos are there."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 409.0,
+            "end": 411.0,
+            "text": " I can make 22 videos."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 411.6,
+            "end": 413.6,
+            "text": " I can give you commitment."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 413.6,
+            "end": 415.6,
+            "text": " When will it end?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 415.6,
+            "end": 417.6,
+            "text": " Tell me the date."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 417.6,
+            "end": 419.6,
+            "text": " Watch two videos first."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 419.6,
+            "end": 421.6,
+            "text": " Understand what improvement can be done."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 421.6,
+            "end": 423.6,
+            "text": " Then the dates will come."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 423.6,
+            "end": 425.6,
+            "text": " Where are we running?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 425.6,
+            "end": 427.6,
+            "text": " Bye Bye"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 427.6,
+            "end": 429.6,
+            "text": " Wait."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 429.6,
+            "end": 431.6,
+            "text": " The first video is going to be uploaded today."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 431.6,
+            "end": 433.6,
+            "text": " Tell us in the comment section."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 433.6,
+            "end": 435.6,
+            "text": " What else should we keep in mind?"
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 435.6,
+            "end": 437.6,
+            "text": " Let's continue the series."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 437.6,
+            "end": 439.6,
+            "text": " See you in the next video."
+        },
+        {
+            "number": "Lecture Intro",
+            "title": "Introduction to Operating Systems Placements Course 2022",
+            "start": 439.6,
+            "end": 442.20000000000005,
+            "text": " Bye."
+        }
+    ],
+    "text": " Hello, how are you all? This is Love Bhopal and welcome to the channel Code Help. So this is our introduction video of our upcoming OS series, operating system series. What are we going to cover in this? What are your expectations going to be fulfilled? Will only target placement or academics, gates, etc. So our Guruji is sitting with us today. Hello, how are you all? This is Laksh. So today we have come to do the course with you. So we will give you a little introduction before the first video of the course. Who will target the course, what will not do, so Babbar will also ask us some questions. We will also answer them. First let's understand that I am a child and I found out that an OS series is about to start on Code Help. What are the things we are going to cover in this? OS which you study in college, it will be a little different from college. In college, you are studying academics, you have to give exam, exam point of view. But here our point of view is a little different. We want you to get placement specific things. Only placement specific. Means it will not help you to clear any other exam. You can do a little, like you are on the college way, so 100% will not come. But we are not targeting the college. If you have a gate, then there will be no 100% because we are not targeting it. We are only targeting the placement interview. If you have asked 10 questions there, then we are making sure that you get 10 answers out of 10. Am I right? If your OS is going to be a deciding factor in the interview, then what we will do is make your OS deciding factor very strong. So that if OS is being asked, then you will make the interviewer happy. Good, good, very good. Once told at a high level, who is going to cover which topics. It doesn't matter that much, but still the child should know what to read. First of all, we will discuss what is OS, why is it important, why not, why we have to read it. We will discuss this. Apart from that, we will cover all the topics you have studied in your courses. Like process, memory management, scheduling algorithms, storage management, concurrency control, deadlock, etc. All the big issues that you must be studying in college. But we will study it from a different angle. So far I have seen OS videos, I have studied very good courses. But there is no placement oriented, only academics oriented. I have studied very good courses, but there is no practical thing. So if I have to say, I have not studied any placement oriented course on YouTube. As I have seen, there is nothing in Hindi or Hindi. So, the theory is read, the academics are read. If I have to tell children, how is our course different from those courses, how is it good from those courses, how is it standing separately, then what will be the factor? First of all, we have discussed the factor that it is targeting only placement courses. Secondly, we will discuss the interview specific questions that will be asked to you directly. What answer do you have to give and what knowledge you should have around it to give that answer. Now the interviewer will ask you some questions. What is OS? He will ask a very small question. So you will give a definition, but he will not be happy with that. He wants to get something out of you. That means you do not understand it in its real. So in the same way, we will explain you the whole background so that the interviewer who will question you, you can answer it properly. Secondly, one more thing that we are not going to introduce in this is that there are some questions in OS that we do coding. Implementation questions. We will go to the level of implementation. The interviewer does not directly code from you, but he wants you to write a little bit. You know a little bit, you can write questions of concurrency control or you can give a solution. So in this way, we will keep it a little practical. The biggest advantage of keeping it practical is that the audience will enjoy it. Exactly the same, all the courses are there, the girl has studied very well there. We studied from there to pass in our college time. But the placement point is that if you show the interviewer that X factor, that coding, that you have done implementation, that sir, I write a program. So you have done a different standout. You had 10 children, 9 did not know, did not know what would happen, the definition came, that this boy knows everything. His OS is very strong and by mistake that company became Adobe. So this video is sponsored by Cryo, the world's leading project driven platform. If we are targeting that we need a good job, we are doing the work on problem solving skills and DSA in this series. Also, if we want to be strong in development, then Cryo is the place for you. In Cryo, you will get different programs like full stack program, backend development program. The grade of each program is such that the project you are going to develop is an internship level project. Here you are going to do things practically. At the end of each program, you will have so many projects that your resume will be very strong. Not only that, there is also a fellowship program here in which you are guaranteed placement. That you will be placed in a product based company. All the programs come with a one week free trial and you will also get an assured scholarship. So a link will show you here in the description, you can go there and avail the maximum discount available. You can use the coupon code here and get the maximum discount. And it applies to every program. Thank you. There are many other questions like this. So that's the thing. And we are targeting the implementation of concurrency control. We are going to do at least 10 questions of concurrency control. And there will be a lot of premium questions in it. So it's going to be a lot of fun. So we have understood this. I want to give a message to your students. I want to explain one thing. Keep in mind this thing. So what will happen? The biggest thing I will say is that OS videos will start uploading from today. What you have to do is to be consistent. Try to watch the video the day it comes out. No one is going to teach in a very big and sophisticated way. They will teach from a very niche level. Try to watch the video the day it comes out. Be consistent. Watch the video the day it comes out. Give us feedback. Give us feedback. Give us feedback. If you leave the video, Then you will think that I will watch it when it is over. It won't be fun. The engagement between a teacher and a student should be there. Watch the video the day it comes out. Because it will be like this. If you leave it behind, The video will be made stupid. Where will it come from now? Lazy. It's up to you. Watch the video the day it comes out. Comment that it was fun. Or you can do this improvement. Include this improvement in the next video. Let's talk about the frequency. How many videos will come in a week? We will put two videos in a week. There will be big videos. Watch them. We will try to keep the length small. So that you can enjoy. Don't go to sleep after watching for 20 minutes. At least two videos are there. I can make 22 videos. I can give you commitment. When will it end? Tell me the date. Watch two videos first. Understand what improvement can be done. Then the dates will come. Where are we running? Bye Bye Wait. The first video is going to be uploaded today. Tell us in the comment section. What else should we keep in mind? Let's continue the series. See you in the next video. Bye."
+}

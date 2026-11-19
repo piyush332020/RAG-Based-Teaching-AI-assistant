@@ -1,0 +1,4072 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 0.0,
+            "end": 7.0,
+            "text": " Hello Ji, How are you all? This is Lakshya. Welcome to our OS Placement Series."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 7.0,
+            "end": 12.0,
+            "text": " Today we have come to our lecture number 5 and we are going to discuss a very important topic today."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 12.0,
+            "end": 14.0,
+            "text": " System Calls"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 14.0,
+            "end": 24.0,
+            "text": " System calls are such an important topic that you should know this terminology and also you should know the in-depth information about it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 24.0,
+            "end": 30.0,
+            "text": " Before we start with System Calls, let's discuss what we have studied till now."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 30.0,
+            "end": 34.0,
+            "text": " In the last video, we have studied two things in the component of OS."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 34.0,
+            "end": 40.0,
+            "text": " First was User Space and the second was Kernel Space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 40.0,
+            "end": 47.0,
+            "text": " There is a distinction between these two."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 48.0,
+            "end": 52.0,
+            "text": " We have these two separate spaces."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 52.0,
+            "end": 56.0,
+            "text": " If we want to switch between these, we switch between the user mode and kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 56.0,
+            "end": 58.0,
+            "text": " We have discussed this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 58.0,
+            "end": 62.0,
+            "text": " Now I will say that the application is running in the user mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 62.0,
+            "end": 66.0,
+            "text": " But actually the core work is done by the kernel."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 66.0,
+            "end": 69.0,
+            "text": " The kernel has the privileged access to the hardware."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 69.0,
+            "end": 71.0,
+            "text": " The user space does not have it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 71.0,
+            "end": 76.0,
+            "text": " If any app was running in the user space, it did not have any access to the hardware."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 77.0,
+            "end": 84.0,
+            "text": " How can I bypass this distinction?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 84.0,
+            "end": 86.0,
+            "text": " The answer is System Calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 86.0,
+            "end": 87.0,
+            "text": " How is System Calls?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 87.0,
+            "end": 96.0,
+            "text": " System Calls is an interface or a mechanism through which I provide a mechanism to the user space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 96.0,
+            "end": 100.0,
+            "text": " In the user space, the apps are running."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 100.0,
+            "end": 102.0,
+            "text": " For example, TikTok is running."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 102.0,
+            "end": 107.0,
+            "text": " I will provide a mechanism to TikTok to talk to the kernel space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 107.0,
+            "end": 109.0,
+            "text": " Why should we talk to the kernel space?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 109.0,
+            "end": 114.0,
+            "text": " Because the kernel space is the only thing that will provide us with hardware access."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 114.0,
+            "end": 118.0,
+            "text": " The hardware access will be provided by the kernel space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 119.0,
+            "end": 121.0,
+            "text": " We have understood this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 121.0,
+            "end": 135.0,
+            "text": " If I want to talk to the kernel space, I have to go to the kernel."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 135.0,
+            "end": 138.0,
+            "text": " The kernel and the user space are two different things."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 138.0,
+            "end": 141.0,
+            "text": " A mechanism is provided for communication between them."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 141.0,
+            "end": 143.0,
+            "text": " That is System Calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 143.0,
+            "end": 148.0,
+            "text": " System Calls is the only way to switch between the user mode and the kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 148.0,
+            "end": 157.0,
+            "text": " For example, if I want to do a malloc."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 157.0,
+            "end": 163.0,
+            "text": " Before TikTok comes into memory, it needs a particular space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 163.0,
+            "end": 171.0,
+            "text": " When it switches from the user mode to the kernel mode, it will enable System Calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 171.0,
+            "end": 175.0,
+            "text": " System Calls is the only way to switch from the user mode to the kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 175.0,
+            "end": 177.0,
+            "text": " And get access to the kernel."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 177.0,
+            "end": 181.0,
+            "text": " We have understood what System Calls is."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 181.0,
+            "end": 186.0,
+            "text": " This video is sponsored by Coding Ninjas, India's leading coding education platform."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 186.0,
+            "end": 194.0,
+            "text": " Many product-based companies like Amazon, Adobe, and Commvault focus on OS in their technical interviews."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 194.0,
+            "end": 198.0,
+            "text": " To clear these interviews, your OS part should be very strong."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 198.0,
+            "end": 202.0,
+            "text": " Coding Ninjas provides a comprehensive and in-depth course."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 202.0,
+            "end": 205.0,
+            "text": " It covers all these concepts."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 205.0,
+            "end": 211.0,
+            "text": " All theoretical concepts are mapped and taught."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 211.0,
+            "end": 214.0,
+            "text": " You are also provided with a one-on-one doubt session."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 214.0,
+            "end": 219.0,
+            "text": " The faculty teaches you from big companies like Nvidia and Microsoft."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 219.0,
+            "end": 224.0,
+            "text": " You will get more than 12 hours of content in this course."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 224.0,
+            "end": 226.0,
+            "text": " You will solve more than 150 problems."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 226.0,
+            "end": 229.0,
+            "text": " You will do more than 12 hands-on projects."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 229.0,
+            "end": 234.0,
+            "text": " You will also get many courses on Coding Ninjas."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 234.0,
+            "end": 237.0,
+            "text": " If you are interested in paid courses, I will put the link in the description."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 237.0,
+            "end": 240.0,
+            "text": " You will get the maximum available discount."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 240.0,
+            "end": 241.0,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 241.0,
+            "end": 243.0,
+            "text": " Let me give you an example."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 243.0,
+            "end": 253.0,
+            "text": " Let's say you want to create a directory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 253.0,
+            "end": 255.0,
+            "text": " You want to create a new folder."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 255.0,
+            "end": 260.0,
+            "text": " Let's say you brought a lot of movies from your friend."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 260.0,
+            "end": 261.0,
+            "text": " You want to copy the movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 261.0,
+            "end": 264.0,
+            "text": " You need a folder named Movies to copy the movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 264.0,
+            "end": 268.0,
+            "text": " How will you make this folder?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 268.0,
+            "end": 270.0,
+            "text": " You will say that it is simple."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 270.0,
+            "end": 272.0,
+            "text": " You have to go to My Computer."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 272.0,
+            "end": 278.0,
+            "text": " Right-click on the folder you want to make."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 278.0,
+            "end": 280.0,
+            "text": " Right-click on the folder you want to make."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 280.0,
+            "end": 282.0,
+            "text": " Type Movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 282.0,
+            "end": 283.0,
+            "text": " You will get a new folder."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 283.0,
+            "end": 284.0,
+            "text": " You are right."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 284.0,
+            "end": 286.0,
+            "text": " It is a very easy task."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 286.0,
+            "end": 287.0,
+            "text": " But who made it easy?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 287.0,
+            "end": 289.0,
+            "text": " GUI made it easy."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 289.0,
+            "end": 292.0,
+            "text": " It is not that easy."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 292.0,
+            "end": 295.0,
+            "text": " It is not that easy."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 295.0,
+            "end": 298.0,
+            "text": " Because of the OS, it seems easy."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 298.0,
+            "end": 300.0,
+            "text": " Because it is resolving the complexity for you."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 300.0,
+            "end": 301.0,
+            "text": " But it is not that easy."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 301.0,
+            "end": 302.0,
+            "text": " How?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 302.0,
+            "end": 310.0,
+            "text": " You go to GUI and click on the New Folder button."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 310.0,
+            "end": 319.0,
+            "text": " Or you can use the command prompt."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 319.0,
+            "end": 325.0,
+            "text": " Open the terminal and run the command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 325.0,
+            "end": 327.0,
+            "text": " This command is used on Linux."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 327.0,
+            "end": 330.0,
+            "text": " Write Movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 330.0,
+            "end": 332.0,
+            "text": " And I will make a folder of movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 332.0,
+            "end": 335.0,
+            "text": " Both methods are doing the same thing."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 335.0,
+            "end": 339.0,
+            "text": " But the GUI method is for standard users."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 339.0,
+            "end": 343.0,
+            "text": " And this method is for smart users like you."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 343.0,
+            "end": 345.0,
+            "text": " So you made a new folder."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 345.0,
+            "end": 348.0,
+            "text": " But it is not as easy as it seems."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 348.0,
+            "end": 355.0,
+            "text": " Because the GUI button is calling the MKDIR internally."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 355.0,
+            "end": 357.0,
+            "text": " I will tell you what the MKDIR is doing."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 357.0,
+            "end": 362.0,
+            "text": " You had a user space and a kernel space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 362.0,
+            "end": 364.0,
+            "text": " And there was hardware here."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 365.0,
+            "end": 370.0,
+            "text": " User space, kernel space and hardware."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 370.0,
+            "end": 372.0,
+            "text": " There is a layer in between."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 372.0,
+            "end": 375.0,
+            "text": " These are separate spaces."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 375.0,
+            "end": 377.0,
+            "text": " Now see how it works."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 377.0,
+            "end": 383.0,
+            "text": " Whenever you click on the New Folder button to make a folder of movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 383.0,
+            "end": 386.0,
+            "text": " Or run the MKDIR movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 386.0,
+            "end": 392.0,
+            "text": " What will the user space do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 392.0,
+            "end": 396.0,
+            "text": " The user space will go to the interface."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 396.0,
+            "end": 400.0,
+            "text": " What is the name of this interface?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 400.0,
+            "end": 404.0,
+            "text": " The name of this interface is SCI."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 404.0,
+            "end": 406.0,
+            "text": " System Call Interface."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 406.0,
+            "end": 408.0,
+            "text": " It will go to the system call interface."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 408.0,
+            "end": 416.0,
+            "text": " And it will ask to take the corresponding implementation of MKDIR to the kernel."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 416.0,
+            "end": 420.0,
+            "text": " So SCI is an entry point of the kernel space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 420.0,
+            "end": 424.0,
+            "text": " So your command went to SCI."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 424.0,
+            "end": 428.0,
+            "text": " And SCI said to find the corresponding MKDIR."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " Now I will tell you in real."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 431.0,
+            "end": 438.0,
+            "text": " The corresponding MKDIR will have an implementation in the kernel space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 438.0,
+            "end": 441.0,
+            "text": " There will be an implementation in the kernel space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 441.0,
+            "end": 443.0,
+            "text": " This implementation will be here."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 443.0,
+            "end": 445.0,
+            "text": " What will your SCI do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 445.0,
+            "end": 447.0,
+            "text": " SCI will say to find this implementation."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 447.0,
+            "end": 452.0,
+            "text": " After finding this implementation, the kernel space will run this implementation."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 452.0,
+            "end": 455.0,
+            "text": " The kernel space will run this implementation."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 455.0,
+            "end": 457.0,
+            "text": " What will happen after running?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 457.0,
+            "end": 464.0,
+            "text": " After running, the folder where you have run the MKDIR command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 464.0,
+            "end": 468.0,
+            "text": " The node will be added to the tree."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 468.0,
+            "end": 470.0,
+            "text": " The node will be named movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 470.0,
+            "end": 473.0,
+            "text": " You are running this command on the root."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 473.0,
+            "end": 476.0,
+            "text": " So the node will be named movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 476.0,
+            "end": 479.0,
+            "text": " And you will see the node named movies."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 479.0,
+            "end": 482.0,
+            "text": " And you will see the folder named movies in GUI."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 482.0,
+            "end": 485.0,
+            "text": " So this is how the complex work is going on."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 485.0,
+            "end": 486.0,
+            "text": " Who is doing this work?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 486.0,
+            "end": 489.0,
+            "text": " Who is doing this work in the kernel?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 489.0,
+            "end": 491.0,
+            "text": " There is an implementation in the kernel."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 491.0,
+            "end": 493.0,
+            "text": " Which is written in C."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 493.0,
+            "end": 497.0,
+            "text": " So I can say that the actual implementation."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 497.0,
+            "end": 505.0,
+            "text": " The actual implementation of MKDIR."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 505.0,
+            "end": 507.0,
+            "text": " It is written in C."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 507.0,
+            "end": 510.0,
+            "text": " So I can say that all the system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 510.0,
+            "end": 514.0,
+            "text": " All the system calls are implemented in C."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 514.0,
+            "end": 518.0,
+            "text": " Actually, the type of app you use."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 518.0,
+            "end": 520.0,
+            "text": " There is a low level C."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 520.0,
+            "end": 523.0,
+            "text": " In which it can access directly from the hardware."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 523.0,
+            "end": 525.0,
+            "text": " It can work from the hardware."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 525.0,
+            "end": 527.0,
+            "text": " It is written in this type of C language."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 527.0,
+            "end": 530.0,
+            "text": " So system calls are basically implemented in C language."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 530.0,
+            "end": 533.0,
+            "text": " But what you are seeing is MKDIR."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 533.0,
+            "end": 535.0,
+            "text": " And above that there is an implementation."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 535.0,
+            "end": 538.0,
+            "text": " Multiple processes are running inside."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 538.0,
+            "end": 540.0,
+            "text": " Multiple code is being executed to do so."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 540.0,
+            "end": 543.0,
+            "text": " So what you see is system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 543.0,
+            "end": 551.0,
+            "text": " It is simply an interface to that C implementation."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 551.0,
+            "end": 558.0,
+            "text": " So this is your small introduction to system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 558.0,
+            "end": 559.0,
+            "text": " So why is this important?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 559.0,
+            "end": 564.0,
+            "text": " Because I have no other way to go from the user space to the kernel space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 564.0,
+            "end": 566.0,
+            "text": " Because these are two separate areas."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 566.0,
+            "end": 569.0,
+            "text": " You have to get some work done from the kernel space."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 569.0,
+            "end": 571.0,
+            "text": " The kernel space has the hardware access."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 571.0,
+            "end": 573.0,
+            "text": " You have to get some work done on the hardware."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 573.0,
+            "end": 575.0,
+            "text": " So you will have to use system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 575.0,
+            "end": 579.0,
+            "text": " Basically, your user app will have to use system calls to do that work."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 579.0,
+            "end": 583.0,
+            "text": " So this is your small introduction to system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 583.0,
+            "end": 585.0,
+            "text": " If I take one more example."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 585.0,
+            "end": 586.0,
+            "text": " I take a small example."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 586.0,
+            "end": 589.0,
+            "text": " Suppose you have executed a process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 589.0,
+            "end": 590.0,
+            "text": " What did you do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 590.0,
+            "end": 592.0,
+            "text": " Executed a process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 593.0,
+            "end": 598.0,
+            "text": " Suppose you have compiled your hello world.exe."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 598.0,
+            "end": 600.0,
+            "text": " You run it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 600.0,
+            "end": 603.0,
+            "text": " What will be the first thing to do after running?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 603.0,
+            "end": 606.0,
+            "text": " After running it, it will find a system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 606.0,
+            "end": 610.0,
+            "text": " It will find a system call of execution."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 610.0,
+            "end": 612.0,
+            "text": " It will find a system call of execution."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 612.0,
+            "end": 614.0,
+            "text": " Which will give your SCI."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 614.0,
+            "end": 616.0,
+            "text": " Your system call interface."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 616.0,
+            "end": 617.0,
+            "text": " What will it do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 617.0,
+            "end": 619.0,
+            "text": " It will switch the work in kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 620.0,
+            "end": 622.0,
+            "text": " We will go to kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 622.0,
+            "end": 624.0,
+            "text": " The kernel mode will switch."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 624.0,
+            "end": 628.0,
+            "text": " In kernel mode, we will go to process management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 628.0,
+            "end": 630.0,
+            "text": " We will go to process management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 630.0,
+            "end": 631.0,
+            "text": " What will it do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 631.0,
+            "end": 633.0,
+            "text": " It will create the process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 633.0,
+            "end": 636.0,
+            "text": " It will create the process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 636.0,
+            "end": 638.0,
+            "text": " There will be many things to create the process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 638.0,
+            "end": 644.0,
+            "text": " To create the process, you will allocate some memory in RAM."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 644.0,
+            "end": 655.0,
+            "text": " If the process is accessing other hardware, then it will be done by the kernel."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 655.0,
+            "end": 659.0,
+            "text": " In this way, a process will be created."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 659.0,
+            "end": 667.0,
+            "text": " After the process is created, we will switch from kernel mode to user mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 667.0,
+            "end": 669.0,
+            "text": " Why?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 669.0,
+            "end": 672.0,
+            "text": " Because the kernel mode work is over."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 672.0,
+            "end": 673.0,
+            "text": " The kernel mode work is over."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 673.0,
+            "end": 676.0,
+            "text": " All the information is that the process has been created."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 676.0,
+            "end": 677.0,
+            "text": " All the user space has to be given."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 677.0,
+            "end": 680.0,
+            "text": " For that, the user space will be given the information of the process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 680.0,
+            "end": 684.0,
+            "text": " You will see in the task manager or in the activity center."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 684.0,
+            "end": 686.0,
+            "text": " This particular process is running."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 686.0,
+            "end": 689.0,
+            "text": " You will see the process on GUI."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 689.0,
+            "end": 691.0,
+            "text": " This is how it works."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 691.0,
+            "end": 693.0,
+            "text": " We are switching."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 693.0,
+            "end": 694.0,
+            "text": " How?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 694.0,
+            "end": 695.0,
+            "text": " User mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 695.0,
+            "end": 696.0,
+            "text": " I clicked on .exe in user mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 696.0,
+            "end": 698.0,
+            "text": " From user mode, you went to kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 698.0,
+            "end": 699.0,
+            "text": " How did you go to kernel mode?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 699.0,
+            "end": 700.0,
+            "text": " Through system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 700.0,
+            "end": 706.0,
+            "text": " After system call, the kernel mode will work."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 706.0,
+            "end": 711.0,
+            "text": " After the process is created, you will give the information to the user mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 711.0,
+            "end": 715.0,
+            "text": " We will switch to user mode again."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 715.0,
+            "end": 717.0,
+            "text": " Finally, you will see the process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 717.0,
+            "end": 719.0,
+            "text": " This is how the process is running."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 719.0,
+            "end": 721.0,
+            "text": " You keep running the computer."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 721.0,
+            "end": 723.0,
+            "text": " All the work is done inside."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 723.0,
+            "end": 725.0,
+            "text": " The user mode and kernel mode switch is running."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 725.0,
+            "end": 729.0,
+            "text": " How does the user mode and kernel mode switch work?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 729.0,
+            "end": 733.0,
+            "text": " How does the user mode and kernel mode switch work?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 733.0,
+            "end": 735.0,
+            "text": " How does it work?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 735.0,
+            "end": 742.0,
+            "text": " Whenever you execute, you call a software interrupt."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 742.0,
+            "end": 745.0,
+            "text": " You call a software interrupt."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 745.0,
+            "end": 747.0,
+            "text": " What does the software interrupt do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 747.0,
+            "end": 752.0,
+            "text": " I told you in the last video that what is a software interrupt."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 752.0,
+            "end": 753.0,
+            "text": " You are doing a task."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 753.0,
+            "end": 756.0,
+            "text": " You tell the CPU to stop the task for 2 minutes."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 756.0,
+            "end": 758.0,
+            "text": " You tell the CPU to do the important task."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 758.0,
+            "end": 763.0,
+            "text": " You switch from user mode to kernel mode by using the software interrupt."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 763.0,
+            "end": 767.0,
+            "text": " This is how things work."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 767.0,
+            "end": 770.0,
+            "text": " These are the examples of system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 770.0,
+            "end": 775.0,
+            "text": " We can discuss the category of system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 775.0,
+            "end": 777.0,
+            "text": " These are the two examples."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 777.0,
+            "end": 779.0,
+            "text": " Let's take a look at the notes."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 779.0,
+            "end": 782.0,
+            "text": " The definition of this is written."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 783.0,
+            "end": 787.0,
+            "text": " Before going to the definition, if I ask you a question,"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 787.0,
+            "end": 789.0,
+            "text": " How do apps interact with kernels?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 789.0,
+            "end": 791.0,
+            "text": " Your answer will be straight."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 791.0,
+            "end": 793.0,
+            "text": " Your answer will be straight."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 793.0,
+            "end": 796.0,
+            "text": " After giving system calls, he will be happy and ask you about it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 796.0,
+            "end": 798.0,
+            "text": " He will ask you to give an example."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 798.0,
+            "end": 801.0,
+            "text": " We have written in the example that if you make a folder by using MKDI or LAKS,"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 801.0,
+            "end": 803.0,
+            "text": " Your folder will be made in this way."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 803.0,
+            "end": 805.0,
+            "text": " We have just discussed all this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 805.0,
+            "end": 807.0,
+            "text": " Similarly, we are creating a process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 807.0,
+            "end": 809.0,
+            "text": " We are switching from user mode to kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 809.0,
+            "end": 811.0,
+            "text": " We are switching from user mode to kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 811.0,
+            "end": 815.0,
+            "text": " We are switching from user space to kernel space by using the software interrupt."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 815.0,
+            "end": 817.0,
+            "text": " System calls are implemented in C."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 817.0,
+            "end": 819.0,
+            "text": " Let's see the definition of this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 819.0,
+            "end": 822.0,
+            "text": " If someone asks you to define it in English, how will you do it?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 822.0,
+            "end": 831.0,
+            "text": " A system call is a mechanism using which a user program can request a service from the kernel for which it does not have the permission to perform."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 831.0,
+            "end": 833.0,
+            "text": " After user mode, there is a very limited access."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 833.0,
+            "end": 838.0,
+            "text": " We switch to kernel mode to do the work that it cannot do."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 838.0,
+            "end": 842.0,
+            "text": " The mechanism used to switch is system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 842.0,
+            "end": 845.0,
+            "text": " Let's see a diagram of this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 845.0,
+            "end": 848.0,
+            "text": " You will get some extra information in the diagram."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 848.0,
+            "end": 850.0,
+            "text": " It is your user app."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 850.0,
+            "end": 852.0,
+            "text": " We have just seen that it is a user app."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 852.0,
+            "end": 859.0,
+            "text": " Assume that you are calling a system call from a user app."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 860.0,
+            "end": 865.0,
+            "text": " In a normal Linux system, there is a Glibc."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 865.0,
+            "end": 867.0,
+            "text": " It is a C++ implemented library."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 867.0,
+            "end": 870.0,
+            "text": " It is a C++ implemented library."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 870.0,
+            "end": 876.0,
+            "text": " It is used to call the system call interface."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 876.0,
+            "end": 878.0,
+            "text": " You call Glibc first."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 878.0,
+            "end": 880.0,
+            "text": " You are in user mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 880.0,
+            "end": 882.0,
+            "text": " There is a software interrupt call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 882.0,
+            "end": 884.0,
+            "text": " What does the software interrupt call do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 884.0,
+            "end": 888.0,
+            "text": " It tells you that you have to switch from user mode to kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 888.0,
+            "end": 890.0,
+            "text": " To switch to kernel mode, we call SCI."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 890.0,
+            "end": 898.0,
+            "text": " SCI checks the location of the corresponding implementation."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 898.0,
+            "end": 900.0,
+            "text": " That implementation will be mapped to the kernel."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 900.0,
+            "end": 906.0,
+            "text": " The kernel will run that implementation."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 906.0,
+            "end": 909.0,
+            "text": " After running that implementation, it will work on the hardware."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 909.0,
+            "end": 911.0,
+            "text": " Assume that the hardware is a disk."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 911.0,
+            "end": 913.0,
+            "text": " A folder will be created in the disk."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 913.0,
+            "end": 914.0,
+            "text": " A directory will be created."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 914.0,
+            "end": 919.0,
+            "text": " In this way, we will get the movie folder."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 919.0,
+            "end": 921.0,
+            "text": " We will retrace it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 921.0,
+            "end": 925.0,
+            "text": " We will get the information in user mode that the movie folder is created."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 925.0,
+            "end": 929.0,
+            "text": " This is an example of a diagram."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 929.0,
+            "end": 931.0,
+            "text": " You can make a diagram and show it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 931.0,
+            "end": 935.0,
+            "text": " Next, let's go to the types of system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 935.0,
+            "end": 939.0,
+            "text": " There are five types of system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 940.0,
+            "end": 942.0,
+            "text": " There are five types of system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 942.0,
+            "end": 944.0,
+            "text": " Process control."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 944.0,
+            "end": 946.0,
+            "text": " File management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 946.0,
+            "end": 947.0,
+            "text": " Device management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 947.0,
+            "end": 948.0,
+            "text": " Information maintenance."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 948.0,
+            "end": 949.0,
+            "text": " Communication management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 949.0,
+            "end": 951.0,
+            "text": " I will give you a brief."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 951.0,
+            "end": 953.0,
+            "text": " Process management system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 953.0,
+            "end": 955.0,
+            "text": " Creating the process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 955.0,
+            "end": 956.0,
+            "text": " Deleting the process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 956.0,
+            "end": 958.0,
+            "text": " Waiting for a process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 958.0,
+            "end": 959.0,
+            "text": " Terminate."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 959.0,
+            "end": 961.0,
+            "text": " Allocate memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 961.0,
+            "end": 962.0,
+            "text": " Deallocate."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 962.0,
+            "end": 965.0,
+            "text": " Attribute set."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 965.0,
+            "end": 967.0,
+            "text": " Attribute get."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 968.0,
+            "end": 970.0,
+            "text": " Process control system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 970.0,
+            "end": 972.0,
+            "text": " The second category is file management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 972.0,
+            "end": 974.0,
+            "text": " File management is the example we just took."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 974.0,
+            "end": 980.0,
+            "text": " Creating, deleting, opening, closing, reading, writing, repositioning."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 980.0,
+            "end": 982.0,
+            "text": " Repositioning is when you are reading a file."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 982.0,
+            "end": 985.0,
+            "text": " You don't want to read from the 0th position."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 985.0,
+            "end": 988.0,
+            "text": " You want to read from the 20th position."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 988.0,
+            "end": 991.0,
+            "text": " Repositioning is used for that."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 991.0,
+            "end": 993.0,
+            "text": " Get and set attributes."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 994.0,
+            "end": 999.0,
+            "text": " Get and set attributes are security."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 999.0,
+            "end": 1001.0,
+            "text": " A file has permissions."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1001.0,
+            "end": 1003.0,
+            "text": " Permission of a particular file."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1003.0,
+            "end": 1007.0,
+            "text": " File is lak.txt."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1007.0,
+            "end": 1012.0,
+            "text": " Permission is only for lak user."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1012.0,
+            "end": 1014.0,
+            "text": " Lakshya user."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1014.0,
+            "end": 1016.0,
+            "text": " If there is any other user."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1016.0,
+            "end": 1017.0,
+            "text": " If there is a ram user."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1017.0,
+            "end": 1020.0,
+            "text": " Ram user will not have access to it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1020.0,
+            "end": 1022.0,
+            "text": " To set this type of attribute."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1022.0,
+            "end": 1025.0,
+            "text": " So that no other user can modify it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1025.0,
+            "end": 1028.0,
+            "text": " File management has this type of system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1028.0,
+            "end": 1030.0,
+            "text": " We will discuss the example of this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1030.0,
+            "end": 1032.0,
+            "text": " We have device management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1032.0,
+            "end": 1039.0,
+            "text": " In device management, we have to read, write, get, set, attach, detach."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1039.0,
+            "end": 1042.0,
+            "text": " This type of work is done in device management system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1042.0,
+            "end": 1044.0,
+            "text": " What happens in information maintenance?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1044.0,
+            "end": 1046.0,
+            "text": " Information maintenance is nothing."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1046.0,
+            "end": 1048.0,
+            "text": " Information of different processes."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1048.0,
+            "end": 1050.0,
+            "text": " Information of device."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1050.0,
+            "end": 1052.0,
+            "text": " Time."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1052.0,
+            "end": 1054.0,
+            "text": " Time, date, system."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1054.0,
+            "end": 1056.0,
+            "text": " Data."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1056.0,
+            "end": 1058.0,
+            "text": " Information management module."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1058.0,
+            "end": 1060.0,
+            "text": " Information management system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1060.0,
+            "end": 1064.0,
+            "text": " Communication management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1064.0,
+            "end": 1072.0,
+            "text": " Communication management is related to inter-process communication."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1072.0,
+            "end": 1074.0,
+            "text": " What was inter-process communication?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1074.0,
+            "end": 1077.0,
+            "text": " Inter-process communication means that there are two different processes."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1077.0,
+            "end": 1079.0,
+            "text": " They are running in separate spaces."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1079.0,
+            "end": 1081.0,
+            "text": " They have to communicate with each other."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1081.0,
+            "end": 1083.0,
+            "text": " Inter-process communication is the mechanism of communication."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1083.0,
+            "end": 1088.0,
+            "text": " Communication management is used to do that inter-process communication."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1088.0,
+            "end": 1091.0,
+            "text": " For example, process A and B."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1091.0,
+            "end": 1093.0,
+            "text": " A pipe is required to communicate."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1093.0,
+            "end": 1095.0,
+            "text": " Creating a pipe."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1095.0,
+            "end": 1097.0,
+            "text": " Maintenance of it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1097.0,
+            "end": 1099.0,
+            "text": " Creation and deletion of it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1099.0,
+            "end": 1101.0,
+            "text": " All these things are done in communication management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1101.0,
+            "end": 1103.0,
+            "text": " Remote devices."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1103.0,
+            "end": 1105.0,
+            "text": " Like LAN."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1105.0,
+            "end": 1107.0,
+            "text": " These things are done in communication management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1107.0,
+            "end": 1109.0,
+            "text": " Now I will take some examples."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1109.0,
+            "end": 1115.0,
+            "text": " I have tried to take examples of both Windows and Unix."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1115.0,
+            "end": 1120.0,
+            "text": " In process control, create process, fork is used."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1120.0,
+            "end": 1122.0,
+            "text": " For exit process, exit is used."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1122.0,
+            "end": 1124.0,
+            "text": " Wait for single object."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1124.0,
+            "end": 1126.0,
+            "text": " How do these three system calls work?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1126.0,
+            "end": 1128.0,
+            "text": " What does fork do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1128.0,
+            "end": 1130.0,
+            "text": " Fork does nothing."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1130.0,
+            "end": 1132.0,
+            "text": " It creates any process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1132.0,
+            "end": 1136.0,
+            "text": " Whenever a system is running."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1136.0,
+            "end": 1138.0,
+            "text": " Like your computer is on."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1138.0,
+            "end": 1141.0,
+            "text": " After the computer is on, there is a root process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1141.0,
+            "end": 1143.0,
+            "text": " It is called the zeroth process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1143.0,
+            "end": 1147.0,
+            "text": " All the processes that are made after this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1147.0,
+            "end": 1149.0,
+            "text": " All are its child."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1149.0,
+            "end": 1152.0,
+            "text": " All are its child."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1152.0,
+            "end": 1154.0,
+            "text": " What does fork do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1154.0,
+            "end": 1156.0,
+            "text": " It makes a child of any process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1156.0,
+            "end": 1160.0,
+            "text": " If I say that you have turned on the terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1160.0,
+            "end": 1164.0,
+            "text": " After turning on the terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1164.0,
+            "end": 1167.0,
+            "text": " You are making a process inside the terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1167.0,
+            "end": 1169.0,
+            "text": " Basically, there is an executable."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1169.0,
+            "end": 1171.0,
+            "text": " You are running it in the terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1171.0,
+            "end": 1174.0,
+            "text": " I can say that this is its parent process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1174.0,
+            "end": 1178.0,
+            "text": " The exe you have run from the terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1178.0,
+            "end": 1180.0,
+            "text": " That is your child process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1180.0,
+            "end": 1182.0,
+            "text": " Fork always makes a child process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1182.0,
+            "end": 1184.0,
+            "text": " No new process is made inside the computer."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1184.0,
+            "end": 1186.0,
+            "text": " All are its child."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1186.0,
+            "end": 1189.0,
+            "text": " This is the work of fork."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1189.0,
+            "end": 1192.0,
+            "text": " Exit means to exit the process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1192.0,
+            "end": 1194.0,
+            "text": " When we call exit for a process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1194.0,
+            "end": 1196.0,
+            "text": " What will exit do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1196.0,
+            "end": 1198.0,
+            "text": " It will allocate the memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1198.0,
+            "end": 1200.0,
+            "text": " It will write in the task table."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1200.0,
+            "end": 1202.0,
+            "text": " That this process has been exited."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1202.0,
+            "end": 1205.0,
+            "text": " There are some examples of file management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1205.0,
+            "end": 1209.0,
+            "text": " Open, read, close, chmod, unmask, chon."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1209.0,
+            "end": 1211.0,
+            "text": " What does chmod do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1211.0,
+            "end": 1213.0,
+            "text": " Basically, it sets the file mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1213.0,
+            "end": 1215.0,
+            "text": " The file mode means."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1215.0,
+            "end": 1217.0,
+            "text": " The file is readable, writeable."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1217.0,
+            "end": 1219.0,
+            "text": " You can only read."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1219.0,
+            "end": 1221.0,
+            "text": " You can also read and write."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1221.0,
+            "end": 1223.0,
+            "text": " What does chon do?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1223.0,
+            "end": 1225.0,
+            "text": " Normally, change ownership."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1225.0,
+            "end": 1227.0,
+            "text": " ch means change."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1227.0,
+            "end": 1229.0,
+            "text": " own means ownership."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1229.0,
+            "end": 1231.0,
+            "text": " The example I gave."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1231.0,
+            "end": 1233.0,
+            "text": " This is a user named Laksh."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1233.0,
+            "end": 1235.0,
+            "text": " He can access it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1235.0,
+            "end": 1237.0,
+            "text": " There is some device management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1237.0,
+            "end": 1239.0,
+            "text": " Read, write, IOCTL."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1239.0,
+            "end": 1241.0,
+            "text": " To set the console mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1241.0,
+            "end": 1243.0,
+            "text": " Information management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1243.0,
+            "end": 1245.0,
+            "text": " Get PID, alarm, sleep."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1245.0,
+            "end": 1247.0,
+            "text": " There is a date command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1247.0,
+            "end": 1249.0,
+            "text": " If you write your date on the terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1249.0,
+            "end": 1251.0,
+            "text": " It will show the date and time."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1251.0,
+            "end": 1253.0,
+            "text": " This system call is also."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1253.0,
+            "end": 1255.0,
+            "text": " In the information management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1255.0,
+            "end": 1257.0,
+            "text": " In communication, we talked about the pipe."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1257.0,
+            "end": 1259.0,
+            "text": " Process A, Process B."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1259.0,
+            "end": 1261.0,
+            "text": " To set up the pipe."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1261.0,
+            "end": 1263.0,
+            "text": " The pipe command is used."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1263.0,
+            "end": 1265.0,
+            "text": " CHM get."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1265.0,
+            "end": 1267.0,
+            "text": " There are two ways in IPC."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1267.0,
+            "end": 1269.0,
+            "text": " The method of shared memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1269.0,
+            "end": 1271.0,
+            "text": " The method of message passing."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1271.0,
+            "end": 1273.0,
+            "text": " It is through the pipe."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1273.0,
+            "end": 1275.0,
+            "text": " The method of shared memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1275.0,
+            "end": 1277.0,
+            "text": " It is through the CHM get."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1277.0,
+            "end": 1279.0,
+            "text": " The particular shared memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1279.0,
+            "end": 1281.0,
+            "text": " Through which."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1281.0,
+            "end": 1283.0,
+            "text": " Process A, Process B."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1283.0,
+            "end": 1285.0,
+            "text": " Through the shared memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1285.0,
+            "end": 1287.0,
+            "text": " To get that shared memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1287.0,
+            "end": 1289.0,
+            "text": " This particular command is used."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1289.0,
+            "end": 1291.0,
+            "text": " There is a command called mmap."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1291.0,
+            "end": 1293.0,
+            "text": " It maps and unmaps."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1293.0,
+            "end": 1295.0,
+            "text": " Devices on memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1295.0,
+            "end": 1297.0,
+            "text": " It also maps on virtual memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1297.0,
+            "end": 1299.0,
+            "text": " Don't get confused."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1299.0,
+            "end": 1301.0,
+            "text": " You have to know."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1301.0,
+            "end": 1303.0,
+            "text": " What all system calls do."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1303.0,
+            "end": 1305.0,
+            "text": " I want to give you a homework."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1305.0,
+            "end": 1307.0,
+            "text": " The homework is."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1307.0,
+            "end": 1309.0,
+            "text": " All system calls are written on this page."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1309.0,
+            "end": 1311.0,
+            "text": " You will search for it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1311.0,
+            "end": 1313.0,
+            "text": " What is today's homework?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1313.0,
+            "end": 1315.0,
+            "text": " All system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1315.0,
+            "end": 1317.0,
+            "text": " All that is written here."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1317.0,
+            "end": 1319.0,
+            "text": " You will search on the internet."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1321.0,
+            "end": 1323.0,
+            "text": " You will search on the internet."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1323.0,
+            "end": 1325.0,
+            "text": " You don't need to know much."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1325.0,
+            "end": 1327.0,
+            "text": " You should know what all system calls are."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1329.0,
+            "end": 1331.0,
+            "text": " You should read about it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1333.0,
+            "end": 1335.0,
+            "text": " You will get intuition."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1335.0,
+            "end": 1337.0,
+            "text": " What system call does."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1337.0,
+            "end": 1339.0,
+            "text": " You should know the name of the system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1341.0,
+            "end": 1343.0,
+            "text": " What is working?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1343.0,
+            "end": 1345.0,
+            "text": " What is system call?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1345.0,
+            "end": 1347.0,
+            "text": " Now we will try."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1347.0,
+            "end": 1349.0,
+            "text": " I will give you a small example."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1349.0,
+            "end": 1351.0,
+            "text": " In process management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1351.0,
+            "end": 1353.0,
+            "text": " Let's go to the screen."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1353.0,
+            "end": 1355.0,
+            "text": " I will give you an example."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1355.0,
+            "end": 1357.0,
+            "text": " I will give you an example."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1357.0,
+            "end": 1359.0,
+            "text": " We will use file management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1359.0,
+            "end": 1361.0,
+            "text": " If I open a terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1361.0,
+            "end": 1363.0,
+            "text": " I will go to the directory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1365.0,
+            "end": 1367.0,
+            "text": " We come to the desktop."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1367.0,
+            "end": 1369.0,
+            "text": " We do Vim on the desktop."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1369.0,
+            "end": 1371.0,
+            "text": " I make a script."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1373.0,
+            "end": 1375.0,
+            "text": " I am making a temporary document."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1375.0,
+            "end": 1377.0,
+            "text": " I will edit it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1377.0,
+            "end": 1379.0,
+            "text": " I will write."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1379.0,
+            "end": 1381.0,
+            "text": " We are making a batch script."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1381.0,
+            "end": 1383.0,
+            "text": " I will write."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1385.0,
+            "end": 1387.0,
+            "text": " This is a batch script."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1387.0,
+            "end": 1389.0,
+            "text": " I will write while."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1389.0,
+            "end": 1391.0,
+            "text": " I will write true."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1393.0,
+            "end": 1395.0,
+            "text": " I will do nothing."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1395.0,
+            "end": 1397.0,
+            "text": " I will keep writing."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1399.0,
+            "end": 1401.0,
+            "text": " I will print hello world."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1403.0,
+            "end": 1405.0,
+            "text": " I will sleep."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1405.0,
+            "end": 1407.0,
+            "text": " I will sleep."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1407.0,
+            "end": 1409.0,
+            "text": " I will sleep."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1409.0,
+            "end": 1411.0,
+            "text": " I have made a temporary document."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1411.0,
+            "end": 1413.0,
+            "text": " I will make it in memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1415.0,
+            "end": 1417.0,
+            "text": " I was in the desktop."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1419.0,
+            "end": 1421.0,
+            "text": " I will use file management."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1421.0,
+            "end": 1423.0,
+            "text": " I am on the desktop."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1423.0,
+            "end": 1425.0,
+            "text": " I will save it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1425.0,
+            "end": 1427.0,
+            "text": " It will go to a particular area."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1427.0,
+            "end": 1429.0,
+            "text": " It will go to the desktop folder."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1429.0,
+            "end": 1431.0,
+            "text": " It will go to the folder where the hierarchy is made."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1431.0,
+            "end": 1433.0,
+            "text": " It will create a file."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1433.0,
+            "end": 1435.0,
+            "text": " It will save it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1435.0,
+            "end": 1437.0,
+            "text": " I will save it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1439.0,
+            "end": 1441.0,
+            "text": " A file has come here."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1443.0,
+            "end": 1445.0,
+            "text": " I have just created a file."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1445.0,
+            "end": 1447.0,
+            "text": " I have used a system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1447.0,
+            "end": 1449.0,
+            "text": " Which system call will be used?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1449.0,
+            "end": 1451.0,
+            "text": " I have made a file descriptor."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1451.0,
+            "end": 1453.0,
+            "text": " It will be open."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1453.0,
+            "end": 1455.0,
+            "text": " I typed it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1455.0,
+            "end": 1457.0,
+            "text": " I used the write command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1459.0,
+            "end": 1461.0,
+            "text": " I edited the file."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1461.0,
+            "end": 1463.0,
+            "text": " I went to write."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1463.0,
+            "end": 1465.0,
+            "text": " I used the write command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1465.0,
+            "end": 1467.0,
+            "text": " I used the write command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1467.0,
+            "end": 1469.0,
+            "text": " I used the write system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1469.0,
+            "end": 1471.0,
+            "text": " I have made a file."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1471.0,
+            "end": 1473.0,
+            "text": " I will run it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1475.0,
+            "end": 1477.0,
+            "text": " What will happen now?"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1477.0,
+            "end": 1479.0,
+            "text": " Think."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1479.0,
+            "end": 1481.0,
+            "text": " Now the system call of process management will come in handy."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1483.0,
+            "end": 1485.0,
+            "text": " This is a particular terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1485.0,
+            "end": 1487.0,
+            "text": " The child of this particular terminal will be created."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1487.0,
+            "end": 1489.0,
+            "text": " We will use the fork system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1489.0,
+            "end": 1491.0,
+            "text": " We will make a process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1491.0,
+            "end": 1493.0,
+            "text": " The name of this process will be hello.sh."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1495.0,
+            "end": 1497.0,
+            "text": " A process has been created."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1497.0,
+            "end": 1499.0,
+            "text": " This process has been created."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1499.0,
+            "end": 1501.0,
+            "text": " You are lying."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1501.0,
+            "end": 1503.0,
+            "text": " I will give you an example."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1503.0,
+            "end": 1505.0,
+            "text": " I will give you proof."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1505.0,
+            "end": 1507.0,
+            "text": " Look at this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1507.0,
+            "end": 1509.0,
+            "text": " There is a command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1509.0,
+            "end": 1511.0,
+            "text": " Look at this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1511.0,
+            "end": 1513.0,
+            "text": " You can see that a process has been created."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1515.0,
+            "end": 1517.0,
+            "text": " I have got the PID of this process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1517.0,
+            "end": 1519.0,
+            "text": " When I used the command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1521.0,
+            "end": 1523.0,
+            "text": " The information management system call was used to create this table."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1527.0,
+            "end": 1529.0,
+            "text": " It has been written here."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1529.0,
+            "end": 1531.0,
+            "text": " It has been written here."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1531.0,
+            "end": 1533.0,
+            "text": " Look at this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1533.0,
+            "end": 1535.0,
+            "text": " First, we took the file management system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1535.0,
+            "end": 1537.0,
+            "text": " Then we took the process management system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1537.0,
+            "end": 1539.0,
+            "text": " Then we took the information management system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1543.0,
+            "end": 1545.0,
+            "text": " I will tell you one more thing."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1545.0,
+            "end": 1547.0,
+            "text": " The command of the fork creates a child of any parent."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1547.0,
+            "end": 1549.0,
+            "text": " The command of the fork creates a child of any parent."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1549.0,
+            "end": 1551.0,
+            "text": " I will write ps-al."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1553.0,
+            "end": 1555.0,
+            "text": " I will write ps-al."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1555.0,
+            "end": 1557.0,
+            "text": " You can see the PID of this particular command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1557.0,
+            "end": 1559.0,
+            "text": " You can see the PID of this particular command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1559.0,
+            "end": 1561.0,
+            "text": " PID is the process ID."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1561.0,
+            "end": 1563.0,
+            "text": " PID is the process ID."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1563.0,
+            "end": 1565.0,
+            "text": " PID is the parent's PID."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1565.0,
+            "end": 1567.0,
+            "text": " PID is the parent's PID."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1567.0,
+            "end": 1569.0,
+            "text": " This is our terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1569.0,
+            "end": 1571.0,
+            "text": " This is our terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1571.0,
+            "end": 1573.0,
+            "text": " We are bored."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1573.0,
+            "end": 1575.0,
+            "text": " We want to kill this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1575.0,
+            "end": 1577.0,
+            "text": " To kill this, look at this file again."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1579.0,
+            "end": 1581.0,
+            "text": " I'll use the kill command."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1585.0,
+            "end": 1587.0,
+            "text": " Kill is used to kill abruptly."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1587.0,
+            "end": 1589.0,
+            "text": " Kill is used to kill abruptly."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1593.0,
+            "end": 1595.0,
+            "text": " I will enter this in the other terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1595.0,
+            "end": 1597.0,
+            "text": " I will enter this in the other terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1597.0,
+            "end": 1599.0,
+            "text": " The kill command is also a system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1599.0,
+            "end": 1601.0,
+            "text": " The kill command is also a system call."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1601.0,
+            "end": 1605.0,
+            "text": " Now, the command is running in kernel mode."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1605.0,
+            "end": 1608.0,
+            "text": " In kernel mode, it saw that a particular PID is running."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1608.0,
+            "end": 1609.0,
+            "text": " It killed it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1609.0,
+            "end": 1612.0,
+            "text": " It told the CPU to shut up."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1612.0,
+            "end": 1613.0,
+            "text": " It said, don't work on this."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1613.0,
+            "end": 1615.0,
+            "text": " It blew the process from memory."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1615.0,
+            "end": 1617.0,
+            "text": " So, this is how things work."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1617.0,
+            "end": 1619.0,
+            "text": " I gave you a small example of how kill number works."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1619.0,
+            "end": 1622.0,
+            "text": " I will give you one more homework."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1622.0,
+            "end": 1627.0,
+            "text": " In that, you can read all the commands written on the net."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1627.0,
+            "end": 1629.0,
+            "text": " Apart from this, you can also read on the terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1629.0,
+            "end": 1632.0,
+            "text": " If I use the man command to read the command,"
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1632.0,
+            "end": 1634.0,
+            "text": " then you can see the information about it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1634.0,
+            "end": 1637.0,
+            "text": " It says, kill is done by terminator signal a process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1637.0,
+            "end": 1638.0,
+            "text": " We signal a process."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1638.0,
+            "end": 1640.0,
+            "text": " There are different types of attributes."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1640.0,
+            "end": 1642.0,
+            "text": " Minus L, minus 1."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1642.0,
+            "end": 1644.0,
+            "text": " There are different types of interrupts."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1644.0,
+            "end": 1646.0,
+            "text": " 2, interrupt."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1646.0,
+            "end": 1647.0,
+            "text": " 3, quit."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1647.0,
+            "end": 1648.0,
+            "text": " 9, kill."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1648.0,
+            "end": 1650.0,
+            "text": " Abort."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1650.0,
+            "end": 1652.0,
+            "text": " Alarm, clock, blah blah."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1652.0,
+            "end": 1654.0,
+            "text": " You can read all these things."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1654.0,
+            "end": 1655.0,
+            "text": " Give it some time."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1655.0,
+            "end": 1657.0,
+            "text": " It is not that necessary."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1657.0,
+            "end": 1661.0,
+            "text": " But if you do some research, you will get familiar with it."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1661.0,
+            "end": 1664.0,
+            "text": " So, this was our video on system calls."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1664.0,
+            "end": 1666.0,
+            "text": " I hope you understood."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1666.0,
+            "end": 1668.0,
+            "text": " You understood your homework."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1668.0,
+            "end": 1669.0,
+            "text": " I gave you two homeworks."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1669.0,
+            "end": 1676.0,
+            "text": " In which, you will read all the system calls written in the notes on the net."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1676.0,
+            "end": 1682.0,
+            "text": " After that, you can run these commands if you want."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1682.0,
+            "end": 1686.0,
+            "text": " Apart from that, you can use the man command on the terminal."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1686.0,
+            "end": 1689.0,
+            "text": " So, let's finish this video."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1689.0,
+            "end": 1690.0,
+            "text": " Thanks for watching."
+        },
+        {
+            "number": "Lecture 5",
+            "title": " System Calls in Operating System  [Theory + Example + Hands-on Terminal]",
+            "start": 1690.0,
+            "end": 1692.0,
+            "text": " Thank you so much."
+        }
+    ],
+    "text": " Hello Ji, How are you all? This is Lakshya. Welcome to our OS Placement Series. Today we have come to our lecture number 5 and we are going to discuss a very important topic today. System Calls System calls are such an important topic that you should know this terminology and also you should know the in-depth information about it. Before we start with System Calls, let's discuss what we have studied till now. In the last video, we have studied two things in the component of OS. First was User Space and the second was Kernel Space. There is a distinction between these two. We have these two separate spaces. If we want to switch between these, we switch between the user mode and kernel mode. We have discussed this. Now I will say that the application is running in the user mode. But actually the core work is done by the kernel. The kernel has the privileged access to the hardware. The user space does not have it. If any app was running in the user space, it did not have any access to the hardware. How can I bypass this distinction? The answer is System Calls. How is System Calls? System Calls is an interface or a mechanism through which I provide a mechanism to the user space. In the user space, the apps are running. For example, TikTok is running. I will provide a mechanism to TikTok to talk to the kernel space. Why should we talk to the kernel space? Because the kernel space is the only thing that will provide us with hardware access. The hardware access will be provided by the kernel space. We have understood this. If I want to talk to the kernel space, I have to go to the kernel. The kernel and the user space are two different things. A mechanism is provided for communication between them. That is System Calls. System Calls is the only way to switch between the user mode and the kernel mode. For example, if I want to do a malloc. Before TikTok comes into memory, it needs a particular space. When it switches from the user mode to the kernel mode, it will enable System Calls. System Calls is the only way to switch from the user mode to the kernel mode. And get access to the kernel. We have understood what System Calls is. This video is sponsored by Coding Ninjas, India's leading coding education platform. Many product-based companies like Amazon, Adobe, and Commvault focus on OS in their technical interviews. To clear these interviews, your OS part should be very strong. Coding Ninjas provides a comprehensive and in-depth course. It covers all these concepts. All theoretical concepts are mapped and taught. You are also provided with a one-on-one doubt session. The faculty teaches you from big companies like Nvidia and Microsoft. You will get more than 12 hours of content in this course. You will solve more than 150 problems. You will do more than 12 hands-on projects. You will also get many courses on Coding Ninjas. If you are interested in paid courses, I will put the link in the description. You will get the maximum available discount. Thank you. Let me give you an example. Let's say you want to create a directory. You want to create a new folder. Let's say you brought a lot of movies from your friend. You want to copy the movies. You need a folder named Movies to copy the movies. How will you make this folder? You will say that it is simple. You have to go to My Computer. Right-click on the folder you want to make. Right-click on the folder you want to make. Type Movies. You will get a new folder. You are right. It is a very easy task. But who made it easy? GUI made it easy. It is not that easy. It is not that easy. Because of the OS, it seems easy. Because it is resolving the complexity for you. But it is not that easy. How? You go to GUI and click on the New Folder button. Or you can use the command prompt. Open the terminal and run the command. This command is used on Linux. Write Movies. And I will make a folder of movies. Both methods are doing the same thing. But the GUI method is for standard users. And this method is for smart users like you. So you made a new folder. But it is not as easy as it seems. Because the GUI button is calling the MKDIR internally. I will tell you what the MKDIR is doing. You had a user space and a kernel space. And there was hardware here. User space, kernel space and hardware. There is a layer in between. These are separate spaces. Now see how it works. Whenever you click on the New Folder button to make a folder of movies. Or run the MKDIR movies. What will the user space do? The user space will go to the interface. What is the name of this interface? The name of this interface is SCI. System Call Interface. It will go to the system call interface. And it will ask to take the corresponding implementation of MKDIR to the kernel. So SCI is an entry point of the kernel space. So your command went to SCI. And SCI said to find the corresponding MKDIR. Now I will tell you in real. The corresponding MKDIR will have an implementation in the kernel space. There will be an implementation in the kernel space. This implementation will be here. What will your SCI do? SCI will say to find this implementation. After finding this implementation, the kernel space will run this implementation. The kernel space will run this implementation. What will happen after running? After running, the folder where you have run the MKDIR command. The node will be added to the tree. The node will be named movies. You are running this command on the root. So the node will be named movies. And you will see the node named movies. And you will see the folder named movies in GUI. So this is how the complex work is going on. Who is doing this work? Who is doing this work in the kernel? There is an implementation in the kernel. Which is written in C. So I can say that the actual implementation. The actual implementation of MKDIR. It is written in C. So I can say that all the system calls. All the system calls are implemented in C. Actually, the type of app you use. There is a low level C. In which it can access directly from the hardware. It can work from the hardware. It is written in this type of C language. So system calls are basically implemented in C language. But what you are seeing is MKDIR. And above that there is an implementation. Multiple processes are running inside. Multiple code is being executed to do so. So what you see is system calls. It is simply an interface to that C implementation. So this is your small introduction to system calls. So why is this important? Because I have no other way to go from the user space to the kernel space. Because these are two separate areas. You have to get some work done from the kernel space. The kernel space has the hardware access. You have to get some work done on the hardware. So you will have to use system calls. Basically, your user app will have to use system calls to do that work. So this is your small introduction to system calls. If I take one more example. I take a small example. Suppose you have executed a process. What did you do? Executed a process. Suppose you have compiled your hello world.exe. You run it. What will be the first thing to do after running? After running it, it will find a system call. It will find a system call of execution. It will find a system call of execution. Which will give your SCI. Your system call interface. What will it do? It will switch the work in kernel mode. We will go to kernel mode. The kernel mode will switch. In kernel mode, we will go to process management. We will go to process management. What will it do? It will create the process. It will create the process. There will be many things to create the process. To create the process, you will allocate some memory in RAM. If the process is accessing other hardware, then it will be done by the kernel. In this way, a process will be created. After the process is created, we will switch from kernel mode to user mode. Why? Because the kernel mode work is over. The kernel mode work is over. All the information is that the process has been created. All the user space has to be given. For that, the user space will be given the information of the process. You will see in the task manager or in the activity center. This particular process is running. You will see the process on GUI. This is how it works. We are switching. How? User mode. I clicked on .exe in user mode. From user mode, you went to kernel mode. How did you go to kernel mode? Through system call. After system call, the kernel mode will work. After the process is created, you will give the information to the user mode. We will switch to user mode again. Finally, you will see the process. This is how the process is running. You keep running the computer. All the work is done inside. The user mode and kernel mode switch is running. How does the user mode and kernel mode switch work? How does the user mode and kernel mode switch work? How does it work? Whenever you execute, you call a software interrupt. You call a software interrupt. What does the software interrupt do? I told you in the last video that what is a software interrupt. You are doing a task. You tell the CPU to stop the task for 2 minutes. You tell the CPU to do the important task. You switch from user mode to kernel mode by using the software interrupt. This is how things work. These are the examples of system calls. We can discuss the category of system calls. These are the two examples. Let's take a look at the notes. The definition of this is written. Before going to the definition, if I ask you a question, How do apps interact with kernels? Your answer will be straight. Your answer will be straight. After giving system calls, he will be happy and ask you about it. He will ask you to give an example. We have written in the example that if you make a folder by using MKDI or LAKS, Your folder will be made in this way. We have just discussed all this. Similarly, we are creating a process. We are switching from user mode to kernel mode. We are switching from user mode to kernel mode. We are switching from user space to kernel space by using the software interrupt. System calls are implemented in C. Let's see the definition of this. If someone asks you to define it in English, how will you do it? A system call is a mechanism using which a user program can request a service from the kernel for which it does not have the permission to perform. After user mode, there is a very limited access. We switch to kernel mode to do the work that it cannot do. The mechanism used to switch is system call. Let's see a diagram of this. You will get some extra information in the diagram. It is your user app. We have just seen that it is a user app. Assume that you are calling a system call from a user app. In a normal Linux system, there is a Glibc. It is a C++ implemented library. It is a C++ implemented library. It is used to call the system call interface. You call Glibc first. You are in user mode. There is a software interrupt call. What does the software interrupt call do? It tells you that you have to switch from user mode to kernel mode. To switch to kernel mode, we call SCI. SCI checks the location of the corresponding implementation. That implementation will be mapped to the kernel. The kernel will run that implementation. After running that implementation, it will work on the hardware. Assume that the hardware is a disk. A folder will be created in the disk. A directory will be created. In this way, we will get the movie folder. We will retrace it. We will get the information in user mode that the movie folder is created. This is an example of a diagram. You can make a diagram and show it. Next, let's go to the types of system calls. There are five types of system calls. There are five types of system calls. Process control. File management. Device management. Information maintenance. Communication management. I will give you a brief. Process management system calls. Creating the process. Deleting the process. Waiting for a process. Terminate. Allocate memory. Deallocate. Attribute set. Attribute get. Process control system calls. The second category is file management. File management is the example we just took. Creating, deleting, opening, closing, reading, writing, repositioning. Repositioning is when you are reading a file. You don't want to read from the 0th position. You want to read from the 20th position. Repositioning is used for that. Get and set attributes. Get and set attributes are security. A file has permissions. Permission of a particular file. File is lak.txt. Permission is only for lak user. Lakshya user. If there is any other user. If there is a ram user. Ram user will not have access to it. To set this type of attribute. So that no other user can modify it. File management has this type of system calls. We will discuss the example of this. We have device management. In device management, we have to read, write, get, set, attach, detach. This type of work is done in device management system calls. What happens in information maintenance? Information maintenance is nothing. Information of different processes. Information of device. Time. Time, date, system. Data. Information management module. Information management system call. Communication management. Communication management is related to inter-process communication. What was inter-process communication? Inter-process communication means that there are two different processes. They are running in separate spaces. They have to communicate with each other. Inter-process communication is the mechanism of communication. Communication management is used to do that inter-process communication. For example, process A and B. A pipe is required to communicate. Creating a pipe. Maintenance of it. Creation and deletion of it. All these things are done in communication management. Remote devices. Like LAN. These things are done in communication management. Now I will take some examples. I have tried to take examples of both Windows and Unix. In process control, create process, fork is used. For exit process, exit is used. Wait for single object. How do these three system calls work? What does fork do? Fork does nothing. It creates any process. Whenever a system is running. Like your computer is on. After the computer is on, there is a root process. It is called the zeroth process. All the processes that are made after this. All are its child. All are its child. What does fork do? It makes a child of any process. If I say that you have turned on the terminal. After turning on the terminal. You are making a process inside the terminal. Basically, there is an executable. You are running it in the terminal. I can say that this is its parent process. The exe you have run from the terminal. That is your child process. Fork always makes a child process. No new process is made inside the computer. All are its child. This is the work of fork. Exit means to exit the process. When we call exit for a process. What will exit do? It will allocate the memory. It will write in the task table. That this process has been exited. There are some examples of file management. Open, read, close, chmod, unmask, chon. What does chmod do? Basically, it sets the file mode. The file mode means. The file is readable, writeable. You can only read. You can also read and write. What does chon do? Normally, change ownership. ch means change. own means ownership. The example I gave. This is a user named Laksh. He can access it. There is some device management. Read, write, IOCTL. To set the console mode. Information management. Get PID, alarm, sleep. There is a date command. If you write your date on the terminal. It will show the date and time. This system call is also. In the information management. In communication, we talked about the pipe. Process A, Process B. To set up the pipe. The pipe command is used. CHM get. There are two ways in IPC. The method of shared memory. The method of message passing. It is through the pipe. The method of shared memory. It is through the CHM get. The particular shared memory. Through which. Process A, Process B. Through the shared memory. To get that shared memory. This particular command is used. There is a command called mmap. It maps and unmaps. Devices on memory. It also maps on virtual memory. Don't get confused. You have to know. What all system calls do. I want to give you a homework. The homework is. All system calls are written on this page. You will search for it. What is today's homework? All system calls. All that is written here. You will search on the internet. You will search on the internet. You don't need to know much. You should know what all system calls are. You should read about it. You will get intuition. What system call does. You should know the name of the system call. What is working? What is system call? Now we will try. I will give you a small example. In process management. Let's go to the screen. I will give you an example. I will give you an example. We will use file management. If I open a terminal. I will go to the directory. We come to the desktop. We do Vim on the desktop. I make a script. I am making a temporary document. I will edit it. I will write. We are making a batch script. I will write. This is a batch script. I will write while. I will write true. I will do nothing. I will keep writing. I will print hello world. I will sleep. I will sleep. I will sleep. I have made a temporary document. I will make it in memory. I was in the desktop. I will use file management. I am on the desktop. I will save it. It will go to a particular area. It will go to the desktop folder. It will go to the folder where the hierarchy is made. It will create a file. It will save it. I will save it. A file has come here. I have just created a file. I have used a system call. Which system call will be used? I have made a file descriptor. It will be open. I typed it. I used the write command. I edited the file. I went to write. I used the write command. I used the write command. I used the write system call. I have made a file. I will run it. What will happen now? Think. Now the system call of process management will come in handy. This is a particular terminal. The child of this particular terminal will be created. We will use the fork system call. We will make a process. The name of this process will be hello.sh. A process has been created. This process has been created. You are lying. I will give you an example. I will give you proof. Look at this. There is a command. Look at this. You can see that a process has been created. I have got the PID of this process. When I used the command. The information management system call was used to create this table. It has been written here. It has been written here. Look at this. First, we took the file management system call. Then we took the process management system call. Then we took the information management system call. I will tell you one more thing. The command of the fork creates a child of any parent. The command of the fork creates a child of any parent. I will write ps-al. I will write ps-al. You can see the PID of this particular command. You can see the PID of this particular command. PID is the process ID. PID is the process ID. PID is the parent's PID. PID is the parent's PID. This is our terminal. This is our terminal. We are bored. We want to kill this. To kill this, look at this file again. I'll use the kill command. Kill is used to kill abruptly. Kill is used to kill abruptly. I will enter this in the other terminal. I will enter this in the other terminal. The kill command is also a system call. The kill command is also a system call. Now, the command is running in kernel mode. In kernel mode, it saw that a particular PID is running. It killed it. It told the CPU to shut up. It said, don't work on this. It blew the process from memory. So, this is how things work. I gave you a small example of how kill number works. I will give you one more homework. In that, you can read all the commands written on the net. Apart from this, you can also read on the terminal. If I use the man command to read the command, then you can see the information about it. It says, kill is done by terminator signal a process. We signal a process. There are different types of attributes. Minus L, minus 1. There are different types of interrupts. 2, interrupt. 3, quit. 9, kill. Abort. Alarm, clock, blah blah. You can read all these things. Give it some time. It is not that necessary. But if you do some research, you will get familiar with it. So, this was our video on system calls. I hope you understood. You understood your homework. I gave you two homeworks. In which, you will read all the system calls written in the notes on the net. After that, you can run these commands if you want. Apart from that, you can use the man command on the terminal. So, let's finish this video. Thanks for watching. Thank you so much."
+}

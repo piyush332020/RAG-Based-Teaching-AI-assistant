@@ -1,0 +1,3120 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 0.0,
+            "end": 4.0,
+            "text": " Hello, how are you all?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 4.0,
+            "end": 7.0,
+            "text": " I am Lakshya and I am here at OS lecture no. 20"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 7.0,
+            "end": 10.0,
+            "text": " and from last two videos we were discussing"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 10.0,
+            "end": 11.0,
+            "text": " classic synchronization problems"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 11.0,
+            "end": 14.0,
+            "text": " and the third and last problem of this video"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 14.0,
+            "end": 17.0,
+            "text": " is our dining philosopher problem."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 17.0,
+            "end": 19.0,
+            "text": " So this video is sponsored by Coding Ninjas"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 19.0,
+            "end": 22.0,
+            "text": " India's leading coding education platform."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 22.0,
+            "end": 26.0,
+            "text": " Many product based companies like Amazon, Adobe, Commvault"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 26.0,
+            "end": 29.0,
+            "text": " focus on OS part in their technical interviews."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 29.0,
+            "end": 31.0,
+            "text": " So to clear these interviews,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 31.0,
+            "end": 34.0,
+            "text": " your OS part should be very strong."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 34.0,
+            "end": 37.0,
+            "text": " So Coding Ninjas provides comprehensive and in-depth course"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 37.0,
+            "end": 41.0,
+            "text": " which covers all these concepts very well."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 41.0,
+            "end": 43.0,
+            "text": " Apart from that, all the theoretical concepts"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 43.0,
+            "end": 46.0,
+            "text": " are taught by mapping all the Linux operating systems."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 46.0,
+            "end": 50.0,
+            "text": " Along with the course, one on one doubt session is also provided."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 50.0,
+            "end": 52.0,
+            "text": " Apart from that, the faculty will teach you"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 52.0,
+            "end": 55.0,
+            "text": " from big companies like Nvidia and Microsoft."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 55.0,
+            "end": 60.0,
+            "text": " Apart from that, you will get more than 12 hours of content in this course."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 60.0,
+            "end": 62.0,
+            "text": " You will solve more than 150 problems."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 62.0,
+            "end": 65.0,
+            "text": " You will do hands-on in more than 12 projects."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 65.0,
+            "end": 67.0,
+            "text": " Apart from that, you will get many different"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 67.0,
+            "end": 70.0,
+            "text": " computer science related courses on Coding Ninjas."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 70.0,
+            "end": 72.0,
+            "text": " If you are interested in paid courses,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 72.0,
+            "end": 73.0,
+            "text": " I will put the link in the description"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 73.0,
+            "end": 76.0,
+            "text": " so that you will get maximum available discount."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 76.0,
+            "end": 77.0,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 77.0,
+            "end": 80.0,
+            "text": " Its name is Dining Philosopher Problem."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 80.0,
+            "end": 81.0,
+            "text": " It is a very interesting problem."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 81.0,
+            "end": 84.0,
+            "text": " We have a table."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 86.0,
+            "end": 90.0,
+            "text": " There are 5 philosophers sitting on this table."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 96.0,
+            "end": 98.0,
+            "text": " 1, 2, 3, 4, 5."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 98.0,
+            "end": 99.0,
+            "text": " There are 5 philosophers sitting on this table."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 99.0,
+            "end": 102.0,
+            "text": " There are noodles placed in the middle."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 105.0,
+            "end": 106.0,
+            "text": " We have plates."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 106.0,
+            "end": 107.0,
+            "text": " There are plates."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 110.0,
+            "end": 112.0,
+            "text": " There are forks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 115.0,
+            "end": 117.0,
+            "text": " Let's make it in another color."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 122.0,
+            "end": 125.0,
+            "text": " We have 5 philosophers."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 125.0,
+            "end": 127.0,
+            "text": " I call philosophers as PH."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 128.0,
+            "end": 131.0,
+            "text": " 2, there are noodles placed in the middle."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 132.0,
+            "end": 134.0,
+            "text": " 3, there are 5 forks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 137.0,
+            "end": 140.0,
+            "text": " This is our current scenario."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 140.0,
+            "end": 142.0,
+            "text": " How does it work?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 142.0,
+            "end": 146.0,
+            "text": " The philosophers are either in thinking state"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 146.0,
+            "end": 148.0,
+            "text": " or in eating state."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 148.0,
+            "end": 150.0,
+            "text": " They don't talk to each other."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 150.0,
+            "end": 151.0,
+            "text": " They don't have friends."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 151.0,
+            "end": 153.0,
+            "text": " They think a lot."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 153.0,
+            "end": 156.0,
+            "text": " They either think or eat."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 156.0,
+            "end": 157.0,
+            "text": " They just think or eat."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 157.0,
+            "end": 158.0,
+            "text": " They do only these two things."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 158.0,
+            "end": 160.0,
+            "text": " They don't talk to each other."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 160.0,
+            "end": 163.0,
+            "text": " They don't have any discussion with each other."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 163.0,
+            "end": 165.0,
+            "text": " So, I say,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 165.0,
+            "end": 168.0,
+            "text": " the philosophers don't talk to each other."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 168.0,
+            "end": 169.0,
+            "text": " They don't have any interaction."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 169.0,
+            "end": 171.0,
+            "text": " They just eat."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 171.0,
+            "end": 173.0,
+            "text": " Now, they are eating."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 173.0,
+            "end": 176.0,
+            "text": " Their thinking state is over."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 176.0,
+            "end": 178.0,
+            "text": " They will come to eating state."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 178.0,
+            "end": 181.0,
+            "text": " They need two forks to eat noodles."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 181.0,
+            "end": 184.0,
+            "text": " At least and at most."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 184.0,
+            "end": 185.0,
+            "text": " They need two forks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 185.0,
+            "end": 187.0,
+            "text": " If I talk about this,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 187.0,
+            "end": 191.0,
+            "text": " they need these two forks to eat."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 191.0,
+            "end": 193.0,
+            "text": " They need these two forks to eat."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 193.0,
+            "end": 197.0,
+            "text": " When they pick these forks,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 197.0,
+            "end": 201.0,
+            "text": " when this philosopher picks,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 201.0,
+            "end": 203.0,
+            "text": " he picks one by one."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 203.0,
+            "end": 205.0,
+            "text": " He picks this first and then this."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 205.0,
+            "end": 207.0,
+            "text": " If he picks this,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 207.0,
+            "end": 209.0,
+            "text": " he picks this first and then this."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 209.0,
+            "end": 212.0,
+            "text": " This is the problem."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 212.0,
+            "end": 213.0,
+            "text": " What should we do?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 213.0,
+            "end": 215.0,
+            "text": " What is our problem?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 215.0,
+            "end": 220.0,
+            "text": " If all the noodles are sitting to eat,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 220.0,
+            "end": 223.0,
+            "text": " then we need 5x2 is equal to 10."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 223.0,
+            "end": 226.0,
+            "text": " Ideally, we need 10 forks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 226.0,
+            "end": 229.0,
+            "text": " But we don't have 10 forks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 229.0,
+            "end": 233.0,
+            "text": " We need 5 forks to work."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 233.0,
+            "end": 234.0,
+            "text": " So, this is the problem."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 234.0,
+            "end": 237.0,
+            "text": " How should I synchronize this?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 237.0,
+            "end": 239.0,
+            "text": " How should I synchronize this?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 239.0,
+            "end": 241.0,
+            "text": " This should be a system"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 241.0,
+            "end": 243.0,
+            "text": " that when someone wants to eat,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 243.0,
+            "end": 245.0,
+            "text": " means when someone wants to go to eating state,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 245.0,
+            "end": 246.0,
+            "text": " he gets two forks to eat."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 246.0,
+            "end": 248.0,
+            "text": " This is deadlock free."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 248.0,
+            "end": 251.0,
+            "text": " Deadlock free is a system."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 251.0,
+            "end": 254.0,
+            "text": " To solve this also,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 254.0,
+            "end": 256.0,
+            "text": " what should I use?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 256.0,
+            "end": 258.0,
+            "text": " I will use semaphores."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 262.0,
+            "end": 265.0,
+            "text": " I will use semaphores."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 265.0,
+            "end": 266.0,
+            "text": " What can I do?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 266.0,
+            "end": 271.0,
+            "text": " First, I can make each fork a semaphore."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 274.0,
+            "end": 277.0,
+            "text": " I can make a binary semaphore."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 279.0,
+            "end": 281.0,
+            "text": " I can make a binary semaphore."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 281.0,
+            "end": 284.0,
+            "text": " I can say that there is an array of forks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 284.0,
+            "end": 285.0,
+            "text": " Let's say 5."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 285.0,
+            "end": 288.0,
+            "text": " I can initialize it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 288.0,
+            "end": 290.0,
+            "text": " From 1."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 290.0,
+            "end": 292.0,
+            "text": " So, in this way,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 292.0,
+            "end": 294.0,
+            "text": " we have an array of forks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 294.0,
+            "end": 296.0,
+            "text": " And this is a semaphore."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 296.0,
+            "end": 299.0,
+            "text": " This is a data type of semaphores."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 301.0,
+            "end": 303.0,
+            "text": " Now, what will happen?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 303.0,
+            "end": 305.0,
+            "text": " Whenever a philosopher comes,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 305.0,
+            "end": 307.0,
+            "text": " whenever a philosopher comes,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 307.0,
+            "end": 309.0,
+            "text": " this particular philosopher"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 309.0,
+            "end": 311.0,
+            "text": " comes to pick this fork,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 311.0,
+            "end": 313.0,
+            "text": " he will wait call."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 313.0,
+            "end": 315.0,
+            "text": " After waiting call,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 315.0,
+            "end": 317.0,
+            "text": " if this philosopher wants to pick it,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 317.0,
+            "end": 319.0,
+            "text": " he cannot pick it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 319.0,
+            "end": 321.0,
+            "text": " Because this person has already locked it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 321.0,
+            "end": 323.0,
+            "text": " So, here I can say that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 323.0,
+            "end": 325.0,
+            "text": " if I am a scenario of OS,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 325.0,
+            "end": 327.0,
+            "text": " then these are all processes."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 327.0,
+            "end": 329.0,
+            "text": " These philosophers are all processes."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 329.0,
+            "end": 331.0,
+            "text": " And I have this resource."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 331.0,
+            "end": 333.0,
+            "text": " These are forks and reforks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 333.0,
+            "end": 335.0,
+            "text": " This is a very classic problem."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 335.0,
+            "end": 337.0,
+            "text": " So, how to solve it?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 337.0,
+            "end": 339.0,
+            "text": " Let's move ahead."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 339.0,
+            "end": 341.0,
+            "text": " Suppose this person has locked it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 341.0,
+            "end": 343.0,
+            "text": " So, when he got it,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 343.0,
+            "end": 345.0,
+            "text": " he also needs it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 345.0,
+            "end": 347.0,
+            "text": " He also needs the adjacent fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 347.0,
+            "end": 349.0,
+            "text": " So, what do I do for this?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 349.0,
+            "end": 351.0,
+            "text": " To do this process,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 351.0,
+            "end": 353.0,
+            "text": " I am using semaphores."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 353.0,
+            "end": 355.0,
+            "text": " So, in semaphores,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 355.0,
+            "end": 357.0,
+            "text": " I can say that when the wait call is made,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 357.0,
+            "end": 359.0,
+            "text": " when the wait call is made on a particular fork,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 359.0,
+            "end": 361.0,
+            "text": " that is, the wait call is made on fork 5,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 361.0,
+            "end": 363.0,
+            "text": " then I can say that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 363.0,
+            "end": 365.0,
+            "text": " the philosopher"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 365.0,
+            "end": 367.0,
+            "text": " who has called it,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 367.0,
+            "end": 369.0,
+            "text": " he has acquired it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 371.0,
+            "end": 373.0,
+            "text": " The third one is that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 373.0,
+            "end": 375.0,
+            "text": " if someone releases it,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 375.0,
+            "end": 377.0,
+            "text": " I will use the release method."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 377.0,
+            "end": 379.0,
+            "text": " What will happen in the release?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 379.0,
+            "end": 381.0,
+            "text": " If the release call is made on fork 5,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 381.0,
+            "end": 383.0,
+            "text": " then this particular fork"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 383.0,
+            "end": 385.0,
+            "text": " will be released."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 385.0,
+            "end": 387.0,
+            "text": " That is, someone else can pick it up."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 387.0,
+            "end": 389.0,
+            "text": " So, let's see how the solution"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 389.0,
+            "end": 391.0,
+            "text": " will work."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 391.0,
+            "end": 393.0,
+            "text": " You can see my solution."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 393.0,
+            "end": 395.0,
+            "text": " Let me make it quickly."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 395.0,
+            "end": 397.0,
+            "text": " So, this is the particular solution."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 397.0,
+            "end": 399.0,
+            "text": " How will this solution work?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 399.0,
+            "end": 401.0,
+            "text": " This solution will work"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 401.0,
+            "end": 403.0,
+            "text": " if I have value 1."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 403.0,
+            "end": 405.0,
+            "text": " If I have value 1,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 405.0,
+            "end": 407.0,
+            "text": " then the particular philosopher"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 407.0,
+            "end": 409.0,
+            "text": " has to pick up the second fork"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 409.0,
+            "end": 411.0,
+            "text": " numbering wise,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 411.0,
+            "end": 413.0,
+            "text": " i plus 1 mod 5."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 413.0,
+            "end": 415.0,
+            "text": " Why am I doing mod 5?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 415.0,
+            "end": 417.0,
+            "text": " Suppose I have 5,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 417.0,
+            "end": 419.0,
+            "text": " which is managed on circular table."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 419.0,
+            "end": 421.0,
+            "text": " There will be no 6th fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 421.0,
+            "end": 423.0,
+            "text": " So, I will make 6 mod 5."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 423.0,
+            "end": 425.0,
+            "text": " What will happen?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 425.0,
+            "end": 427.0,
+            "text": " 6 mod 5 will be 1."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 427.0,
+            "end": 429.0,
+            "text": " In this case,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " I will come back to 1."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 431.0,
+            "end": 433.0,
+            "text": " That's why this mod condition is used."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 433.0,
+            "end": 435.0,
+            "text": " We keep doing this in programming."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 435.0,
+            "end": 437.0,
+            "text": " That is easy to understand."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 437.0,
+            "end": 439.0,
+            "text": " Suppose i is equal to 1,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 439.0,
+            "end": 441.0,
+            "text": " then which fork will I have to pick up?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 441.0,
+            "end": 443.0,
+            "text": " 1 plus 1"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 443.0,
+            "end": 445.0,
+            "text": " mod 5, that is 2."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 445.0,
+            "end": 447.0,
+            "text": " Let's see in this diagram."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 447.0,
+            "end": 449.0,
+            "text": " Suppose I have to pick up 1,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 449.0,
+            "end": 451.0,
+            "text": " then I have to pick up 2."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 451.0,
+            "end": 453.0,
+            "text": " So, I have to pick up 2."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 453.0,
+            "end": 455.0,
+            "text": " So, in this way,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 455.0,
+            "end": 457.0,
+            "text": " I have parallelly weight called on both."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 457.0,
+            "end": 459.0,
+            "text": " Not parallelly,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 459.0,
+            "end": 461.0,
+            "text": " I have weight called on both."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 461.0,
+            "end": 463.0,
+            "text": " After weight calling,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 463.0,
+            "end": 465.0,
+            "text": " a particular philosopher"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 465.0,
+            "end": 467.0,
+            "text": " will weight call on"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 467.0,
+            "end": 469.0,
+            "text": " a particular philosopher of i."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 469.0,
+            "end": 471.0,
+            "text": " So, I can say that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 471.0,
+            "end": 473.0,
+            "text": " he has acquired this fork"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 473.0,
+            "end": 475.0,
+            "text": " and this fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 475.0,
+            "end": 477.0,
+            "text": " After acquiring, he will go for eating."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 477.0,
+            "end": 479.0,
+            "text": " After eating,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 479.0,
+            "end": 481.0,
+            "text": " he will signal both and release."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 481.0,
+            "end": 483.0,
+            "text": " After that, he will continue thinking."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 483.0,
+            "end": 485.0,
+            "text": " This solution"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 485.0,
+            "end": 487.0,
+            "text": " looks very easy."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 487.0,
+            "end": 489.0,
+            "text": " But, there is a major problem."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 489.0,
+            "end": 491.0,
+            "text": " What is that problem?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 491.0,
+            "end": 493.0,
+            "text": " I guess,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 493.0,
+            "end": 495.0,
+            "text": " you have guessed it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 495.0,
+            "end": 497.0,
+            "text": " Let me tell you."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 497.0,
+            "end": 499.0,
+            "text": " This solution ensures that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 499.0,
+            "end": 501.0,
+            "text": " two neighbors,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 501.0,
+            "end": 503.0,
+            "text": " these two neighbors,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 503.0,
+            "end": 505.0,
+            "text": " simultaneously,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 505.0,
+            "end": 507.0,
+            "text": " cannot eat."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 507.0,
+            "end": 509.0,
+            "text": " Because, if P1 locks on both,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 509.0,
+            "end": 511.0,
+            "text": " P2 can lock on this,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " but not on this."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 513.0,
+            "end": 515.0,
+            "text": " P2 cannot lock on this."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 515.0,
+            "end": 517.0,
+            "text": " So, in this way, I can say"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 517.0,
+            "end": 519.0,
+            "text": " that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 519.0,
+            "end": 521.0,
+            "text": " this solution ensures"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 521.0,
+            "end": 523.0,
+            "text": " that two adjacent philosophers"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 523.0,
+            "end": 525.0,
+            "text": " will not eat together."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 525.0,
+            "end": 527.0,
+            "text": " Now, there is a problem."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 527.0,
+            "end": 529.0,
+            "text": " There is a deadlock."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 529.0,
+            "end": 531.0,
+            "text": " How will it come?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 531.0,
+            "end": 533.0,
+            "text": " Assume that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 533.0,
+            "end": 535.0,
+            "text": " all philosophers"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 535.0,
+            "end": 537.0,
+            "text": " have picked their left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 537.0,
+            "end": 539.0,
+            "text": " All of them got hungry and"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 539.0,
+            "end": 541.0,
+            "text": " picked their left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 541.0,
+            "end": 543.0,
+            "text": " P1 has also picked left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 543.0,
+            "end": 545.0,
+            "text": " P2 has also picked left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 545.0,
+            "end": 547.0,
+            "text": " P3 has also picked left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 547.0,
+            "end": 549.0,
+            "text": " P4 has also picked left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 549.0,
+            "end": 551.0,
+            "text": " Now, look carefully."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 551.0,
+            "end": 553.0,
+            "text": " This is a condition"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 553.0,
+            "end": 555.0,
+            "text": " of deadlock."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 555.0,
+            "end": 557.0,
+            "text": " I have given a small introduction"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 557.0,
+            "end": 559.0,
+            "text": " in my previous videos."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 559.0,
+            "end": 561.0,
+            "text": " This philosopher"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 561.0,
+            "end": 563.0,
+            "text": " has picked left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 563.0,
+            "end": 565.0,
+            "text": " Now, he is waiting for P1 to free."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 565.0,
+            "end": 567.0,
+            "text": " Similarly, P2 has picked left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 567.0,
+            "end": 569.0,
+            "text": " But, he is waiting for P1 to free."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 569.0,
+            "end": 571.0,
+            "text": " But, P1 will not free until"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 571.0,
+            "end": 573.0,
+            "text": " P5 will not free."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 573.0,
+            "end": 575.0,
+            "text": " Now, there is a deadlock situation."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 577.0,
+            "end": 579.0,
+            "text": " This deadlock situation"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 579.0,
+            "end": 581.0,
+            "text": " will never"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 581.0,
+            "end": 583.0,
+            "text": " come out."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 583.0,
+            "end": 585.0,
+            "text": " This is an infinite loop."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 585.0,
+            "end": 587.0,
+            "text": " How can I avoid this?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 587.0,
+            "end": 589.0,
+            "text": " Although, I have used Seema 4."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 589.0,
+            "end": 591.0,
+            "text": " After using Seema 4,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 591.0,
+            "end": 593.0,
+            "text": " I have ensured that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 593.0,
+            "end": 595.0,
+            "text": " the philosophers"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 595.0,
+            "end": 597.0,
+            "text": " who are sitting next to me"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 597.0,
+            "end": 599.0,
+            "text": " cannot eat simultaneously."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 599.0,
+            "end": 601.0,
+            "text": " I have ensured this."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 601.0,
+            "end": 603.0,
+            "text": " But, what will you do in this condition?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 603.0,
+            "end": 605.0,
+            "text": " To avoid this,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 605.0,
+            "end": 607.0,
+            "text": " we don't have a hard and fast"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 607.0,
+            "end": 609.0,
+            "text": " solution to avoid deadlocks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 609.0,
+            "end": 611.0,
+            "text": " But, we have to tweak it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 611.0,
+            "end": 613.0,
+            "text": " I am telling you"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 613.0,
+            "end": 615.0,
+            "text": " this is the basis"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 615.0,
+            "end": 617.0,
+            "text": " of how to avoid deadlocks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 619.0,
+            "end": 621.0,
+            "text": " We will avoid deadlocks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 621.0,
+            "end": 623.0,
+            "text": " We will try to avoid this situation."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 623.0,
+            "end": 625.0,
+            "text": " This particular situation"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 625.0,
+            "end": 627.0,
+            "text": " should never occur."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 627.0,
+            "end": 629.0,
+            "text": " We should stop things before it occurs."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 629.0,
+            "end": 631.0,
+            "text": " For this,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 631.0,
+            "end": 633.0,
+            "text": " we have made"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 633.0,
+            "end": 635.0,
+            "text": " very good notes."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 635.0,
+            "end": 637.0,
+            "text": " If you read this page,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 637.0,
+            "end": 639.0,
+            "text": " you will understand the dining philosopher."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 639.0,
+            "end": 641.0,
+            "text": " We were here."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 641.0,
+            "end": 643.0,
+            "text": " When each philosopher"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 643.0,
+            "end": 645.0,
+            "text": " tries to grab his right fork"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 645.0,
+            "end": 647.0,
+            "text": " or left fork,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 647.0,
+            "end": 649.0,
+            "text": " he will be waiting forever."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 649.0,
+            "end": 651.0,
+            "text": " We have discussed this in the above diagram."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 651.0,
+            "end": 653.0,
+            "text": " To avoid this,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 653.0,
+            "end": 655.0,
+            "text": " we don't have a hard and fast rule."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 655.0,
+            "end": 657.0,
+            "text": " We have a few tweaks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 657.0,
+            "end": 659.0,
+            "text": " The first tweak is"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 659.0,
+            "end": 661.0,
+            "text": " allow at most 4 philosophers"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 661.0,
+            "end": 663.0,
+            "text": " to sit simultaneously."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 663.0,
+            "end": 665.0,
+            "text": " At most,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 665.0,
+            "end": 667.0,
+            "text": " 4 should sit"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 667.0,
+            "end": 669.0,
+            "text": " together."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 669.0,
+            "end": 671.0,
+            "text": " How can we do this?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 671.0,
+            "end": 673.0,
+            "text": " Assume that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 673.0,
+            "end": 675.0,
+            "text": " I have removed the 5th philosopher."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 675.0,
+            "end": 677.0,
+            "text": " I have removed him from the table."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 677.0,
+            "end": 679.0,
+            "text": " Now,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 679.0,
+            "end": 681.0,
+            "text": " let's do a similar case"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 681.0,
+            "end": 683.0,
+            "text": " which we have discussed in the above diagram."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 683.0,
+            "end": 685.0,
+            "text": " P1 chose his left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 685.0,
+            "end": 687.0,
+            "text": " P2 chose his left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 687.0,
+            "end": 689.0,
+            "text": " P3 chose his left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 689.0,
+            "end": 691.0,
+            "text": " P4 chose his left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 691.0,
+            "end": 693.0,
+            "text": " Now,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 693.0,
+            "end": 695.0,
+            "text": " P1 can pick up"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 695.0,
+            "end": 697.0,
+            "text": " the left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 697.0,
+            "end": 699.0,
+            "text": " At least,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 699.0,
+            "end": 701.0,
+            "text": " one philosopher is in the eating state."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 701.0,
+            "end": 703.0,
+            "text": " Rest are waiting."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 703.0,
+            "end": 705.0,
+            "text": " Whenever P1 finishes the execution,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 705.0,
+            "end": 707.0,
+            "text": " P1 will go out of the waiting state."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 707.0,
+            "end": 709.0,
+            "text": " When he will finish"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 709.0,
+            "end": 711.0,
+            "text": " his meal,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 711.0,
+            "end": 713.0,
+            "text": " he will release both of them."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 713.0,
+            "end": 715.0,
+            "text": " When he releases"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 715.0,
+            "end": 717.0,
+            "text": " both of them, P2 will get"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 717.0,
+            "end": 719.0,
+            "text": " the left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 719.0,
+            "end": 721.0,
+            "text": " P2 will execute."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 721.0,
+            "end": 723.0,
+            "text": " When P2 will execute,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 723.0,
+            "end": 725.0,
+            "text": " P2 will leave the left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 725.0,
+            "end": 727.0,
+            "text": " Similarly,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 727.0,
+            "end": 729.0,
+            "text": " P3 will get the left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 729.0,
+            "end": 731.0,
+            "text": " So, we avoided the deadlock situation."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 731.0,
+            "end": 733.0,
+            "text": " But, the problem is"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 733.0,
+            "end": 735.0,
+            "text": " we didn't allow the 5th philosopher to sit."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 735.0,
+            "end": 737.0,
+            "text": " It's okay."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 737.0,
+            "end": 739.0,
+            "text": " Let's discuss the second solution."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 739.0,
+            "end": 741.0,
+            "text": " The second method is"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 741.0,
+            "end": 743.0,
+            "text": " allow a philosopher to pick up his fork"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 743.0,
+            "end": 745.0,
+            "text": " only if both forks are available."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 745.0,
+            "end": 747.0,
+            "text": " I will pick up both of them only when both forks are available."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 747.0,
+            "end": 749.0,
+            "text": " In the beginning, we discussed"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 749.0,
+            "end": 751.0,
+            "text": " that first, one philosopher will pick up the left fork"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 751.0,
+            "end": 753.0,
+            "text": " and then the right fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 753.0,
+            "end": 755.0,
+            "text": " So, the left philosopher can pick up"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 755.0,
+            "end": 757.0,
+            "text": " only one fork at a time."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 757.0,
+            "end": 759.0,
+            "text": " But, in this case,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 759.0,
+            "end": 761.0,
+            "text": " the picking of the fork"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 761.0,
+            "end": 763.0,
+            "text": " is critical."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 763.0,
+            "end": 765.0,
+            "text": " Let me draw it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 765.0,
+            "end": 767.0,
+            "text": " Let me draw it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 767.0,
+            "end": 769.0,
+            "text": " If I make it critical,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 769.0,
+            "end": 771.0,
+            "text": " then I will use"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 771.0,
+            "end": 773.0,
+            "text": " locks in front of it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 773.0,
+            "end": 775.0,
+            "text": " I will put a mutex here"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 775.0,
+            "end": 777.0,
+            "text": " and a mutex release here."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 777.0,
+            "end": 779.0,
+            "text": " I will put a mutex release here."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 779.0,
+            "end": 781.0,
+            "text": " What will happen with this?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 781.0,
+            "end": 783.0,
+            "text": " What will happen with one more lock?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 783.0,
+            "end": 785.0,
+            "text": " Whenever a philosopher will come here,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 785.0,
+            "end": 787.0,
+            "text": " he will lock the mutex"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 787.0,
+            "end": 789.0,
+            "text": " and this will be a critical section."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 789.0,
+            "end": 791.0,
+            "text": " So, this mutex will ensure"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 791.0,
+            "end": 793.0,
+            "text": " that both forks"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 793.0,
+            "end": 795.0,
+            "text": " are available at the same time."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 795.0,
+            "end": 797.0,
+            "text": " So, in this way,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 797.0,
+            "end": 799.0,
+            "text": " I can also"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 799.0,
+            "end": 801.0,
+            "text": " make the weight call"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 801.0,
+            "end": 803.0,
+            "text": " as a critical section."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 803.0,
+            "end": 805.0,
+            "text": " If I make it critical, then I will have to make it critical"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 805.0,
+            "end": 807.0,
+            "text": " to release both of them at the same time."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 807.0,
+            "end": 809.0,
+            "text": " So,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 809.0,
+            "end": 811.0,
+            "text": " I can say that I have made"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 811.0,
+            "end": 813.0,
+            "text": " both the critical section conditions atomic."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 813.0,
+            "end": 815.0,
+            "text": " That means,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 815.0,
+            "end": 817.0,
+            "text": " no thread will be able to enter at a time."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 817.0,
+            "end": 819.0,
+            "text": " Only one thread will be able to"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 819.0,
+            "end": 821.0,
+            "text": " execute the critical section at a time."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 821.0,
+            "end": 823.0,
+            "text": " That means, if a philosopher enters"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 823.0,
+            "end": 825.0,
+            "text": " this critical section,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 825.0,
+            "end": 827.0,
+            "text": " he will take both the forks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 827.0,
+            "end": 829.0,
+            "text": " So, this can be a method of avoidance."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 829.0,
+            "end": 831.0,
+            "text": " What can be the third method?"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 831.0,
+            "end": 833.0,
+            "text": " The third method can be my odd-even rule."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 833.0,
+            "end": 835.0,
+            "text": " I can also put an odd-even rule"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 835.0,
+            "end": 837.0,
+            "text": " in this."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 837.0,
+            "end": 839.0,
+            "text": " All the odd philosophers"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 839.0,
+            "end": 841.0,
+            "text": " should pick their left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 841.0,
+            "end": 843.0,
+            "text": " Then,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 843.0,
+            "end": 845.0,
+            "text": " they should pick their right fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 845.0,
+            "end": 847.0,
+            "text": " And, the even philosophers should"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 847.0,
+            "end": 849.0,
+            "text": " pick their right fork and then their left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 849.0,
+            "end": 851.0,
+            "text": " Now, see how it will be."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 851.0,
+            "end": 853.0,
+            "text": " I have marked the odd philosophers"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 853.0,
+            "end": 855.0,
+            "text": " 1, 3, 5 and"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 855.0,
+            "end": 857.0,
+            "text": " even philosophers."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 857.0,
+            "end": 859.0,
+            "text": " So, the odd philosopher will pick his left fork first."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 859.0,
+            "end": 861.0,
+            "text": " So, let's draw this."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 861.0,
+            "end": 863.0,
+            "text": " The odd philosopher will pick his left fork first."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 863.0,
+            "end": 865.0,
+            "text": " This 3"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 865.0,
+            "end": 867.0,
+            "text": " will also pick his left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 867.0,
+            "end": 869.0,
+            "text": " The 5th"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 869.0,
+            "end": 871.0,
+            "text": " will also pick his left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 871.0,
+            "end": 873.0,
+            "text": " And, the even philosophers will pick their right fork first."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 873.0,
+            "end": 875.0,
+            "text": " So, first, he will pick his left fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 875.0,
+            "end": 877.0,
+            "text": " And,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 877.0,
+            "end": 879.0,
+            "text": " he will pick his right fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 879.0,
+            "end": 881.0,
+            "text": " Now, when 4 will pick his right fork,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 881.0,
+            "end": 883.0,
+            "text": " he will not be able to pick it."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 883.0,
+            "end": 885.0,
+            "text": " So, here he will wait."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 885.0,
+            "end": 887.0,
+            "text": " In this position, 4 is waiting."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 887.0,
+            "end": 889.0,
+            "text": " But, this deadlock situation will not be created."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 889.0,
+            "end": 891.0,
+            "text": " Why? Because, the 5th"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 891.0,
+            "end": 893.0,
+            "text": " can pick this fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 893.0,
+            "end": 895.0,
+            "text": " Because, 4 did not pick this fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 895.0,
+            "end": 897.0,
+            "text": " Because, 4 did not pick this fork."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 897.0,
+            "end": 899.0,
+            "text": " Because, we have set an order for 4."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 899.0,
+            "end": 901.0,
+            "text": " 4 will pick this fork first."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 901.0,
+            "end": 903.0,
+            "text": " So, if the 5th will pick this fork,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 903.0,
+            "end": 905.0,
+            "text": " then both the forks will be available to him."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 905.0,
+            "end": 907.0,
+            "text": " And, he will move ahead."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 907.0,
+            "end": 909.0,
+            "text": " Similarly, there will be no deadlock situation."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 909.0,
+            "end": 911.0,
+            "text": " So,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 911.0,
+            "end": 913.0,
+            "text": " we are good to go."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 913.0,
+            "end": 915.0,
+            "text": " So, we have avoided the deadlock."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 915.0,
+            "end": 917.0,
+            "text": " So, basically, these are the three methods"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 917.0,
+            "end": 919.0,
+            "text": " by which we can avoid the deadlock."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 919.0,
+            "end": 921.0,
+            "text": " So, this sets the basis"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 921.0,
+            "end": 923.0,
+            "text": " for the next lecture."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 923.0,
+            "end": 925.0,
+            "text": " We will discuss the deadlock."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 925.0,
+            "end": 927.0,
+            "text": " We will see that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 927.0,
+            "end": 929.0,
+            "text": " it is very difficult to remove the deadlock permanently."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 929.0,
+            "end": 931.0,
+            "text": " Like, we saw in the dynamic joseph problem"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 931.0,
+            "end": 933.0,
+            "text": " that it was impossible to remove it permanently."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 933.0,
+            "end": 935.0,
+            "text": " So, we have taken some small tweaks."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 935.0,
+            "end": 937.0,
+            "text": " We have added some rules."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 937.0,
+            "end": 939.0,
+            "text": " Like, how to do it this way, how to do it that way."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 939.0,
+            "end": 941.0,
+            "text": " So, generally, this happens a lot in programming."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 941.0,
+            "end": 943.0,
+            "text": " When you will work in the real world industry,"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 943.0,
+            "end": 945.0,
+            "text": " you will see that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 945.0,
+            "end": 947.0,
+            "text": " there are some unavoidable situations."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 947.0,
+            "end": 949.0,
+            "text": " We have very limited resources."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 949.0,
+            "end": 951.0,
+            "text": " We have a very strict pattern."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 951.0,
+            "end": 953.0,
+            "text": " We have some resources and threads."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 953.0,
+            "end": 955.0,
+            "text": " We have to make it work."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 955.0,
+            "end": 957.0,
+            "text": " So, we set some order in some threads."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 957.0,
+            "end": 959.0,
+            "text": " Like, using conditional variables"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 959.0,
+            "end": 961.0,
+            "text": " or we will set some rules."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 961.0,
+            "end": 963.0,
+            "text": " So, I can say that only semaphores are not enough for the solution."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 963.0,
+            "end": 965.0,
+            "text": " I could not make it work with semaphores."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 965.0,
+            "end": 967.0,
+            "text": " I had to add some enhancements"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 967.0,
+            "end": 969.0,
+            "text": " to make sure that"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 969.0,
+            "end": 971.0,
+            "text": " my system does not go into deadlock."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 971.0,
+            "end": 973.0,
+            "text": " Deadlock-free system will be made."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 973.0,
+            "end": 975.0,
+            "text": " So, with this, we have finished"
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 975.0,
+            "end": 977.0,
+            "text": " our three classic problems."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 977.0,
+            "end": 979.0,
+            "text": " We will talk about deadlocks in the next video."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 979.0,
+            "end": 981.0,
+            "text": " That would be the end of concurrency module."
+        },
+        {
+            "number": "Lecture 20",
+            "title": " The Dining Philosophers Problem & its Solution",
+            "start": 981.0,
+            "end": 983.0,
+            "text": " Thank you."
+        }
+    ],
+    "text": " Hello, how are you all? I am Lakshya and I am here at OS lecture no. 20 and from last two videos we were discussing classic synchronization problems and the third and last problem of this video is our dining philosopher problem. So this video is sponsored by Coding Ninjas India's leading coding education platform. Many product based companies like Amazon, Adobe, Commvault focus on OS part in their technical interviews. So to clear these interviews, your OS part should be very strong. So Coding Ninjas provides comprehensive and in-depth course which covers all these concepts very well. Apart from that, all the theoretical concepts are taught by mapping all the Linux operating systems. Along with the course, one on one doubt session is also provided. Apart from that, the faculty will teach you from big companies like Nvidia and Microsoft. Apart from that, you will get more than 12 hours of content in this course. You will solve more than 150 problems. You will do hands-on in more than 12 projects. Apart from that, you will get many different computer science related courses on Coding Ninjas. If you are interested in paid courses, I will put the link in the description so that you will get maximum available discount. Thank you. Its name is Dining Philosopher Problem. It is a very interesting problem. We have a table. There are 5 philosophers sitting on this table. 1, 2, 3, 4, 5. There are 5 philosophers sitting on this table. There are noodles placed in the middle. We have plates. There are plates. There are forks. Let's make it in another color. We have 5 philosophers. I call philosophers as PH. 2, there are noodles placed in the middle. 3, there are 5 forks. This is our current scenario. How does it work? The philosophers are either in thinking state or in eating state. They don't talk to each other. They don't have friends. They think a lot. They either think or eat. They just think or eat. They do only these two things. They don't talk to each other. They don't have any discussion with each other. So, I say, the philosophers don't talk to each other. They don't have any interaction. They just eat. Now, they are eating. Their thinking state is over. They will come to eating state. They need two forks to eat noodles. At least and at most. They need two forks. If I talk about this, they need these two forks to eat. They need these two forks to eat. When they pick these forks, when this philosopher picks, he picks one by one. He picks this first and then this. If he picks this, he picks this first and then this. This is the problem. What should we do? What is our problem? If all the noodles are sitting to eat, then we need 5x2 is equal to 10. Ideally, we need 10 forks. But we don't have 10 forks. We need 5 forks to work. So, this is the problem. How should I synchronize this? How should I synchronize this? This should be a system that when someone wants to eat, means when someone wants to go to eating state, he gets two forks to eat. This is deadlock free. Deadlock free is a system. To solve this also, what should I use? I will use semaphores. I will use semaphores. What can I do? First, I can make each fork a semaphore. I can make a binary semaphore. I can make a binary semaphore. I can say that there is an array of forks. Let's say 5. I can initialize it. From 1. So, in this way, we have an array of forks. And this is a semaphore. This is a data type of semaphores. Now, what will happen? Whenever a philosopher comes, whenever a philosopher comes, this particular philosopher comes to pick this fork, he will wait call. After waiting call, if this philosopher wants to pick it, he cannot pick it. Because this person has already locked it. So, here I can say that if I am a scenario of OS, then these are all processes. These philosophers are all processes. And I have this resource. These are forks and reforks. This is a very classic problem. So, how to solve it? Let's move ahead. Suppose this person has locked it. So, when he got it, he also needs it. He also needs the adjacent fork. So, what do I do for this? To do this process, I am using semaphores. So, in semaphores, I can say that when the wait call is made, when the wait call is made on a particular fork, that is, the wait call is made on fork 5, then I can say that the philosopher who has called it, he has acquired it. The third one is that if someone releases it, I will use the release method. What will happen in the release? If the release call is made on fork 5, then this particular fork will be released. That is, someone else can pick it up. So, let's see how the solution will work. You can see my solution. Let me make it quickly. So, this is the particular solution. How will this solution work? This solution will work if I have value 1. If I have value 1, then the particular philosopher has to pick up the second fork numbering wise, i plus 1 mod 5. Why am I doing mod 5? Suppose I have 5, which is managed on circular table. There will be no 6th fork. So, I will make 6 mod 5. What will happen? 6 mod 5 will be 1. In this case, I will come back to 1. That's why this mod condition is used. We keep doing this in programming. That is easy to understand. Suppose i is equal to 1, then which fork will I have to pick up? 1 plus 1 mod 5, that is 2. Let's see in this diagram. Suppose I have to pick up 1, then I have to pick up 2. So, I have to pick up 2. So, in this way, I have parallelly weight called on both. Not parallelly, I have weight called on both. After weight calling, a particular philosopher will weight call on a particular philosopher of i. So, I can say that he has acquired this fork and this fork. After acquiring, he will go for eating. After eating, he will signal both and release. After that, he will continue thinking. This solution looks very easy. But, there is a major problem. What is that problem? I guess, you have guessed it. Let me tell you. This solution ensures that two neighbors, these two neighbors, simultaneously, cannot eat. Because, if P1 locks on both, P2 can lock on this, but not on this. P2 cannot lock on this. So, in this way, I can say that this solution ensures that two adjacent philosophers will not eat together. Now, there is a problem. There is a deadlock. How will it come? Assume that all philosophers have picked their left fork. All of them got hungry and picked their left fork. P1 has also picked left fork. P2 has also picked left fork. P3 has also picked left fork. P4 has also picked left fork. Now, look carefully. This is a condition of deadlock. I have given a small introduction in my previous videos. This philosopher has picked left fork. Now, he is waiting for P1 to free. Similarly, P2 has picked left fork. But, he is waiting for P1 to free. But, P1 will not free until P5 will not free. Now, there is a deadlock situation. This deadlock situation will never come out. This is an infinite loop. How can I avoid this? Although, I have used Seema 4. After using Seema 4, I have ensured that the philosophers who are sitting next to me cannot eat simultaneously. I have ensured this. But, what will you do in this condition? To avoid this, we don't have a hard and fast solution to avoid deadlocks. But, we have to tweak it. I am telling you this is the basis of how to avoid deadlocks. We will avoid deadlocks. We will try to avoid this situation. This particular situation should never occur. We should stop things before it occurs. For this, we have made very good notes. If you read this page, you will understand the dining philosopher. We were here. When each philosopher tries to grab his right fork or left fork, he will be waiting forever. We have discussed this in the above diagram. To avoid this, we don't have a hard and fast rule. We have a few tweaks. The first tweak is allow at most 4 philosophers to sit simultaneously. At most, 4 should sit together. How can we do this? Assume that I have removed the 5th philosopher. I have removed him from the table. Now, let's do a similar case which we have discussed in the above diagram. P1 chose his left fork. P2 chose his left fork. P3 chose his left fork. P4 chose his left fork. Now, P1 can pick up the left fork. At least, one philosopher is in the eating state. Rest are waiting. Whenever P1 finishes the execution, P1 will go out of the waiting state. When he will finish his meal, he will release both of them. When he releases both of them, P2 will get the left fork. P2 will execute. When P2 will execute, P2 will leave the left fork. Similarly, P3 will get the left fork. So, we avoided the deadlock situation. But, the problem is we didn't allow the 5th philosopher to sit. It's okay. Let's discuss the second solution. The second method is allow a philosopher to pick up his fork only if both forks are available. I will pick up both of them only when both forks are available. In the beginning, we discussed that first, one philosopher will pick up the left fork and then the right fork. So, the left philosopher can pick up only one fork at a time. But, in this case, the picking of the fork is critical. Let me draw it. Let me draw it. If I make it critical, then I will use locks in front of it. I will put a mutex here and a mutex release here. I will put a mutex release here. What will happen with this? What will happen with one more lock? Whenever a philosopher will come here, he will lock the mutex and this will be a critical section. So, this mutex will ensure that both forks are available at the same time. So, in this way, I can also make the weight call as a critical section. If I make it critical, then I will have to make it critical to release both of them at the same time. So, I can say that I have made both the critical section conditions atomic. That means, no thread will be able to enter at a time. Only one thread will be able to execute the critical section at a time. That means, if a philosopher enters this critical section, he will take both the forks. So, this can be a method of avoidance. What can be the third method? The third method can be my odd-even rule. I can also put an odd-even rule in this. All the odd philosophers should pick their left fork. Then, they should pick their right fork. And, the even philosophers should pick their right fork and then their left fork. Now, see how it will be. I have marked the odd philosophers 1, 3, 5 and even philosophers. So, the odd philosopher will pick his left fork first. So, let's draw this. The odd philosopher will pick his left fork first. This 3 will also pick his left fork. The 5th will also pick his left fork. And, the even philosophers will pick their right fork first. So, first, he will pick his left fork. And, he will pick his right fork. Now, when 4 will pick his right fork, he will not be able to pick it. So, here he will wait. In this position, 4 is waiting. But, this deadlock situation will not be created. Why? Because, the 5th can pick this fork. Because, 4 did not pick this fork. Because, 4 did not pick this fork. Because, we have set an order for 4. 4 will pick this fork first. So, if the 5th will pick this fork, then both the forks will be available to him. And, he will move ahead. Similarly, there will be no deadlock situation. So, we are good to go. So, we have avoided the deadlock. So, basically, these are the three methods by which we can avoid the deadlock. So, this sets the basis for the next lecture. We will discuss the deadlock. We will see that it is very difficult to remove the deadlock permanently. Like, we saw in the dynamic joseph problem that it was impossible to remove it permanently. So, we have taken some small tweaks. We have added some rules. Like, how to do it this way, how to do it that way. So, generally, this happens a lot in programming. When you will work in the real world industry, you will see that there are some unavoidable situations. We have very limited resources. We have a very strict pattern. We have some resources and threads. We have to make it work. So, we set some order in some threads. Like, using conditional variables or we will set some rules. So, I can say that only semaphores are not enough for the solution. I could not make it work with semaphores. I had to add some enhancements to make sure that my system does not go into deadlock. Deadlock-free system will be made. So, with this, we have finished our three classic problems. We will talk about deadlocks in the next video. That would be the end of concurrency module. Thank you."
+}

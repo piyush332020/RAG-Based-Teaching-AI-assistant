@@ -1,0 +1,5325 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 0.0,
+            "end": 5.0,
+            "text": " Hello, how are you all? This is Lakshay."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 5.0,
+            "end": 7.0,
+            "text": " We have come to our today's lecture number 27."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 7.0,
+            "end": 12.0,
+            "text": " And today we are going to discuss one more great topic in non-contiguous memory allocation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 12.0,
+            "end": 14.0,
+            "text": " So in the last lecture we learned about paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 14.0,
+            "end": 18.0,
+            "text": " Paging is a very important technique."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 18.0,
+            "end": 23.0,
+            "text": " How did we see that paging completely removed external fragmentation?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 23.0,
+            "end": 25.0,
+            "text": " But there is a problem in paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 25.0,
+            "end": 27.0,
+            "text": " There is a problem in paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 27.0,
+            "end": 29.0,
+            "text": " What is that problem? Let's discuss that."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 30.0,
+            "end": 32.0,
+            "text": " What were we doing in paging?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 32.0,
+            "end": 34.0,
+            "text": " We had this user program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 34.0,
+            "end": 37.0,
+            "text": " User program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 37.0,
+            "end": 40.0,
+            "text": " I was calling it logical address space."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 40.0,
+            "end": 43.0,
+            "text": " I was calling it address space."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 43.0,
+            "end": 45.0,
+            "text": " We divided it into fixed pages."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 45.0,
+            "end": 47.0,
+            "text": " It was fixed length."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 47.0,
+            "end": 49.0,
+            "text": " Like this is 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 49.0,
+            "end": 51.0,
+            "text": " So this will also be 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 51.0,
+            "end": 52.0,
+            "text": " This will also be 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 52.0,
+            "end": 56.0,
+            "text": " So everything will be 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 57.0,
+            "end": 59.0,
+            "text": " This is the corresponding frame."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 59.0,
+            "end": 60.0,
+            "text": " We were allocating frame."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 60.0,
+            "end": 63.0,
+            "text": " We were dividing RAM into 2 KB 2 KB chunks."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 63.0,
+            "end": 65.0,
+            "text": " We were calling it frame."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 65.0,
+            "end": 67.0,
+            "text": " Now a small problem can happen in this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 67.0,
+            "end": 68.0,
+            "text": " Think carefully."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 68.0,
+            "end": 70.0,
+            "text": " Suppose you have written a code."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 70.0,
+            "end": 73.0,
+            "text": " There is a function fun in your code."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 73.0,
+            "end": 76.0,
+            "text": " Function is fun."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 76.0,
+            "end": 81.0,
+            "text": " Now it will be in some part of your logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 81.0,
+            "end": 83.0,
+            "text": " It will be in some part of logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 83.0,
+            "end": 85.0,
+            "text": " Start from here and end from here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 85.0,
+            "end": 90.0,
+            "text": " Now you have forgotten that you are paging 2 KB pages."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 90.0,
+            "end": 94.0,
+            "text": " 2 KB will be my page size."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 94.0,
+            "end": 97.0,
+            "text": " Now just imagine that your code,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 97.0,
+            "end": 99.0,
+            "text": " the function you have written,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 99.0,
+            "end": 102.0,
+            "text": " is coming in 4 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 102.0,
+            "end": 107.0,
+            "text": " It is coming in 4 KB in your logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 107.0,
+            "end": 114.0,
+            "text": " But still your OS will divide it into 2 KB chunks."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 114.0,
+            "end": 116.0,
+            "text": " 2 KB and 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 116.0,
+            "end": 120.0,
+            "text": " Still your OS will divide it into 2 pages."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 120.0,
+            "end": 122.0,
+            "text": " This is page 0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 122.0,
+            "end": 124.0,
+            "text": " This is page 1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 124.0,
+            "end": 126.0,
+            "text": " Right?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 126.0,
+            "end": 130.0,
+            "text": " In fact, you knew that this is one function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 130.0,
+            "end": 133.0,
+            "text": " The instructions written in this function"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 133.0,
+            "end": 135.0,
+            "text": " are the same instructions."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 135.0,
+            "end": 136.0,
+            "text": " Right?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 136.0,
+            "end": 140.0,
+            "text": " But still your OS divided it into 2 pages."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 140.0,
+            "end": 146.0,
+            "text": " Now it is possible that your RAM has many frames."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 146.0,
+            "end": 148.0,
+            "text": " 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 148.0,
+            "end": 150.0,
+            "text": " Some are filled and some are not."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 150.0,
+            "end": 151.0,
+            "text": " Right?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 151.0,
+            "end": 154.0,
+            "text": " So this particular page will be allocated here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 154.0,
+            "end": 157.0,
+            "text": " And this particular page will be allocated in this frame."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 157.0,
+            "end": 159.0,
+            "text": " Are you getting it?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 159.0,
+            "end": 162.0,
+            "text": " I mean to say that this particular page"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 162.0,
+            "end": 164.0,
+            "text": " will be allocated in frame 5."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 164.0,
+            "end": 168.0,
+            "text": " And this particular page will be allocated in frame 2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 168.0,
+            "end": 169.0,
+            "text": " Right?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 169.0,
+            "end": 170.0,
+            "text": " It is possible."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 170.0,
+            "end": 172.0,
+            "text": " Non-contiguous allocation is going on there."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 172.0,
+            "end": 173.0,
+            "text": " Now there is a problem."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 173.0,
+            "end": 175.0,
+            "text": " Let's see what the problem is."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 175.0,
+            "end": 177.0,
+            "text": " As I said, page 0 is in frame 5."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 177.0,
+            "end": 179.0,
+            "text": " Page 1 is in frame 2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 179.0,
+            "end": 180.0,
+            "text": " And this is one function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 180.0,
+            "end": 183.0,
+            "text": " This is one function in 4 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 183.0,
+            "end": 185.0,
+            "text": " So how will it be allocated to RAM?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 185.0,
+            "end": 186.0,
+            "text": " Right?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 186.0,
+            "end": 188.0,
+            "text": " Page 0 is in frame 5."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 188.0,
+            "end": 191.0,
+            "text": " So here the initial part of the fun will be"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 191.0,
+            "end": 192.0,
+            "text": " I will say it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 192.0,
+            "end": 193.0,
+            "text": " Initial part."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 193.0,
+            "end": 196.0,
+            "text": " Initial half will be in frame 5."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 196.0,
+            "end": 202.0,
+            "text": " And second half of the fun will be in frame 2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 202.0,
+            "end": 204.0,
+            "text": " Now what will be the problem with this?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 204.0,
+            "end": 207.0,
+            "text": " The problem will be that your CPU is sitting here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 207.0,
+            "end": 209.0,
+            "text": " CPU is basically generating logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 209.0,
+            "end": 211.0,
+            "text": " Right?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 211.0,
+            "end": 213.0,
+            "text": " It is generating logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 213.0,
+            "end": 217.0,
+            "text": " Due to your logical address space,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 217.0,
+            "end": 219.0,
+            "text": " CPU will be thinking"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 219.0,
+            "end": 221.0,
+            "text": " how will it generate the address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 221.0,
+            "end": 223.0,
+            "text": " It will keep generating the address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 223.0,
+            "end": 225.0,
+            "text": " Keep generating."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 225.0,
+            "end": 227.0,
+            "text": " Then after one point, it will go to second half."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 227.0,
+            "end": 229.0,
+            "text": " It will go to the second page."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 229.0,
+            "end": 232.0,
+            "text": " CPU is thinking that I am on the same function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 232.0,
+            "end": 235.0,
+            "text": " CPU is thinking that I am executing the instruction of the fun function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 235.0,
+            "end": 239.0,
+            "text": " But actually the instruction stored in RAM"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 239.0,
+            "end": 241.0,
+            "text": " is stored in two places."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 241.0,
+            "end": 243.0,
+            "text": " First place is F5."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 243.0,
+            "end": 245.0,
+            "text": " Second is F2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 245.0,
+            "end": 247.0,
+            "text": " So what will be happening?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 247.0,
+            "end": 249.0,
+            "text": " Actually as soon as"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 249.0,
+            "end": 255.0,
+            "text": " first half of fun is over."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 255.0,
+            "end": 257.0,
+            "text": " As soon as first half of fun is over."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 257.0,
+            "end": 259.0,
+            "text": " As soon as it is over."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 259.0,
+            "end": 261.0,
+            "text": " What will my MMU do?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 261.0,
+            "end": 264.0,
+            "text": " Now the MMU which will do the address translation"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 264.0,
+            "end": 266.0,
+            "text": " will shift to the second frame."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 266.0,
+            "end": 268.0,
+            "text": " And for this, which was the second frame?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 268.0,
+            "end": 270.0,
+            "text": " Sorry, here. F2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 270.0,
+            "end": 273.0,
+            "text": " That means it shifted from F5 to F2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 273.0,
+            "end": 276.0,
+            "text": " Although my function is the same."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 276.0,
+            "end": 278.0,
+            "text": " It is written in 4KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 278.0,
+            "end": 280.0,
+            "text": " But the function is divided into two pages."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 280.0,
+            "end": 282.0,
+            "text": " And because of this,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 282.0,
+            "end": 284.0,
+            "text": " the frame is also allocated far away."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 284.0,
+            "end": 286.0,
+            "text": " Non-contiguously far away."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 286.0,
+            "end": 288.0,
+            "text": " Now what happened in this?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 288.0,
+            "end": 291.0,
+            "text": " In the starting, it will be running on this frame."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 291.0,
+            "end": 293.0,
+            "text": " So when you are running on the same frame."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 293.0,
+            "end": 295.0,
+            "text": " Then your memory access is fast."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 295.0,
+            "end": 297.0,
+            "text": " That means you are working efficiently."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 297.0,
+            "end": 299.0,
+            "text": " You are there."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 299.0,
+            "end": 301.0,
+            "text": " Now as soon as you jump to the second frame."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 301.0,
+            "end": 303.0,
+            "text": " So what will happen?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 303.0,
+            "end": 306.0,
+            "text": " When you jump to the memory in any other statement."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 306.0,
+            "end": 308.0,
+            "text": " So what will happen?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 308.0,
+            "end": 310.0,
+            "text": " Your RAM value 0 is starting from here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 310.0,
+            "end": 312.0,
+            "text": " So it will jump here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 312.0,
+            "end": 314.0,
+            "text": " It will go to the new offset."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 314.0,
+            "end": 316.0,
+            "text": " Earlier it was going to the second offset."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 316.0,
+            "end": 318.0,
+            "text": " Now it is running here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 318.0,
+            "end": 320.0,
+            "text": " So because of this,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 320.0,
+            "end": 322.0,
+            "text": " your access becomes a little inefficient."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 322.0,
+            "end": 324.0,
+            "text": " Understood?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 324.0,
+            "end": 326.0,
+            "text": " An overhead came unnecessarily."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 326.0,
+            "end": 329.0,
+            "text": " All this function could have been executed here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 329.0,
+            "end": 331.0,
+            "text": " But we did not do it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 331.0,
+            "end": 333.0,
+            "text": " We divided it into two frames."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 333.0,
+            "end": 335.0,
+            "text": " Because of this, a problem comes."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 335.0,
+            "end": 337.0,
+            "text": " There is a small issue."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 337.0,
+            "end": 339.0,
+            "text": " Not a big issue."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 339.0,
+            "end": 343.0,
+            "text": " Because paging solves a bigger issue."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 343.0,
+            "end": 345.0,
+            "text": " And what is the biggest issue?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 345.0,
+            "end": 347.0,
+            "text": " External fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 347.0,
+            "end": 349.0,
+            "text": " External fragmentation is the biggest issue."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 349.0,
+            "end": 353.0,
+            "text": " Because you can do utilization space well in it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 353.0,
+            "end": 355.0,
+            "text": " So this is a small issue."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 355.0,
+            "end": 357.0,
+            "text": " Which is in paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 357.0,
+            "end": 359.0,
+            "text": " How do we solve this issue?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 359.0,
+            "end": 361.0,
+            "text": " What technique do we use?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 361.0,
+            "end": 363.0,
+            "text": " So this video is sponsored by Cryo."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 363.0,
+            "end": 365.0,
+            "text": " Cryo is a leading project driven platform."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 365.0,
+            "end": 367.0,
+            "text": " To learn the latest technical skills."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 367.0,
+            "end": 369.0,
+            "text": " If you are interested in SDD type profiles."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 369.0,
+            "end": 371.0,
+            "text": " Or you want to learn about QA."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 371.0,
+            "end": 373.0,
+            "text": " Cryo is a platform for you."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 373.0,
+            "end": 375.0,
+            "text": " You are going to make a lot of projects here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 375.0,
+            "end": 377.0,
+            "text": " You will learn practical work experience."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 377.0,
+            "end": 379.0,
+            "text": " Similar to a real job."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 379.0,
+            "end": 381.0,
+            "text": " You will build a diverse set of guided and independent work like professional projects."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 381.0,
+            "end": 385.0,
+            "text": " To master API testing, DevOps, Selenium, Java and more."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 385.0,
+            "end": 387.0,
+            "text": " Not only this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 387.0,
+            "end": 389.0,
+            "text": " Their program comes with a placement guarantee."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 389.0,
+            "end": 391.0,
+            "text": " So that you can double assure that your placement is in a good company."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 391.0,
+            "end": 393.0,
+            "text": " At the end of their programs."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 393.0,
+            "end": 395.0,
+            "text": " You must have made a lot of projects."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 395.0,
+            "end": 397.0,
+            "text": " So that your resume will be more effective."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 397.0,
+            "end": 399.0,
+            "text": " And your portfolio will be more strong."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 399.0,
+            "end": 401.0,
+            "text": " If you are interested."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 401.0,
+            "end": 403.0,
+            "text": " Then they have a free trial program for a week."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 403.0,
+            "end": 405.0,
+            "text": " You can take the trial."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 405.0,
+            "end": 407.0,
+            "text": " And you also get an assured scholarship."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 407.0,
+            "end": 409.0,
+            "text": " So what do you have to do?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 409.0,
+            "end": 411.0,
+            "text": " I will add a link in the description."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 411.0,
+            "end": 413.0,
+            "text": " And by clicking on that link."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 413.0,
+            "end": 415.0,
+            "text": " You can avail maximum possible discount on their program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 415.0,
+            "end": 417.0,
+            "text": " You can take the placement."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 417.0,
+            "end": 419.0,
+            "text": " And after the placement, you can give me a party."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 419.0,
+            "end": 421.0,
+            "text": " So the technique that solves this problem."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 421.0,
+            "end": 423.0,
+            "text": " I call it segmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 425.0,
+            "end": 427.0,
+            "text": " Now what I will do."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 427.0,
+            "end": 429.0,
+            "text": " Now what I will do."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " My function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 431.0,
+            "end": 433.0,
+            "text": " Fun of 4kb."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 437.0,
+            "end": 439.0,
+            "text": " Now what I will do."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 439.0,
+            "end": 441.0,
+            "text": " I will divide it into two pages."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 441.0,
+            "end": 443.0,
+            "text": " Now I say that I have different segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 445.0,
+            "end": 447.0,
+            "text": " Different segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 447.0,
+            "end": 449.0,
+            "text": " And they are of varying size."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 449.0,
+            "end": 451.0,
+            "text": " Means different sizes."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 453.0,
+            "end": 455.0,
+            "text": " According to the user view."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 455.0,
+            "end": 457.0,
+            "text": " User is your programmer."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 459.0,
+            "end": 461.0,
+            "text": " So he will divide every function into a segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 463.0,
+            "end": 465.0,
+            "text": " If he feels that this is a contiguous function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 467.0,
+            "end": 469.0,
+            "text": " So it should be in one part of the memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 469.0,
+            "end": 471.0,
+            "text": " So he will make it a segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 471.0,
+            "end": 473.0,
+            "text": " Similarly he will feel."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 473.0,
+            "end": 475.0,
+            "text": " This particular function should be in this part."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 475.0,
+            "end": 477.0,
+            "text": " So he will get a function which is different from fun."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 477.0,
+            "end": 479.0,
+            "text": " Means there was a fun function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 479.0,
+            "end": 481.0,
+            "text": " And there was fun2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 481.0,
+            "end": 483.0,
+            "text": " Now fun and fun2 are different."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 483.0,
+            "end": 485.0,
+            "text": " So we have put it in a different segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 485.0,
+            "end": 487.0,
+            "text": " So in this way."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 487.0,
+            "end": 489.0,
+            "text": " We divide it into segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 489.0,
+            "end": 491.0,
+            "text": " So you can say that here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 491.0,
+            "end": 493.0,
+            "text": " I have done variable partitioning of address space."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 493.0,
+            "end": 495.0,
+            "text": " Variable partitioning."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 495.0,
+            "end": 497.0,
+            "text": " Of logical address space."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 501.0,
+            "end": 503.0,
+            "text": " Ok."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 503.0,
+            "end": 505.0,
+            "text": " Now let's see how that partitioning will be seen."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 505.0,
+            "end": 507.0,
+            "text": " Suppose this was your program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 509.0,
+            "end": 511.0,
+            "text": " Now in this program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " You have made one segment of main function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 513.0,
+            "end": 515.0,
+            "text": " Which we call as S0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 515.0,
+            "end": 517.0,
+            "text": " One segment of add function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 517.0,
+            "end": 519.0,
+            "text": " Which we call as S1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 519.0,
+            "end": 521.0,
+            "text": " One segment of divide function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 521.0,
+            "end": 523.0,
+            "text": " Which we call as S2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 523.0,
+            "end": 525.0,
+            "text": " One you have made stack."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 525.0,
+            "end": 527.0,
+            "text": " Process of stack."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 529.0,
+            "end": 531.0,
+            "text": " Which we call as third segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 531.0,
+            "end": 533.0,
+            "text": " One function you have made."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 533.0,
+            "end": 535.0,
+            "text": " As print function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 535.0,
+            "end": 537.0,
+            "text": " You have given it as fourth segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 539.0,
+            "end": 541.0,
+            "text": " Now here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 541.0,
+            "end": 543.0,
+            "text": " The size of segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 543.0,
+            "end": 545.0,
+            "text": " The size of segments is different."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 545.0,
+            "end": 547.0,
+            "text": " For every segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 547.0,
+            "end": 549.0,
+            "text": " We will see an example of this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 549.0,
+            "end": 551.0,
+            "text": " So here we have divided it into different segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 551.0,
+            "end": 553.0,
+            "text": " And what we were doing in paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 553.0,
+            "end": 555.0,
+            "text": " We were dividing it into fixed partitions."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 555.0,
+            "end": 557.0,
+            "text": " Here variable partitioning will be done."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 557.0,
+            "end": 559.0,
+            "text": " Depending upon how my segment is looking."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 559.0,
+            "end": 561.0,
+            "text": " So here compiler decides."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 561.0,
+            "end": 563.0,
+            "text": " Which function should be used."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 563.0,
+            "end": 565.0,
+            "text": " According to user view."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 565.0,
+            "end": 567.0,
+            "text": " Which function should be used."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 567.0,
+            "end": 569.0,
+            "text": " In this segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 569.0,
+            "end": 571.0,
+            "text": " Which function can be divided into segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 571.0,
+            "end": 573.0,
+            "text": " Which functions can be used."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 573.0,
+            "end": 575.0,
+            "text": " Like this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 575.0,
+            "end": 577.0,
+            "text": " Now let's see."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 577.0,
+            "end": 579.0,
+            "text": " In this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 579.0,
+            "end": 581.0,
+            "text": " MMU."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 581.0,
+            "end": 583.0,
+            "text": " What was it used to do."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 583.0,
+            "end": 585.0,
+            "text": " Address translation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 585.0,
+            "end": 587.0,
+            "text": " From logical letter space to physical letter space."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 587.0,
+            "end": 589.0,
+            "text": " So my MMU."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 589.0,
+            "end": 591.0,
+            "text": " How will it do translation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 593.0,
+            "end": 595.0,
+            "text": " Translation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 595.0,
+            "end": 597.0,
+            "text": " How will it do."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 597.0,
+            "end": 599.0,
+            "text": " From logical letter space to physical letter space."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 599.0,
+            "end": 601.0,
+            "text": " How will it do translation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 601.0,
+            "end": 603.0,
+            "text": " To see translation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 603.0,
+            "end": 605.0,
+            "text": " Let's go to notes."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 605.0,
+            "end": 607.0,
+            "text": " There is a method like paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 607.0,
+            "end": 609.0,
+            "text": " There is a method like paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 609.0,
+            "end": 611.0,
+            "text": " How will it work."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 611.0,
+            "end": 613.0,
+            "text": " First of all."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 613.0,
+            "end": 615.0,
+            "text": " As in paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 615.0,
+            "end": 617.0,
+            "text": " Segment table will be used."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 617.0,
+            "end": 619.0,
+            "text": " What will happen now."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 619.0,
+            "end": 621.0,
+            "text": " Logical letter space."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 621.0,
+            "end": 623.0,
+            "text": " I will divide it into two parts."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 623.0,
+            "end": 625.0,
+            "text": " I will divide it into two parts."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 625.0,
+            "end": 627.0,
+            "text": " First will be."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 627.0,
+            "end": 629.0,
+            "text": " Segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 629.0,
+            "end": 631.0,
+            "text": " Segment number."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 631.0,
+            "end": 633.0,
+            "text": " Which I will call S."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 633.0,
+            "end": 635.0,
+            "text": " Second will be offset."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 635.0,
+            "end": 637.0,
+            "text": " Second will be offset."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 637.0,
+            "end": 639.0,
+            "text": " Which I will call D."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 639.0,
+            "end": 641.0,
+            "text": " Whichever logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 641.0,
+            "end": 643.0,
+            "text": " Your CPU will generate."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 643.0,
+            "end": 645.0,
+            "text": " That logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 645.0,
+            "end": 647.0,
+            "text": " Some bits of starting."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 647.0,
+            "end": 649.0,
+            "text": " Will tell segment number."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 649.0,
+            "end": 651.0,
+            "text": " Some bits of end."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 651.0,
+            "end": 653.0,
+            "text": " Will tell offset."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 653.0,
+            "end": 655.0,
+            "text": " Where to go."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 655.0,
+            "end": 657.0,
+            "text": " From which base."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 657.0,
+            "end": 659.0,
+            "text": " Paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 659.0,
+            "end": 661.0,
+            "text": " Contiguous relocation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 661.0,
+            "end": 663.0,
+            "text": " In which your relocation register."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 663.0,
+            "end": 665.0,
+            "text": " We have made it by joining it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 665.0,
+            "end": 667.0,
+            "text": " See how it will work."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 667.0,
+            "end": 669.0,
+            "text": " You took CPU."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 669.0,
+            "end": 671.0,
+            "text": " CPU generates logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 671.0,
+            "end": 673.0,
+            "text": " S and D will be two values."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 673.0,
+            "end": 675.0,
+            "text": " Suppose."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 675.0,
+            "end": 677.0,
+            "text": " Your logical address is 01111."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 677.0,
+            "end": 679.0,
+            "text": " Suppose."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 679.0,
+            "end": 681.0,
+            "text": " Your logical address is 01111."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 681.0,
+            "end": 683.0,
+            "text": " Suppose."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 683.0,
+            "end": 685.0,
+            "text": " I will take out SOD part."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 685.0,
+            "end": 687.0,
+            "text": " I will take out SOD part."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 687.0,
+            "end": 689.0,
+            "text": " SOD part."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 689.0,
+            "end": 691.0,
+            "text": " I will call S as 1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 691.0,
+            "end": 693.0,
+            "text": " And D as 7."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 693.0,
+            "end": 695.0,
+            "text": " Right."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 695.0,
+            "end": 697.0,
+            "text": " What will happen in segment table."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 697.0,
+            "end": 699.0,
+            "text": " In contiguous memory location."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 699.0,
+            "end": 701.0,
+            "text": " In contiguous memory location."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 701.0,
+            "end": 703.0,
+            "text": " We have relocation register."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 703.0,
+            "end": 705.0,
+            "text": " Every segment will have corresponding limit."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 705.0,
+            "end": 707.0,
+            "text": " And base."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 707.0,
+            "end": 709.0,
+            "text": " Because here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 709.0,
+            "end": 711.0,
+            "text": " Segments are of variable size."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 711.0,
+            "end": 713.0,
+            "text": " So."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 713.0,
+            "end": 715.0,
+            "text": " Every segment information will be different."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 715.0,
+            "end": 717.0,
+            "text": " Base of every segment will be different."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 717.0,
+            "end": 719.0,
+            "text": " So its limit will be different."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 719.0,
+            "end": 721.0,
+            "text": " Because."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 721.0,
+            "end": 723.0,
+            "text": " Some segment limit will be more."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 723.0,
+            "end": 725.0,
+            "text": " Some segment limit will be less."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 725.0,
+            "end": 727.0,
+            "text": " So in this way."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 727.0,
+            "end": 729.0,
+            "text": " Suppose."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 729.0,
+            "end": 731.0,
+            "text": " My limit is 15."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 731.0,
+            "end": 733.0,
+            "text": " My limit is 15."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 733.0,
+            "end": 735.0,
+            "text": " And base of every segment is 20."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 735.0,
+            "end": 737.0,
+            "text": " And base of every segment is 20."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 737.0,
+            "end": 739.0,
+            "text": " Suppose."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 739.0,
+            "end": 741.0,
+            "text": " Now."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 741.0,
+            "end": 743.0,
+            "text": " How it will work."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 743.0,
+            "end": 745.0,
+            "text": " It will go 1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 745.0,
+            "end": 747.0,
+            "text": " It will go 1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 747.0,
+            "end": 749.0,
+            "text": " It will go 0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 749.0,
+            "end": 751.0,
+            "text": " It will go 0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 751.0,
+            "end": 753.0,
+            "text": " It will go 0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 753.0,
+            "end": 755.0,
+            "text": " It will go 0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 755.0,
+            "end": 757.0,
+            "text": " Now."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 757.0,
+            "end": 759.0,
+            "text": " D value."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 759.0,
+            "end": 761.0,
+            "text": " D7."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 761.0,
+            "end": 763.0,
+            "text": " D7 value."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 763.0,
+            "end": 765.0,
+            "text": " Is less than 7."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 765.0,
+            "end": 767.0,
+            "text": " Means."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 767.0,
+            "end": 769.0,
+            "text": " CPU generated address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 769.0,
+            "end": 771.0,
+            "text": " According to segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 771.0,
+            "end": 773.0,
+            "text": " Is offset."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 773.0,
+            "end": 775.0,
+            "text": " Is offset."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 775.0,
+            "end": 777.0,
+            "text": " Is less than limit."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 777.0,
+            "end": 779.0,
+            "text": " Is less than limit."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 779.0,
+            "end": 781.0,
+            "text": " Yes."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 781.0,
+            "end": 783.0,
+            "text": " Now."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 783.0,
+            "end": 785.0,
+            "text": " Remember."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 785.0,
+            "end": 787.0,
+            "text": " Relocation and limit."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 787.0,
+            "end": 789.0,
+            "text": " Because one segment is contiguous."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 789.0,
+            "end": 791.0,
+            "text": " Now."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 791.0,
+            "end": 793.0,
+            "text": " Base is 20."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 793.0,
+            "end": 795.0,
+            "text": " Plus 7."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 795.0,
+            "end": 797.0,
+            "text": " Means 27th location."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 797.0,
+            "end": 799.0,
+            "text": " Means."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 799.0,
+            "end": 801.0,
+            "text": " From here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 801.0,
+            "end": 803.0,
+            "text": " Segment 1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 803.0,
+            "end": 805.0,
+            "text": " Is starting."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 805.0,
+            "end": 807.0,
+            "text": " And limit."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 807.0,
+            "end": 809.0,
+            "text": " Is 20."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 809.0,
+            "end": 811.0,
+            "text": " Plus 15."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 811.0,
+            "end": 813.0,
+            "text": " 15."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 813.0,
+            "end": 815.0,
+            "text": " 35."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 815.0,
+            "end": 817.0,
+            "text": " From here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 817.0,
+            "end": 819.0,
+            "text": " S1 segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 819.0,
+            "end": 821.0,
+            "text": " 27th location."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 821.0,
+            "end": 823.0,
+            "text": " From here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 823.0,
+            "end": 825.0,
+            "text": " 27th location."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 825.0,
+            "end": 827.0,
+            "text": " From here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 827.0,
+            "end": 829.0,
+            "text": " From here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 829.0,
+            "end": 831.0,
+            "text": " This way."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 831.0,
+            "end": 833.0,
+            "text": " Hardware works."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 833.0,
+            "end": 835.0,
+            "text": " This way."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 835.0,
+            "end": 837.0,
+            "text": " Very simple."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 837.0,
+            "end": 839.0,
+            "text": " Paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 839.0,
+            "end": 841.0,
+            "text": " Limit and base."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 841.0,
+            "end": 843.0,
+            "text": " Contiguous memory allocation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 843.0,
+            "end": 845.0,
+            "text": " Contiguous memory allocation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 845.0,
+            "end": 847.0,
+            "text": " Contiguous memory allocation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 847.0,
+            "end": 849.0,
+            "text": " Base."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 849.0,
+            "end": 851.0,
+            "text": " Base for every segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 851.0,
+            "end": 853.0,
+            "text": " Limit for every segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 853.0,
+            "end": 855.0,
+            "text": " Because every segment is variable size."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 855.0,
+            "end": 857.0,
+            "text": " Let's see another example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 857.0,
+            "end": 859.0,
+            "text": " Let's see another example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 859.0,
+            "end": 861.0,
+            "text": " This example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 861.0,
+            "end": 863.0,
+            "text": " Logical address space."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 863.0,
+            "end": 865.0,
+            "text": " Subroutine."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 865.0,
+            "end": 867.0,
+            "text": " Stack."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 867.0,
+            "end": 869.0,
+            "text": " Stack."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 869.0,
+            "end": 871.0,
+            "text": " Main program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 871.0,
+            "end": 873.0,
+            "text": " Square root."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 873.0,
+            "end": 875.0,
+            "text": " Your segment table."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 875.0,
+            "end": 877.0,
+            "text": " Is like this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 877.0,
+            "end": 879.0,
+            "text": " Segmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 879.0,
+            "end": 881.0,
+            "text": " Limit and base."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 881.0,
+            "end": 883.0,
+            "text": " Same thing."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 883.0,
+            "end": 885.0,
+            "text": " We were playing in bits."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 885.0,
+            "end": 887.0,
+            "text": " Let's play in decimal."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 887.0,
+            "end": 889.0,
+            "text": " Example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 889.0,
+            "end": 891.0,
+            "text": " This is your physical memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 891.0,
+            "end": 893.0,
+            "text": " This is your physical memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 893.0,
+            "end": 895.0,
+            "text": " In this physical memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 895.0,
+            "end": 897.0,
+            "text": " In this physical memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 897.0,
+            "end": 899.0,
+            "text": " This chunk."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 899.0,
+            "end": 901.0,
+            "text": " Just imagine."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 901.0,
+            "end": 903.0,
+            "text": " This segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 903.0,
+            "end": 905.0,
+            "text": " Is related to this program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 905.0,
+            "end": 907.0,
+            "text": " Segment 0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 907.0,
+            "end": 909.0,
+            "text": " Is stored here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 909.0,
+            "end": 911.0,
+            "text": " Segment 0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 911.0,
+            "end": 913.0,
+            "text": " Is stored in how many areas."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 913.0,
+            "end": 915.0,
+            "text": " Segment 0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 915.0,
+            "end": 917.0,
+            "text": " 1000."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 917.0,
+            "end": 919.0,
+            "text": " Limit of segment 0 is 1000."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 919.0,
+            "end": 921.0,
+            "text": " Limit of segment 1 is 400."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 921.0,
+            "end": 923.0,
+            "text": " Limit of segment 2 is 400."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 923.0,
+            "end": 925.0,
+            "text": " Limit of segment 2 is 400."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 925.0,
+            "end": 927.0,
+            "text": " Limit of segment 3 is 1100."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 927.0,
+            "end": 929.0,
+            "text": " Limit of segment 3 is 1000."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 929.0,
+            "end": 931.0,
+            "text": " As you can see."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 931.0,
+            "end": 933.0,
+            "text": " Variable size."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 933.0,
+            "end": 935.0,
+            "text": " Different base."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 935.0,
+            "end": 937.0,
+            "text": " Different register."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 937.0,
+            "end": 939.0,
+            "text": " Let's see another example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 939.0,
+            "end": 941.0,
+            "text": " Logical address."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 941.0,
+            "end": 943.0,
+            "text": " Generated."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 943.0,
+            "end": 945.0,
+            "text": " 53."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 945.0,
+            "end": 947.0,
+            "text": " To go to 53."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 947.0,
+            "end": 949.0,
+            "text": " What should I do?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 949.0,
+            "end": 951.0,
+            "text": " First."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 951.0,
+            "end": 953.0,
+            "text": " Where is my segment 2?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 953.0,
+            "end": 955.0,
+            "text": " Here it is."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 955.0,
+            "end": 957.0,
+            "text": " I need its base."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 957.0,
+            "end": 959.0,
+            "text": " Base is 4300."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 959.0,
+            "end": 961.0,
+            "text": " I added 53."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 961.0,
+            "end": 963.0,
+            "text": " 4359 is here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 963.0,
+            "end": 965.0,
+            "text": " I am inside segment 2."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 965.0,
+            "end": 967.0,
+            "text": " I am inside 4359."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 967.0,
+            "end": 969.0,
+            "text": " Here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 969.0,
+            "end": 971.0,
+            "text": " Addressing."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 971.0,
+            "end": 973.0,
+            "text": " This is same case."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 973.0,
+            "end": 975.0,
+            "text": " We understood from this example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 975.0,
+            "end": 977.0,
+            "text": " We understood from decimal."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 977.0,
+            "end": 979.0,
+            "text": " We understood from bits."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 979.0,
+            "end": 981.0,
+            "text": " Checking."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 981.0,
+            "end": 983.0,
+            "text": " Is it inside limit?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 983.0,
+            "end": 985.0,
+            "text": " Yes."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 985.0,
+            "end": 987.0,
+            "text": " Limit is 400."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 987.0,
+            "end": 989.0,
+            "text": " It is inside limit."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 989.0,
+            "end": 991.0,
+            "text": " We are able to move forward."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 991.0,
+            "end": 993.0,
+            "text": " Think carefully."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 993.0,
+            "end": 995.0,
+            "text": " Is it has"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 995.0,
+            "end": 997.0,
+            "text": " external fragmentation?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 997.0,
+            "end": 999.0,
+            "text": " Think carefully."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 999.0,
+            "end": 1001.0,
+            "text": " It has external fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1001.0,
+            "end": 1003.0,
+            "text": " It has"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1003.0,
+            "end": 1005.0,
+            "text": " external fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1005.0,
+            "end": 1007.0,
+            "text": " Let's see another example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1007.0,
+            "end": 1009.0,
+            "text": " Let's see another example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1009.0,
+            "end": 1011.0,
+            "text": " Consider"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1011.0,
+            "end": 1013.0,
+            "text": " a situation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1013.0,
+            "end": 1015.0,
+            "text": " External fragmentation"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1015.0,
+            "end": 1017.0,
+            "text": " in"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1017.0,
+            "end": 1019.0,
+            "text": " segmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1019.0,
+            "end": 1021.0,
+            "text": " in segmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1021.0,
+            "end": 1023.0,
+            "text": " Consider"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1023.0,
+            "end": 1025.0,
+            "text": " a situation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1025.0,
+            "end": 1027.0,
+            "text": " Consider"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1027.0,
+            "end": 1029.0,
+            "text": " P0 program"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1029.0,
+            "end": 1031.0,
+            "text": " segment 1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1031.0,
+            "end": 1033.0,
+            "text": " P0 program segment 1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1033.0,
+            "end": 1035.0,
+            "text": " Locations are busy."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1035.0,
+            "end": 1037.0,
+            "text": " Now, consider P1 program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1037.0,
+            "end": 1039.0,
+            "text": " P1 program has"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1039.0,
+            "end": 1041.0,
+            "text": " 2 segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1041.0,
+            "end": 1043.0,
+            "text": " Segment 0 is"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1043.0,
+            "end": 1045.0,
+            "text": " 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1045.0,
+            "end": 1047.0,
+            "text": " Segment 1 is"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1047.0,
+            "end": 1049.0,
+            "text": " 3 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1049.0,
+            "end": 1051.0,
+            "text": " In segmentation,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1051.0,
+            "end": 1053.0,
+            "text": " whole segment will be allocated."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1053.0,
+            "end": 1055.0,
+            "text": " Whole segment will be allocated."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1055.0,
+            "end": 1057.0,
+            "text": " Now,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1057.0,
+            "end": 1059.0,
+            "text": " can I allocate S0 segment?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1059.0,
+            "end": 1061.0,
+            "text": " I can allocate S0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1061.0,
+            "end": 1063.0,
+            "text": " I can allocate S1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1063.0,
+            "end": 1065.0,
+            "text": " But, I can't allocate S1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1065.0,
+            "end": 1067.0,
+            "text": " I can't allocate S1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1067.0,
+            "end": 1069.0,
+            "text": " This allocation will not be possible."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1069.0,
+            "end": 1071.0,
+            "text": " Because, I have 2 KB here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1071.0,
+            "end": 1073.0,
+            "text": " 2 KB here. 1 KB is left."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1073.0,
+            "end": 1075.0,
+            "text": " 3 KB is contiguous."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1075.0,
+            "end": 1077.0,
+            "text": " 3 KB is contiguous."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1077.0,
+            "end": 1079.0,
+            "text": " In this case,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1079.0,
+            "end": 1081.0,
+            "text": " external fragmentation is available."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1081.0,
+            "end": 1083.0,
+            "text": " Although, I have 2 plus 2 plus 1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1083.0,
+            "end": 1085.0,
+            "text": " That is"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1085.0,
+            "end": 1087.0,
+            "text": " 5 KB is available."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1087.0,
+            "end": 1089.0,
+            "text": " 5 KB is available."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1089.0,
+            "end": 1091.0,
+            "text": " Non-contiguous is available."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1091.0,
+            "end": 1093.0,
+            "text": " I am not able to allocate P1 process of 5 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1093.0,
+            "end": 1095.0,
+            "text": " This means,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1095.0,
+            "end": 1097.0,
+            "text": " in segmentation,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1097.0,
+            "end": 1099.0,
+            "text": " external fragmentation is available."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1099.0,
+            "end": 1101.0,
+            "text": " But, there is no internal fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1101.0,
+            "end": 1103.0,
+            "text": " Why?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1103.0,
+            "end": 1105.0,
+            "text": " Because,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1105.0,
+            "end": 1107.0,
+            "text": " you have removed"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1107.0,
+            "end": 1109.0,
+            "text": " the segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1109.0,
+            "end": 1111.0,
+            "text": " You have allocated the same segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1111.0,
+            "end": 1113.0,
+            "text": " You can do it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1113.0,
+            "end": 1115.0,
+            "text": " There is no internal fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1115.0,
+            "end": 1117.0,
+            "text": " There is no internal fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1117.0,
+            "end": 1119.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1119.0,
+            "end": 1121.0,
+            "text": " Let's move ahead."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1121.0,
+            "end": 1123.0,
+            "text": " Let's see the advantages and disadvantages."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1123.0,
+            "end": 1125.0,
+            "text": " First, we have seen that"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1125.0,
+            "end": 1127.0,
+            "text": " the advantage is that there is no internal fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1127.0,
+            "end": 1129.0,
+            "text": " Second advantage is that"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1129.0,
+            "end": 1131.0,
+            "text": " we can do contiguous allocation"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1131.0,
+            "end": 1133.0,
+            "text": " to a segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1133.0,
+            "end": 1135.0,
+            "text": " Contiguous allocation of a segment is"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1135.0,
+            "end": 1137.0,
+            "text": " like fun function."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1137.0,
+            "end": 1139.0,
+            "text": " Let's see this example."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1139.0,
+            "end": 1141.0,
+            "text": " In this,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1141.0,
+            "end": 1143.0,
+            "text": " you have allocated"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1143.0,
+            "end": 1145.0,
+            "text": " the entire SQRT function here."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1145.0,
+            "end": 1147.0,
+            "text": " When I am working in this,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1147.0,
+            "end": 1149.0,
+            "text": " it is efficient."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1149.0,
+            "end": 1151.0,
+            "text": " It means,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1151.0,
+            "end": 1153.0,
+            "text": " your work is efficient within segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1153.0,
+            "end": 1155.0,
+            "text": " The size of segment table is generally less than"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1155.0,
+            "end": 1157.0,
+            "text": " the size of page table."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1157.0,
+            "end": 1159.0,
+            "text": " In this,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1159.0,
+            "end": 1161.0,
+            "text": " suppose there is a program"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1161.0,
+            "end": 1163.0,
+            "text": " of 100 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1163.0,
+            "end": 1165.0,
+            "text": " Suppose,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1165.0,
+            "end": 1167.0,
+            "text": " 100 KB program is divided"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1167.0,
+            "end": 1169.0,
+            "text": " into pages of 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1169.0,
+            "end": 1171.0,
+            "text": " Then, 50 pages will be there."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1171.0,
+            "end": 1173.0,
+            "text": " In this,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1173.0,
+            "end": 1175.0,
+            "text": " the page table of this program will be"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1175.0,
+            "end": 1177.0,
+            "text": " so big."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1177.0,
+            "end": 1179.0,
+            "text": " But, it is possible that"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1179.0,
+            "end": 1181.0,
+            "text": " there are only 2 segments in 100 KB program."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1181.0,
+            "end": 1183.0,
+            "text": " Suppose, there are 2 segments of 50 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1183.0,
+            "end": 1185.0,
+            "text": " Then, the segment table will be so big."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1185.0,
+            "end": 1187.0,
+            "text": " In this,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1187.0,
+            "end": 1189.0,
+            "text": " there will be only 2 entries."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1189.0,
+            "end": 1191.0,
+            "text": " So, what does it mean?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1191.0,
+            "end": 1193.0,
+            "text": " In page table,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1193.0,
+            "end": 1195.0,
+            "text": " it is divided according to the page size."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1195.0,
+            "end": 1197.0,
+            "text": " So, there are more number of pages"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1197.0,
+            "end": 1199.0,
+            "text": " and more number of entries."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1199.0,
+            "end": 1201.0,
+            "text": " So, page table is generally bigger than segment table."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1201.0,
+            "end": 1203.0,
+            "text": " If segment table is small,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1203.0,
+            "end": 1205.0,
+            "text": " then it will take less memory to store."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1207.0,
+            "end": 1209.0,
+            "text": " The result is more efficient system"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1209.0,
+            "end": 1211.0,
+            "text": " because compiler keeps"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1211.0,
+            "end": 1213.0,
+            "text": " the same type of function in the same segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1213.0,
+            "end": 1215.0,
+            "text": " It depends on"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1215.0,
+            "end": 1217.0,
+            "text": " whether you have put"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1217.0,
+            "end": 1219.0,
+            "text": " same nature function, same area access function"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1219.0,
+            "end": 1221.0,
+            "text": " in one segment"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1221.0,
+            "end": 1223.0,
+            "text": " or"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1223.0,
+            "end": 1225.0,
+            "text": " other nature function in another segment."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1225.0,
+            "end": 1227.0,
+            "text": " So, it becomes more efficient system"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1227.0,
+            "end": 1229.0,
+            "text": " from user perspective."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1229.0,
+            "end": 1231.0,
+            "text": " The disadvantage of this is"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1231.0,
+            "end": 1233.0,
+            "text": " external fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1233.0,
+            "end": 1235.0,
+            "text": " We have discussed it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1235.0,
+            "end": 1237.0,
+            "text": " The different size of segment"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1237.0,
+            "end": 1239.0,
+            "text": " is not good for time of swapping."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1239.0,
+            "end": 1241.0,
+            "text": " Remember this part."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1241.0,
+            "end": 1243.0,
+            "text": " We have studied this in some lecture"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1243.0,
+            "end": 1245.0,
+            "text": " where we have studied medium term scheduler."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1245.0,
+            "end": 1247.0,
+            "text": " MTS."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1247.0,
+            "end": 1249.0,
+            "text": " Write in the comment section"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1249.0,
+            "end": 1251.0,
+            "text": " which lecture we have studied"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1251.0,
+            "end": 1253.0,
+            "text": " medium term scheduler in."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1253.0,
+            "end": 1255.0,
+            "text": " We have studied about swapping."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1255.0,
+            "end": 1257.0,
+            "text": " Generally,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1257.0,
+            "end": 1259.0,
+            "text": " we will study further."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1259.0,
+            "end": 1261.0,
+            "text": " If you have understood this, then skip this video."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1261.0,
+            "end": 1263.0,
+            "text": " We will discuss swapping in next video."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1263.0,
+            "end": 1265.0,
+            "text": " The different size of segment"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1265.0,
+            "end": 1267.0,
+            "text": " is not good for time of swapping."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1267.0,
+            "end": 1269.0,
+            "text": " What does it mean?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1269.0,
+            "end": 1271.0,
+            "text": " I will try to explain."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1271.0,
+            "end": 1273.0,
+            "text": " You have many segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1275.0,
+            "end": 1277.0,
+            "text": " One thing is that we have studied"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1277.0,
+            "end": 1279.0,
+            "text": " in swapping. Remember this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1279.0,
+            "end": 1281.0,
+            "text": " Write in the comment section"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1281.0,
+            "end": 1283.0,
+            "text": " which lecture we have studied"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1283.0,
+            "end": 1285.0,
+            "text": " swapping in."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1285.0,
+            "end": 1287.0,
+            "text": " In that,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1287.0,
+            "end": 1289.0,
+            "text": " the degree of multi programming"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1289.0,
+            "end": 1291.0,
+            "text": " increases."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1291.0,
+            "end": 1293.0,
+            "text": " To accommodate"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1293.0,
+            "end": 1295.0,
+            "text": " high priority process,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1295.0,
+            "end": 1297.0,
+            "text": " I preempt"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1297.0,
+            "end": 1299.0,
+            "text": " a particular process."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1299.0,
+            "end": 1301.0,
+            "text": " Preempt means"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1301.0,
+            "end": 1303.0,
+            "text": " taking some segments of it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1303.0,
+            "end": 1305.0,
+            "text": " Preemption"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1305.0,
+            "end": 1307.0,
+            "text": " is not complete preemption."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1307.0,
+            "end": 1309.0,
+            "text": " I do not take the whole process."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1309.0,
+            "end": 1311.0,
+            "text": " I take it back."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1311.0,
+            "end": 1313.0,
+            "text": " Suppose,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1313.0,
+            "end": 1315.0,
+            "text": " the process is P0."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1315.0,
+            "end": 1317.0,
+            "text": " The name of this process is P1."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1317.0,
+            "end": 1319.0,
+            "text": " Just imagine."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1319.0,
+            "end": 1321.0,
+            "text": " This process is running."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1321.0,
+            "end": 1323.0,
+            "text": " Only this segment is useful."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1323.0,
+            "end": 1325.0,
+            "text": " This segment is useful."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1325.0,
+            "end": 1327.0,
+            "text": " This segment is useful."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1327.0,
+            "end": 1329.0,
+            "text": " It means,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1329.0,
+            "end": 1331.0,
+            "text": " P1 is working in these segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1331.0,
+            "end": 1333.0,
+            "text": " It is working in these segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1333.0,
+            "end": 1335.0,
+            "text": " OS ranks."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1335.0,
+            "end": 1337.0,
+            "text": " It ranks and sees"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1337.0,
+            "end": 1339.0,
+            "text": " that segment 4 and segment 1 are lying in main memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1341.0,
+            "end": 1343.0,
+            "text": " P1 may need segment 4 and segment 5."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1343.0,
+            "end": 1345.0,
+            "text": " But for time being,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1345.0,
+            "end": 1347.0,
+            "text": " it is not being used."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1347.0,
+            "end": 1349.0,
+            "text": " I take it"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1349.0,
+            "end": 1351.0,
+            "text": " and put it in"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1351.0,
+            "end": 1353.0,
+            "text": " a swap area."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1353.0,
+            "end": 1355.0,
+            "text": " Swap area."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1355.0,
+            "end": 1357.0,
+            "text": " Swap area is generally in hard disk."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1357.0,
+            "end": 1359.0,
+            "text": " In hard disk,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1359.0,
+            "end": 1361.0,
+            "text": " there is an area"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1361.0,
+            "end": 1363.0,
+            "text": " which is storing some segments"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1363.0,
+            "end": 1365.0,
+            "text": " of main memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1365.0,
+            "end": 1367.0,
+            "text": " It is storing some segments of main memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1367.0,
+            "end": 1369.0,
+            "text": " It is storing those segments in such a way"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1369.0,
+            "end": 1371.0,
+            "text": " that whenever main memory needs these segments,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1371.0,
+            "end": 1373.0,
+            "text": " it may happen that"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1373.0,
+            "end": 1375.0,
+            "text": " you take them"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1375.0,
+            "end": 1377.0,
+            "text": " in hard disk."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1377.0,
+            "end": 1379.0,
+            "text": " It is also called backing storage."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1379.0,
+            "end": 1381.0,
+            "text": " You take them in backing storage."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1381.0,
+            "end": 1383.0,
+            "text": " Then you get an instruction"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1383.0,
+            "end": 1385.0,
+            "text": " that segment 4 needs to be stored."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1385.0,
+            "end": 1387.0,
+            "text": " What will happen then?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1387.0,
+            "end": 1389.0,
+            "text": " OS will generate page fault"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1389.0,
+            "end": 1391.0,
+            "text": " and will bring back segment 4"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1391.0,
+            "end": 1393.0,
+            "text": " from swap area."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1393.0,
+            "end": 1395.0,
+            "text": " It means,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1395.0,
+            "end": 1397.0,
+            "text": " segment 4 will be stored"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1397.0,
+            "end": 1399.0,
+            "text": " in such a way"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1399.0,
+            "end": 1401.0,
+            "text": " that it will be used by a process."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1401.0,
+            "end": 1403.0,
+            "text": " In hard disk, there is an area"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1403.0,
+            "end": 1405.0,
+            "text": " which behaves like RAM."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1405.0,
+            "end": 1407.0,
+            "text": " I call it virtual memory."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1407.0,
+            "end": 1409.0,
+            "text": " We will discuss it in next video."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1409.0,
+            "end": 1411.0,
+            "text": " Very good. I hope you understood"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1411.0,
+            "end": 1413.0,
+            "text": " something."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1413.0,
+            "end": 1415.0,
+            "text": " When swapping is happening,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1415.0,
+            "end": 1417.0,
+            "text": " if segment size is different,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1417.0,
+            "end": 1419.0,
+            "text": " then every time"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1419.0,
+            "end": 1421.0,
+            "text": " different size segments"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1421.0,
+            "end": 1423.0,
+            "text": " will be swapped out."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1423.0,
+            "end": 1425.0,
+            "text": " This term is also"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1425.0,
+            "end": 1427.0,
+            "text": " used in the lecture"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1427.0,
+            "end": 1429.0,
+            "text": " wherein I discussed median no scale."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1429.0,
+            "end": 1431.0,
+            "text": " Swap in, swap out."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1431.0,
+            "end": 1433.0,
+            "text": " If different size segments"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1433.0,
+            "end": 1435.0,
+            "text": " will be swapped in and out,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1435.0,
+            "end": 1437.0,
+            "text": " then it will take more time to swap in"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1437.0,
+            "end": 1439.0,
+            "text": " and swap out bigger segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1439.0,
+            "end": 1441.0,
+            "text": " It will take less time to swap out smaller segments."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1441.0,
+            "end": 1443.0,
+            "text": " It will not be an efficient system."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1443.0,
+            "end": 1445.0,
+            "text": " Every segment"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1445.0,
+            "end": 1447.0,
+            "text": " will take different time."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1447.0,
+            "end": 1449.0,
+            "text": " Estimations will be wrong."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1449.0,
+            "end": 1451.0,
+            "text": " Many things will be spoiled."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1451.0,
+            "end": 1453.0,
+            "text": " This is not right."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1453.0,
+            "end": 1455.0,
+            "text": " There is a disadvantage."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1455.0,
+            "end": 1457.0,
+            "text": " Now,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1457.0,
+            "end": 1459.0,
+            "text": " there is a question."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1459.0,
+            "end": 1461.0,
+            "text": " Should we use segmentation or paging?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1461.0,
+            "end": 1463.0,
+            "text": " Whatever concept we are using"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1463.0,
+            "end": 1465.0,
+            "text": " and reading in OS,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1465.0,
+            "end": 1467.0,
+            "text": " those are theoretical concepts."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1467.0,
+            "end": 1469.0,
+            "text": " They are not used individually."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1469.0,
+            "end": 1471.0,
+            "text": " It is not possible"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1471.0,
+            "end": 1473.0,
+            "text": " that your system"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1473.0,
+            "end": 1475.0,
+            "text": " uses segmentation"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1475.0,
+            "end": 1477.0,
+            "text": " like I am using Macbook."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1477.0,
+            "end": 1479.0,
+            "text": " It uses segmentation"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1479.0,
+            "end": 1481.0,
+            "text": " in RAM for logical letters"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1481.0,
+            "end": 1483.0,
+            "text": " and physical letter space translation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1483.0,
+            "end": 1485.0,
+            "text": " It is not possible."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1485.0,
+            "end": 1487.0,
+            "text": " Modern computers have advanced so much"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1487.0,
+            "end": 1489.0,
+            "text": " that we implement"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1489.0,
+            "end": 1491.0,
+            "text": " both segmentation and paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1491.0,
+            "end": 1493.0,
+            "text": " Both are implemented"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1493.0,
+            "end": 1495.0,
+            "text": " by choosing hybrid approach."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1495.0,
+            "end": 1497.0,
+            "text": " As we discussed in paging,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1497.0,
+            "end": 1499.0,
+            "text": " page size will be same."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1499.0,
+            "end": 1501.0,
+            "text": " But,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1501.0,
+            "end": 1503.0,
+            "text": " page size is not same now."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1503.0,
+            "end": 1505.0,
+            "text": " 2-3 type of page size is defined."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1505.0,
+            "end": 1507.0,
+            "text": " Do you understand?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1507.0,
+            "end": 1509.0,
+            "text": " This is how things work."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1509.0,
+            "end": 1511.0,
+            "text": " In modern architecture, both segmentation and paging are used."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1511.0,
+            "end": 1513.0,
+            "text": " I have read the disadvantage and disadvantage."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1513.0,
+            "end": 1515.0,
+            "text": " One more thing is coming to my mind."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1515.0,
+            "end": 1517.0,
+            "text": " In paging,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1517.0,
+            "end": 1519.0,
+            "text": " there is internal fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1519.0,
+            "end": 1521.0,
+            "text": " Here, there is no internal fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1521.0,
+            "end": 1523.0,
+            "text": " But, in paging,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1523.0,
+            "end": 1525.0,
+            "text": " there is internal fragmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1525.0,
+            "end": 1527.0,
+            "text": " I will tell you how."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1527.0,
+            "end": 1529.0,
+            "text": " For example,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1529.0,
+            "end": 1531.0,
+            "text": " you have a program"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1531.0,
+            "end": 1533.0,
+            "text": " of 15 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1533.0,
+            "end": 1535.0,
+            "text": " Page size"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1535.0,
+            "end": 1537.0,
+            "text": " is defined by architecture"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1537.0,
+            "end": 1539.0,
+            "text": " as 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1539.0,
+            "end": 1541.0,
+            "text": " How will you divide it?"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1541.0,
+            "end": 1543.0,
+            "text": " We cannot divide it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1543.0,
+            "end": 1545.0,
+            "text": " If it was of 16 KB,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1545.0,
+            "end": 1547.0,
+            "text": " I could have decided."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1547.0,
+            "end": 1549.0,
+            "text": " But, it is of 15 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1549.0,
+            "end": 1551.0,
+            "text": " What I have to do is"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1551.0,
+            "end": 1553.0,
+            "text": " the last page"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1553.0,
+            "end": 1555.0,
+            "text": " will look like this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1557.0,
+            "end": 1559.0,
+            "text": " The last page"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1559.0,
+            "end": 1561.0,
+            "text": " will be of 2 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1561.0,
+            "end": 1563.0,
+            "text": " It will store"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1563.0,
+            "end": 1565.0,
+            "text": " 1 KB of storage."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1565.0,
+            "end": 1567.0,
+            "text": " Rest of the storage will be empty."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1569.0,
+            "end": 1571.0,
+            "text": " This will be the last page."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1571.0,
+            "end": 1573.0,
+            "text": " In this page,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1573.0,
+            "end": 1575.0,
+            "text": " the corresponding frame"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1575.0,
+            "end": 1577.0,
+            "text": " will be there."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1577.0,
+            "end": 1579.0,
+            "text": " The frame of 2 KB"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1579.0,
+            "end": 1581.0,
+            "text": " will be there."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1581.0,
+            "end": 1583.0,
+            "text": " The allocation will be like this."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1583.0,
+            "end": 1585.0,
+            "text": " This part will be used."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1585.0,
+            "end": 1587.0,
+            "text": " This part will be free."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1589.0,
+            "end": 1591.0,
+            "text": " Due to this,"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1591.0,
+            "end": 1593.0,
+            "text": " my RAM"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1593.0,
+            "end": 1595.0,
+            "text": " has"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1595.0,
+            "end": 1597.0,
+            "text": " an internal fragmentation"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1597.0,
+            "end": 1599.0,
+            "text": " of 1 KB."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1599.0,
+            "end": 1601.0,
+            "text": " I cannot avoid it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1601.0,
+            "end": 1603.0,
+            "text": " This is a particular problem"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1603.0,
+            "end": 1605.0,
+            "text": " in paging."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1605.0,
+            "end": 1607.0,
+            "text": " Let's assume that"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1607.0,
+            "end": 1609.0,
+            "text": " this is not a problem."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1609.0,
+            "end": 1611.0,
+            "text": " We have to accept it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1611.0,
+            "end": 1613.0,
+            "text": " This problem is not"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1613.0,
+            "end": 1615.0,
+            "text": " in segmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1615.0,
+            "end": 1617.0,
+            "text": " You can ask questions in the interview."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1617.0,
+            "end": 1619.0,
+            "text": " You can explain the fragging"
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1619.0,
+            "end": 1621.0,
+            "text": " and segmentation."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1621.0,
+            "end": 1623.0,
+            "text": " This is a simple question."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1623.0,
+            "end": 1625.0,
+            "text": " We can discuss it."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1625.0,
+            "end": 1627.0,
+            "text": " We will discuss it in the next lecture."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1627.0,
+            "end": 1629.0,
+            "text": " It is an interesting topic."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1629.0,
+            "end": 1631.0,
+            "text": " See you in the next class."
+        },
+        {
+            "number": "Lecture 27",
+            "title": " What is Segmentation ",
+            "start": 1631.0,
+            "end": 1633.0,
+            "text": " Goodbye."
+        }
+    ],
+    "text": " Hello, how are you all? This is Lakshay. We have come to our today's lecture number 27. And today we are going to discuss one more great topic in non-contiguous memory allocation. So in the last lecture we learned about paging. Paging is a very important technique. How did we see that paging completely removed external fragmentation? But there is a problem in paging. There is a problem in paging. What is that problem? Let's discuss that. What were we doing in paging? We had this user program. User program. I was calling it logical address space. I was calling it address space. We divided it into fixed pages. It was fixed length. Like this is 2 KB. So this will also be 2 KB. This will also be 2 KB. So everything will be 2 KB. This is the corresponding frame. We were allocating frame. We were dividing RAM into 2 KB 2 KB chunks. We were calling it frame. Now a small problem can happen in this. Think carefully. Suppose you have written a code. There is a function fun in your code. Function is fun. Now it will be in some part of your logical address. It will be in some part of logical address. Start from here and end from here. Now you have forgotten that you are paging 2 KB pages. 2 KB will be my page size. Now just imagine that your code, the function you have written, is coming in 4 KB. It is coming in 4 KB in your logical address. But still your OS will divide it into 2 KB chunks. 2 KB and 2 KB. Still your OS will divide it into 2 pages. This is page 0. This is page 1. Right? In fact, you knew that this is one function. The instructions written in this function are the same instructions. Right? But still your OS divided it into 2 pages. Now it is possible that your RAM has many frames. 2 KB. Some are filled and some are not. Right? So this particular page will be allocated here. And this particular page will be allocated in this frame. Are you getting it? I mean to say that this particular page will be allocated in frame 5. And this particular page will be allocated in frame 2. Right? It is possible. Non-contiguous allocation is going on there. Now there is a problem. Let's see what the problem is. As I said, page 0 is in frame 5. Page 1 is in frame 2. And this is one function. This is one function in 4 KB. So how will it be allocated to RAM? Right? Page 0 is in frame 5. So here the initial part of the fun will be I will say it. Initial part. Initial half will be in frame 5. And second half of the fun will be in frame 2. Now what will be the problem with this? The problem will be that your CPU is sitting here. CPU is basically generating logical address. Right? It is generating logical address. Due to your logical address space, CPU will be thinking how will it generate the address. It will keep generating the address. Keep generating. Then after one point, it will go to second half. It will go to the second page. CPU is thinking that I am on the same function. CPU is thinking that I am executing the instruction of the fun function. But actually the instruction stored in RAM is stored in two places. First place is F5. Second is F2. So what will be happening? Actually as soon as first half of fun is over. As soon as first half of fun is over. As soon as it is over. What will my MMU do? Now the MMU which will do the address translation will shift to the second frame. And for this, which was the second frame? Sorry, here. F2. That means it shifted from F5 to F2. Although my function is the same. It is written in 4KB. But the function is divided into two pages. And because of this, the frame is also allocated far away. Non-contiguously far away. Now what happened in this? In the starting, it will be running on this frame. So when you are running on the same frame. Then your memory access is fast. That means you are working efficiently. You are there. Now as soon as you jump to the second frame. So what will happen? When you jump to the memory in any other statement. So what will happen? Your RAM value 0 is starting from here. So it will jump here. It will go to the new offset. Earlier it was going to the second offset. Now it is running here. So because of this, your access becomes a little inefficient. Understood? An overhead came unnecessarily. All this function could have been executed here. But we did not do it. We divided it into two frames. Because of this, a problem comes. There is a small issue. Not a big issue. Because paging solves a bigger issue. And what is the biggest issue? External fragmentation. External fragmentation is the biggest issue. Because you can do utilization space well in it. So this is a small issue. Which is in paging. How do we solve this issue? What technique do we use? So this video is sponsored by Cryo. Cryo is a leading project driven platform. To learn the latest technical skills. If you are interested in SDD type profiles. Or you want to learn about QA. Cryo is a platform for you. You are going to make a lot of projects here. You will learn practical work experience. Similar to a real job. You will build a diverse set of guided and independent work like professional projects. To master API testing, DevOps, Selenium, Java and more. Not only this. Their program comes with a placement guarantee. So that you can double assure that your placement is in a good company. At the end of their programs. You must have made a lot of projects. So that your resume will be more effective. And your portfolio will be more strong. If you are interested. Then they have a free trial program for a week. You can take the trial. And you also get an assured scholarship. So what do you have to do? I will add a link in the description. And by clicking on that link. You can avail maximum possible discount on their program. You can take the placement. And after the placement, you can give me a party. So the technique that solves this problem. I call it segmentation. Now what I will do. Now what I will do. My function. Fun of 4kb. Now what I will do. I will divide it into two pages. Now I say that I have different segments. Different segments. And they are of varying size. Means different sizes. According to the user view. User is your programmer. So he will divide every function into a segment. If he feels that this is a contiguous function. So it should be in one part of the memory. So he will make it a segment. Similarly he will feel. This particular function should be in this part. So he will get a function which is different from fun. Means there was a fun function. And there was fun2. Now fun and fun2 are different. So we have put it in a different segment. So in this way. We divide it into segments. So you can say that here. I have done variable partitioning of address space. Variable partitioning. Of logical address space. Ok. Now let's see how that partitioning will be seen. Suppose this was your program. Now in this program. You have made one segment of main function. Which we call as S0. One segment of add function. Which we call as S1. One segment of divide function. Which we call as S2. One you have made stack. Process of stack. Which we call as third segment. One function you have made. As print function. You have given it as fourth segment. Now here. The size of segments. The size of segments is different. For every segment. We will see an example of this. So here we have divided it into different segments. And what we were doing in paging. We were dividing it into fixed partitions. Here variable partitioning will be done. Depending upon how my segment is looking. So here compiler decides. Which function should be used. According to user view. Which function should be used. In this segment. Which function can be divided into segments. Which functions can be used. Like this. Now let's see. In this. MMU. What was it used to do. Address translation. From logical letter space to physical letter space. So my MMU. How will it do translation. Translation. How will it do. From logical letter space to physical letter space. How will it do translation. To see translation. Let's go to notes. There is a method like paging. There is a method like paging. How will it work. First of all. As in paging. Segment table will be used. What will happen now. Logical letter space. I will divide it into two parts. I will divide it into two parts. First will be. Segment. Segment number. Which I will call S. Second will be offset. Second will be offset. Which I will call D. Whichever logical address. Your CPU will generate. That logical address. Some bits of starting. Will tell segment number. Some bits of end. Will tell offset. Where to go. From which base. Paging. Contiguous relocation. In which your relocation register. We have made it by joining it. See how it will work. You took CPU. CPU generates logical address. S and D will be two values. Suppose. Your logical address is 01111. Suppose. Your logical address is 01111. Suppose. I will take out SOD part. I will take out SOD part. SOD part. I will call S as 1. And D as 7. Right. What will happen in segment table. In contiguous memory location. In contiguous memory location. We have relocation register. Every segment will have corresponding limit. And base. Because here. Segments are of variable size. So. Every segment information will be different. Base of every segment will be different. So its limit will be different. Because. Some segment limit will be more. Some segment limit will be less. So in this way. Suppose. My limit is 15. My limit is 15. And base of every segment is 20. And base of every segment is 20. Suppose. Now. How it will work. It will go 1. It will go 1. It will go 0. It will go 0. It will go 0. It will go 0. Now. D value. D7. D7 value. Is less than 7. Means. CPU generated address. According to segment. Is offset. Is offset. Is less than limit. Is less than limit. Yes. Now. Remember. Relocation and limit. Because one segment is contiguous. Now. Base is 20. Plus 7. Means 27th location. Means. From here. Segment 1. Is starting. And limit. Is 20. Plus 15. 15. 35. From here. S1 segment. 27th location. From here. 27th location. From here. From here. This way. Hardware works. This way. Very simple. Paging. Limit and base. Contiguous memory allocation. Contiguous memory allocation. Contiguous memory allocation. Base. Base for every segment. Limit for every segment. Because every segment is variable size. Let's see another example. Let's see another example. This example. Logical address space. Subroutine. Stack. Stack. Main program. Square root. Your segment table. Is like this. Segmentation. Limit and base. Same thing. We were playing in bits. Let's play in decimal. Example. This is your physical memory. This is your physical memory. In this physical memory. In this physical memory. This chunk. Just imagine. This segment. Is related to this program. Segment 0. Is stored here. Segment 0. Is stored in how many areas. Segment 0. 1000. Limit of segment 0 is 1000. Limit of segment 1 is 400. Limit of segment 2 is 400. Limit of segment 2 is 400. Limit of segment 3 is 1100. Limit of segment 3 is 1000. As you can see. Variable size. Different base. Different register. Let's see another example. Logical address. Generated. 53. To go to 53. What should I do? First. Where is my segment 2? Here it is. I need its base. Base is 4300. I added 53. 4359 is here. I am inside segment 2. I am inside 4359. Here. Addressing. This is same case. We understood from this example. We understood from decimal. We understood from bits. Checking. Is it inside limit? Yes. Limit is 400. It is inside limit. We are able to move forward. Think carefully. Is it has external fragmentation? Think carefully. It has external fragmentation. It has external fragmentation. Let's see another example. Let's see another example. Consider a situation. External fragmentation in segmentation. in segmentation. Consider a situation. Consider P0 program segment 1. P0 program segment 1. Locations are busy. Now, consider P1 program. P1 program has 2 segments. Segment 0 is 2 KB. Segment 1 is 3 KB. In segmentation, whole segment will be allocated. Whole segment will be allocated. Now, can I allocate S0 segment? I can allocate S0. I can allocate S1. But, I can't allocate S1. I can't allocate S1. This allocation will not be possible. Because, I have 2 KB here. 2 KB here. 1 KB is left. 3 KB is contiguous. 3 KB is contiguous. In this case, external fragmentation is available. Although, I have 2 plus 2 plus 1. That is 5 KB is available. 5 KB is available. Non-contiguous is available. I am not able to allocate P1 process of 5 KB. This means, in segmentation, external fragmentation is available. But, there is no internal fragmentation. Why? Because, you have removed the segment. You have allocated the same segment. You can do it. There is no internal fragmentation. There is no internal fragmentation. Okay. Let's move ahead. Let's see the advantages and disadvantages. First, we have seen that the advantage is that there is no internal fragmentation. Second advantage is that we can do contiguous allocation to a segment. Contiguous allocation of a segment is like fun function. Let's see this example. In this, you have allocated the entire SQRT function here. When I am working in this, it is efficient. It means, your work is efficient within segment. The size of segment table is generally less than the size of page table. In this, suppose there is a program of 100 KB. Suppose, 100 KB program is divided into pages of 2 KB. Then, 50 pages will be there. In this, the page table of this program will be so big. But, it is possible that there are only 2 segments in 100 KB program. Suppose, there are 2 segments of 50 KB. Then, the segment table will be so big. In this, there will be only 2 entries. So, what does it mean? In page table, it is divided according to the page size. So, there are more number of pages and more number of entries. So, page table is generally bigger than segment table. If segment table is small, then it will take less memory to store. The result is more efficient system because compiler keeps the same type of function in the same segment. It depends on whether you have put same nature function, same area access function in one segment or other nature function in another segment. So, it becomes more efficient system from user perspective. The disadvantage of this is external fragmentation. We have discussed it. The different size of segment is not good for time of swapping. Remember this part. We have studied this in some lecture where we have studied medium term scheduler. MTS. Write in the comment section which lecture we have studied medium term scheduler in. We have studied about swapping. Generally, we will study further. If you have understood this, then skip this video. We will discuss swapping in next video. The different size of segment is not good for time of swapping. What does it mean? I will try to explain. You have many segments. One thing is that we have studied in swapping. Remember this. Write in the comment section which lecture we have studied swapping in. In that, the degree of multi programming increases. To accommodate high priority process, I preempt a particular process. Preempt means taking some segments of it. Preemption is not complete preemption. I do not take the whole process. I take it back. Suppose, the process is P0. The name of this process is P1. Just imagine. This process is running. Only this segment is useful. This segment is useful. This segment is useful. It means, P1 is working in these segments. It is working in these segments. OS ranks. It ranks and sees that segment 4 and segment 1 are lying in main memory. P1 may need segment 4 and segment 5. But for time being, it is not being used. I take it and put it in a swap area. Swap area. Swap area is generally in hard disk. In hard disk, there is an area which is storing some segments of main memory. It is storing some segments of main memory. It is storing those segments in such a way that whenever main memory needs these segments, it may happen that you take them in hard disk. It is also called backing storage. You take them in backing storage. Then you get an instruction that segment 4 needs to be stored. What will happen then? OS will generate page fault and will bring back segment 4 from swap area. It means, segment 4 will be stored in such a way that it will be used by a process. In hard disk, there is an area which behaves like RAM. I call it virtual memory. We will discuss it in next video. Very good. I hope you understood something. When swapping is happening, if segment size is different, then every time different size segments will be swapped out. This term is also used in the lecture wherein I discussed median no scale. Swap in, swap out. If different size segments will be swapped in and out, then it will take more time to swap in and swap out bigger segments. It will take less time to swap out smaller segments. It will not be an efficient system. Every segment will take different time. Estimations will be wrong. Many things will be spoiled. This is not right. There is a disadvantage. Now, there is a question. Should we use segmentation or paging? Whatever concept we are using and reading in OS, those are theoretical concepts. They are not used individually. It is not possible that your system uses segmentation like I am using Macbook. It uses segmentation in RAM for logical letters and physical letter space translation. It is not possible. Modern computers have advanced so much that we implement both segmentation and paging. Both are implemented by choosing hybrid approach. As we discussed in paging, page size will be same. But, page size is not same now. 2-3 type of page size is defined. Do you understand? This is how things work. In modern architecture, both segmentation and paging are used. I have read the disadvantage and disadvantage. One more thing is coming to my mind. In paging, there is internal fragmentation. Here, there is no internal fragmentation. But, in paging, there is internal fragmentation. I will tell you how. For example, you have a program of 15 KB. Page size is defined by architecture as 2 KB. How will you divide it? We cannot divide it. If it was of 16 KB, I could have decided. But, it is of 15 KB. What I have to do is the last page will look like this. The last page will be of 2 KB. It will store 1 KB of storage. Rest of the storage will be empty. This will be the last page. In this page, the corresponding frame will be there. The frame of 2 KB will be there. The allocation will be like this. This part will be used. This part will be free. Due to this, my RAM has an internal fragmentation of 1 KB. I cannot avoid it. This is a particular problem in paging. Let's assume that this is not a problem. We have to accept it. This problem is not in segmentation. You can ask questions in the interview. You can explain the fragging and segmentation. This is a simple question. We can discuss it. We will discuss it in the next lecture. It is an interesting topic. See you in the next class. Goodbye."
+}

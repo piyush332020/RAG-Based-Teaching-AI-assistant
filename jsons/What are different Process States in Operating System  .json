@@ -1,0 +1,2679 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 0.0,
+            "end": 5.0,
+            "text": " Hello, how are you all? This is Lakshay."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 5.0,
+            "end": 8.0,
+            "text": " So we have come to our OS lecture number 10."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 8.0,
+            "end": 12.0,
+            "text": " And we are going to discuss about process state in this video."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 12.0,
+            "end": 15.0,
+            "text": " In the last video, we discussed about PCB,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 15.0,
+            "end": 18.0,
+            "text": " we discussed about attributes of process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 18.0,
+            "end": 20.0,
+            "text": " In that, there was a vlog in PCB,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 20.0,
+            "end": 22.0,
+            "text": " named as Process State."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 22.0,
+            "end": 25.0,
+            "text": " That the current state of the process,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 25.0,
+            "end": 29.0,
+            "text": " is also stored by your PCB, data structure."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 29.0,
+            "end": 33.0,
+            "text": " So now we will double click about process state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 33.0,
+            "end": 34.0,
+            "text": " This video is sponsored by Cryo."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 34.0,
+            "end": 37.0,
+            "text": " Cryo is world's leading work experience based learning platform."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 37.0,
+            "end": 39.0,
+            "text": " Where you can enhance your software skills."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 39.0,
+            "end": 42.0,
+            "text": " Along with that, you can also grab top development job."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 42.0,
+            "end": 43.0,
+            "text": " Unlike usual courses,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 43.0,
+            "end": 46.0,
+            "text": " in Cryo you are going to learn full stack development or backend development."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 46.0,
+            "end": 51.0,
+            "text": " But by building industry level projects in a real development environment."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 51.0,
+            "end": 54.0,
+            "text": " At the end of each program, you must have done a lot of projects."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 54.0,
+            "end": 56.0,
+            "text": " Which will make your resume more effective."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 56.0,
+            "end": 58.0,
+            "text": " And also make a strong github profile."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 58.0,
+            "end": 60.0,
+            "text": " Now in full stack or backend development,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 60.0,
+            "end": 61.0,
+            "text": " what all tech you are going to use,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 61.0,
+            "end": 63.0,
+            "text": " all that is visible here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 63.0,
+            "end": 66.0,
+            "text": " Along with that, you are going to get personalized career assistance."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 66.0,
+            "end": 69.0,
+            "text": " So that your dream job will be double surety."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 69.0,
+            "end": 70.0,
+            "text": " What you have to do is,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 70.0,
+            "end": 72.0,
+            "text": " I will attach the link in the description."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 72.0,
+            "end": 74.0,
+            "text": " Through that, you will get maximum possible discount."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 74.0,
+            "end": 78.0,
+            "text": " And along with that, you will also get access to some free resources."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 78.0,
+            "end": 80.0,
+            "text": " So go to the description quickly,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 80.0,
+            "end": 82.0,
+            "text": " use the link and take a good placement."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 82.0,
+            "end": 83.0,
+            "text": " And give me a party."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 83.0,
+            "end": 84.0,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 84.0,
+            "end": 89.0,
+            "text": " What is a process state?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 89.0,
+            "end": 92.0,
+            "text": " Any process in its whole life cycle."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 92.0,
+            "end": 95.0,
+            "text": " If I talk about the life cycle of a process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 95.0,
+            "end": 97.0,
+            "text": " What will come in the life cycle of a process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 97.0,
+            "end": 99.0,
+            "text": " Right from its new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 99.0,
+            "end": 105.0,
+            "text": " New state means from generation to termination."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 110.0,
+            "end": 112.0,
+            "text": " From generation to termination."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 112.0,
+            "end": 114.0,
+            "text": " What all happens in between a process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 114.0,
+            "end": 118.0,
+            "text": " What all different states a process goes through."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 118.0,
+            "end": 120.0,
+            "text": " We will discuss about that now."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 120.0,
+            "end": 123.0,
+            "text": " Before moving ahead, let's give a shoutout to our sponsor."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 123.0,
+            "end": 125.0,
+            "text": " So that your flow doesn't get spoiled."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 125.0,
+            "end": 126.0,
+            "text": " So let's continue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 126.0,
+            "end": 131.0,
+            "text": " So in process states, the first state that comes is the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 131.0,
+            "end": 132.0,
+            "text": " New state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 132.0,
+            "end": 133.0,
+            "text": " What is a new state?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 133.0,
+            "end": 139.0,
+            "text": " New state is when OS is converting your program in the process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 139.0,
+            "end": 141.0,
+            "text": " When this process is happening."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 141.0,
+            "end": 144.0,
+            "text": " So at that point, in that particular process,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 144.0,
+            "end": 146.0,
+            "text": " in the PCB,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 146.0,
+            "end": 148.0,
+            "text": " what is the process state written?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 148.0,
+            "end": 149.0,
+            "text": " New."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 149.0,
+            "end": 155.0,
+            "text": " That is, when a program is converting in the process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 155.0,
+            "end": 158.0,
+            "text": " This process is happening."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 158.0,
+            "end": 159.0,
+            "text": " Being done."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 159.0,
+            "end": 161.0,
+            "text": " This process is happening."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 161.0,
+            "end": 164.0,
+            "text": " When this is happening, it is called a new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 164.0,
+            "end": 166.0,
+            "text": " Now it is being made."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 167.0,
+            "end": 171.0,
+            "text": " Now the second type is the ready state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 173.0,
+            "end": 175.0,
+            "text": " What is a ready state?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 175.0,
+            "end": 176.0,
+            "text": " The process is made."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 176.0,
+            "end": 178.0,
+            "text": " We have brought the process into the memory."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 178.0,
+            "end": 181.0,
+            "text": " So the process that has been brought into the memory,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 181.0,
+            "end": 184.0,
+            "text": " and the process that is lying in the memory,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 184.0,
+            "end": 185.0,
+            "text": " in which area it is,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 185.0,
+            "end": 186.0,
+            "text": " is also called a ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 186.0,
+            "end": 188.0,
+            "text": " We have discussed about the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 188.0,
+            "end": 193.0,
+            "text": " So the process is in the memory."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 194.0,
+            "end": 197.0,
+            "text": " The process is in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 197.0,
+            "end": 200.0,
+            "text": " Now why am I calling it a ready queue?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 200.0,
+            "end": 203.0,
+            "text": " It is just ready for execution."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 203.0,
+            "end": 205.0,
+            "text": " It just needs CPU."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 205.0,
+            "end": 206.0,
+            "text": " It is waiting for the CPU."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 206.0,
+            "end": 209.0,
+            "text": " As soon as the CPU is scheduled, it will be released."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 209.0,
+            "end": 211.0,
+            "text": " So this is the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 211.0,
+            "end": 213.0,
+            "text": " So there can be many processes in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 213.0,
+            "end": 216.0,
+            "text": " We have seen that in the multi-programming OS,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 216.0,
+            "end": 218.0,
+            "text": " we keep more than one process in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 218.0,
+            "end": 222.0,
+            "text": " So that we can increase the degree of multi-programming."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 223.0,
+            "end": 225.0,
+            "text": " So this is the second state, ready."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 225.0,
+            "end": 227.0,
+            "text": " After ready, what will be the third state?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 227.0,
+            "end": 229.0,
+            "text": " The third state will be the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 229.0,
+            "end": 231.0,
+            "text": " Running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 231.0,
+            "end": 233.0,
+            "text": " Running state is known by the name."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 233.0,
+            "end": 239.0,
+            "text": " Finally, a particular process has been allocated to the CPU from the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 239.0,
+            "end": 240.0,
+            "text": " CPU has been allocated."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 240.0,
+            "end": 247.0,
+            "text": " So I can say that the CPU has been allocated to the P1 process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 247.0,
+            "end": 249.0,
+            "text": " Now it is being executed."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 249.0,
+            "end": 257.0,
+            "text": " So at this point, the process state of the PCB will be running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 257.0,
+            "end": 259.0,
+            "text": " Now the process is in the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 259.0,
+            "end": 261.0,
+            "text": " Now what happens while running?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 261.0,
+            "end": 264.0,
+            "text": " We have discussed that sometimes the instruction of I0 comes."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 264.0,
+            "end": 267.0,
+            "text": " So we go to the waiting state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 267.0,
+            "end": 270.0,
+            "text": " Our fourth state is the waiting state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 270.0,
+            "end": 272.0,
+            "text": " What do we do in the waiting state?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 272.0,
+            "end": 275.0,
+            "text": " It is just waiting for I0."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 275.0,
+            "end": 277.0,
+            "text": " Waiting for I0 completion."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 277.0,
+            "end": 279.0,
+            "text": " So I continue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 279.0,
+            "end": 282.0,
+            "text": " Now what is the fifth state?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 282.0,
+            "end": 285.0,
+            "text": " The fifth state is the termination state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 285.0,
+            "end": 289.0,
+            "text": " I will call it terminated."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 289.0,
+            "end": 291.0,
+            "text": " It has been terminated."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 291.0,
+            "end": 293.0,
+            "text": " Now what happens in the terminated state?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 293.0,
+            "end": 298.0,
+            "text": " Now the process is finished."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 298.0,
+            "end": 301.0,
+            "text": " Its execution is finished."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 301.0,
+            "end": 307.0,
+            "text": " Now the process is not in the memory."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 307.0,
+            "end": 311.0,
+            "text": " I will explain this with a diagram."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 311.0,
+            "end": 313.0,
+            "text": " I have just said the definition."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 313.0,
+            "end": 316.0,
+            "text": " Let's discuss it with a diagram."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 316.0,
+            "end": 322.0,
+            "text": " This diagram shows the life cycle of the process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 322.0,
+            "end": 324.0,
+            "text": " You can see the different states."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 324.0,
+            "end": 326.0,
+            "text": " The first state is the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 326.0,
+            "end": 328.0,
+            "text": " What is the new state doing?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 328.0,
+            "end": 331.0,
+            "text": " The new state is converting the program into the process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 331.0,
+            "end": 336.0,
+            "text": " The state is the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 336.0,
+            "end": 339.0,
+            "text": " I can say that there is a disk here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 339.0,
+            "end": 342.0,
+            "text": " Things are coming from the disk."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 342.0,
+            "end": 345.0,
+            "text": " Things are coming from the disk."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 345.0,
+            "end": 350.0,
+            "text": " So the thing that is going to this position is in the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 350.0,
+            "end": 354.0,
+            "text": " Now after the new state, as soon as the process is complete,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 354.0,
+            "end": 358.0,
+            "text": " we put all the processes in the ready state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 358.0,
+            "end": 361.0,
+            "text": " OS has a separate module."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 361.0,
+            "end": 365.0,
+            "text": " It does all the jobs from the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 365.0,
+            "end": 370.0,
+            "text": " It does the job of providing the CPU."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 370.0,
+            "end": 373.0,
+            "text": " It does the job of dispatching the CPU."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 373.0,
+            "end": 376.0,
+            "text": " That's why I am writing scheduler dispatch."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 376.0,
+            "end": 380.0,
+            "text": " Now the process is in the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 380.0,
+            "end": 382.0,
+            "text": " The process is running."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 382.0,
+            "end": 385.0,
+            "text": " Now there are two ways to run."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 385.0,
+            "end": 387.0,
+            "text": " Either it will go to IO."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 387.0,
+            "end": 388.0,
+            "text": " We have discussed this."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 388.0,
+            "end": 390.0,
+            "text": " Either it will go to IO."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 390.0,
+            "end": 392.0,
+            "text": " If it goes to IO, then what will happen at this event?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 392.0,
+            "end": 394.0,
+            "text": " It will come to the waiting state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 394.0,
+            "end": 396.0,
+            "text": " The process is in the waiting state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 396.0,
+            "end": 400.0,
+            "text": " Now let's discuss this in a while."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 400.0,
+            "end": 402.0,
+            "text": " The Malo process is in the waiting state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 402.0,
+            "end": 404.0,
+            "text": " But what can be the second thing?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 404.0,
+            "end": 408.0,
+            "text": " The second thing is that in the time sharing system,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 408.0,
+            "end": 410.0,
+            "text": " its time quantum is over."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 410.0,
+            "end": 412.0,
+            "text": " If the time quantum is over, it will come back to the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 412.0,
+            "end": 414.0,
+            "text": " I am handling this by interrupting."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 414.0,
+            "end": 418.0,
+            "text": " We have discussed that software interrupts are used for this."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 418.0,
+            "end": 420.0,
+            "text": " A software interrupt will be generated."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 420.0,
+            "end": 423.0,
+            "text": " This particular process, P1 was running here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 423.0,
+            "end": 425.0,
+            "text": " P1, your time is over, come back."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 425.0,
+            "end": 429.0,
+            "text": " That's why we are sending it back to the ready queue by interrupting."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " And the jobs that were taken to the IO,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 431.0,
+            "end": 432.0,
+            "text": " which were in the waiting state,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 432.0,
+            "end": 435.0,
+            "text": " will go back to the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 435.0,
+            "end": 437.0,
+            "text": " Will go back to the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 438.0,
+            "end": 441.0,
+            "text": " We had a comment in the second video."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 441.0,
+            "end": 443.0,
+            "text": " If the Malo is in the running state,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 443.0,
+            "end": 445.0,
+            "text": " and after being in the running state,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 445.0,
+            "end": 447.0,
+            "text": " it goes to the waiting state,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 447.0,
+            "end": 449.0,
+            "text": " then will it come back to the running state?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 449.0,
+            "end": 451.0,
+            "text": " It will not come back to the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 451.0,
+            "end": 453.0,
+            "text": " It will go to the ready queue first."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 453.0,
+            "end": 455.0,
+            "text": " After the ready queue, the scheduler is responsible"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 455.0,
+            "end": 457.0,
+            "text": " that it will get less chance."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 457.0,
+            "end": 462.0,
+            "text": " Depending on its priority and how the scheduling algorithm is working,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 462.0,
+            "end": 464.0,
+            "text": " it will get a chance later."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 464.0,
+            "end": 466.0,
+            "text": " Things will run like this."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 466.0,
+            "end": 470.0,
+            "text": " Suppose the process is over,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 470.0,
+            "end": 473.0,
+            "text": " then it will go to the terminal."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 473.0,
+            "end": 475.0,
+            "text": " So it will work like this."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 475.0,
+            "end": 477.0,
+            "text": " Whatever I was talking about,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 477.0,
+            "end": 479.0,
+            "text": " if I want to elaborate a little,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 479.0,
+            "end": 484.0,
+            "text": " suppose P1, P2, P3 was in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 484.0,
+            "end": 487.0,
+            "text": " Now what I do is,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 487.0,
+            "end": 490.0,
+            "text": " I pick it up and schedule P3."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 490.0,
+            "end": 493.0,
+            "text": " So P3 will go to the run state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 493.0,
+            "end": 495.0,
+            "text": " Now when P3 goes to the run state,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 495.0,
+            "end": 497.0,
+            "text": " it will move away from here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 497.0,
+            "end": 499.0,
+            "text": " P3 will move away from here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 499.0,
+            "end": 501.0,
+            "text": " Now what will happen?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 501.0,
+            "end": 504.0,
+            "text": " Suppose P3 got interrupted."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 504.0,
+            "end": 508.0,
+            "text": " So it went to the waiting state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 508.0,
+            "end": 511.0,
+            "text": " Now when P3 goes to the waiting state,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " the CPU will be empty."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 513.0,
+            "end": 517.0,
+            "text": " But before that, I scheduled P2 here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 517.0,
+            "end": 520.0,
+            "text": " As soon as P3 went to the waiting state,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 520.0,
+            "end": 524.0,
+            "text": " within a fraction of time, P2 was executed."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 524.0,
+            "end": 526.0,
+            "text": " Now I have sent P2 here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 526.0,
+            "end": 529.0,
+            "text": " Now when P2 is sent here, it will move away from here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 529.0,
+            "end": 532.0,
+            "text": " Now suppose P3 has completed the IO,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 532.0,
+            "end": 535.0,
+            "text": " then it will go to the ready queue and P3 will go here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 535.0,
+            "end": 537.0,
+            "text": " P2 is being executed here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 537.0,
+            "end": 539.0,
+            "text": " Now P3 will get a chance later."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 539.0,
+            "end": 541.0,
+            "text": " This is what I wanted to discuss."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 541.0,
+            "end": 546.0,
+            "text": " So we understood how different life cycles of a process run."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 546.0,
+            "end": 549.0,
+            "text": " Now let's discuss further."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 549.0,
+            "end": 552.0,
+            "text": " Now let's talk about different types of queues."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 552.0,
+            "end": 554.0,
+            "text": " First, let's talk about job queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 554.0,
+            "end": 558.0,
+            "text": " In job queue, the process is in a new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 558.0,
+            "end": 563.0,
+            "text": " So all the processes in the new state are kept in the job queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 563.0,
+            "end": 566.0,
+            "text": " Now let's make this job queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 566.0,
+            "end": 568.0,
+            "text": " So this is basically your job queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 568.0,
+            "end": 573.0,
+            "text": " In job queue, P1, P2, P3 are all the processes."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 573.0,
+            "end": 577.0,
+            "text": " Now all the processes in the job queue are in the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 578.0,
+            "end": 580.0,
+            "text": " All the processes are in the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 580.0,
+            "end": 584.0,
+            "text": " Now all the processes will go from the new state to the ready state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 584.0,
+            "end": 588.0,
+            "text": " We have discussed that all the processes go from the new state to the ready state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 588.0,
+            "end": 593.0,
+            "text": " So to do this, the code used, the software used,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 593.0,
+            "end": 595.0,
+            "text": " I call it a job scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 595.0,
+            "end": 599.0,
+            "text": " It is scheduling the job, that is, it is putting the job in the ready state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 599.0,
+            "end": 601.0,
+            "text": " So I call it a job scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 601.0,
+            "end": 606.0,
+            "text": " So the process that goes from the job queue to the ready state,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 606.0,
+            "end": 609.0,
+            "text": " I call this module a job scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 609.0,
+            "end": 613.0,
+            "text": " And along with job scheduler, it has another name, long term scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 613.0,
+            "end": 615.0,
+            "text": " Now why am I calling it a long term scheduler?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 615.0,
+            "end": 616.0,
+            "text": " I'll tell you."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 616.0,
+            "end": 619.0,
+            "text": " Now basically before going to the news,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 619.0,
+            "end": 622.0,
+            "text": " I was telling you that programs are lying in the disk."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 622.0,
+            "end": 624.0,
+            "text": " Which is ready to execute."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 624.0,
+            "end": 625.0,
+            "text": " Programs are lying in the disk."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 625.0,
+            "end": 629.0,
+            "text": " It has to be scheduled here by picking up from the disk."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 630.0,
+            "end": 632.0,
+            "text": " Pick it up from the disk and put it in the ready state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 632.0,
+            "end": 633.0,
+            "text": " Basically put it in the memory."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 633.0,
+            "end": 635.0,
+            "text": " It has to be scheduled by picking it up from the disk."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 635.0,
+            "end": 637.0,
+            "text": " So this particular work,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 637.0,
+            "end": 639.0,
+            "text": " Pick it up from the disk and put it here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 639.0,
+            "end": 642.0,
+            "text": " Pick it up from the disk and put it in the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 642.0,
+            "end": 644.0,
+            "text": " This work is done by my job scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 644.0,
+            "end": 646.0,
+            "text": " I also call it a long term scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 646.0,
+            "end": 647.0,
+            "text": " Why do I call it a long term scheduler?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 647.0,
+            "end": 649.0,
+            "text": " We will come to this in a while."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 649.0,
+            "end": 652.0,
+            "text": " So now I call it a job scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 652.0,
+            "end": 656.0,
+            "text": " So basically what we are doing is that there is a very big pool in the disk."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 656.0,
+            "end": 660.0,
+            "text": " There are many ready to be executed programs there."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 660.0,
+            "end": 663.0,
+            "text": " So the job scheduler comes, picks it up,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 663.0,
+            "end": 665.0,
+            "text": " Picks it up and converts it to the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 665.0,
+            "end": 668.0,
+            "text": " Picks it up and puts it in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 668.0,
+            "end": 672.0,
+            "text": " So the job of the job scheduler is to put it in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 672.0,
+            "end": 674.0,
+            "text": " Now the second one is ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 674.0,
+            "end": 676.0,
+            "text": " Now you have put a lot of processes in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 676.0,
+            "end": 678.0,
+            "text": " Now I have to go from the ready queue to the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 678.0,
+            "end": 682.0,
+            "text": " So the CPU scheduler does the job of putting it in the running state from the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 682.0,
+            "end": 685.0,
+            "text": " So CPU scheduler is a module which I call a short term scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 685.0,
+            "end": 686.0,
+            "text": " What does it do?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 686.0,
+            "end": 688.0,
+            "text": " It picks up the process from the ready queue,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 688.0,
+            "end": 691.0,
+            "text": " Depending upon the algorithm of end priority."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 691.0,
+            "end": 693.0,
+            "text": " Picks it up and dispatches the CPU."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 693.0,
+            "end": 695.0,
+            "text": " I use the word dispatch a lot."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 695.0,
+            "end": 697.0,
+            "text": " It dispatches the CPU."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 697.0,
+            "end": 699.0,
+            "text": " And the module that the CPU provides,"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 699.0,
+            "end": 702.0,
+            "text": " It works, enables, I call it a dispatcher."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 702.0,
+            "end": 707.0,
+            "text": " So these are my two types of schedulers."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 707.0,
+            "end": 709.0,
+            "text": " First is our job scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 711.0,
+            "end": 713.0,
+            "text": " I am also calling it a long term scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 714.0,
+            "end": 716.0,
+            "text": " And the second one is my CPU scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 720.0,
+            "end": 722.0,
+            "text": " I also call it a short term scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 722.0,
+            "end": 724.0,
+            "text": " Let's revise it again."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 724.0,
+            "end": 726.0,
+            "text": " What is the job scheduler doing?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 726.0,
+            "end": 731.0,
+            "text": " It is picking up a lot of processes from the pool."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 731.0,
+            "end": 734.0,
+            "text": " After picking up, it is putting them in the ready state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 736.0,
+            "end": 739.0,
+            "text": " The job of the job scheduler is to put it in the ready state from here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 739.0,
+            "end": 746.0,
+            "text": " And the job of the CPU scheduler is to take the decision from the ready state to the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 748.0,
+            "end": 750.0,
+            "text": " Why do we call the job scheduler a long term scheduler?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 750.0,
+            "end": 755.0,
+            "text": " Long term scheduler depends on the frequency."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 755.0,
+            "end": 758.0,
+            "text": " Frequency means how long it works."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 758.0,
+            "end": 760.0,
+            "text": " In what time period it works."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 760.0,
+            "end": 765.0,
+            "text": " The CPU scheduler works at a very high frequency."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 765.0,
+            "end": 767.0,
+            "text": " It works at a difference of milliseconds."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 767.0,
+            "end": 771.0,
+            "text": " It works at a very low idle time."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 771.0,
+            "end": 773.0,
+            "text": " Suppose there is a process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 773.0,
+            "end": 775.0,
+            "text": " P1 was here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 775.0,
+            "end": 777.0,
+            "text": " P1 was scheduled here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 777.0,
+            "end": 779.0,
+            "text": " It is running."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 779.0,
+            "end": 783.0,
+            "text": " In a fraction of a second, it got the operation of I O."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 783.0,
+            "end": 785.0,
+            "text": " And it went to I O."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 785.0,
+            "end": 788.0,
+            "text": " That means the CPU scheduler scheduled."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 788.0,
+            "end": 790.0,
+            "text": " After scheduling, P1 went to the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 790.0,
+            "end": 798.0,
+            "text": " After a few seconds of running state, it went to I O."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 798.0,
+            "end": 800.0,
+            "text": " So the CPU got empty."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 800.0,
+            "end": 805.0,
+            "text": " The CPU scheduler's idle time was too much."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 805.0,
+            "end": 811.0,
+            "text": " After scheduling P1, it thought it will see again in the ready view."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 811.0,
+            "end": 813.0,
+            "text": " Which job I have to do."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 813.0,
+            "end": 816.0,
+            "text": " If this happens, the CPU will remain idle."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 817.0,
+            "end": 820.0,
+            "text": " We have discussed earlier that the CPU should not remain idle."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 820.0,
+            "end": 824.0,
+            "text": " In this case, the frequency to restart the job scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 824.0,
+            "end": 826.0,
+            "text": " Or the idle time."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 826.0,
+            "end": 828.0,
+            "text": " We will keep it at the lowest."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 828.0,
+            "end": 830.0,
+            "text": " We will tell it to work fast."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 830.0,
+            "end": 832.0,
+            "text": " What will it do?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 832.0,
+            "end": 835.0,
+            "text": " Suppose it scheduled P1."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 835.0,
+            "end": 837.0,
+            "text": " And P1 went to I O."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 837.0,
+            "end": 843.0,
+            "text": " CPU scheduler will check whether the CPU is empty or not."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 843.0,
+            "end": 845.0,
+            "text": " As soon as the CPU is empty, it will start another process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 845.0,
+            "end": 847.0,
+            "text": " Like P1 or P3."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 847.0,
+            "end": 849.0,
+            "text": " P3 will put it in the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 849.0,
+            "end": 855.0,
+            "text": " I can say that the CPU scheduler is short term."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 855.0,
+            "end": 858.0,
+            "text": " Because its idle time is very less."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 858.0,
+            "end": 861.0,
+            "text": " It is working at a very high frequency."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 861.0,
+            "end": 864.0,
+            "text": " Basically, it is not taking any delay."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 864.0,
+            "end": 867.0,
+            "text": " As soon as it schedules a job, it does not trust the job."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 867.0,
+            "end": 870.0,
+            "text": " It comes back to the ready view to see if the CPU is empty."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 870.0,
+            "end": 872.0,
+            "text": " If the CPU is not empty."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 872.0,
+            "end": 875.0,
+            "text": " If it is empty, then I will give it back."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 875.0,
+            "end": 877.0,
+            "text": " I will give it back after some other process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 877.0,
+            "end": 879.0,
+            "text": " That's why I call it short term scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 879.0,
+            "end": 881.0,
+            "text": " Job scheduler is a little lazy."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 881.0,
+            "end": 883.0,
+            "text": " Its idle time is a little more."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 883.0,
+            "end": 886.0,
+            "text": " It checks every minute."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 886.0,
+            "end": 890.0,
+            "text": " It checks if there is a job to be put in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 890.0,
+            "end": 892.0,
+            "text": " It checks every minute."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 892.0,
+            "end": 896.0,
+            "text": " Suppose at t equal to zero time, it put five jobs in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 897.0,
+            "end": 905.0,
+            "text": " Then after t equal to zero time, it will check if there is any other job."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 905.0,
+            "end": 907.0,
+            "text": " It will check if there is any other job to be put in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 907.0,
+            "end": 910.0,
+            "text": " The gap between the two is more."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 910.0,
+            "end": 912.0,
+            "text": " That's why I call it long term scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 912.0,
+            "end": 918.0,
+            "text": " Another interesting thing is the degree of multi programming."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 918.0,
+            "end": 924.0,
+            "text": " Degree of multi programming means how many processes can be in the ready queue at a time."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 924.0,
+            "end": 927.0,
+            "text": " How many processes can be in the ready queue at a time."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 927.0,
+            "end": 935.0,
+            "text": " If I take an example, if only five processes can be in the ready queue at a time."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 935.0,
+            "end": 937.0,
+            "text": " Then I will call it degree of multi programming 5."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 937.0,
+            "end": 939.0,
+            "text": " Who handles it?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 939.0,
+            "end": 941.0,
+            "text": " Who is governing it?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 941.0,
+            "end": 944.0,
+            "text": " Who is managing it?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 944.0,
+            "end": 947.0,
+            "text": " It is your job scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 947.0,
+            "end": 949.0,
+            "text": " It is managing the long term scheduler."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 949.0,
+            "end": 955.0,
+            "text": " It is actually taking jobs from the pool and putting them in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 955.0,
+            "end": 958.0,
+            "text": " So degree of multi programming is also handling it."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 958.0,
+            "end": 962.0,
+            "text": " So the question may come that who controls the degree of multi programming?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 962.0,
+            "end": 964.0,
+            "text": " You will say LTS."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 964.0,
+            "end": 968.0,
+            "text": " Long term scheduler handles the degree of multi programming."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 968.0,
+            "end": 972.0,
+            "text": " So this was for this video."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 972.0,
+            "end": 974.0,
+            "text": " So what did you learn here?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 974.0,
+            "end": 976.0,
+            "text": " Let's summarize it through notes."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 977.0,
+            "end": 980.0,
+            "text": " First we saw the process states."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 980.0,
+            "end": 982.0,
+            "text": " What are the process states?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 982.0,
+            "end": 985.0,
+            "text": " Processes revolve in different states in their life cycle."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 985.0,
+            "end": 988.0,
+            "text": " First is the new state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 988.0,
+            "end": 990.0,
+            "text": " Then there is the run state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 990.0,
+            "end": 992.0,
+            "text": " Waiting, ready, terminated."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 992.0,
+            "end": 993.0,
+            "text": " We discussed all of this."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 993.0,
+            "end": 996.0,
+            "text": " This particular diagram, print it in your mind."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 996.0,
+            "end": 1003.0,
+            "text": " Where our job scheduler puts the processes in the ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1004.0,
+            "end": 1011.0,
+            "text": " CPU scheduler dispatches the process to run the actual CPU."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1011.0,
+            "end": 1014.0,
+            "text": " CPU executes the process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1014.0,
+            "end": 1017.0,
+            "text": " So this is it."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1017.0,
+            "end": 1021.0,
+            "text": " After that we discussed the type of queues in the process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1021.0,
+            "end": 1022.0,
+            "text": " Why is our job queue ready?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1022.0,
+            "end": 1025.0,
+            "text": " And one more queue that I forgot to discuss is the waiting queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1025.0,
+            "end": 1026.0,
+            "text": " What is the waiting queue?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1026.0,
+            "end": 1029.0,
+            "text": " When the running state goes to I O."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1029.0,
+            "end": 1031.0,
+            "text": " Suppose more than one process goes to I O."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1031.0,
+            "end": 1035.0,
+            "text": " Suppose P1, P2, P3 were three processes."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1035.0,
+            "end": 1037.0,
+            "text": " P3 was scheduled here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1037.0,
+            "end": 1038.0,
+            "text": " P3 was running here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1038.0,
+            "end": 1040.0,
+            "text": " So P3 came here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1040.0,
+            "end": 1041.0,
+            "text": " So P3 came here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1041.0,
+            "end": 1043.0,
+            "text": " So P3 came here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1043.0,
+            "end": 1046.0,
+            "text": " CPU scheduler saw that the CPU is empty."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1046.0,
+            "end": 1048.0,
+            "text": " So it put P2 here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1048.0,
+            "end": 1052.0,
+            "text": " P2 came to I O when it went to the running state."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1052.0,
+            "end": 1054.0,
+            "text": " So P2 and P3 went to I O."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1054.0,
+            "end": 1055.0,
+            "text": " P1 was scheduled here."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1055.0,
+            "end": 1057.0,
+            "text": " So P2 and P3 are in I O."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1057.0,
+            "end": 1059.0,
+            "text": " So these also go like a queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1060.0,
+            "end": 1061.0,
+            "text": " So these are all the queues."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1061.0,
+            "end": 1062.0,
+            "text": " This is also a ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1062.0,
+            "end": 1063.0,
+            "text": " This is running."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1063.0,
+            "end": 1064.0,
+            "text": " This is basically CPU."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1064.0,
+            "end": 1066.0,
+            "text": " This is your ready queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1066.0,
+            "end": 1068.0,
+            "text": " And this is your waiting queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1068.0,
+            "end": 1071.0,
+            "text": " This is your job queue."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1071.0,
+            "end": 1075.0,
+            "text": " So I can say that we have these three types of queues."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1075.0,
+            "end": 1078.0,
+            "text": " We just discussed the degree of multiprogram."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1078.0,
+            "end": 1080.0,
+            "text": " And we talked about dispatcher."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1080.0,
+            "end": 1081.0,
+            "text": " What is dispatcher?"
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1081.0,
+            "end": 1086.0,
+            "text": " I told you about dispatcher so that you don't feel bad if you read it somewhere."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1086.0,
+            "end": 1088.0,
+            "text": " So that's it for this video."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1088.0,
+            "end": 1089.0,
+            "text": " See you in the next video."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1089.0,
+            "end": 1091.0,
+            "text": " I hope you understood."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1091.0,
+            "end": 1094.0,
+            "text": " Write in the comment section how you are enjoying reading the process."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1094.0,
+            "end": 1095.0,
+            "text": " Okay."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1095.0,
+            "end": 1096.0,
+            "text": " So see you."
+        },
+        {
+            "number": "Lecture 10",
+            "title": " What are different Process States in Operating System  ",
+            "start": 1096.0,
+            "end": 1097.0,
+            "text": " Bye."
+        }
+    ],
+    "text": " Hello, how are you all? This is Lakshay. So we have come to our OS lecture number 10. And we are going to discuss about process state in this video. In the last video, we discussed about PCB, we discussed about attributes of process. In that, there was a vlog in PCB, named as Process State. That the current state of the process, is also stored by your PCB, data structure. So now we will double click about process state. This video is sponsored by Cryo. Cryo is world's leading work experience based learning platform. Where you can enhance your software skills. Along with that, you can also grab top development job. Unlike usual courses, in Cryo you are going to learn full stack development or backend development. But by building industry level projects in a real development environment. At the end of each program, you must have done a lot of projects. Which will make your resume more effective. And also make a strong github profile. Now in full stack or backend development, what all tech you are going to use, all that is visible here. Along with that, you are going to get personalized career assistance. So that your dream job will be double surety. What you have to do is, I will attach the link in the description. Through that, you will get maximum possible discount. And along with that, you will also get access to some free resources. So go to the description quickly, use the link and take a good placement. And give me a party. Thank you. What is a process state? Any process in its whole life cycle. If I talk about the life cycle of a process. What will come in the life cycle of a process. Right from its new state. New state means from generation to termination. From generation to termination. What all happens in between a process. What all different states a process goes through. We will discuss about that now. Before moving ahead, let's give a shoutout to our sponsor. So that your flow doesn't get spoiled. So let's continue. So in process states, the first state that comes is the new state. New state. What is a new state? New state is when OS is converting your program in the process. When this process is happening. So at that point, in that particular process, in the PCB, what is the process state written? New. That is, when a program is converting in the process. This process is happening. Being done. This process is happening. When this is happening, it is called a new state. Now it is being made. Now the second type is the ready state. What is a ready state? The process is made. We have brought the process into the memory. So the process that has been brought into the memory, and the process that is lying in the memory, in which area it is, is also called a ready queue. We have discussed about the ready queue. So the process is in the memory. The process is in the ready queue. Now why am I calling it a ready queue? It is just ready for execution. It just needs CPU. It is waiting for the CPU. As soon as the CPU is scheduled, it will be released. So this is the ready queue. So there can be many processes in the ready queue. We have seen that in the multi-programming OS, we keep more than one process in the ready queue. So that we can increase the degree of multi-programming. So this is the second state, ready. After ready, what will be the third state? The third state will be the running state. Running state. Running state is known by the name. Finally, a particular process has been allocated to the CPU from the ready queue. CPU has been allocated. So I can say that the CPU has been allocated to the P1 process. Now it is being executed. So at this point, the process state of the PCB will be running state. Now the process is in the running state. Now what happens while running? We have discussed that sometimes the instruction of I0 comes. So we go to the waiting state. Our fourth state is the waiting state. What do we do in the waiting state? It is just waiting for I0. Waiting for I0 completion. So I continue. Now what is the fifth state? The fifth state is the termination state. I will call it terminated. It has been terminated. Now what happens in the terminated state? Now the process is finished. Its execution is finished. Now the process is not in the memory. I will explain this with a diagram. I have just said the definition. Let's discuss it with a diagram. This diagram shows the life cycle of the process. You can see the different states. The first state is the new state. What is the new state doing? The new state is converting the program into the process. The state is the new state. I can say that there is a disk here. Things are coming from the disk. Things are coming from the disk. So the thing that is going to this position is in the new state. Now after the new state, as soon as the process is complete, we put all the processes in the ready state. OS has a separate module. It does all the jobs from the ready queue. It does the job of providing the CPU. It does the job of dispatching the CPU. That's why I am writing scheduler dispatch. Now the process is in the running state. The process is running. Now there are two ways to run. Either it will go to IO. We have discussed this. Either it will go to IO. If it goes to IO, then what will happen at this event? It will come to the waiting state. The process is in the waiting state. Now let's discuss this in a while. The Malo process is in the waiting state. But what can be the second thing? The second thing is that in the time sharing system, its time quantum is over. If the time quantum is over, it will come back to the ready queue. I am handling this by interrupting. We have discussed that software interrupts are used for this. A software interrupt will be generated. This particular process, P1 was running here. P1, your time is over, come back. That's why we are sending it back to the ready queue by interrupting. And the jobs that were taken to the IO, which were in the waiting state, will go back to the ready queue. Will go back to the ready queue. We had a comment in the second video. If the Malo is in the running state, and after being in the running state, it goes to the waiting state, then will it come back to the running state? It will not come back to the running state. It will go to the ready queue first. After the ready queue, the scheduler is responsible that it will get less chance. Depending on its priority and how the scheduling algorithm is working, it will get a chance later. Things will run like this. Suppose the process is over, then it will go to the terminal. So it will work like this. Whatever I was talking about, if I want to elaborate a little, suppose P1, P2, P3 was in the ready queue. Now what I do is, I pick it up and schedule P3. So P3 will go to the run state. Now when P3 goes to the run state, it will move away from here. P3 will move away from here. Now what will happen? Suppose P3 got interrupted. So it went to the waiting state. Now when P3 goes to the waiting state, the CPU will be empty. But before that, I scheduled P2 here. As soon as P3 went to the waiting state, within a fraction of time, P2 was executed. Now I have sent P2 here. Now when P2 is sent here, it will move away from here. Now suppose P3 has completed the IO, then it will go to the ready queue and P3 will go here. P2 is being executed here. Now P3 will get a chance later. This is what I wanted to discuss. So we understood how different life cycles of a process run. Now let's discuss further. Now let's talk about different types of queues. First, let's talk about job queue. In job queue, the process is in a new state. So all the processes in the new state are kept in the job queue. Now let's make this job queue. So this is basically your job queue. In job queue, P1, P2, P3 are all the processes. Now all the processes in the job queue are in the new state. All the processes are in the new state. Now all the processes will go from the new state to the ready state. We have discussed that all the processes go from the new state to the ready state. So to do this, the code used, the software used, I call it a job scheduler. It is scheduling the job, that is, it is putting the job in the ready state. So I call it a job scheduler. So the process that goes from the job queue to the ready state, I call this module a job scheduler. And along with job scheduler, it has another name, long term scheduler. Now why am I calling it a long term scheduler? I'll tell you. Now basically before going to the news, I was telling you that programs are lying in the disk. Which is ready to execute. Programs are lying in the disk. It has to be scheduled here by picking up from the disk. Pick it up from the disk and put it in the ready state. Basically put it in the memory. It has to be scheduled by picking it up from the disk. So this particular work, Pick it up from the disk and put it here. Pick it up from the disk and put it in the new state. This work is done by my job scheduler. I also call it a long term scheduler. Why do I call it a long term scheduler? We will come to this in a while. So now I call it a job scheduler. So basically what we are doing is that there is a very big pool in the disk. There are many ready to be executed programs there. So the job scheduler comes, picks it up, Picks it up and converts it to the new state. Picks it up and puts it in the ready queue. So the job of the job scheduler is to put it in the ready queue. Now the second one is ready queue. Now you have put a lot of processes in the ready queue. Now I have to go from the ready queue to the running state. So the CPU scheduler does the job of putting it in the running state from the ready queue. So CPU scheduler is a module which I call a short term scheduler. What does it do? It picks up the process from the ready queue, Depending upon the algorithm of end priority. Picks it up and dispatches the CPU. I use the word dispatch a lot. It dispatches the CPU. And the module that the CPU provides, It works, enables, I call it a dispatcher. So these are my two types of schedulers. First is our job scheduler. I am also calling it a long term scheduler. And the second one is my CPU scheduler. I also call it a short term scheduler. Let's revise it again. What is the job scheduler doing? It is picking up a lot of processes from the pool. After picking up, it is putting them in the ready state. The job of the job scheduler is to put it in the ready state from here. And the job of the CPU scheduler is to take the decision from the ready state to the running state. Why do we call the job scheduler a long term scheduler? Long term scheduler depends on the frequency. Frequency means how long it works. In what time period it works. The CPU scheduler works at a very high frequency. It works at a difference of milliseconds. It works at a very low idle time. Suppose there is a process. P1 was here. P1 was scheduled here. It is running. In a fraction of a second, it got the operation of I O. And it went to I O. That means the CPU scheduler scheduled. After scheduling, P1 went to the running state. After a few seconds of running state, it went to I O. So the CPU got empty. The CPU scheduler's idle time was too much. After scheduling P1, it thought it will see again in the ready view. Which job I have to do. If this happens, the CPU will remain idle. We have discussed earlier that the CPU should not remain idle. In this case, the frequency to restart the job scheduler. Or the idle time. We will keep it at the lowest. We will tell it to work fast. What will it do? Suppose it scheduled P1. And P1 went to I O. CPU scheduler will check whether the CPU is empty or not. As soon as the CPU is empty, it will start another process. Like P1 or P3. P3 will put it in the running state. I can say that the CPU scheduler is short term. Because its idle time is very less. It is working at a very high frequency. Basically, it is not taking any delay. As soon as it schedules a job, it does not trust the job. It comes back to the ready view to see if the CPU is empty. If the CPU is not empty. If it is empty, then I will give it back. I will give it back after some other process. That's why I call it short term scheduler. Job scheduler is a little lazy. Its idle time is a little more. It checks every minute. It checks if there is a job to be put in the ready queue. It checks every minute. Suppose at t equal to zero time, it put five jobs in the ready queue. Then after t equal to zero time, it will check if there is any other job. It will check if there is any other job to be put in the ready queue. The gap between the two is more. That's why I call it long term scheduler. Another interesting thing is the degree of multi programming. Degree of multi programming means how many processes can be in the ready queue at a time. How many processes can be in the ready queue at a time. If I take an example, if only five processes can be in the ready queue at a time. Then I will call it degree of multi programming 5. Who handles it? Who is governing it? Who is managing it? It is your job scheduler. It is managing the long term scheduler. It is actually taking jobs from the pool and putting them in the ready queue. So degree of multi programming is also handling it. So the question may come that who controls the degree of multi programming? You will say LTS. Long term scheduler handles the degree of multi programming. So this was for this video. So what did you learn here? Let's summarize it through notes. First we saw the process states. What are the process states? Processes revolve in different states in their life cycle. First is the new state. Then there is the run state. Waiting, ready, terminated. We discussed all of this. This particular diagram, print it in your mind. Where our job scheduler puts the processes in the ready queue. CPU scheduler dispatches the process to run the actual CPU. CPU executes the process. So this is it. After that we discussed the type of queues in the process. Why is our job queue ready? And one more queue that I forgot to discuss is the waiting queue. What is the waiting queue? When the running state goes to I O. Suppose more than one process goes to I O. Suppose P1, P2, P3 were three processes. P3 was scheduled here. P3 was running here. So P3 came here. So P3 came here. So P3 came here. CPU scheduler saw that the CPU is empty. So it put P2 here. P2 came to I O when it went to the running state. So P2 and P3 went to I O. P1 was scheduled here. So P2 and P3 are in I O. So these also go like a queue. So these are all the queues. This is also a ready queue. This is running. This is basically CPU. This is your ready queue. And this is your waiting queue. This is your job queue. So I can say that we have these three types of queues. We just discussed the degree of multiprogram. And we talked about dispatcher. What is dispatcher? I told you about dispatcher so that you don't feel bad if you read it somewhere. So that's it for this video. See you in the next video. I hope you understood. Write in the comment section how you are enjoying reading the process. Okay. So see you. Bye."
+}

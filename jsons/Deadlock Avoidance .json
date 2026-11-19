@@ -1,0 +1,2609 @@
+{
+    "chunks": [
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 0.0,
+            "end": 7.44,
+            "text": " Hello, how are you all? This is Lakshay and you are watching lecture 22 of OS"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 7.44,
+            "end": 11.44,
+            "text": " and today we are going to discuss about deadlock avoidance and deadlock detection."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 11.44,
+            "end": 17.84,
+            "text": " In last video we discussed about what is deadlock, what are the necessary conditions of deadlock and how to prevent deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 17.84,
+            "end": 20.8,
+            "text": " Today we will discuss about how to avoid deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 20.8,
+            "end": 25.04,
+            "text": " So this video is sponsored by Coding Ninjas, India's leading coding education platform."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 25.04,
+            "end": 32.8,
+            "text": " Many product based companies like Amazon, Adobe, Commvault focus on OS part in their technical interviews."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 32.8,
+            "end": 37.36,
+            "text": " So to clear these interviews, your OS part should be very strong."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 37.36,
+            "end": 44.32,
+            "text": " So Coding Ninjas provides comprehensive and in-depth course which covers all these concepts well."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 44.32,
+            "end": 49.84,
+            "text": " Apart from that, all the theoretical concepts are taught by mapping all the Linux operating systems."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 49.84,
+            "end": 53.68,
+            "text": " Along with the course, one on one doubt session is also provided."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 53.76,
+            "end": 58.24,
+            "text": " Apart from that, the faculty will teach you from big companies like Nvidia and Microsoft."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 58.24,
+            "end": 63.2,
+            "text": " Apart from that, you will get more than 12 hours of content in this course."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 63.2,
+            "end": 68.08,
+            "text": " You will solve more than 150 problems and you will do hands-on in more than 12 projects."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 68.08,
+            "end": 73.03999999999999,
+            "text": " Apart from that, you will get many different computer science related courses on Coding Ninjas."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 73.03999999999999,
+            "end": 78.96000000000001,
+            "text": " If you are interested in paid courses, I will put the link in the description, so that you will get maximum available discount."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 78.96000000000001,
+            "end": 79.52,
+            "text": " Thank you."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 79.6,
+            "end": 84.16,
+            "text": " Before discussing about Deadlock Avoidance,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 88.72,
+            "end": 90.72,
+            "text": " Let's understand what is Deadlock Avoidance."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 90.72,
+            "end": 94.24,
+            "text": " Deadlock Avoidance means that we want to avoid deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 94.24,
+            "end": 95.36,
+            "text": " In which scenario?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 96.0,
+            "end": 101.67999999999999,
+            "text": " In case of Deadlock Avoidance, we know the current state of the system."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 104.8,
+            "end": 108.08,
+            "text": " Current state means number of processes."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 110.08,
+            "end": 112.08,
+            "text": " We know this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 112.08,
+            "end": 116.08,
+            "text": " Secondly, we know the need of each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 116.08,
+            "end": 121.19999999999999,
+            "text": " Need of resources of each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 123.19999999999999,
+            "end": 130.0,
+            "text": " And how many resources are currently allocated to each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 130.0,
+            "end": 138.32,
+            "text": " Currently allocated amount of resources to each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 139.12,
+            "end": 141.12,
+            "text": " We know this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 141.12,
+            "end": 147.12,
+            "text": " And we also know the maximum amount of resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 147.12,
+            "end": 151.12,
+            "text": " Max amount of each resource."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 155.12,
+            "end": 159.12,
+            "text": " We know how much currently allocated resources are to each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 159.12,
+            "end": 161.12,
+            "text": " Maximum need of each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 161.12,
+            "end": 163.12,
+            "text": " Maximum need of each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 163.12,
+            "end": 165.12,
+            "text": " Maximum number of processes."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 165.12,
+            "end": 167.12,
+            "text": " Maximum number of resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 167.92000000000002,
+            "end": 169.92000000000002,
+            "text": " We know all this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 169.92000000000002,
+            "end": 173.92000000000002,
+            "text": " And we have to schedule the system accordingly."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 173.92000000000002,
+            "end": 179.92000000000002,
+            "text": " Schedule means we know all the processes."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 179.92000000000002,
+            "end": 183.92000000000002,
+            "text": " We know all the resources and resources instances."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 183.92000000000002,
+            "end": 187.92000000000002,
+            "text": " We also know the current state of the system."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 187.92000000000002,
+            "end": 191.92000000000002,
+            "text": " And how many resources are allocated to each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 192.72,
+            "end": 198.72,
+            "text": " In case of Deadlock Avoidance, we want to schedule the system accordingly."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 198.72,
+            "end": 202.72,
+            "text": " Schedule means we want to schedule the system accordingly."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 202.72,
+            "end": 206.72,
+            "text": " And how many resources are allocated to each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 206.72,
+            "end": 210.72,
+            "text": " So that our system is in a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 210.72,
+            "end": 212.72,
+            "text": " So that our system is in a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 212.72,
+            "end": 216.72,
+            "text": " I want our system to be in a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 216.72,
+            "end": 220.72,
+            "text": " What is the meaning of safe state?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 221.52,
+            "end": 225.52,
+            "text": " Safe state means"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 225.52,
+            "end": 229.52,
+            "text": " I have all the allocated resources and maximum resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 229.52,
+            "end": 233.52,
+            "text": " I have all the allocated resources and maximum resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 233.52,
+            "end": 237.52,
+            "text": " I can schedule the processes accordingly."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 237.52,
+            "end": 241.52,
+            "text": " I can schedule the processes accordingly."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 241.52,
+            "end": 245.52,
+            "text": " So that my system is deadlock free."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 245.52,
+            "end": 249.52,
+            "text": " So that my system is deadlock free."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 250.32000000000002,
+            "end": 254.32000000000002,
+            "text": " So that my system is in a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 254.32000000000002,
+            "end": 258.32,
+            "text": " And unsafe state means"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 258.32,
+            "end": 262.32,
+            "text": " If there is any allocation,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 262.32,
+            "end": 266.32,
+            "text": " Then maybe deadlock occurs."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 266.32,
+            "end": 270.32,
+            "text": " Means if there is any allocation,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 270.32,
+            "end": 274.32,
+            "text": " Then maybe deadlock occurs."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 274.32,
+            "end": 278.32,
+            "text": " Deadlock Avoidance means"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 279.12,
+            "end": 283.12,
+            "text": " I have all the allocated resources and maximum resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 283.12,
+            "end": 287.12,
+            "text": " I have all the allocated resources and maximum resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 287.12,
+            "end": 291.12,
+            "text": " I have all the allocated resources and maximum resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 291.12,
+            "end": 295.12,
+            "text": " To decide whether the current request can be satisfied or delayed,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 295.12,
+            "end": 299.12,
+            "text": " The system must consider the resource availability,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 299.12,
+            "end": 303.12,
+            "text": " Resource currently allocated to each process and future requests."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 303.12,
+            "end": 307.12,
+            "text": " Safe state means"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 307.92,
+            "end": 311.92,
+            "text": " All the resources to each process up to its maximum."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 311.92,
+            "end": 315.92,
+            "text": " All the resources to each process up to its maximum."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 315.92,
+            "end": 319.92,
+            "text": " In some order."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 319.92,
+            "end": 323.92,
+            "text": " In some order."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 323.92,
+            "end": 327.92,
+            "text": " And still avoid deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 327.92,
+            "end": 331.92,
+            "text": " And still avoid deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 331.92,
+            "end": 335.92,
+            "text": " If there is a safe sequence,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 335.92,
+            "end": 339.92,
+            "text": " If there is a safe sequence,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 339.92,
+            "end": 343.92,
+            "text": " Then my deadlock does not occur."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 343.92,
+            "end": 347.92,
+            "text": " But if I schedule P1, P2, P3, P4,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 347.92,
+            "end": 351.92,
+            "text": " Then my deadlock occurs."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 351.92,
+            "end": 355.92,
+            "text": " So this is the safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 355.92,
+            "end": 359.92,
+            "text": " So this is the safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 359.92,
+            "end": 363.92,
+            "text": " So this is the safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 363.92,
+            "end": 367.92,
+            "text": " To find out the number of processes,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 367.92,
+            "end": 371.92,
+            "text": " To find out the number of processes,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 371.92,
+            "end": 375.92,
+            "text": " We use an algorithm to find out the safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 375.92,
+            "end": 379.92,
+            "text": " We use an algorithm to find out the safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 379.92,
+            "end": 383.92,
+            "text": " Bankers Algorithm"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 383.92,
+            "end": 387.92,
+            "text": " We consider this scenario as an example"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 387.92,
+            "end": 391.92,
+            "text": " We consider this scenario as an example"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 391.92,
+            "end": 396.92,
+            "text": " This is my system. I have 5 processes."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 396.92,
+            "end": 401.92,
+            "text": " I have 3 resources. A, B, C. These can be anything."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 401.92,
+            "end": 406.92,
+            "text": " We have discussed that it can be memory, CPU, files, locks, anything."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 406.92,
+            "end": 411.92,
+            "text": " What is the maximum need of each process to execute those resources?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 411.92,
+            "end": 413.92,
+            "text": " How many instances does it need?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 413.92,
+            "end": 415.92,
+            "text": " How many are available?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 415.92,
+            "end": 417.92,
+            "text": " And how many are remaining?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 417.92,
+            "end": 422.92,
+            "text": " I have a table to understand the deadlock avoidance."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 422.92,
+            "end": 425.92,
+            "text": " What is a safe state? What is a safe sequence?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 425.92,
+            "end": 427.92,
+            "text": " This is how things work."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 427.92,
+            "end": 429.92,
+            "text": " You must have got a question in the exam."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 429.92,
+            "end": 433.92,
+            "text": " What is the safe sequence of a bank algorithm?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 433.92,
+            "end": 436.92,
+            "text": " Safe sequence means how to schedule them."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 436.92,
+            "end": 439.92,
+            "text": " How to fulfill their allocation?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 439.92,
+            "end": 441.92,
+            "text": " I have to bring a safe sequence."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 441.92,
+            "end": 444.92,
+            "text": " If a safe sequence is available in the system."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 444.92,
+            "end": 447.92,
+            "text": " Then I say that the system is in a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 447.92,
+            "end": 449.92,
+            "text": " If there is no safe sequence,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 449.92,
+            "end": 452.92,
+            "text": " means at the end I can't do the allocations."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 452.92,
+            "end": 455.92,
+            "text": " The resources are exhausted instantly."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 455.92,
+            "end": 462.92,
+            "text": " And still I can't get any sequence to schedule the 5 processes."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 462.92,
+            "end": 465.92,
+            "text": " Then I say that this particular system is unsafe."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 465.92,
+            "end": 468.92,
+            "text": " Let's see if this particular system is safe or unsafe."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 468.92,
+            "end": 469.92,
+            "text": " Let's see the example."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 469.92,
+            "end": 476.92,
+            "text": " First of all, I say that the total number of resources is available."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 476.92,
+            "end": 478.92,
+            "text": " I have all the information in the system."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 478.92,
+            "end": 481.92,
+            "text": " Let's say that A has 10 resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 481.92,
+            "end": 483.92,
+            "text": " B has 5 resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 483.92,
+            "end": 485.92,
+            "text": " C has 7 resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 485.92,
+            "end": 487.92,
+            "text": " Let's go line by line."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 487.92,
+            "end": 492.92,
+            "text": " Allocated means how many resources are allocated to this process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 492.92,
+            "end": 496.92,
+            "text": " Max need means how many resources are needed."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 496.92,
+            "end": 500.92,
+            "text": " Let's see the total already allocated resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 500.92,
+            "end": 502.92,
+            "text": " To get the available resources,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 502.92,
+            "end": 507.92,
+            "text": " I will subtract the total already allocated resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 507.92,
+            "end": 510.92,
+            "text": " Let's say 10-7"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 510.92,
+            "end": 512.9200000000001,
+            "text": " 10-7 would be 3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 512.9200000000001,
+            "end": 514.9200000000001,
+            "text": " Similarly, 5-2 would be 3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 514.9200000000001,
+            "end": 517.9200000000001,
+            "text": " And 7-5 would be 2."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 517.9200000000001,
+            "end": 520.9200000000001,
+            "text": " So, I have the available resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 520.9200000000001,
+            "end": 522.9200000000001,
+            "text": " Now, let's find the remaining need."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 522.9200000000001,
+            "end": 524.9200000000001,
+            "text": " How many remaining need of each process?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 524.92,
+            "end": 526.92,
+            "text": " We know the allocated need."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 526.92,
+            "end": 528.92,
+            "text": " So, we will subtract the remaining need."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 528.92,
+            "end": 530.92,
+            "text": " Let's subtract the remaining need."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 530.92,
+            "end": 532.92,
+            "text": " This would be 7-4-3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 532.92,
+            "end": 534.92,
+            "text": " This would be 3-2-1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 534.92,
+            "end": 536.92,
+            "text": " 2-2."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 536.92,
+            "end": 539.92,
+            "text": " This would be 6-0-0."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 539.92,
+            "end": 542.92,
+            "text": " Because, it has 2 max need."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 542.92,
+            "end": 543.92,
+            "text": " So, 2 is already allocated."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 543.92,
+            "end": 545.92,
+            "text": " 2-2 would be 0."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 545.92,
+            "end": 548.92,
+            "text": " After that, we subtract 2-1-1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 548.92,
+            "end": 551.92,
+            "text": " This would be 5-3-1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 551.92,
+            "end": 555.92,
+            "text": " So, I have the remaining need."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 555.92,
+            "end": 559.92,
+            "text": " So, I will write the remaining need of P1, P2, P3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 559.92,
+            "end": 561.92,
+            "text": " P4, P5."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 561.92,
+            "end": 567.92,
+            "text": " Now, you can see that I have the remaining need of each process."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 567.92,
+            "end": 569.92,
+            "text": " And it is available."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 569.92,
+            "end": 571.92,
+            "text": " So, now I will go to the sequence wise."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 571.92,
+            "end": 574.92,
+            "text": " So, I will allocate to whom?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 574.92,
+            "end": 576.92,
+            "text": " Can I allocate to P1?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 576.92,
+            "end": 578.92,
+            "text": " Now, we are trying to find the safe sequence."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 578.92,
+            "end": 583.92,
+            "text": " How can I schedule the deadlock pre-operation?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 583.92,
+            "end": 587.92,
+            "text": " If I see P1, P1 needs 7-4-3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 587.92,
+            "end": 589.92,
+            "text": " How many available are there?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 589.92,
+            "end": 591.92,
+            "text": " Its instance is 3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 591.92,
+            "end": 593.92,
+            "text": " So, I will not be able to allocate it."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 593.92,
+            "end": 595.92,
+            "text": " Can I allocate P2?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 595.92,
+            "end": 598.92,
+            "text": " Because, P2 needs 1 instance of A."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 598.92,
+            "end": 600.92,
+            "text": " We need 1 instance of A resource."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 600.92,
+            "end": 602.92,
+            "text": " We have 3 available of A."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 602.92,
+            "end": 604.92,
+            "text": " So, I will schedule P2 first."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 604.92,
+            "end": 606.92,
+            "text": " So, if I schedule P2."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 606.92,
+            "end": 612.92,
+            "text": " Once P2 is executed, how many resources P2 has?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 612.92,
+            "end": 614.92,
+            "text": " 200."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 614.92,
+            "end": 616.92,
+            "text": " These resources will be free."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 616.92,
+            "end": 620.92,
+            "text": " Now, after freeing, I will add 200 to it."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 620.92,
+            "end": 622.92,
+            "text": " Now, how many available resources are there?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 622.92,
+            "end": 624.92,
+            "text": " 5-3-2."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 624.92,
+            "end": 626.92,
+            "text": " How many resources are available?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 626.92,
+            "end": 628.92,
+            "text": " P2's scheduling is done."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 628.92,
+            "end": 631.92,
+            "text": " Now, we will see whom we can schedule next."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 632.92,
+            "end": 634.92,
+            "text": " Let's see again."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 634.92,
+            "end": 638.92,
+            "text": " Can I schedule P3?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 638.92,
+            "end": 640.92,
+            "text": " Let's see the sequence."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 640.92,
+            "end": 642.92,
+            "text": " Can I schedule P3?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 642.92,
+            "end": 644.92,
+            "text": " I can't schedule P3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 644.92,
+            "end": 646.92,
+            "text": " Can I schedule P4?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 646.92,
+            "end": 648.92,
+            "text": " Yes, I can."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 648.92,
+            "end": 650.92,
+            "text": " So, let's schedule P4."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 650.92,
+            "end": 652.92,
+            "text": " I have scheduled P4."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 652.92,
+            "end": 654.92,
+            "text": " P4 is on scheduling."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 654.92,
+            "end": 657.92,
+            "text": " The resources P4 has, 2, 1, 1, will be free."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 657.92,
+            "end": 661.92,
+            "text": " So, 5 plus 2 is 743."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 661.92,
+            "end": 663.92,
+            "text": " I will get these resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 663.92,
+            "end": 665.92,
+            "text": " 743."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 665.92,
+            "end": 672.92,
+            "text": " Now, I will see whom I can schedule next."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 672.92,
+            "end": 674.92,
+            "text": " 743."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 674.92,
+            "end": 676.92,
+            "text": " Can I schedule P5?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 676.92,
+            "end": 678.92,
+            "text": " Yes, I can."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 678.92,
+            "end": 680.92,
+            "text": " So, let's schedule P5."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 680.92,
+            "end": 682.92,
+            "text": " Let's schedule P5."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 682.92,
+            "end": 686.92,
+            "text": " After scheduling P5, how many resources will be available?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 686.92,
+            "end": 688.92,
+            "text": " 745."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 688.92,
+            "end": 690.92,
+            "text": " I will get these resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 690.92,
+            "end": 692.92,
+            "text": " 745."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 692.92,
+            "end": 694.92,
+            "text": " I will get these resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 694.92,
+            "end": 696.92,
+            "text": " Now, let's see next."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 696.92,
+            "end": 698.92,
+            "text": " Let's see again."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 698.92,
+            "end": 700.92,
+            "text": " Can I schedule P1?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 700.92,
+            "end": 702.92,
+            "text": " Yes, I can."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 702.92,
+            "end": 704.92,
+            "text": " I have 7 resources available."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 704.92,
+            "end": 706.92,
+            "text": " So, let's schedule P1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 706.92,
+            "end": 708.92,
+            "text": " We have scheduled P1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 708.92,
+            "end": 710.92,
+            "text": " P1 will free all the allocated resources after P1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 710.92,
+            "end": 712.92,
+            "text": " So, how many resources will be available?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 712.92,
+            "end": 714.92,
+            "text": " 755."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 714.92,
+            "end": 716.92,
+            "text": " I will get these resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 716.92,
+            "end": 718.92,
+            "text": " Now, P3 is free."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 718.92,
+            "end": 720.92,
+            "text": " Can I schedule P3?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 720.92,
+            "end": 722.92,
+            "text": " Yes, I can."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 722.92,
+            "end": 724.92,
+            "text": " So, I will schedule P3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 724.92,
+            "end": 726.92,
+            "text": " Now, let's see."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 726.92,
+            "end": 728.92,
+            "text": " P3 will free all the allocated resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 728.92,
+            "end": 730.92,
+            "text": " So, how many resources will be available?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 730.92,
+            "end": 732.92,
+            "text": " 10, 5, and 7."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 732.92,
+            "end": 738.92,
+            "text": " So, I have all the resources available."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 738.92,
+            "end": 740.92,
+            "text": " I have all the resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 740.92,
+            "end": 742.92,
+            "text": " Now, after scheduling all the processes,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 742.92,
+            "end": 744.92,
+            "text": " how many resources are available?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 744.92,
+            "end": 746.92,
+            "text": " So, I can say that"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 746.92,
+            "end": 748.92,
+            "text": " after scheduling, I have a safe sequence."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 748.92,
+            "end": 750.92,
+            "text": " So, this particular scenario"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 750.92,
+            "end": 752.92,
+            "text": " was a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 752.92,
+            "end": 754.92,
+            "text": " So, I can avoid a deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 754.92,
+            "end": 756.92,
+            "text": " This is a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 756.92,
+            "end": 758.92,
+            "text": " This is a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 758.92,
+            "end": 760.92,
+            "text": " So, this is a banker's algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 760.92,
+            "end": 762.92,
+            "text": " This is a deadlock avoidance algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 762.92,
+            "end": 764.92,
+            "text": " So, it works like this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 764.92,
+            "end": 766.92,
+            "text": " This is a safe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 766.92,
+            "end": 768.92,
+            "text": " Now, how can it be a deadlock?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 768.92,
+            "end": 770.92,
+            "text": " Suppose, the last schedule was P3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 770.92,
+            "end": 772.92,
+            "text": " P3 needed 6 resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 772.92,
+            "end": 774.92,
+            "text": " Now, P3 needs 8 resources"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 774.92,
+            "end": 776.92,
+            "text": " instead of 6."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 776.92,
+            "end": 778.92,
+            "text": " Suppose, P3 needs 8 resources"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 778.92,
+            "end": 780.92,
+            "text": " instead of 6."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 780.92,
+            "end": 782.92,
+            "text": " But, I had 7 resources left."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 782.92,
+            "end": 784.92,
+            "text": " But, I had 7 resources left."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 784.92,
+            "end": 786.92,
+            "text": " I couldn't fulfill the requirement."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 786.92,
+            "end": 788.92,
+            "text": " So, P3 couldn't be scheduled."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 788.92,
+            "end": 790.92,
+            "text": " Now, P3 couldn't be scheduled."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 790.92,
+            "end": 792.92,
+            "text": " So, I can say that I can't schedule P3."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 792.92,
+            "end": 794.92,
+            "text": " So, P3 couldn't be scheduled."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 794.92,
+            "end": 796.92,
+            "text": " So, it is an unsafe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 796.92,
+            "end": 798.92,
+            "text": " It is an unsafe state."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 802.92,
+            "end": 804.92,
+            "text": " So, this is how it works."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 804.92,
+            "end": 806.92,
+            "text": " This is a banker's algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 806.92,
+            "end": 808.92,
+            "text": " This is a deadlock avoidance algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 808.92,
+            "end": 810.92,
+            "text": " Basically,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 810.92,
+            "end": 812.92,
+            "text": " I check the available resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 812.92,
+            "end": 814.92,
+            "text": " Can I fulfill the remaining need of someone?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 814.92,
+            "end": 816.92,
+            "text": " Can I fulfill the remaining need of someone?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 816.92,
+            "end": 818.92,
+            "text": " If I can fulfill the remaining need of someone,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 818.92,
+            "end": 820.92,
+            "text": " I can schedule it."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 820.92,
+            "end": 822.92,
+            "text": " After scheduling, I move forward."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 822.92,
+            "end": 824.92,
+            "text": " If I get a particular process,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 824.92,
+            "end": 826.92,
+            "text": " or if I get a point"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 826.92,
+            "end": 828.92,
+            "text": " where I can't schedule"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 828.92,
+            "end": 830.92,
+            "text": " or I can't fulfill"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 830.92,
+            "end": 832.92,
+            "text": " or I can't fulfill"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 832.92,
+            "end": 834.92,
+            "text": " the remaining need of the resources,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 834.92,
+            "end": 836.92,
+            "text": " I can say that"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 836.92,
+            "end": 838.92,
+            "text": " there is an unsafe state"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 838.92,
+            "end": 840.92,
+            "text": " in this particular system."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 842.92,
+            "end": 844.92,
+            "text": " There can be a deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 844.92,
+            "end": 846.92,
+            "text": " There can be a deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 846.92,
+            "end": 848.92,
+            "text": " This is my deadlock avoidance algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 848.92,
+            "end": 850.92,
+            "text": " This is my bankers algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 850.92,
+            "end": 855.92,
+            "text": " Now we come to Deadlock Detection"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 855.92,
+            "end": 868.92,
+            "text": " Before discussing Deadlock Detection, let me tell you that in the case of Deadlock Avoidance, no one asks you in any interview that what is the Bankers Algorithm, solve it with an example, no one asks you that."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 868.92,
+            "end": 889.92,
+            "text": " You can simply ask what is Deadlock Avoidance, what are the things in it, I assume that we know all these things, we know the allocated, we know the max need, we know how many processes are there, we know the instances of each resource, and which algorithm is used for Deadlock Avoidance, all these questions can be asked."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 889.92,
+            "end": 894.92,
+            "text": " No one will ask you to solve questions like this, it comes in your exam, which is called University exam."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 894.92,
+            "end": 900.92,
+            "text": " Now next we discuss Deadlock Detection"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 900.92,
+            "end": 905.92,
+            "text": " What is the meaning of Deadlock Detection?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 905.92,
+            "end": 926.92,
+            "text": " Deadlock Detection means that we use Deadlock Prevention and Avoidance in Deadlock Handling, after that we detect that if I have not implemented the prevention algorithm in any system, that is, I have not implemented the prevention in any OS, basically I have not implemented the avoidance."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 927.92,
+            "end": 939.92,
+            "text": " Third is that I let the system go into the deadlock, I tell the system to go into the deadlock, and after going, I try to detect from an algorithm that whether the system is in the deadlock, if the system is in the deadlock, then I recover it."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 939.92,
+            "end": 957.92,
+            "text": " What does this mean? Let's draw it straight, that I have a system, in the system I can say that an algorithm will be used, which will detect whether the system is in the deadlock or not, if the system is in the deadlock, then we will recover it."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 957.92,
+            "end": 964.92,
+            "text": " If it is not in the deadlock, then after some interval, we will run this algorithm again."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 964.92,
+            "end": 991.92,
+            "text": " This means that an algorithm of deadlock detection will be implemented in the system, that algorithm will run every now and then, after some interval, it will check if the system is in the deadlock, if it is, then we will use the recovery mechanism, if it is not, then we will go back to the system."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 991.92,
+            "end": 994.92,
+            "text": " So, this is how the deadlock detection algorithm is implemented."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 994.92,
+            "end": 1003.92,
+            "text": " Which system is implemented where there is no deadlock prevention and deadlock avoidance, then we will use the detection and recovery method, let the system go into the deadlock, then we will recover it."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1003.92,
+            "end": 1008.92,
+            "text": " So, let's see the examples on the notes, what are the ways of this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1008.92,
+            "end": 1015.92,
+            "text": " So, it is written here that the system has not implemented the deadlock prevention and deadlock avoidance technique, they may employ the deadlock detection and recovery method."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1015.92,
+            "end": 1022.92,
+            "text": " So, it is written here that the system has not implemented the deadlock prevention and deadlock avoidance technique, they may employ the deadlock detection and recovery method."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1022.92,
+            "end": 1031.92,
+            "text": " The first method was Single Instance of Each Resource."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1032.92,
+            "end": 1041.92,
+            "text": " In this, we are using the resource allocation graph, which we have read, how is it implemented in the algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1041.92,
+            "end": 1045.92,
+            "text": " Here, the biggest thing is that there is only one instance of each resource."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1045.92,
+            "end": 1054.92,
+            "text": " So, I can draw this case like this, I know that P1 is there and this is basically R1, this is R2, this is P2."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1054.92,
+            "end": 1060.92,
+            "text": " P1 wants R1 and R2 is already allocated to it."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1060.92,
+            "end": 1068.92,
+            "text": " P2 requests R2 and R1 is already allocated to it."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1068.92,
+            "end": 1071.92,
+            "text": " This cycle is made, this is deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1072.92,
+            "end": 1082.92,
+            "text": " So, in this, what is done is that by using the resource allocation graph, I have given a name, waitForGraph."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1082.92,
+            "end": 1085.92,
+            "text": " WaitForGraph method is used."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1085.92,
+            "end": 1090.92,
+            "text": " Apply a version of the resource allocation graph."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1090.92,
+            "end": 1104.92,
+            "text": " In this, we remove the vertices of the resources from the resource allocation graph and merge the vertices of the processes."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1104.92,
+            "end": 1109.92,
+            "text": " I will represent this scenario."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1109.92,
+            "end": 1113.92,
+            "text": " If I remove R1 and R2, then P1 and P2 will be made."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1113.92,
+            "end": 1118.92,
+            "text": " This is the dependency of this and this is the dependency of this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1118.92,
+            "end": 1120.92,
+            "text": " I have made something like this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1120.92,
+            "end": 1127.92,
+            "text": " So, I have converted this resource allocation graph into a waitForGraph."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1127.92,
+            "end": 1130.92,
+            "text": " Why am I saying waitForGraph?"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1130.92,
+            "end": 1134.92,
+            "text": " Because, now see what conclusion I can draw from this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1134.92,
+            "end": 1147.92,
+            "text": " I can say that P1 is waiting for a resource which is held by P2 and P2 is using a resource which is held by P1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1147.92,
+            "end": 1163.92,
+            "text": " So, if I get a cycle after making a waitForGraph, then I say that there is a deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1163.92,
+            "end": 1168.92,
+            "text": " If I don't get a cycle, then I say that there is no deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1168.92,
+            "end": 1170.92,
+            "text": " So, this is a simple algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1170.92,
+            "end": 1179.92,
+            "text": " I remove the vertices of the resources from the resource allocation graph and then I make a waitForGraph."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1179.92,
+            "end": 1180.92,
+            "text": " This is called a waitForGraph."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1180.92,
+            "end": 1182.92,
+            "text": " This is made from the resource allocation graph."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1182.92,
+            "end": 1186.92,
+            "text": " If there is a cycle in the waitForGraph, then I say that there is a deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1186.92,
+            "end": 1188.92,
+            "text": " This is valid for single instances."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1188.92,
+            "end": 1190.92,
+            "text": " Keep in mind that this is valid for single instances."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1190.92,
+            "end": 1193.92,
+            "text": " The second is my multiple instances."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1198.92,
+            "end": 1203.92,
+            "text": " In multiple instances, I use the banker algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1207.92,
+            "end": 1213.92,
+            "text": " I can say that the banker algorithm is a deadlock detection algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1213.92,
+            "end": 1225.92,
+            "text": " If I get a safe sequence in the banker algorithm, then I say that there is no deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1226.92,
+            "end": 1235.92,
+            "text": " If there is no safe sequence, then I say that there is a deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1237.92,
+            "end": 1245.92,
+            "text": " So, I can say that I use the banker algorithm to detect deadlocks in multiple instances."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1245.92,
+            "end": 1250.92,
+            "text": " Now, let's assume that the deadlock detection is done."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1250.92,
+            "end": 1254.92,
+            "text": " But, our system has a similar algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1254.92,
+            "end": 1257.92,
+            "text": " The system has a similar algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1257.92,
+            "end": 1260.92,
+            "text": " The algorithm checks the deadlock time to time."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1260.92,
+            "end": 1263.92,
+            "text": " If there is a deadlock, then we call the recovery mechanism."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1263.92,
+            "end": 1266.92,
+            "text": " Let's see how the recovery mechanism works."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1266.92,
+            "end": 1269.92,
+            "text": " There are two methods of deadlock recovery."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1269.92,
+            "end": 1272.92,
+            "text": " The first is process termination and the second is resource preemption."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1273.92,
+            "end": 1280.92,
+            "text": " Process termination means that I terminate all the deadlock processes."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1280.92,
+            "end": 1282.92,
+            "text": " There are two variants of this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1282.92,
+            "end": 1287.92,
+            "text": " All deadlock processes, i.e. all the processes in the deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1287.92,
+            "end": 1289.92,
+            "text": " Let's say that this system was made for deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1289.92,
+            "end": 1294.92,
+            "text": " So, I terminate P1 and P2."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1294.92,
+            "end": 1295.92,
+            "text": " I kill them forcefully."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1295.92,
+            "end": 1299.92,
+            "text": " This is one way to kill them forcefully."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1302.92,
+            "end": 1309.92,
+            "text": " The second way is to kill them in one process at a time until the deadlock cycle is eliminated."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1309.92,
+            "end": 1318.92,
+            "text": " This means that if I kill P1 and P2 together, then definitely the deadlock will be removed from the system."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1318.92,
+            "end": 1320.92,
+            "text": " But, I can also do something like this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1320.92,
+            "end": 1324.92,
+            "text": " I can kill P1 and P2 together."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1324.92,
+            "end": 1328.92,
+            "text": " I can also add a mechanism of low priority."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1329.92,
+            "end": 1333.92,
+            "text": " Let's say that P2 has low priority."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1333.92,
+            "end": 1335.92,
+            "text": " So, I will kill P1 and P2 together."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1335.92,
+            "end": 1340.92,
+            "text": " If P2 is killed, then P1 will get R1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1340.92,
+            "end": 1344.92,
+            "text": " So, the deadlock will be removed."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1344.92,
+            "end": 1350.92,
+            "text": " I can say that this method is very harsh and straightforward."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1350.92,
+            "end": 1353.92,
+            "text": " This method is making the sound better."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1353.92,
+            "end": 1355.92,
+            "text": " The second method is resource preemption."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1355.92,
+            "end": 1362.92,
+            "text": " To eliminate deadlock, we successfully preempt some resources from processes and give these resources to the other process until the cycle is over."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1362.92,
+            "end": 1364.92,
+            "text": " This is a process termination type."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1364.92,
+            "end": 1368.92,
+            "text": " I will simply preempt the resources."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1368.92,
+            "end": 1370.92,
+            "text": " Let's take the same case."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1370.92,
+            "end": 1371.92,
+            "text": " P2 has low priority."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1371.92,
+            "end": 1373.92,
+            "text": " R1 is allocated to P2."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1373.92,
+            "end": 1382.92,
+            "text": " Since P2 had low priority and P2 is waiting for R2 in some other resource,"
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1382.92,
+            "end": 1385.92,
+            "text": " I will preempt P1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1385.92,
+            "end": 1391.92,
+            "text": " Since P2 is waiting for R2, I will preempt R1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1391.92,
+            "end": 1393.92,
+            "text": " This edge will be deleted."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1393.92,
+            "end": 1395.92,
+            "text": " R1 will be free."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1395.92,
+            "end": 1397.92,
+            "text": " P1 will get R1."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1397.92,
+            "end": 1399.92,
+            "text": " This is a resource preemption method."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1399.92,
+            "end": 1406.92,
+            "text": " I can recover the system from deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1406.92,
+            "end": 1409.92,
+            "text": " These were the two methods of deadlock recovery."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1409.92,
+            "end": 1411.92,
+            "text": " We have studied the detection method."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1411.92,
+            "end": 1413.92,
+            "text": " We have used the single-stand-wait-for-graph method."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1413.92,
+            "end": 1415.92,
+            "text": " We have used the multiple-bank algorithm."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1415.92,
+            "end": 1418.92,
+            "text": " If there is a safe sequence, then there is no deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1418.92,
+            "end": 1420.92,
+            "text": " If there is no safe sequence, then there is deadlock."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1420.92,
+            "end": 1422.92,
+            "text": " We can assume this."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1422.92,
+            "end": 1424.92,
+            "text": " With this, the deadlock is over."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1424.92,
+            "end": 1427.92,
+            "text": " See you in the next lecture."
+        },
+        {
+            "number": "Lecture 22",
+            "title": " Deadlock Avoidance ",
+            "start": 1427.92,
+            "end": 1428.92,
+            "text": " Bye."
+        }
+    ],
+    "text": " Hello, how are you all? This is Lakshay and you are watching lecture 22 of OS and today we are going to discuss about deadlock avoidance and deadlock detection. In last video we discussed about what is deadlock, what are the necessary conditions of deadlock and how to prevent deadlock. Today we will discuss about how to avoid deadlock. So this video is sponsored by Coding Ninjas, India's leading coding education platform. Many product based companies like Amazon, Adobe, Commvault focus on OS part in their technical interviews. So to clear these interviews, your OS part should be very strong. So Coding Ninjas provides comprehensive and in-depth course which covers all these concepts well. Apart from that, all the theoretical concepts are taught by mapping all the Linux operating systems. Along with the course, one on one doubt session is also provided. Apart from that, the faculty will teach you from big companies like Nvidia and Microsoft. Apart from that, you will get more than 12 hours of content in this course. You will solve more than 150 problems and you will do hands-on in more than 12 projects. Apart from that, you will get many different computer science related courses on Coding Ninjas. If you are interested in paid courses, I will put the link in the description, so that you will get maximum available discount. Thank you. Before discussing about Deadlock Avoidance, Let's understand what is Deadlock Avoidance. Deadlock Avoidance means that we want to avoid deadlock. In which scenario? In case of Deadlock Avoidance, we know the current state of the system. Current state means number of processes. We know this. Secondly, we know the need of each process. Need of resources of each process. And how many resources are currently allocated to each process. Currently allocated amount of resources to each process. We know this. And we also know the maximum amount of resources. Max amount of each resource. We know how much currently allocated resources are to each process. Maximum need of each process. Maximum need of each process. Maximum number of processes. Maximum number of resources. We know all this. And we have to schedule the system accordingly. Schedule means we know all the processes. We know all the resources and resources instances. We also know the current state of the system. And how many resources are allocated to each process. In case of Deadlock Avoidance, we want to schedule the system accordingly. Schedule means we want to schedule the system accordingly. And how many resources are allocated to each process. So that our system is in a safe state. So that our system is in a safe state. I want our system to be in a safe state. What is the meaning of safe state? Safe state means I have all the allocated resources and maximum resources. I have all the allocated resources and maximum resources. I can schedule the processes accordingly. I can schedule the processes accordingly. So that my system is deadlock free. So that my system is deadlock free. So that my system is in a safe state. And unsafe state means If there is any allocation, Then maybe deadlock occurs. Means if there is any allocation, Then maybe deadlock occurs. Deadlock Avoidance means I have all the allocated resources and maximum resources. I have all the allocated resources and maximum resources. I have all the allocated resources and maximum resources. To decide whether the current request can be satisfied or delayed, The system must consider the resource availability, Resource currently allocated to each process and future requests. Safe state means All the resources to each process up to its maximum. All the resources to each process up to its maximum. In some order. In some order. And still avoid deadlock. And still avoid deadlock. If there is a safe sequence, If there is a safe sequence, Then my deadlock does not occur. But if I schedule P1, P2, P3, P4, Then my deadlock occurs. So this is the safe state. So this is the safe state. So this is the safe state. To find out the number of processes, To find out the number of processes, We use an algorithm to find out the safe state. We use an algorithm to find out the safe state. Bankers Algorithm We consider this scenario as an example We consider this scenario as an example This is my system. I have 5 processes. I have 3 resources. A, B, C. These can be anything. We have discussed that it can be memory, CPU, files, locks, anything. What is the maximum need of each process to execute those resources? How many instances does it need? How many are available? And how many are remaining? I have a table to understand the deadlock avoidance. What is a safe state? What is a safe sequence? This is how things work. You must have got a question in the exam. What is the safe sequence of a bank algorithm? Safe sequence means how to schedule them. How to fulfill their allocation? I have to bring a safe sequence. If a safe sequence is available in the system. Then I say that the system is in a safe state. If there is no safe sequence, means at the end I can't do the allocations. The resources are exhausted instantly. And still I can't get any sequence to schedule the 5 processes. Then I say that this particular system is unsafe. Let's see if this particular system is safe or unsafe. Let's see the example. First of all, I say that the total number of resources is available. I have all the information in the system. Let's say that A has 10 resources. B has 5 resources. C has 7 resources. Let's go line by line. Allocated means how many resources are allocated to this process. Max need means how many resources are needed. Let's see the total already allocated resources. To get the available resources, I will subtract the total already allocated resources. Let's say 10-7 10-7 would be 3. Similarly, 5-2 would be 3. And 7-5 would be 2. So, I have the available resources. Now, let's find the remaining need. How many remaining need of each process? We know the allocated need. So, we will subtract the remaining need. Let's subtract the remaining need. This would be 7-4-3. This would be 3-2-1. 2-2. This would be 6-0-0. Because, it has 2 max need. So, 2 is already allocated. 2-2 would be 0. After that, we subtract 2-1-1. This would be 5-3-1. So, I have the remaining need. So, I will write the remaining need of P1, P2, P3. P4, P5. Now, you can see that I have the remaining need of each process. And it is available. So, now I will go to the sequence wise. So, I will allocate to whom? Can I allocate to P1? Now, we are trying to find the safe sequence. How can I schedule the deadlock pre-operation? If I see P1, P1 needs 7-4-3. How many available are there? Its instance is 3. So, I will not be able to allocate it. Can I allocate P2? Because, P2 needs 1 instance of A. We need 1 instance of A resource. We have 3 available of A. So, I will schedule P2 first. So, if I schedule P2. Once P2 is executed, how many resources P2 has? 200. These resources will be free. Now, after freeing, I will add 200 to it. Now, how many available resources are there? 5-3-2. How many resources are available? P2's scheduling is done. Now, we will see whom we can schedule next. Let's see again. Can I schedule P3? Let's see the sequence. Can I schedule P3? I can't schedule P3. Can I schedule P4? Yes, I can. So, let's schedule P4. I have scheduled P4. P4 is on scheduling. The resources P4 has, 2, 1, 1, will be free. So, 5 plus 2 is 743. I will get these resources. 743. Now, I will see whom I can schedule next. 743. Can I schedule P5? Yes, I can. So, let's schedule P5. Let's schedule P5. After scheduling P5, how many resources will be available? 745. I will get these resources. 745. I will get these resources. Now, let's see next. Let's see again. Can I schedule P1? Yes, I can. I have 7 resources available. So, let's schedule P1. We have scheduled P1. P1 will free all the allocated resources after P1. So, how many resources will be available? 755. I will get these resources. Now, P3 is free. Can I schedule P3? Yes, I can. So, I will schedule P3. Now, let's see. P3 will free all the allocated resources. So, how many resources will be available? 10, 5, and 7. So, I have all the resources available. I have all the resources. Now, after scheduling all the processes, how many resources are available? So, I can say that after scheduling, I have a safe sequence. So, this particular scenario was a safe state. So, I can avoid a deadlock. This is a safe state. This is a safe state. So, this is a banker's algorithm. This is a deadlock avoidance algorithm. So, it works like this. This is a safe state. Now, how can it be a deadlock? Suppose, the last schedule was P3. P3 needed 6 resources. Now, P3 needs 8 resources instead of 6. Suppose, P3 needs 8 resources instead of 6. But, I had 7 resources left. But, I had 7 resources left. I couldn't fulfill the requirement. So, P3 couldn't be scheduled. Now, P3 couldn't be scheduled. So, I can say that I can't schedule P3. So, P3 couldn't be scheduled. So, it is an unsafe state. It is an unsafe state. So, this is how it works. This is a banker's algorithm. This is a deadlock avoidance algorithm. Basically, I check the available resources. Can I fulfill the remaining need of someone? Can I fulfill the remaining need of someone? If I can fulfill the remaining need of someone, I can schedule it. After scheduling, I move forward. If I get a particular process, or if I get a point where I can't schedule or I can't fulfill or I can't fulfill the remaining need of the resources, I can say that there is an unsafe state in this particular system. There can be a deadlock. There can be a deadlock. This is my deadlock avoidance algorithm. This is my bankers algorithm. Now we come to Deadlock Detection Before discussing Deadlock Detection, let me tell you that in the case of Deadlock Avoidance, no one asks you in any interview that what is the Bankers Algorithm, solve it with an example, no one asks you that. You can simply ask what is Deadlock Avoidance, what are the things in it, I assume that we know all these things, we know the allocated, we know the max need, we know how many processes are there, we know the instances of each resource, and which algorithm is used for Deadlock Avoidance, all these questions can be asked. No one will ask you to solve questions like this, it comes in your exam, which is called University exam. Now next we discuss Deadlock Detection What is the meaning of Deadlock Detection? Deadlock Detection means that we use Deadlock Prevention and Avoidance in Deadlock Handling, after that we detect that if I have not implemented the prevention algorithm in any system, that is, I have not implemented the prevention in any OS, basically I have not implemented the avoidance. Third is that I let the system go into the deadlock, I tell the system to go into the deadlock, and after going, I try to detect from an algorithm that whether the system is in the deadlock, if the system is in the deadlock, then I recover it. What does this mean? Let's draw it straight, that I have a system, in the system I can say that an algorithm will be used, which will detect whether the system is in the deadlock or not, if the system is in the deadlock, then we will recover it. If it is not in the deadlock, then after some interval, we will run this algorithm again. This means that an algorithm of deadlock detection will be implemented in the system, that algorithm will run every now and then, after some interval, it will check if the system is in the deadlock, if it is, then we will use the recovery mechanism, if it is not, then we will go back to the system. So, this is how the deadlock detection algorithm is implemented. Which system is implemented where there is no deadlock prevention and deadlock avoidance, then we will use the detection and recovery method, let the system go into the deadlock, then we will recover it. So, let's see the examples on the notes, what are the ways of this. So, it is written here that the system has not implemented the deadlock prevention and deadlock avoidance technique, they may employ the deadlock detection and recovery method. So, it is written here that the system has not implemented the deadlock prevention and deadlock avoidance technique, they may employ the deadlock detection and recovery method. The first method was Single Instance of Each Resource. In this, we are using the resource allocation graph, which we have read, how is it implemented in the algorithm. Here, the biggest thing is that there is only one instance of each resource. So, I can draw this case like this, I know that P1 is there and this is basically R1, this is R2, this is P2. P1 wants R1 and R2 is already allocated to it. P2 requests R2 and R1 is already allocated to it. This cycle is made, this is deadlock. So, in this, what is done is that by using the resource allocation graph, I have given a name, waitForGraph. WaitForGraph method is used. Apply a version of the resource allocation graph. In this, we remove the vertices of the resources from the resource allocation graph and merge the vertices of the processes. I will represent this scenario. If I remove R1 and R2, then P1 and P2 will be made. This is the dependency of this and this is the dependency of this. I have made something like this. So, I have converted this resource allocation graph into a waitForGraph. Why am I saying waitForGraph? Because, now see what conclusion I can draw from this. I can say that P1 is waiting for a resource which is held by P2 and P2 is using a resource which is held by P1. So, if I get a cycle after making a waitForGraph, then I say that there is a deadlock. If I don't get a cycle, then I say that there is no deadlock. So, this is a simple algorithm. I remove the vertices of the resources from the resource allocation graph and then I make a waitForGraph. This is called a waitForGraph. This is made from the resource allocation graph. If there is a cycle in the waitForGraph, then I say that there is a deadlock. This is valid for single instances. Keep in mind that this is valid for single instances. The second is my multiple instances. In multiple instances, I use the banker algorithm. I can say that the banker algorithm is a deadlock detection algorithm. If I get a safe sequence in the banker algorithm, then I say that there is no deadlock. If there is no safe sequence, then I say that there is a deadlock. So, I can say that I use the banker algorithm to detect deadlocks in multiple instances. Now, let's assume that the deadlock detection is done. But, our system has a similar algorithm. The system has a similar algorithm. The algorithm checks the deadlock time to time. If there is a deadlock, then we call the recovery mechanism. Let's see how the recovery mechanism works. There are two methods of deadlock recovery. The first is process termination and the second is resource preemption. Process termination means that I terminate all the deadlock processes. There are two variants of this. All deadlock processes, i.e. all the processes in the deadlock. Let's say that this system was made for deadlock. So, I terminate P1 and P2. I kill them forcefully. This is one way to kill them forcefully. The second way is to kill them in one process at a time until the deadlock cycle is eliminated. This means that if I kill P1 and P2 together, then definitely the deadlock will be removed from the system. But, I can also do something like this. I can kill P1 and P2 together. I can also add a mechanism of low priority. Let's say that P2 has low priority. So, I will kill P1 and P2 together. If P2 is killed, then P1 will get R1. So, the deadlock will be removed. I can say that this method is very harsh and straightforward. This method is making the sound better. The second method is resource preemption. To eliminate deadlock, we successfully preempt some resources from processes and give these resources to the other process until the cycle is over. This is a process termination type. I will simply preempt the resources. Let's take the same case. P2 has low priority. R1 is allocated to P2. Since P2 had low priority and P2 is waiting for R2 in some other resource, I will preempt P1. Since P2 is waiting for R2, I will preempt R1. This edge will be deleted. R1 will be free. P1 will get R1. This is a resource preemption method. I can recover the system from deadlock. These were the two methods of deadlock recovery. We have studied the detection method. We have used the single-stand-wait-for-graph method. We have used the multiple-bank algorithm. If there is a safe sequence, then there is no deadlock. If there is no safe sequence, then there is deadlock. We can assume this. With this, the deadlock is over. See you in the next lecture. Bye."
+}
